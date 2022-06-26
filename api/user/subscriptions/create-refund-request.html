@@ -1,0 +1,409 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-refund-request#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/create-refund-request (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.user.subscriptions.CreateRefundRequest.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "chargeid": "ch_3LEOcHHHqepMFuCX19Y9lFZA",
+  "accountid": "acct_697741f7bc0161ea",
+  "subscriptionid": "sub_1LEOcGHHqepMFuCX71QsL36e",
+  "customerid": "cus_LwHA6vW0yPyvpS",
+  "paymentmethodid": null,
+  "invoiceid": "in_1LEOcHHHqepMFuCX0TvcmqTE",
+  "refundRequested": "2022-06-25T02:21:00.488Z",
+  "refundReason": "refund plz",
+  "refundDenied": null,
+  "refundDeniedReason": null,
+  "object": "charge",
+  "stripeObject": {
+    "id": "ch_3LEOcHHHqepMFuCX19Y9lFZA",
+    "object": "charge",
+    "amount": 1000,
+    "amount_captured": 1000,
+    "amount_refunded": 0,
+    "application": null,
+    "application_fee": null,
+    "application_fee_amount": null,
+    "balance_transaction": "txn_3LEOcHHHqepMFuCX1g1pVWuB",
+    "billing_details": {
+      "address": {
+        "city": "New York",
+        "country": "US",
+        "line1": "285 Fulton St",
+        "line2": "Apt 893",
+        "postal_code": "10007",
+        "state": "NY"
+      },
+      "email": null,
+      "name": "Jaime Hills",
+      "phone": null
+    },
+    "calculated_statement_descriptor": "PRODUCT257 DESCRIPTION",
+    "captured": true,
+    "created": 1656123657,
+    "currency": "usd",
+    "customer": "cus_LwHA6vW0yPyvpS",
+    "description": "Subscription creation",
+    "destination": null,
+    "dispute": null,
+    "disputed": false,
+    "failure_balance_transaction": null,
+    "failure_code": null,
+    "failure_message": null,
+    "fraud_details": {},
+    "invoice": "in_1LEOcHHHqepMFuCX0TvcmqTE",
+    "livemode": false,
+    "metadata": {},
+    "on_behalf_of": null,
+    "order": null,
+    "outcome": {
+      "network_status": "approved_by_network",
+      "reason": null,
+      "risk_level": "normal",
+      "risk_score": 36,
+      "seller_message": "Payment complete.",
+      "type": "authorized"
+    },
+    "paid": true,
+    "payment_intent": "pi_3LEOcHHHqepMFuCX1SHGl1V9",
+    "payment_method": "pm_1LEOc2HHqepMFuCXxLrK6FqU",
+    "payment_method_details": {
+      "card": {
+        "brand": "visa",
+        "checks": {
+          "address_line1_check": "pass",
+          "address_postal_code_check": "pass",
+          "cvc_check": "pass"
+        },
+        "country": "US",
+        "exp_month": 1,
+        "exp_year": 2023,
+        "fingerprint": "IRcdqfBUCskmPkNV",
+        "funding": "credit",
+        "installments": null,
+        "last4": "1111",
+        "mandate": null,
+        "network": "visa",
+        "three_d_secure": null,
+        "wallet": null
+      },
+      "type": "card"
+    },
+    "receipt_email": null,
+    "receipt_number": null,
+    "receipt_url": "https://pay.stripe.com/receipts/invoices/CAcaFwoVYWNjdF8xS2hpUDhISHFlcE1GdUNYKIvi2ZUGMgY7c2JRZx86LBaAS-V2QauUBoym-w7pyZJVPJZ44qKmpMdkh3X2iXbAfYpOHs4jFHhhj9H3?s=ap",
+    "refunded": false,
+    "refunds": {
+      "object": "list",
+      "data": [],
+      "has_more": false,
+      "total_count": 0,
+      "url": "/v1/charges/ch_3LEOcHHHqepMFuCX19Y9lFZA/refunds"
+    },
+    "review": null,
+    "shipping": null,
+    "source": null,
+    "source_transfer": null,
+    "statement_descriptor": "product257 description",
+    "statement_descriptor_suffix": null,
+    "status": "succeeded",
+    "transfer_data": null,
+    "transfer_group": null
+  },
+  "appid": "tests_1656123640",
+  "createdAt": "2022-06-25T02:20:59.850Z",
+  "updatedAt": "2022-06-25T02:21:00.488Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-charge</td>
+                  <td>ineligible querystring charge is refunded</td>
+                </tr>
+                <tr>
+                  <td>ineligible querystring charge has refund request</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-chargeid</td>
+                  <td>missing querystring chargeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring chargeid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-refund-request.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.chargeid) {
+      throw new Error('invalid-chargeid')
+    }
+    if (!req.body || !req.body.reason) {
+      throw new Error('invalid-reason')
+    }
+    if (!req.body.reason.length || req.body.reason.length > 200) {
+      throw new Error('invalid-reason-length')
+    }
+    const charge = await global.api.user.subscriptions.Charge.get(req)
+    if (!charge.stripeObject.amount || !charge.stripeObject.paid || charge.stripeObject.refunded) {
+      throw new Error('invalid-charge')
+    }
+    if (charge.refundRequested) {
+      throw new Error('invalid-charge')
+    }
+    await subscriptions.Storage.Charge.update({
+      refundRequested: new Date(),
+      refundReason: req.body.reason
+    }, {
+      where: {
+        chargeid: req.query.chargeid,
+        appid: req.appid || global.appid
+      }
+    })
+    return global.api.user.subscriptions.Charge.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-refund-request.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/create-refund-request', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+    // missing or invalid id
+    const req = TestHelper.createRequest('/api/user/subscriptions/create-refund-request')
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      reason: 'refund plz'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.missing = error.message
+    }
+    const req2 = TestHelper.createRequest('/api/user/subscriptions/create-refund-request?chargeid=invalid')
+    req2.account = user.account
+    req2.session = user.session
+    req2.body = {
+      reason: 'refund plz'
+    }
+    try {
+      await req2.post()
+    } catch (error) {
+      cachedResponses.invalid = error.message
+    }
+    // invalid charge
+    await TestHelper.createRefund(administrator, user.charge.chargeid)
+    const req3 = TestHelper.createRequest(`/api/user/subscriptions/create-refund-request?chargeid=${user.charge.chargeid}`)
+    req3.account = user.account
+    req3.session = user.session
+    req3.body = {
+      reason: 'refund plz'
+    }
+    try {
+      await req3.post()
+    } catch (error) {
+      cachedResponses.invalidCharge = error.message
+    }
+    await TestStripeAccounts.createUserWithPaidSubscription(administrator.price, user)
+    await TestHelper.requestRefund(user, user.charge.chargeid)
+    const req4 = TestHelper.createRequest(`/api/user/subscriptions/create-refund-request?chargeid=${user.charge.chargeid}`)
+    req4.account = user.account
+    req4.session = user.session
+    req4.body = {
+      reason: 'refund plz'
+    }
+    try {
+      await req4.post()
+    } catch (error) {
+      cachedResponses.invalidCharge2 = error.message
+    }
+    // invalid account
+    await TestStripeAccounts.createUserWithPaidSubscription(administrator.price, user)
+    const user2 = await TestHelper.createUser()
+    const req5 = TestHelper.createRequest(`/api/user/subscriptions/create-refund-request?chargeid=${user.charge.chargeid}`)
+    req5.account = user2.account
+    req5.session = user2.session
+    req5.body = {
+      reason: 'refund plz'
+    }
+    try {
+      await req5.post()
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    // returns
+    const req6 = TestHelper.createRequest(`/api/user/subscriptions/create-refund-request?chargeid=${user.charge.chargeid}`)
+    req6.account = user.account
+    req6.session = user.session
+    req6.body = {
+      reason: 'refund plz'
+    }
+    req6.filename = __filename
+    req6.saveResponse = true
+    cachedResponses.returns = await req6.post()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-chargeid', () => {
+      it('missing querystring chargeid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missing
+        assert.strictEqual(errorMessage, 'invalid-chargeid')
+      })
+
+      it('invalid querystring chargeid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalid
+        assert.strictEqual(errorMessage, 'invalid-chargeid')
+      })
+    })
+
+    describe('invalid-charge', () => {
+      it('ineligible querystring charge is refunded', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidCharge
+        assert.strictEqual(errorMessage, 'invalid-charge')
+      })
+
+      it('ineligible querystring charge has refund request', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidCharge2
+        assert.strictEqual(errorMessage, 'invalid-charge')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const charge = cachedResponses.returns
+      assert.strictEqual(charge.object, 'charge')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

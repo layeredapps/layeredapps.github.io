@@ -1,0 +1,158 @@
+[
+  {
+    "priceid": "price_1LEOMVHHqepMFuCX9XeGwuMk",
+    "object": "price",
+    "stripeObject": {
+      "id": "price_1LEOMVHHqepMFuCX9XeGwuMk",
+      "object": "price",
+      "active": true,
+      "billing_scheme": "tiered",
+      "created": 1656122679,
+      "currency": "usd",
+      "custom_unit_amount": null,
+      "livemode": false,
+      "lookup_key": null,
+      "metadata": {},
+      "nickname": null,
+      "product": "prod_LwGuoIpJIUClkU",
+      "recurring": {
+        "aggregate_usage": "sum",
+        "interval": "month",
+        "interval_count": 1,
+        "trial_period_days": null,
+        "usage_type": "metered"
+      },
+      "tax_behavior": "inclusive",
+      "tiers": [
+        {
+          "flat_amount": 9999,
+          "flat_amount_decimal": "9999",
+          "unit_amount": null,
+          "unit_amount_decimal": null,
+          "up_to": 1000
+        },
+        {
+          "flat_amount": 8999,
+          "flat_amount_decimal": "8999",
+          "unit_amount": null,
+          "unit_amount_decimal": null,
+          "up_to": null
+        }
+      ],
+      "tiers_mode": "volume",
+      "transform_quantity": null,
+      "type": "recurring",
+      "unit_amount": null,
+      "unit_amount_decimal": null
+    },
+    "productid": "prod_LwGuoIpJIUClkU",
+    "active": true,
+    "appid": "tests_1656122677",
+    "createdAt": "2022-06-25T02:04:39.870Z",
+    "updatedAt": "2022-06-25T02:04:39.870Z"
+  },
+  {
+    "priceid": "price_1LEOMUHHqepMFuCX0ya4MBnU",
+    "object": "price",
+    "stripeObject": {
+      "id": "price_1LEOMUHHqepMFuCX0ya4MBnU",
+      "object": "price",
+      "active": true,
+      "billing_scheme": "tiered",
+      "created": 1656122678,
+      "currency": "usd",
+      "custom_unit_amount": null,
+      "livemode": false,
+      "lookup_key": null,
+      "metadata": {},
+      "nickname": null,
+      "product": "prod_LwGuoIpJIUClkU",
+      "recurring": {
+        "aggregate_usage": "sum",
+        "interval": "month",
+        "interval_count": 1,
+        "trial_period_days": null,
+        "usage_type": "metered"
+      },
+      "tax_behavior": "inclusive",
+      "tiers": [
+        {
+          "flat_amount": 9999,
+          "flat_amount_decimal": "9999",
+          "unit_amount": null,
+          "unit_amount_decimal": null,
+          "up_to": 1000
+        },
+        {
+          "flat_amount": 8999,
+          "flat_amount_decimal": "8999",
+          "unit_amount": null,
+          "unit_amount_decimal": null,
+          "up_to": null
+        }
+      ],
+      "tiers_mode": "volume",
+      "transform_quantity": null,
+      "type": "recurring",
+      "unit_amount": null,
+      "unit_amount_decimal": null
+    },
+    "productid": "prod_LwGuoIpJIUClkU",
+    "active": true,
+    "appid": "tests_1656122677",
+    "createdAt": "2022-06-25T02:04:39.278Z",
+    "updatedAt": "2022-06-25T02:04:39.278Z"
+  },
+  {
+    "priceid": "price_1LEOMUHHqepMFuCX9tbkvRFb",
+    "object": "price",
+    "stripeObject": {
+      "id": "price_1LEOMUHHqepMFuCX9tbkvRFb",
+      "object": "price",
+      "active": true,
+      "billing_scheme": "tiered",
+      "created": 1656122678,
+      "currency": "usd",
+      "custom_unit_amount": null,
+      "livemode": false,
+      "lookup_key": null,
+      "metadata": {},
+      "nickname": null,
+      "product": "prod_LwGuoIpJIUClkU",
+      "recurring": {
+        "aggregate_usage": "sum",
+        "interval": "month",
+        "interval_count": 1,
+        "trial_period_days": null,
+        "usage_type": "metered"
+      },
+      "tax_behavior": "inclusive",
+      "tiers": [
+        {
+          "flat_amount": 9999,
+          "flat_amount_decimal": "9999",
+          "unit_amount": null,
+          "unit_amount_decimal": null,
+          "up_to": 1000
+        },
+        {
+          "flat_amount": 8999,
+          "flat_amount_decimal": "8999",
+          "unit_amount": null,
+          "unit_amount_decimal": null,
+          "up_to": null
+        }
+      ],
+      "tiers_mode": "volume",
+      "transform_quantity": null,
+      "type": "recurring",
+      "unit_amount": null,
+      "unit_amount_decimal": null
+    },
+    "productid": "prod_LwGuoIpJIUClkU",
+    "active": true,
+    "appid": "tests_1656122677",
+    "createdAt": "2022-06-25T02:04:38.686Z",
+    "updatedAt": "2022-06-25T02:04:38.686Z"
+  }
+]

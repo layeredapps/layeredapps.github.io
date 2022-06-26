@@ -1,0 +1,157 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>OAuth module</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">OAuth module</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="active"><a class="navigation-link" href="/oauth-module">Documentation</a></li>
+          <li><a class="navigation-link" href="/oauth-github-module">GitHub</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="documentation-for-oauth-module">Documentation for OAuth module</h1>
+          <h4>Shortcuts</h4>
+          <ul>
+            <li><a href="https://layeredapps.github.io">Documentation website</a></li>
+            <li><a href="https://layeredapps.github.io/oauth-module">Module documentation</a></li>
+          </ul>
+          <h4>Index</h4>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#import-this-module">Import this module</a></li>
+            <li><a href="#provided-server-content-and-proxy-handlers">Provided server, content and proxy handlers</a></li>
+            <li><a href="https://github.com/layeredapps/oauth">Github repository</a></li>
+            <li><a href="https://npmjs.org/layeredapps/oauth">NPM package</a></li>
+          </ul>
+          <h1 id="introduction">Introduction</h1>
+          <p>Dashboard bundles everything a web app needs, all the &quot;boilerplate&quot; like signing in and changing passwords, into a parallel server so you can write a much smaller web app.</p>
+          <p><a href="https://www.maxmind.com/en/home">OAuth</a> provide authentication options for websites using the Oauth standard, so users can &quot;sign in with&quot; GitHub and other compatible services rather than by username/password.</p>
+          <p>When the user authenticates with an OAuth service they can optionally be required to complete a profile with contact or other information.</p>
+          <p>Sessions created with OAuth do not expire until the user signs out or the session is expired in the user / administrator options.</p>
+          <p>Accounts created with OAuth cannot <code data-language="js">change username</code>, <code data-language="js">change password</code>, or use <code data-language="js">reset codes</code>. If they navigate to these routes the requests are intercepted by a server handler and redirected to a conversion form that can convert an OAuth account to username/password.</p>
+          <h2 id="import-this-module">Import this module</h2>
+          <p>Install the module with NPM:</p>
+          <pre><code data-language="js">$ npm install @layeredapps/oauth
+</code></pre>
+          <p>Edit your <code data-language="js">package.json</code> to activate the module:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@layeredapps/oauth&quot;
+  ]
+}
+</code></pre>
+          <p>Edit your <code data-language="js">package.json</code> to include the scripts for provider buttons which injects a <code data-language="js">&lt;div id=&quot;oauth-buttons&quot; /&gt;</code> into the <code data-language="js">signin</code> and <code data-language="js">register</code> pages:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;content&quot;: [
+    &quot;@layeredapps/oauth/src/content/register-buttons.js&quot;,
+    &quot;@layeredapps/oauth/src/content/signin-buttons.js&quot;
+  ]
+}
+</code></pre>
+          <p>Add provider modules, eg:</p>
+          <pre><code data-language="js">$ npm install @layeredapps/oauth-github
+</code></pre>
+          <p>And configure the provider modules:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@layeredapps/oauth&quot;,
+    &quot;@layeredapps/oauth-github&quot;
+  ]
+  &quot;server&quot;: [
+    &quot;@layeredapps/oauth/src/server/redirect-unused.js&quot;,
+  ],
+  &quot;content&quot;: [
+    &quot;@layeredapps/oauth/src/content/register-buttons.js&quot;,
+    &quot;@layeredapps/oauth/src/content/signin-buttons.js&quot;,
+    &quot;@layeredapps/oauth-github/src/content/error-templates.js&quot;,
+    &quot;@layeredapps/oauth-github/src/content/register-button.js&quot;,
+    &quot;@layeredapps/oauth-github/src/content/signin-button.js&quot;
+  ]
+}
+</code></pre>
+          <p>Optionally require the user complete a profile with Dashboard's configuration setting:</p>
+          <pre><code data-language="js">REQUIRE_PROFILE=true
+USER_PROFILE_FIELDS=....
+</code></pre>
+          <h1 id="provided-server,-content-and-proxy-handlers">Provided server, content and proxy handlers</h1>
+          <p>This module comes with some convenience scripts you can add to your <code data-language="js">package.json</code>:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Script path</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>content</td>
+                <td>@layeredapps/oauth/src/content/register-buttons.js</td>
+                <td>Adds a <code data-language="js">&lt;div id=&quot;oauth-buttons&quot;&gt;&lt;/div&gt;</code> container to the registration page for placing provider buttons.</td>
+              </tr>
+              <tr>
+                <td>content</td>
+                <td>@layeredapps/oauth/src/content/signin-buttons.js</td>
+                <td>Adds a <code data-language="js">&lt;div id=&quot;oauth-buttons&quot;&gt;&lt;/div&gt;</code> container to the signin page for placing provider buttons.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/oauth/src/server/redirect-unused.js</td>
+                <td>Redirects <code data-language="js">change-username</code>, <code data-language="js">change-password</code> and <code data-language="js">create-reset-code</code> to a page where users may convert their Oauth-credentialed account to a username/password account.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><a href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

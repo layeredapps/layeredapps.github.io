@@ -1,0 +1,25 @@
+{
+  "couponid": "COUPON48",
+  "object": "coupon",
+  "stripeObject": {
+    "id": "COUPON48",
+    "object": "coupon",
+    "amount_off": 47,
+    "created": 1656123573,
+    "currency": "usd",
+    "duration": "once",
+    "duration_in_months": null,
+    "livemode": false,
+    "max_redemptions": null,
+    "metadata": {},
+    "name": "coupon name",
+    "percent_off": null,
+    "redeem_by": null,
+    "times_redeemed": 0,
+    "valid": true
+  },
+  "active": null,
+  "appid": "tests_1656123572",
+  "createdAt": "2022-06-25T02:19:33.297Z",
+  "updatedAt": "2022-06-25T02:19:33.297Z"
+}

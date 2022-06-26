@@ -1,0 +1,536 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-product#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/create-product (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.administrator.subscriptions.CreateProduct.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "productid": "prod_LwGpBJCRJRwdpI",
+  "object": "product",
+  "stripeObject": {
+    "id": "prod_LwGpBJCRJRwdpI",
+    "object": "product",
+    "active": true,
+    "attributes": [],
+    "created": 1656122388,
+    "default_price": null,
+    "description": null,
+    "images": [],
+    "livemode": false,
+    "metadata": {},
+    "name": "product name",
+    "package_dimensions": null,
+    "shippable": null,
+    "statement_descriptor": "description",
+    "tax_code": "txcd_41060003",
+    "type": "service",
+    "unit_label": "thing",
+    "updated": 1656122389,
+    "url": null
+  },
+  "active": true,
+  "appid": "tests_1656122388",
+  "createdAt": "2022-06-25T01:59:49.155Z",
+  "updatedAt": "2022-06-25T01:59:49.155Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>active </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>name </td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>statement_descriptor </td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>tax_code </td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>unit_label </td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-name</td>
+                  <td>missing posted name</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-product-name-length</td>
+                  <td>posted name too short</td>
+                </tr>
+                <tr>
+                  <td>posted name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-statement_descriptor</td>
+                  <td>missing posted statement_descriptor</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-tax_code</td>
+                  <td>missing posted tax_code</td>
+                </tr>
+                <tr>
+                  <td>invalid posted tax_code</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-product.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.body || !req.body.name) {
+      throw new Error('invalid-name')
+    }
+    if (global.minimumProductNameLength > req.body.name.length ||
+      global.maximumProductNameLength < req.body.name.length) {
+      throw new Error('invalid-product-name-length')
+    }
+    if (!req.body.statement_descriptor || !req.body.statement_descriptor.length) {
+      throw new Error('invalid-statement_descriptor')
+    }
+    if (!req.body.unit_label || !req.body.unit_label.length) {
+      throw new Error('invalid-unit_label')
+    }
+    if (!req.body.tax_code || !req.body.tax_code.length) {
+      throw new Error('invalid-tax_code')
+    }
+    req.query = req.query || {}
+    req.query.taxcodeid = req.body.tax_code
+    try {
+      await global.api.administrator.subscriptions.TaxCode.get(req)
+    } catch (error) {
+      throw new Error('invalid-tax_code')
+    }
+    const productInfo = {
+      type: 'service',
+      name: req.body.name,
+      statement_descriptor: req.body.statement_descriptor,
+      unit_label: req.body.unit_label,
+      tax_code: req.body.tax_code
+    }
+    if (req.body.active) {
+      productInfo.active = true
+    }
+    const product = await stripeCache.execute('products', 'create', productInfo, req.stripeKey)
+    if (!product) {
+      throw new Error()
+    }
+    await subscriptions.Storage.Product.create({
+      appid: req.appid || global.appid,
+      productid: product.id,
+      stripeObject: product,
+      active: product.active
+    })
+    req.query = req.query || {}
+    req.query.productid = product.id
+    return global.api.administrator.subscriptions.Product.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-product.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/administrator/subscriptions/create-product', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('exceptions', () => {
+    describe('invalid-name', () => {
+      it('missing posted name', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          name: '',
+          statement_descriptor: 'description',
+          unit_label: 'thing',
+          tax_code: 'txcd_41060003'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-name')
+      })
+    })
+
+    describe('invalid-product-name-length', () => {
+      it('posted name too short', async () => {
+        global.minimumProductNameLength = 10
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          name: 'this',
+          statement_descriptor: 'description',
+          unit_label: 'thing',
+          tax_code: 'txcd_41060003'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-product-name-length')
+      })
+
+      it('posted name too long', async () => {
+        global.maximumProductNameLength = 1
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          name: 'that',
+          statement_descriptor: 'description',
+          unit_label: 'thing',
+          tax_code: 'txcd_41060003'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-product-name-length')
+      })
+    })
+
+    describe('invalid-statement_descriptor', () => {
+      it('missing posted statement_descriptor', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          name: 'productName',
+          statement_descriptor: '',
+          unit_label: 'thing',
+          tax_code: 'txcd_41060003'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-statement_descriptor')
+      })
+    })
+
+    describe('invalid-tax_code', () => {
+      it('missing posted tax_code', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          name: 'productName',
+          statement_descriptor: 'description',
+          unit_label: 'thing',
+          tax_code: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tax_code')
+      })
+
+      it('invalid posted tax_code', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          name: 'productName',
+          statement_descriptor: 'description',
+          unit_label: 'thing',
+          tax_code: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tax_code')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional posted active (boolean)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'product name',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        active: 'true',
+        tax_code: 'txcd_41060003'
+      }
+      const product = await req.post()
+      assert.strictEqual(product.stripeObject.active, true)
+    })
+
+    it('required posted name (string)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'product name',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        active: 'true',
+        tax_code: 'txcd_41060003'
+      }
+      const product = await req.post()
+      assert.strictEqual(product.stripeObject.name, 'product name')
+    })
+
+    it('required posted statement_descriptor (string)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'product name',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        active: 'true',
+        tax_code: 'txcd_41060003'
+      }
+      const product = await req.post()
+      assert.strictEqual(product.stripeObject.statement_descriptor, 'description')
+    })
+
+    it('required posted unit_label (string)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'product name',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        active: 'true',
+        tax_code: 'txcd_41060003'
+      }
+      const product = await req.post()
+      assert.strictEqual(product.stripeObject.unit_label, 'thing')
+    })
+
+    it('required posted tax_code (string)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'product name',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        active: 'true',
+        tax_code: 'txcd_41060003'
+      }
+      const product = await req.post()
+      assert.strictEqual(product.stripeObject.tax_code, 'txcd_41060003')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'product name',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        tax_code: 'txcd_41060003'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const product = await req.post()
+      assert.strictEqual(product.object, 'product')
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment MINIMUM_PRODUCT_NAME_LENGTH', async () => {
+      global.minimumProductNameLength = 10
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'this',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        tax_code: 'txcd_41060003'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-product-name-length')
+    })
+
+    it('environment MAXIMUM_PRODUCT_NAME_LENGTH', async () => {
+      global.maximumProductNameLength = 1
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-product')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        name: 'that',
+        statement_descriptor: 'description',
+        unit_label: 'thing',
+        tax_code: 'txcd_41060003'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-product-name-length')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

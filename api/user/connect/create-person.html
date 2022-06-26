@@ -1,0 +1,713 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-person#POST (@layeredapps/stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/create-person (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.user.connect.CreatePerson.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "personid": "person_1LEBsARbTvuVhFnBZw9F7lQj",
+  "object": "person",
+  "accountid": "acct_2eded9e851ef76a5",
+  "stripeid": "acct_1LEBs5RbTvuVhFnB",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "person_1LEBsARbTvuVhFnBZw9F7lQj",
+    "object": "person",
+    "account": "acct_1LEBs5RbTvuVhFnB",
+    "address": {
+      "city": null,
+      "country": "GB",
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "created": 1656074670,
+    "dob": {
+      "day": null,
+      "month": null,
+      "year": null
+    },
+    "first_name": null,
+    "future_requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "last_name": null,
+    "metadata": {},
+    "relationship": {
+      "director": false,
+      "executive": false,
+      "owner": true,
+      "percent_ownership": 0.1,
+      "representative": false,
+      "title": "Chairperson"
+    },
+    "requirements": {
+      "alternatives": [],
+      "currently_due": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "dob.day",
+        "dob.month",
+        "dob.year",
+        "email",
+        "first_name",
+        "last_name"
+      ],
+      "errors": [],
+      "eventually_due": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "dob.day",
+        "dob.month",
+        "dob.year",
+        "email",
+        "first_name",
+        "last_name"
+      ],
+      "past_due": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "dob.day",
+        "dob.month",
+        "dob.year",
+        "email",
+        "first_name",
+        "last_name"
+      ],
+      "pending_verification": []
+    },
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "unverified"
+    }
+  },
+  "appid": "tests_1656074644",
+  "createdAt": "2022-06-24T12:44:32.022Z",
+  "updatedAt": "2022-06-24T12:44:32.022Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>relationship_director</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_executive</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_owner</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_percent_ownership</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_representative</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>relationship_title</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-relationship_percent_ownership</td>
+                  <td>missing posted relationship.percent_ownership</td>
+                </tr>
+                <tr>
+                  <td>invalid posted relationship.percent_ownership</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-relationship_title</td>
+                  <td>missing posted relationship.title</td>
+                </tr>
+                <tr>
+                  <td>invalid posted relationship_title</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="4">invalid-stripe-account</td>
+                  <td>ineligible stripe account for individuals</td>
+                </tr>
+                <tr>
+                  <td>ineligible stripe account does not require directors</td>
+                </tr>
+                <tr>
+                  <td>ineligible stripe account does not require owners</td>
+                </tr>
+                <tr>
+                  <td>ineligible stripe account does not require executives</td>
+                </tr>
+                <tr>
+                  <td id="description-9" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/create-person.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const connect = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    req.body = req.body || {}
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (!stripeAccount) {
+      throw new Error('invalid-stripeid')
+    }
+    if (stripeAccount.stripeObject.business_type !== 'company') {
+      throw new Error('invalid-stripe-account')
+    }
+    if (!req.body.relationship_representative &&
+        !req.body.relationship_director &&
+        !req.body.relationship_owner &&
+        !req.body.relationship_executive) {
+      throw new Error('invalid-selection')
+    }
+    // TODO: the 5000 character limit is from Stripe
+    // they'll probably change it so monitor this
+    if (!req.body.relationship_title ||
+        !req.body.relationship_title.length ||
+        req.body.relationship_title.length > 5000) {
+      throw new Error('invalid-relationship_title')
+    }
+    if (!req.body.relationship_percent_ownership) {
+      throw new Error('invalid-relationship_percent_ownership')
+    }
+    let percent
+    try {
+      percent = parseFloat(req.body.relationship_percent_ownership, 10)
+    } catch (s) {
+      throw new Error('invalid-relationship_percent_ownership')
+    }
+    // TODO: 0% ownership throws an error on Stripe if the person is not 'owner=true'
+    if ((!percent && percent !== 0) || percent > 100 || percent < 0) {
+      throw new Error('invalid-relationship_percent_ownership')
+    }
+    if (percent === 0) {
+      if (req.body.relationship_owner) {
+        throw new Error('invalid-relationship_percent_ownership')
+      }
+      delete (req.body.relationship_percent_ownership)
+    }
+    const personInfo = {
+      relationship: {
+        title: req.body.relationship_title
+      }
+    }
+    if (req.body.relationship_percent_ownership) {
+      personInfo.relationship.percent_ownership = req.body.relationship_percent_ownership
+    }
+    if (req.body.relationship_representative) {
+      personInfo.relationship.representative = true
+    }
+    if (req.body.relationship_executive === 'true') {
+      if (!personInfo.relationship.representative && !stripeAccount.requiresExecutives) {
+        throw new Error('invalid-stripe-account')
+      }
+      personInfo.relationship.executive = req.body.relationship_executive || false
+    }
+    if (req.body.relationship_director === 'true') {
+      if (!stripeAccount.requiresDirectors) {
+        throw new Error('invalid-stripe-account')
+      }
+      personInfo.relationship.director = req.body.relationship_director || false
+    }
+    if (req.body.relationship_owner === 'true') {
+      if (!stripeAccount.requiresOwners) {
+        throw new Error('invalid-stripe-account')
+      }
+      personInfo.relationship.owner = req.body.relationship_owner || false
+    }
+    try {
+      const person = await stripeCache.execute('accounts', 'createPerson', req.query.stripeid, personInfo, req.stripeKey)
+      await connect.Storage.Person.create({
+        appid: req.appid || global.appid,
+        personid: person.id,
+        accountid: req.account.accountid,
+        stripeid: stripeAccount.stripeid,
+        stripeObject: person
+      })
+      req.query.personid = person.id
+      return global.api.user.connect.Person.get(req)
+    } catch (error) {
+      if (error.message.startsWith('invalid-')) {
+        throw new Error(error.message.split('.').join('_'))
+      }
+      throw error
+    }
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/create-person.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/connect/create-person', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const user = await TestHelper.createUser()
+    await TestHelper.createStripeAccount(user, {
+      country: 'US',
+      business_type: 'individual'
+    })
+    // individual account
+    let req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.individualAccount = error.message
+    }
+    // does not require owner
+    await TestHelper.createStripeAccount(user, {
+      country: 'CA',
+      business_type: 'company'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      relationship_owner: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.ownersNotRequired = error.message
+    }
+    // executives not required
+    req.body = {
+      relationship_executive: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.executivesNotRequired = error.message
+    }
+    // invalid account
+    const user2 = await TestHelper.createUser()
+    req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user2.account
+    req.session = user2.session
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    // does not require director
+    await TestHelper.createStripeAccount(user, {
+      country: 'US',
+      business_type: 'company'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      relationship_director: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.directorsNotRequired = error.message
+    }
+    // missing percent owned
+    await TestHelper.createStripeAccount(user, {
+      country: 'AT',
+      business_type: 'company'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      relationship_representative: 'true',
+      relationship_executive: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: ''
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.missingPercentOwned = error.message
+    }
+    // invalid percent owned
+    req.body = {
+      relationship_representative: 'true',
+      relationship_executive: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: 'invalid'
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.invalidPercentOwned = error.message
+    }
+    // missing relationship title
+    req.body = {
+      relationship_representative: 'true',
+      relationship_executive: 'true',
+      relationship_title: '',
+      relationship_percent_ownership: '0.1'
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.missingRelationshipTitle = error.message
+    }
+    // invalid relationship title
+    while (req.body.relationship_title.length < 5001) {
+      req.body.relationship_title += '-'
+    }
+    try {
+      await req.post(req)
+    } catch (error) {
+      cachedResponses.invalidRelationshipTitle = error.message
+    }
+    // posted executive
+    req.body = {
+      relationship_representative: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    cachedResponses.representative = await req.post()
+    // posted executive
+    req.body = {
+      relationship_executive: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    cachedResponses.executive = await req.post()
+    // posted director
+    req.body = {
+      relationship_director: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    cachedResponses.director = await req.post()
+    // posted owner
+    await TestHelper.createStripeAccount(user, {
+      country: 'GB',
+      business_type: 'company'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/create-person?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    req.filename = __filename
+    req.saveResponse = true
+    req.body = {
+      relationship_owner: 'true',
+      relationship_title: 'Chairperson',
+      relationship_percent_ownership: '0.1'
+    }
+    cachedResponses.owner = await req.post()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/create-person')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/create-person?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-stripe-account', () => {
+      it('ineligible stripe account for individuals', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.individualAccount
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+
+      it('ineligible stripe account does not require directors', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.directorsNotRequired
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+
+      it('ineligible stripe account does not require owners', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.ownersNotRequired
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+
+      it('ineligible stripe account does not require executives', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.executivesNotRequired
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-relationship_percent_ownership', () => {
+      it('missing posted relationship.percent_ownership', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingPercentOwned
+        assert.strictEqual(errorMessage, 'invalid-relationship_percent_ownership')
+      })
+
+      it('invalid posted relationship.percent_ownership', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPercentOwned
+        assert.strictEqual(errorMessage, 'invalid-relationship_percent_ownership')
+      })
+    })
+
+    describe('invalid-relationship_title', () => {
+      it('missing posted relationship.title', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingRelationshipTitle
+        assert.strictEqual(errorMessage, 'invalid-relationship_title')
+      })
+
+      it('invalid posted relationship_title', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidRelationshipTitle
+        assert.strictEqual(errorMessage, 'invalid-relationship_title')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional posted relationship_representative', async function () {
+      await bundledData(this.test.currentRetry())
+      const person = cachedResponses.representative
+      assert.strictEqual(person.stripeObject.relationship.representative, true)
+    })
+
+    it('optionally-required posted relationship_executive', async function () {
+      await bundledData(this.test.currentRetry())
+      const person = cachedResponses.executive
+      assert.strictEqual(person.stripeObject.relationship.executive, true)
+    })
+
+    it('optional posted relationship_director', async function () {
+      await bundledData(this.test.currentRetry())
+      const person = cachedResponses.director
+      assert.strictEqual(person.stripeObject.relationship.director, true)
+    })
+
+    it('optional posted relationship_owner', async function () {
+      await bundledData(this.test.currentRetry())
+      const person = cachedResponses.owner
+      assert.strictEqual(person.stripeObject.relationship.owner, true)
+    })
+
+    it('required posted relationship_percent_ownership', async function () {
+      await bundledData(this.test.currentRetry())
+      const person = cachedResponses.owner
+      assert.strictEqual(person.stripeObject.relationship.percent_ownership, 0.1)
+    })
+
+    it('required posted relationship_title', async () => {
+      const person = cachedResponses.owner
+      await bundledData()
+      assert.strictEqual(person.stripeObject.relationship.title, 'Chairperson')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async function () {
+      await bundledData(this.test.currentRetry())
+      const person = cachedResponses.owner
+      assert.strictEqual(person.object, 'person')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

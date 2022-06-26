@@ -1,0 +1,29 @@
+{
+  "refundid": "re_3LEOO5HHqepMFuCX1sLqggDZ",
+  "object": "refund",
+  "stripeObject": {
+    "id": "re_3LEOO5HHqepMFuCX1sLqggDZ",
+    "object": "refund",
+    "amount": 3000,
+    "balance_transaction": "txn_3LEOO5HHqepMFuCX1fKlBtrF",
+    "charge": "ch_3LEOO5HHqepMFuCX1Pmnfrju",
+    "created": 1656122782,
+    "currency": "usd",
+    "metadata": {},
+    "payment_intent": "pi_3LEOO5HHqepMFuCX1pdRhxE4",
+    "reason": "requested_by_customer",
+    "receipt_number": null,
+    "source_transfer_reversal": null,
+    "status": "succeeded",
+    "transfer_reversal": null
+  },
+  "accountid": "acct_a36ee1fa09affad6",
+  "subscriptionid": null,
+  "customerid": null,
+  "invoiceid": "in_1LEOO5HHqepMFuCXqtrsDn7P",
+  "productid": null,
+  "paymentmethodid": null,
+  "appid": "tests_1656122772",
+  "createdAt": "2022-06-25T02:06:22.830Z",
+  "updatedAt": "2022-06-25T02:06:22.830Z"
+}

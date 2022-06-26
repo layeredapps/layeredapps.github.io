@@ -1,0 +1,454 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>customers#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/customers (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.user.subscriptions.Customers.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "customerid": "cus_LwHCbkHdHGCZbf",
+    "object": "customer",
+    "accountid": "acct_8b0825541fc85b15",
+    "couponid": null,
+    "stripeObject": {
+      "id": "cus_LwHCbkHdHGCZbf",
+      "object": "customer",
+      "address": null,
+      "balance": 0,
+      "created": 1656123783,
+      "currency": null,
+      "default_source": null,
+      "delinquent": false,
+      "description": "Visa Electron",
+      "discount": null,
+      "email": "Benny_Davis76@yahoo.com",
+      "invoice_prefix": "B1818A67",
+      "invoice_settings": {
+        "custom_fields": null,
+        "default_payment_method": null,
+        "footer": null,
+        "rendering_options": null
+      },
+      "livemode": false,
+      "metadata": {},
+      "name": null,
+      "next_invoice_sequence": 1,
+      "phone": null,
+      "preferred_locales": [],
+      "shipping": null,
+      "tax_exempt": "none",
+      "test_clock": null
+    },
+    "appid": "tests_1656123781",
+    "createdAt": "2022-06-25T02:23:03.666Z",
+    "updatedAt": "2022-06-25T02:23:03.666Z"
+  },
+  {
+    "customerid": "cus_LwHCGYSoM63ZKP",
+    "object": "customer",
+    "accountid": "acct_8b0825541fc85b15",
+    "couponid": null,
+    "stripeObject": {
+      "id": "cus_LwHCGYSoM63ZKP",
+      "object": "customer",
+      "address": null,
+      "balance": 0,
+      "created": 1656123783,
+      "currency": null,
+      "default_source": null,
+      "delinquent": false,
+      "description": "American Express (work)",
+      "discount": null,
+      "email": "Benny_Davis76@yahoo.com",
+      "invoice_prefix": "0C872961",
+      "invoice_settings": {
+        "custom_fields": null,
+        "default_payment_method": null,
+        "footer": null,
+        "rendering_options": null
+      },
+      "livemode": false,
+      "metadata": {},
+      "name": null,
+      "next_invoice_sequence": 1,
+      "phone": null,
+      "preferred_locales": [],
+      "shipping": null,
+      "tax_exempt": "none",
+      "test_clock": null
+    },
+    "appid": "tests_1656123781",
+    "createdAt": "2022-06-25T02:23:03.278Z",
+    "updatedAt": "2022-06-25T02:23:03.690Z"
+  },
+  {
+    "customerid": "cus_LwHCdQUJQulynR",
+    "object": "customer",
+    "accountid": "acct_8b0825541fc85b15",
+    "couponid": null,
+    "stripeObject": {
+      "id": "cus_LwHCdQUJQulynR",
+      "object": "customer",
+      "address": null,
+      "balance": 0,
+      "created": 1656123782,
+      "currency": null,
+      "default_source": null,
+      "delinquent": false,
+      "description": "MasterCard",
+      "discount": null,
+      "email": "Benny_Davis76@yahoo.com",
+      "invoice_prefix": "FD8F8BAF",
+      "invoice_settings": {
+        "custom_fields": null,
+        "default_payment_method": null,
+        "footer": null,
+        "rendering_options": null
+      },
+      "livemode": false,
+      "metadata": {},
+      "name": null,
+      "next_invoice_sequence": 1,
+      "phone": null,
+      "preferred_locales": [],
+      "shipping": null,
+      "tax_exempt": "none",
+      "test_clock": null
+    },
+    "appid": "tests_1656123781",
+    "createdAt": "2022-06-25T02:23:02.879Z",
+    "updatedAt": "2022-06-25T02:23:03.438Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-accountid</td>
+                  <td>missing querystring accountid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring accountid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/customers.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.user.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-account')
+    }
+    const where = {
+      accountid: req.query.accountid,
+      appid: req.appid || global.appid
+    }
+    let customerids
+    if (req.query.all) {
+      customerids = await subscriptions.Storage.Customer.findAll({
+        where,
+        attributes: ['customerid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      customerids = await subscriptions.Storage.Customer.findAll({
+        where,
+        attributes: ['customerid'],
+        offset,
+        limit,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    }
+    if (!customerids || !customerids.length) {
+      return null
+    }
+    const items = []
+    for (const customerInfo of customerids) {
+      req.query.customerid = customerInfo.dataValues.customerid
+      const customer = await global.api.user.subscriptions.Customer.get(req)
+      items.push(customer)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/customers.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/customers', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedCustomers
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedCustomers = []
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestHelper.createOwner()
+    await TestHelper.createProduct(administrator, {
+      active: 'true'
+    })
+    const user = await TestHelper.createUser()
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      await TestHelper.createCustomer(user, {
+        email: user.profile.contactEmail
+      })
+      cachedCustomers.unshift(user.customer.customerid)
+    }
+    const req1 = TestHelper.createRequest(`/api/user/subscriptions/customers?accountid=${user.account.accountid}&offset=1`)
+    req1.account = user.account
+    req1.session = user.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest(`/api/user/subscriptions/customers?accountid=${user.account.accountid}&limit=1`)
+    req2.account = user.account
+    req2.session = user.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest(`/api/user/subscriptions/customers?accountid=${user.account.accountid}&all=true`)
+    req3.account = user.account
+    req3.session = user.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest(`/api/user/subscriptions/customers?accountid=${user.account.accountid}`)
+    req4.account = user.account
+    req4.session = user.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+    global.pageSize = 2
+    cachedResponses.finished = true
+  }
+  describe('exceptions', () => {
+    describe('invalid-accountid', () => {
+      it('missing querystring accountid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/customers')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+
+      it('invalid querystring accountid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/customers?accountid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const user = await TestHelper.createUser()
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/subscriptions/customers?accountid=${user.account.accountid}`)
+        req.account = user2.account
+        req.session = user2.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const customersNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(customersNow[i].customerid, cachedCustomers[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const limit = 1
+      const customersNow = cachedResponses.limit
+      assert.strictEqual(customersNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const customersNow = await cachedResponses.all
+      assert.strictEqual(customersNow.length, cachedCustomers.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const customers = cachedResponses.returns
+      assert.strictEqual(customers.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      const customers = cachedResponses.pageSize
+      assert.strictEqual(customers.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

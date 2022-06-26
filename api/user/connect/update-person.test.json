@@ -1,0 +1,77 @@
+{
+  "personid": "person_1LEC5TRmeT3CaUbsfglcx1MU",
+  "object": "person",
+  "accountid": "acct_b7b4a23cd8d84230",
+  "stripeid": "acct_1LEC5QRmeT3CaUbs",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "person_1LEC5TRmeT3CaUbsfglcx1MU",
+    "object": "person",
+    "account": "acct_1LEC5QRmeT3CaUbs",
+    "address": {
+      "city": "Vienna",
+      "country": "AT",
+      "line1": "123 Park Lane",
+      "line2": null,
+      "postal_code": "1020",
+      "state": null
+    },
+    "created": 1656075496,
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1970
+    },
+    "email": "Brad_Waelchi91@hotmail.com",
+    "first_name": "Brad",
+    "future_requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "last_name": "Waelchi",
+    "metadata": {},
+    "relationship": {
+      "director": false,
+      "executive": true,
+      "owner": true,
+      "percent_ownership": 10,
+      "representative": false,
+      "title": "SVP Testing"
+    },
+    "requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": [
+        "verification.additional_document",
+        "verification.document"
+      ]
+    },
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "pending"
+    }
+  },
+  "appid": "tests_1656075380",
+  "createdAt": "2022-06-24T12:58:17.387Z",
+  "updatedAt": "2022-06-24T12:58:20.930Z"
+}

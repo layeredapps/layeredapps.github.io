@@ -1,0 +1,420 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Stripe Subscriptions module</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="api"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="documentation-for-stripe-subscriptions-module">Documentation for Stripe Subscriptions module</h1>
+          <h4>Shortcuts</h4>
+          <ul>
+            <li><a href="https://layeredapps.github.io">Documentation website</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-subscriptions-module">Module documentation</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-subscriptions-ui">UI screenshots</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-subscriptions-api">API documentation</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-subscriptions-configuration">Environment configuration</a></li>
+          </ul>
+          <h4>Index</h4>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#import-this-module">Import this module</a></li>
+            <li><a href="#setting-up-your-stripe-credentials">Setting up your Stripe credentials</a></li>
+            <li><a href="#configuring-your-products-and-prices">Configuring your products and prices</a></li>
+            <li><a href="#starting-subscriptions">Starting subscriptions</a></li>
+            <li><a href="#provided-server-content-and-proxy-handlers">Provided server, content and proxy handlers</a></li>
+            <li><a href="#storage-engine">Storage engine</a></li>
+            <li><a href="#access-the-api">Access the API</a></li>
+            <li><a href="https://github.com/layeredapps/stripe-subscriptions">Github repository</a></li>
+            <li><a href="https://npmjs.org/layeredapps/stripe-subscriptions">NPM package</a></li>
+          </ul>
+          <h1 id="introduction">Introduction</h1>
+          <p>Dashboard bundles everything a web app needs, all the &quot;boilerplate&quot; like signing in and changing passwords, into a parallel server so you can write a much smaller web app.</p>
+          <p>The Stripe Subscriptions module adds a complete interface for creating and managing your Stripe products, prices, subscriptions etc. Users can self-cancel their subscriptions at any time and you can nominate a 0+ day period allowing users to refund themselves too. You can optionally require a subscription and/or no unpaid invoices from all users outside of the <code data-language="js">/account/</code> and <code data-language="js">/administrator/</code> content. The <a href="https://stripe.com/docs/api">Stripe API documentation</a> supplements this documentation.</p>
+          <h2 id="import-this-module">Import this module</h2>
+          <p>Install the module with NPM:</p>
+          <pre><code data-language="js">$ npm install @layeredapps/stripe-subscriptions
+</code></pre>
+          <p>Edit your <code data-language="js">package.json</code> to activate the module:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@layeredapps/stripe-subscriptions&quot;
+  ]
+}
+</code></pre>
+          <h2 id="setting-up-your-stripe-credentials">Setting up your Stripe credentials</h2>
+          <p>You will need to retrieve various keys from <a href="https://stripe.com">Stripe</a>. During development your webhook will be created automatically, but in production with multiple dashboard server instances they share a configured webhook:</p>
+          <pre><code data-language="js">- create your Stripe account and find your API keys
+- create a webhook for https://your_domain/webhooks/subscriptions/index-subscription-data 
+- environment STRIPE_JS=3|2|false
+- environment STRIPE_KEY=sk_test_xxxxxxx
+- environment STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxx
+- environment SUBSCRIPTIONS_WEBHOOK_ENDPOINT_SECRET=whsec_xxxxxxxx
+</code></pre>
+          <h3 id="configuring-your-products-and-prices">Configuring your products and prices</h3>
+          <p>This module adds a complete interface for creating products and prices with one-time, recurring and tiered billing. Stripe's nomenclature and structure is used directly so for more information refer to the &lt;a href=&quot;https://stripe.com/docs&quot;&gt;Stripe documentation&lt;/a&gt; and &lt;a href=&quot;https://stripe.com/docs/api&quot;&gt;Stripe API documentation&lt;/a&gt;.</p>
+          <p>A subscription is created for one or more &quot;Price&quot; objects, which each hold pricing information for &quot;Product&quot; objects. These objects must be set active before they can be used by users.</p>
+          <ol>
+            <li>Administrator creates product</li>
+            <li>Administrator activates product</li>
+            <li>Administrator creates price(s)</li>
+            <li>Administrator activates price(s)</li>
+          </ol>
+          <h3 id="starting-subscriptions">Starting subscriptions</h3>
+          <p>To create a subscription the user creates a billing profile ie a &quot;Customer&quot; object in Stripe. If your Price objects are free then they do not require payment information, but their Customer object must still be created with basic information.</p>
+          <p>You can check if a user has a suscription by including the <code data-language="js">x-has-subscription</code> proxy script <code data-language="js">@stripe-subscriptions/src/proxy/x-has-subscription.js</code> in your <code data-language="js">package.json</code>. When requests are made to your application server the <code data-language="js">x-has-subscription</code> header will be set <code data-language="js">true</code> or <code data-language="js">false</code>. Alternatively you can include <code data-language="js">x-subscrpitions</code> or <code data-language="js">x-subscriptions-active</code> to include their Stripe Subscription objects.</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+    &quot;proxy&quot;: [
+        &quot;@stripe-subscriptions/src/proxy/x-has-subscription.js&quot;,
+        &quot;@stripe-subscriptions/src/proxy/x-subscriptions.js&quot;,
+        &quot;@stripe-subscriptions/src/proxy/x-subscriptions-active.js&quot;
+    ]
+}
+</code></pre>
+          <p>When a user needs to create a subscription you can respond with a HTTP redirect that Dashboard will follow, example:</p>
+          <pre><code data-language="js">HTTP/1.1 302 Found
+Location: /select-plan
+</code></pre>
+          <p>On a plan selection page you can automatically redirect after creating a billing profile by including a <code data-language="js">redirect-url</code> URL parameter.</p>
+          <pre><code data-language="js">&lt;a href=&quot;/account/subscriptions/create-billing-profile?redirect-url=/select-plan%3Fplan=gold%26other=data&quot;&gt;Gold plan&lt;/a&gt;
+</code></pre>
+          <p>Your application uses the API to create their subscription to the Price(s) by POSTING to your Dashboard server:</p>
+          <pre><code data-language="js">{your_dashboard_server}/api/user/subscriptions/create-subscription?customerid=X
+</code></pre>
+          <p>The POST data can include comma-delimited priceids and quantities if there are multiple billing items:</p>
+          <pre><code data-language="js">priceids=priceid
+quantities=1
+taxrateids=optional
+couponid=optional
+trial_period_days=optional
+billing_cycle_anchor=optional
+paymentmethodid=optional (will use default customer payment method)
+</code></pre>
+          <p>The API will return their subscription object or throw an exception. You can view the exceptions in <code data-language="js">api.txt</code> or the documentation website.</p>
+          <h4>Example with plan selection screen:</h4>
+          <p>In these examples &quot;plans&quot; are referred to, these are just identifiers you would have to correlate with Price objects (which are replacing Plan objects in Stripe).</p>
+          <ol>
+            <li>
+              <p>create a page on your application server where users select their plan eg <code data-language="js">/plans</code></p>
+            </li>
+            <li>
+              <p>add the <code data-language="js">x-has-subscription</code> proxy script to your <code data-language="js">package.json</code></p>
+            </li>
+            <li>
+              <p>user registers and requests your <code data-language="js">/home</code> path, where you determine they need to create a subscription and redirect to your <code data-language="js">/plans</code> page</p>
+            </li>
+            <li>
+              <p>user clicks plan button which links to <code data-language="js">/account/subscriptions/create-billing-profile?return-url=/plans%3Fplan=gold%26start=true</code></p>
+            </li>
+            <li>
+              <p>after creating their payment information user is redirected back to your <code data-language="js">/plans?plan=gold&amp;start=true</code>, you observe the plan and start parameters and post to the Dashboard API to start their subscription:</p>
+              <p>{your_dashboard_server}/api/user/subscriptions/create-subscription?customerid=X</p>
+            </li>
+          </ol>
+          <p>POST data:</p>
+          <pre><code data-language="js">priceids=price1
+quantities=1
+</code></pre>
+          <h4>Example with just one subscription type</h4>
+          <ol>
+            <li>
+              <p>create a page on your application server where the user consents to creating a subscription eg <code data-language="js">/subscribe</code></p>
+            </li>
+            <li>
+              <p>add the <code data-language="js">x-has-customer-billing</code> and <code data-language="js">x-has-subscription</code> proxy scripts to your <code data-language="js">package.json</code></p>
+            </li>
+            <li>
+              <p>user registers and enters your application at your <code data-language="js">/home</code> path where you determine they need to create a subscription</p>
+            </li>
+            <li>
+              <p>if the user needs billing information you redirect to <code data-language="js">/account/subscriptions/create-billing-profile?return-url=/subscribe</code> and after the user is redirected back to your <code data-language="js">/subscribe</code> page</p>
+            </li>
+            <li>
+              <p>create the subscription:</p>
+              <p>{your_dashboard_server}/api/user/subscriptions/create-subscription?customerid=X</p>
+            </li>
+          </ol>
+          <p>POST data:</p>
+          <pre><code data-language="js">priceids=price1
+quantities=1
+</code></pre>
+          <h4>Example with subscriptions shared by users</h4>
+          <p>If you were using this module in conjunction with the <a href="https://github.com/layeredapps/organizations">Organizations module</a> you might want one person to create a subscription that is shared by members of their org.</p>
+          <ol>
+            <li>
+              <p>create a page on your application server where users select their plan and organization eg <code data-language="js">/subscribe</code></p>
+            </li>
+            <li>
+              <p>add the <code data-language="js">x-has-subscription</code> proxy script to your <code data-language="js">package.json</code>, and the <code data-language="js">x-organizations</code> proxy script from the Organizations module so you have that information for the plan</p>
+            </li>
+            <li>
+              <p>user registers and requests your <code data-language="js">/home</code> path, where you determine they need to create a subscription and redirect to <code data-language="js">/account/subscriptions/create-billing-profile?return-url=/subscribe</code></p>
+            </li>
+            <li>
+              <p>after creating their payment information user is redirected back to your <code data-language="js">/subscribe</code> page and you create the subscription:</p>
+              <p>{your_dashboard_server}/api/user/subscriptions/create-subscription?customerid=X</p>
+            </li>
+          </ol>
+          <p>POST data:</p>
+          <pre><code data-language="js">priceids=price1
+quantities=1
+</code></pre>
+          <ol start="5">
+            <li>store the organization and subscription ids in your database so you can identify when users are members of an organization with a subscription</li>
+          </ol>
+          <h4>Example with metered billing</h4>
+          <p>When you use metered billing prices are set based on usage amount, eg disk storage on a server.</p>
+          <p>You can set usage amounts using the API:</p>
+          <pre><code data-language="js">{your_dashboard_server}/api/user/subscriptions/create-usage-record?subscriptionid=X
+</code></pre>
+          <p>POST data:</p>
+          <pre><code data-language="js">subscriptionitemid=X
+quantity=8
+action=increment|set
+</code></pre>
+          <p>The subscription item id can be found in <code data-language="js">subscription.items.data</code> array, eg <code data-language="js">subscription.items.data[0].id</code>. You can include the users' subscription information in requests Dashboard makes to your server by adding the <code data-language="js">x-subscriptions</code> proxy script in your <code data-language="js">package.json</code> so this information is automatically sent to your application server.</p>
+          <h3 id="customizing-billing-information-entry">Customizing billing information entry</h3>
+          <p>You can adjust certain parts of the payment information collection with environment variables.</p>
+          <p>Use <code data-language="js">AUTOMATIC_BILLING_PROFILE_DESCRIPTION=true</code> to skip customers assigning a description to their profiles.</p>
+          <p>Use <code data-language="js">AUTOMATIC_BILLING_PROFILE_FULL_NAME=true</code> to use the full name from the user's profile which you can collect at registration. The user can update their profile to keep these matched.</p>
+          <p>Use <code data-language="js">AUTOMATIC_BILLING_PROFILE_EMAIL=true</code> to use the contact email from the user's profile which you can collect at registration. The user can update their profile with a different email address if necessary.</p>
+          <p>Use <code data-language="js">REQUIRE_BILLING_PROFILE_ADDRESS=false</code> to disable the address collection. You can enable it on a per-request basis by creating a <code data-language="js">server</code> script and overriding the global setting:</p>
+          <pre><code data-language="js">module.exports = {
+    after: (req) =&gt; {
+        if (!req.account) {
+            return
+        }
+        if (some condition you determine) {
+            req.requireBillingProfileAddress = true
+        }
+    }
+}
+</code></pre>
+          <p>If you use <code data-language="js">AUTOMATIC_BILLING_PROFILE_EMAIL</code> and <code data-language="js">AUTOMATIC_BILLING_PROFILE_FULL_NAME</code> but the user does not have a profile they provide those values as normal. To ensure the user has a profile with this information use <code data-language="js">REQUIRE_PROFILE=true</code> and <code data-language="js">USER_PROFILE_FIELDS=contact-email,full-name</code> to collect it at registration.</p>
+          <h3 id="styling-the-stripe-elements">Styling the Stripe elements</h3>
+          <p>Using StripeJS version 3 sensitive fields like credit card numbers are created by Stripe in nested iframes and styled using a JavaScript object passed to their script.</p>
+          <p>You can specify your own JavaScript styling on your application server at <code data-language="js">/stripe-element-style.json</code>. This module will automatically detect if the browser is in light or dark mode, or switched mode, and apply your settings:</p>
+          <pre><code data-language="js">{
+    &quot;light&quot;: {
+        &quot;base&quot;: {
+            &quot;color&quot;: &quot;#666666&quot;,
+            &quot;fontFamily&quot;: &quot;\&quot;Helvetica Neue\&quot;, Helvetica, sans-serif&quot;,
+            &quot;fontSmoothing&quot;: &quot;antialiased&quot;,
+            &quot;fontSize&quot;: &quot;16px&quot;,
+            &quot;::placeholder&quot;: {
+                &quot;color&quot;: &quot;#EEEEEE&quot;
+            }
+        },
+        &quot;invalid&quot;: {
+            &quot;color&quot;: &quot;#990000&quot;,
+            &quot;iconColor&quot;: &quot;#fa755a&quot;
+        }
+    },
+    &quot;dark&quot;: {
+        &quot;base&quot;: {
+            &quot;color&quot;: &quot;#666666&quot;,
+            &quot;fontFamily&quot;: &quot;\&quot;Helvetica Neue\&quot;, Helvetica, sans-serif&quot;,
+            &quot;fontSmoothing&quot;: &quot;antialiased&quot;,
+            &quot;fontSize&quot;: &quot;16px&quot;,
+            &quot;::placeholder&quot;: {
+                &quot;color&quot;: &quot;#EEEEEE&quot;
+            }
+        },
+        &quot;invalid&quot;: {
+            &quot;color&quot;: &quot;#990000&quot;,
+            &quot;iconColor&quot;: &quot;#fa755a&quot;
+        }
+    }
+}
+</code></pre>
+          <h1 id="provided-server,-content-and-proxy-handlers">Provided server, content and proxy handlers</h1>
+          <p>This module comes with some convenience scripts you can add to your <code data-language="js">package.json</code>:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Script path</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-customers.js</td>
+                <td>Dashboard will bundle the user's <code data-language="js">Customer</code> objects in <code data-language="js">x-customers</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-has-customer-billing.js</td>
+                <td>Sets <code data-language="js">x-has-customer-billing</code> to <code data-language="js">true</code> or <code data-language="js">false</code> if the user has a Customer object with payment method.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-has-customer.js</td>
+                <td>Sets <code data-language="js">x-has-customer</code> to <code data-language="js">true</code> or <code data-language="js">false</code> if the user has a Customer object.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-has-subscription.js</td>
+                <td>Sets <code data-language="js">x-has-subscription</code> to <code data-language="js">true</code> or <code data-language="js">false</code> if the user has a subscription that is not canceled or canceling.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-invoices-latest.js</td>
+                <td>Dashboard will bundle the user's latest Invoice objects in <code data-language="js">x-invoices-latest</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-invoices-open.js</td>
+                <td>Dashboard will bundle the user's open Invoice objects in <code data-language="js">x-invoices-open</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-invoices.js</td>
+                <td>Dashboard will bundle the user's Invoice objects in <code data-language="js">x-invoices</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-prices.js</td>
+                <td>Dashboard will bundle all active prices in <code data-language="js">x-prices</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-subscriptions-active.js</td>
+                <td>Dashboard will bundle all the user's <code data-language="js">active</code> subscriptions in <code data-language="js">x-subscriptions-active</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-subscriptions/src/proxy/x-subscriptions.js</td>
+                <td>Dashboard will bundle all the user's subscriptions in <code data-language="js">x-subscriptions</code> header.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-subscriptions/src/server/bind-stripe-key.js</td>
+                <td>The Stripe API key object will be bound to <code data-language="js">req.stripeKey</code></td>
+                <td>.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-subscriptions/src/server/check-before-cancel-subscription.js</td>
+                <td>Require users complete steps, such as deleting data, before canceling their subscription. Set a <code data-language="js">CHECK_BEFORE_CANCEL_SUBSCRIPTION</code> path such as <code data-language="js">/check-delete</code> on your Application server, Dashboard will query this API passing <code data-language="js">?subscriptionid=xxxxx</code> and you may respond with { &quot;redirect&quot;: &quot;/your-delete-requirements&quot; } or { &quot;redirect&quot;: false }&quot; to enforce the requirements.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-subscriptions/src/server/require-payment-confirmation.js</td>
+                <td>If the user has an invoice requiring payment confirmation they will be redirected to provide it. They can still access <code data-language="js">/account</code> and <code data-language="js">/administrator</code> routes (if an administrator)</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-subscriptions/src/server/require-payment.js</td>
+                <td>If the user has an invoice requiring payment they will be redirected to provide it. They can still access <code data-language="js">/account</code> and <code data-language="js">/administrator</code> routes (if an administrator)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>This module includes &quot;private&quot; content scripts that are configured automatically:</p>
+          <p>|----------|----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| | content | @layeredapps/stripe-subscriptions/src/content/embed-stripe-element-style.js | When STRIPE_JS=3 this loads &quot;/stripe-elements-style.json&quot; from this module or your application server to style Stripe's special fields created with stripe.js. The style object is cached for 60 seconds. |</p>
+          <h2 id="storage-engine">Storage engine</h2>
+          <p>By default this module will share whatever storage you use for Dashboard. You can specify nothing, specify an alternate storage backend, or specify the same type with a separate database.</p>
+          <pre><code data-language="js">SUBSCRIPTIONS_STORAGE=mysql
+SUBSCRIPTIONS_DATABASE_URL=mysql://username:password@host:port/db
+</code></pre>
+          <p>If your Dashboard is configured with database read replication servers this module will follow that configuration. You can also specify module-specific read replication:</p>
+          <pre><code data-language="js">SUBSCRIPTIONS_STORAGE_REPLICATION=true
+SUBSCRIPTIONS_DATABASE_URL=postgres://1.0.0.0:5432/subscriptions
+SUBSCRIPTIONS_READ_DATABASE_URL1=postgres://1.0.0.1:5432/subscriptions
+SUBSCRIPTIONS_READ_DATABASE_URL2=postgres://1.0.0.2:5432/subscriptions
+SUBSCRIPTIONS_READ_DATABASE_URL3=postgres://1.0.0.3:5432/subscriptions
+</code></pre>
+          <h3 id="access-the-api">Access the API</h3>
+          <p>Dashboard and official modules are completely API-driven and you can access the same APIs on behalf of the user making requests. You perform <code data-language="js">GET</code>, <code data-language="js">POST</code>, <code data-language="js">PATCH</code>, and <code data-language="js">DELETE</code> HTTP requests against the API endpoints to fetch or modify data. This example fetches the user's subscriptions using NodeJS, you can do this with any language:</p>
+          <p>You can view API documentation within the NodeJS modules' <code data-language="js">api.txt</code> files, or on the <a href="https://layeredapps.github.io/stripe-subscriptions-api">documentation site</a>.</p>
+          <pre><code data-language="js">const subscriptions = await proxy(`/api/user/subscriptions/subscriptions?accountid=${accountid}&amp;all=true`, accountid, sessionid)
+
+const proxy = util.promisify((path, accountid, sessionid, callback) =&gt; {
+    const requestOptions = {
+        host: 'dashboard.example.com',
+        path: path,
+        port: '443',
+        method: 'GET',
+        headers: {
+            'x-application-server': 'application.example.com',
+            'x-application-server-token': process.env.APPLICATION_SERVER_TOKEN,
+            'x-accountid': accountid,
+            'x-sessionid': sessionid
+        }
+    }
+    const proxyRequest = require('https').request(requestOptions, (proxyResponse) =&gt; {
+        let body = ''
+        proxyResponse.on('data', (chunk) =&gt; {
+            body += chunk
+        })
+        return proxyResponse.on('end', () =&gt; {
+            return callback(null, JSON.parse(body))
+        })
+    })
+    proxyRequest.on('error', (error) =&gt; {
+        return callback(error)
+    })
+    return proxyRequest.end()
+  })
+}
+</code></pre>
+        </div>
+        <p><a href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

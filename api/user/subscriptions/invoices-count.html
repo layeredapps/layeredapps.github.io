@@ -1,0 +1,146 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>invoices-count#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/invoices-count (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.user.subscriptions.InvoicesCount.get(req)</span>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/invoices-count.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.user.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-account')
+    }
+    return subscriptions.Storage.Invoice.count({
+      where: {
+        accountid: req.query.accountid,
+        appid: req.appid || global.appid
+      }
+    })
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/invoices-count.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+
+describe('/api/user/subscriptions/invoices-count', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('returns', () => {
+    it('integer', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const user = await TestStripeAccounts.createUserWithPaymentMethod()
+      for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+        await TestHelper.createPrice(administrator, {
+          productid: administrator.product.productid,
+          unit_amount: 3000,
+          currency: 'usd',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'licensed',
+          active: 'true'
+        })
+        await TestStripeAccounts.createUserWithPaidSubscription(administrator.price, user)
+      }
+      const req = TestHelper.createRequest(`/api/user/subscriptions/invoices-count?accountid=${user.account.accountid}`)
+      req.account = user.account
+      req.session = user.session
+      req.filename = __filename
+      req.saveResponse = true
+      const result = await req.get()
+      assert.strictEqual(result, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,1560 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-price#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/create-price (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.administrator.subscriptions.CreatePrice.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "priceid": "price_1LEOHcHHqepMFuCXqwmisJA0",
+  "object": "price",
+  "stripeObject": {
+    "id": "price_1LEOHcHHqepMFuCXqwmisJA0",
+    "object": "price",
+    "active": true,
+    "billing_scheme": "per_unit",
+    "created": 1656122376,
+    "currency": "usd",
+    "custom_unit_amount": null,
+    "livemode": false,
+    "lookup_key": null,
+    "metadata": {},
+    "nickname": null,
+    "product": "prod_LwGp5kMISl1vS2",
+    "recurring": {
+      "aggregate_usage": "sum",
+      "interval": "month",
+      "interval_count": 1,
+      "trial_period_days": null,
+      "usage_type": "metered"
+    },
+    "tax_behavior": "inclusive",
+    "tiers_mode": null,
+    "transform_quantity": null,
+    "type": "recurring",
+    "unit_amount": 1000,
+    "unit_amount_decimal": "1000"
+  },
+  "productid": "prod_LwGp5kMISl1vS2",
+  "active": true,
+  "appid": "tests_1656122375",
+  "createdAt": "2022-06-25T01:59:36.397Z",
+  "updatedAt": "2022-06-25T01:59:36.397Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>active </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>billing_scheme </td>
+                  <td>per_unit, tiered</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>currency</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>productid</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>recurring_aggregate_usage </td>
+                  <td>sum, max, last_ever, last_during_period</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>recurring_interval </td>
+                  <td>day, week, month, year</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>recurring_interval_count</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>recurring_usage_type </td>
+                  <td>licensed, metered</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>tax_behavior</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>tier</td>
+                  <td>1...</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>tier</td>
+                  <td>1...</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>tier</td>
+                  <td>1...</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>tiers_mode </td>
+                  <td>graduated, volume</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>transform_quantity_divide_by</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>transform_quantity_round </td>
+                  <td>up, down</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>unit_amount</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-billing_scheme</td>
+                  <td>invalid posted billing_scheme</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-currency</td>
+                  <td>missing posted currency</td>
+                </tr>
+                <tr>
+                  <td>invalid posted currency</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-product</td>
+                  <td>ineligible posted product is not active</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-productid</td>
+                  <td>missing posted productid</td>
+                </tr>
+                <tr>
+                  <td>invalid posted productid</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="1">invalid-recurring_aggregate_usage</td>
+                  <td>invalid posted recurring_aggregate_usage</td>
+                </tr>
+                <tr>
+                  <td id="description-7" rowspan="1">invalid-recurring_interval</td>
+                  <td>invalid posted recurring_interval</td>
+                </tr>
+                <tr>
+                  <td id="description-8" rowspan="3">invalid-recurring_interval_count</td>
+                  <td>missing posted recurring_interval_count</td>
+                </tr>
+                <tr>
+                  <td>invalid posted recurring_interval_count</td>
+                </tr>
+                <tr>
+                  <td>invalid posted recurring_interval_count exceeds one year</td>
+                </tr>
+                <tr>
+                  <td id="description-11" rowspan="1">invalid-recurring_usage_type</td>
+                  <td>invalid posted recurring_usage_type</td>
+                </tr>
+                <tr>
+                  <td id="description-12" rowspan="1">invalid-tax_behavior</td>
+                  <td>invalid posted tax_behavior</td>
+                </tr>
+                <tr>
+                  <td id="description-13" rowspan="1">invalid-tier_flat_amount</td>
+                  <td>invalid posted tier_flat_amount</td>
+                </tr>
+                <tr>
+                  <td id="description-14" rowspan="1">invalid-tier_unit_amount</td>
+                  <td>invalid posted tier_unit_amount</td>
+                </tr>
+                <tr>
+                  <td id="description-15" rowspan="1">invalid-tier_up_to</td>
+                  <td>invalid posted tier_up_to</td>
+                </tr>
+                <tr>
+                  <td id="description-16" rowspan="1">invalid-tiers_mode</td>
+                  <td>invalid posted tiers_mode</td>
+                </tr>
+                <tr>
+                  <td id="description-17" rowspan="1">invalid-transform_quantity_divide_by</td>
+                  <td>invalid posted transform_quantity_divide_by</td>
+                </tr>
+                <tr>
+                  <td id="description-18" rowspan="1">invalid-transform_quantity_round</td>
+                  <td>invalid posted transform_quantity_round</td>
+                </tr>
+                <tr>
+                  <td id="description-19" rowspan="1">invalid-unit_amount</td>
+                  <td>invalid posted unit_amount</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-price.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.body || !req.body.productid || !req.body.productid.length) {
+      throw new Error('invalid-productid')
+    }
+    if (!req.body.currency || req.body.currency.length !== 3) {
+      throw new Error('invalid-currency')
+    }
+    req.query = req.query || {}
+    req.query.productid = req.body.productid
+    const product = await global.api.administrator.subscriptions.Product.get(req)
+    if (!product) {
+      throw new Error('invalid-productid')
+    }
+    if (!product.active) {
+      throw new Error('invalid-product')
+    }
+    if (!req.body.tax_behavior || (req.body.tax_behavior !== 'inclusive' && req.body.tax_behavior !== 'exclusive')) {
+      throw new Error('invalid-tax_behavior')
+    }
+    if (req.body.recurring_usage_type && req.body.recurring_usage_type !== 'metered' && req.body.recurring_usage_type !== 'licensed') {
+      throw new Error('invalid-recurring_usage_type')
+    }
+    if (!req.body.unit_amount && req.body.billing_scheme === 'per_unit') {
+      throw new Error('invalid-unit_amount')
+    }
+    if (req.body.unit_amount) {
+      if (req.body.unit_amount.indexOf('.') === -1) {
+        try {
+          const amount = parseInt(req.body.unit_amount, 10)
+          if (req.body.unit_amount !== amount.toString()) {
+            throw new Error('invalid-unit_amount')
+          }
+          if (amount < 0) {
+            throw new Error('invalid-unit_amount')
+          }
+        } catch (s) {
+          throw new Error('invalid-unit_amount')
+        }
+      } else {
+        try {
+          const amount = parseFloat(req.body.unit_amount)
+          if (req.body.unit_amount !== amount.toString()) {
+            throw new Error('invalid-unit_amount')
+          }
+          if (amount < 0) {
+            throw new Error('invalid-unit_amount')
+          }
+        } catch (s) {
+          throw new Error('invalid-unit_amount')
+        }
+        req.body.unit_amount_decimal = req.body.unit_amount
+        delete (req.body.unit_amount)
+      }
+    }
+    if (req.body.recurring_interval &&
+        req.body.recurring_interval !== 'day' &&
+        req.body.recurring_interval !== 'week' &&
+        req.body.recurring_interval !== 'month' &&
+        req.body.recurring_interval !== 'year') {
+      throw new Error('invalid-recurring_interval')
+    }
+    if (req.body.recurring_interval && !req.body.recurring_interval_count) {
+      throw new Error('invalid-recurring_interval_count')
+    }
+    if (req.body.recurring_interval) {
+      try {
+        req.body.recurring_interval_count = parseInt(req.body.recurring_interval_count, 10)
+        if (!req.body.recurring_interval_count) {
+          throw new Error('invalid-recurring_interval_count')
+        }
+      } catch (s) {
+        throw new Error('invalid-recurring_interval_count')
+      }
+      if (req.body.recurring_interval_count < 1) {
+        throw new Error('invalid-recurring_interval_count')
+      }
+      if (req.body.recurring_interval === 'day' && req.body.recurring_interval_count > 365) {
+        throw new Error('invalid-recurring_interval_count')
+      } else if (req.body.recurring_interval === 'week' && req.body.recurring_interval_count > 52) {
+        throw new Error('invalid-recurring_interval_count')
+      } else if (req.body.recurring_interval === 'month' && req.body.recurring_interval_count > 12) {
+        throw new Error('invalid-recurring_interval_count')
+      } else if (req.body.recurring_interval_count > 1) {
+        throw new Error('invalid-recurring_interval_count')
+      }
+    }
+    if (req.body.recurring_usage_type === 'metered') {
+      if (req.body.recurring_aggregate_usage !== 'sum' &&
+          req.body.recurring_aggregate_usage !== 'last_during_period' &&
+          req.body.recurring_aggregate_usage !== 'last_ever' &&
+          req.body.recurring_aggregate_usage !== 'max') {
+        throw new Error('invalid-recurring_aggregate_usage')
+      }
+    }
+    if (req.body.billing_scheme && req.body.billing_scheme !== 'per_unit' && req.body.billing_scheme !== 'tiered') {
+      throw new Error('invalid-billing_scheme')
+    }
+    if (req.body.billing_scheme === 'per_unit') {
+      if (req.body.transform_quantity_divide_by) {
+        try {
+          const amount = parseFloat(req.body.transform_quantity_divide_by)
+          if (req.body.transform_quantity_divide_by !== amount.toString()) {
+            throw new Error('invalid-transform_quantity_divide_by')
+          }
+          if (amount < 0) {
+            throw new Error('invalid-transform_quantity_divide_by')
+          }
+        } catch (s) {
+          throw new Error('invalid-transform_quantity_divide_by')
+        }
+        if (req.body.transform_quantity_round !== 'up' && req.body.transform_quantity_round !== 'down') {
+          throw new Error('invalid-transform_quantity_round')
+        }
+      }
+    } else if (req.body.billing_scheme === 'tiered') {
+      if (req.body.tiers_mode !== 'graduated' && req.body.tiers_mode !== 'volume') {
+        throw new Error('invalid-tiers_mode')
+      }
+    }
+    const priceInfo = {
+      billing_scheme: req.body.billing_scheme,
+      nickname: req.body.nickname,
+      product: req.body.productid,
+      currency: req.body.currency,
+      tax_behavior: req.body.tax_behavior,
+      unit_amount: req.body.unit_amount || undefined,
+      unit_amount_decimal: req.body.unit_amount_decimal || undefined,
+      recurring: {
+        interval: req.body.recurring_interval,
+        interval_count: req.body.recurring_interval_count || 0,
+        usage_type: req.body.recurring_usage_type || 'licensed'
+      }
+    }
+    if (req.body.recurring_usage_type === 'metered') {
+      priceInfo.recurring.aggregate_usage = req.body.recurring_aggregate_usage
+    }
+    if (req.body.billing_scheme === 'tiered') {
+      priceInfo.tiers_mode = req.body.tiers_mode
+      priceInfo.tiers = []
+      let tierNumber = 1
+      while (true) {
+        if (!req.body[`tier${tierNumber}_up_to`]) {
+          break
+        }
+        if (req.body[`tier${tierNumber}_up_to`] !== 'inf') {
+          try {
+            const upto = parseInt(req.body[`tier${tierNumber}_up_to`], 10)
+            if (req.body[`tier${tierNumber}_up_to`] !== upto.toString()) {
+              throw new Error('invalid-tier_up_to')
+            }
+            if (upto < 0) {
+              throw new Error('invalid-tier_up_to')
+            }
+          } catch (s) {
+            throw new Error('invalid-tier_up_to')
+          }
+        }
+        const tier = {
+          up_to: req.body[`tier${tierNumber}_up_to`]
+        }
+        if (req.body[`tier${tierNumber}_unit_amount`]) {
+          if (req.body[`tier${tierNumber}_unit_amount`].indexOf('.') === -1) {
+            try {
+              const amount = parseInt(req.body[`tier${tierNumber}_unit_amount`], 10)
+              if (req.body[`tier${tierNumber}_unit_amount`] !== amount.toString()) {
+                throw new Error('invalid-tier_unit_amount')
+              }
+              if (amount < 0) {
+                throw new Error('invalid-tier_unit_amount')
+              }
+            } catch (s) {
+              throw new Error('invalid-tier_unit_amount')
+            }
+            tier.unit_amount = req.body[`tier${tierNumber}_unit_amount`]
+          } else {
+            try {
+              const amount = parseFloat(req.body[`tier${tierNumber}_unit_amount`])
+              if (req.body[`tier${tierNumber}_unit_amount`] !== amount.toString()) {
+                throw new Error('invalid-tier_unit_amount')
+              }
+              if (amount < 0) {
+                throw new Error('invalid-tier_unit_amount')
+              }
+            } catch (s) {
+              throw new Error('invalid-tier_unit_amount')
+            }
+            tier.unit_amount_decimal = req.body[`tier${tierNumber}_unit_amount`]
+          }
+        } else if (req.body[`tier${tierNumber}_flat_amount`]) {
+          if (req.body[`tier${tierNumber}_flat_amount`].indexOf('.') === -1) {
+            try {
+              const amount = parseInt(req.body[`tier${tierNumber}_flat_amount`], 10)
+              if (req.body[`tier${tierNumber}_flat_amount`] !== amount.toString()) {
+                throw new Error('invalid-tier_flat_amount')
+              }
+              if (amount < 0) {
+                throw new Error('invalid-tier_flat_amount')
+              }
+            } catch (s) {
+              throw new Error('invalid-tier_flat_amount')
+            }
+            tier.flat_amount = req.body[`tier${tierNumber}_flat_amount`]
+          } else {
+            try {
+              const amount = parseFloat(req.body[`tier${tierNumber}_flat_amount`])
+              if (req.body[`tier${tierNumber}_flat_amount`] !== amount.toString()) {
+                throw new Error('invalid-tier_flat_amount')
+              }
+              if (amount < 0) {
+                throw new Error('invalid-tier_flat_amount')
+              }
+            } catch (s) {
+              throw new Error('invalid-tier_flat_amount')
+            }
+            tier.flat_amount_decimal = req.body[`tier${tierNumber}_flat_amount`]
+            delete (req.body[`tier${tierNumber}_flat_amount`])
+          }
+        }
+        priceInfo.tiers.push(tier)
+        tierNumber++
+      }
+    } else {
+      if (req.body.transform_quantity_divide_by) {
+        priceInfo.transform_quantity = {
+          divide_by: req.body.transform_quantity_divide_by,
+          round: req.body.transform_quantity_round
+        }
+      }
+    }
+    if (req.body.active) {
+      priceInfo.active = true
+    }
+    const price = await stripeCache.execute('prices', 'create', priceInfo, req.stripeKey)
+    const priceExpanded = await stripeCache.execute('prices', 'retrieve', price.id, {
+      expand: ['tiers']
+    }, req.stripeKey)
+    await subscriptions.Storage.Price.create({
+      appid: req.appid || global.appid,
+      priceid: price.id,
+      productid: req.body.productid,
+      stripeObject: priceExpanded,
+      active: price.active
+    })
+    req.query.priceid = price.id
+    return global.api.administrator.subscriptions.Price.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-price.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/administrator/subscriptions/create-price', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('exceptions', () => {
+    describe('invalid-productid', () => {
+      it('missing posted productid', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          tax_behavior: 'inclusive',
+          productid: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-productid')
+      })
+
+      it('invalid posted productid', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          tax_behavior: 'inclusive',
+          productid: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-productid')
+      })
+    })
+
+    describe('invalid-product', () => {
+      it('ineligible posted product is not active', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'false'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          productid: administrator.product.productid,
+          tax_behavior: 'inclusive'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-product')
+      })
+    })
+
+    describe('invalid-tax_behavior', () => {
+      it('invalid posted tax_behavior', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'invalid',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tax_behavior')
+      })
+    })
+
+    describe('invalid-unit_amount', () => {
+      it('invalid posted unit_amount', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: 'invalid',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-unit_amount')
+      })
+    })
+
+    describe('invalid-currency', () => {
+      it('missing posted currency', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: '',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-currency')
+      })
+
+      it('invalid posted currency', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'invalid',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-currency')
+      })
+    })
+
+    describe('invalid-recurring_interval', () => {
+      it('invalid posted recurring_interval', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'invalid',
+          recurring_interval_count: '1',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-recurring_interval')
+      })
+    })
+
+    describe('invalid-recurring_interval_count', () => {
+      it('missing posted recurring_interval_count', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-recurring_interval_count')
+      })
+
+      it('invalid posted recurring_interval_count', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: 'nvalid',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-recurring_interval_count')
+      })
+
+      it('invalid posted recurring_interval_count exceeds one year', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '14',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-recurring_interval_count')
+      })
+    })
+
+    describe('invalid-recurring_aggregate_usage', () => {
+      it('invalid posted recurring_aggregate_usage', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_aggregate_usage: 'invalid',
+          recurring_usage_type: 'metered',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-recurring_aggregate_usage')
+      })
+    })
+
+    describe('invalid-recurring_usage_type', () => {
+      it('invalid posted recurring_usage_type', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'invalid',
+          recurring_aggregate_usage: 'sum',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-recurring_usage_type')
+      })
+    })
+
+    describe('invalid-billing_scheme', () => {
+      it('invalid posted billing_scheme', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'invalid',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-billing_scheme')
+      })
+    })
+
+    describe('invalid-transform_quantity_divide_by', () => {
+      it('invalid posted transform_quantity_divide_by', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'per_unit',
+          transform_quantity_divide_by: 'invalid',
+          transform_quantity_round: 'up',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-transform_quantity_divide_by')
+      })
+    })
+
+    describe('invalid-transform_quantity_round', () => {
+      it('invalid posted transform_quantity_round', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'per_unit',
+          transform_quantity_divide_by: '1.2',
+          transform_quantity_round: 'invalid',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-transform_quantity_round')
+      })
+    })
+
+    describe('invalid-tiers_mode', () => {
+      it('invalid posted tiers_mode', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          unit_amount: '1000',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'tiered',
+          tiers_mode: 'invalid',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tiers_mode')
+      })
+    })
+
+    describe('invalid-tier_up_to', () => {
+      it('invalid posted tier_up_to', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          tax_behavior: 'inclusive',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'tiered',
+          tiers_mode: 'volume',
+          tier1_up_to: 'invalid',
+          tier1_unit_amount: '9999',
+          tier2_up_to: 'inf',
+          tier2_unit_amount: '9999',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tier_up_to')
+      })
+    })
+
+    describe('invalid-tier_unit_amount', () => {
+      it('invalid posted tier_unit_amount', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          tax_behavior: 'inclusive',
+          unit_amount: '1000',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'tiered',
+          tiers_mode: 'volume',
+          tier1_up_to: '1000',
+          tier1_unit_amount: 'invalid',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tier_unit_amount')
+      })
+    })
+
+    describe('invalid-tier_flat_amount', () => {
+      it('invalid posted tier_flat_amount', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createProduct(administrator, {
+          active: 'true'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          currency: 'usd',
+          tax_behavior: 'inclusive',
+          unit_amount: '1000',
+          recurring_interval: 'month',
+          recurring_interval_count: '1',
+          recurring_usage_type: 'metered',
+          recurring_aggregate_usage: 'sum',
+          billing_scheme: 'tiered',
+          tiers_mode: 'volume',
+          tier1_up_to: '1000',
+          tier1_flat_amount: 'invalid',
+          productid: administrator.product.productid
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-tier_flat_amount')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('required posted productid', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.product, administrator.product.productid)
+    })
+
+    it('required posted tax_behavior', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.tax_behavior, 'inclusive')
+    })
+
+    it('required posted currency', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.currency, 'usd')
+    })
+
+    it('optionally-required posted unit_amount', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.unit_amount, 1000)
+    })
+
+    it('optional posted active (boolean)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator)
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        productid: administrator.product.productid,
+        active: 'true'
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.active, true)
+    })
+
+    it('optional posted billing_scheme (per_unit|tiered)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        billing_scheme: 'per_unit',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.billing_scheme, 'per_unit')
+    })
+
+    it('optional posted recurring_usage_type (licensed|metered)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.recurring.usage_type, 'metered')
+    })
+
+    it('optional posted recurring_interval (day|week|month|year)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.recurring.interval, 'month')
+    })
+
+    it('optionally-required posted recurring_interval_count', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.recurring.interval_count, 1)
+    })
+
+    it('optionally-required posted recurring_aggregate_usage (sum|max|last_ever|last_during_period)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.recurring.aggregate_usage, 'sum')
+    })
+
+    it('optional posted transform_quantity_divide_by', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        transform_quantity_divide_by: '7',
+        transform_quantity_round: 'down',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.transform_quantity.divide_by, 7)
+    })
+
+    it('optionally-required posted transform_quantity_round (up|down)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        transform_quantity_divide_by: '7',
+        transform_quantity_round: 'down',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.transform_quantity.round, 'down')
+    })
+
+    it('optionally-required posted tiers_mode (graduated|volume)', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        billing_scheme: 'tiered',
+        tiers_mode: 'volume',
+        tier1_up_to: '1000',
+        tier1_unit_amount: '9999',
+        tier2_up_to: 'inf',
+        tier2_unit_amount: '8999',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.tiers_mode, 'volume')
+    })
+
+    it('optional posted tier(1...)_up_to', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        billing_scheme: 'tiered',
+        tiers_mode: 'volume',
+        tier1_up_to: '1000',
+        tier1_unit_amount: '9999',
+        tier2_up_to: 'inf',
+        tier2_unit_amount: '8999',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.tiers[0].up_to, 1000)
+    })
+
+    it('optional posted tier(1...)_unit_amount', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        billing_scheme: 'tiered',
+        tiers_mode: 'volume',
+        tier1_up_to: '1000',
+        tier1_unit_amount: '9999',
+        tier2_up_to: 'inf',
+        tier2_unit_amount: '8999',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.tiers[1].unit_amount, 8999)
+    })
+
+    it('optional posted tier(1...)_flat_amount', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        billing_scheme: 'tiered',
+        tiers_mode: 'volume',
+        tier1_up_to: '1000',
+        tier1_flat_amount: '9999',
+        tier2_up_to: 'inf',
+        tier2_flat_amount: '8999',
+        productid: administrator.product.productid
+      }
+      const price = await req.post()
+      assert.strictEqual(price.stripeObject.tiers[1].flat_amount, 8999)
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const administrator = await TestHelper.createOwner()
+      await TestHelper.createProduct(administrator, {
+        active: 'true'
+      })
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-price')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        currency: 'usd',
+        tax_behavior: 'inclusive',
+        unit_amount: '1000',
+        recurring_interval: 'month',
+        recurring_interval_count: '1',
+        recurring_usage_type: 'metered',
+        recurring_aggregate_usage: 'sum',
+        productid: administrator.product.productid
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const price = await req.post()
+      assert.strictEqual(price.object, 'price')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

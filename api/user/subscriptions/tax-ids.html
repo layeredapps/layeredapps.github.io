@@ -1,0 +1,423 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>tax-ids#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/tax-ids (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.user.subscriptions.TaxIds.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "taxid": "txi_1LEOp5HHqepMFuCX64Mnyvu0",
+    "object": "taxid",
+    "accountid": "acct_214386364b7e4508",
+    "customerid": "cus_LwHNf2sZGkNKy5",
+    "appid": "tests_1656124449",
+    "stripeObject": {
+      "id": "txi_1LEOp5HHqepMFuCX64Mnyvu0",
+      "object": "tax_id",
+      "country": "DE",
+      "created": 1656124451,
+      "customer": "cus_LwHNf2sZGkNKy5",
+      "livemode": false,
+      "type": "eu_vat",
+      "value": "DE123456786",
+      "verification": {
+        "status": "pending",
+        "verified_address": null,
+        "verified_name": null
+      }
+    },
+    "type": null,
+    "value": null,
+    "createdAt": "2022-06-25T02:34:11.914Z",
+    "updatedAt": "2022-06-25T02:34:11.914Z"
+  },
+  {
+    "taxid": "txi_1LEOp5HHqepMFuCXgeMjd1Bp",
+    "object": "taxid",
+    "accountid": "acct_214386364b7e4508",
+    "customerid": "cus_LwHNf2sZGkNKy5",
+    "appid": "tests_1656124449",
+    "stripeObject": {
+      "id": "txi_1LEOp5HHqepMFuCXgeMjd1Bp",
+      "object": "tax_id",
+      "country": "DE",
+      "created": 1656124451,
+      "customer": "cus_LwHNf2sZGkNKy5",
+      "livemode": false,
+      "type": "eu_vat",
+      "value": "DE123456787",
+      "verification": {
+        "status": "pending",
+        "verified_address": null,
+        "verified_name": null
+      }
+    },
+    "type": null,
+    "value": null,
+    "createdAt": "2022-06-25T02:34:11.559Z",
+    "updatedAt": "2022-06-25T02:34:11.559Z"
+  },
+  {
+    "taxid": "txi_1LEOp4HHqepMFuCXwCSsHovp",
+    "object": "taxid",
+    "accountid": "acct_214386364b7e4508",
+    "customerid": "cus_LwHNf2sZGkNKy5",
+    "appid": "tests_1656124449",
+    "stripeObject": {
+      "id": "txi_1LEOp4HHqepMFuCXwCSsHovp",
+      "object": "tax_id",
+      "country": "DE",
+      "created": 1656124450,
+      "customer": "cus_LwHNf2sZGkNKy5",
+      "livemode": false,
+      "type": "eu_vat",
+      "value": "DE123456788",
+      "verification": {
+        "status": "pending",
+        "verified_address": null,
+        "verified_name": null
+      }
+    },
+    "type": null,
+    "value": null,
+    "createdAt": "2022-06-25T02:34:11.149Z",
+    "updatedAt": "2022-06-25T02:34:11.149Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-customerid</td>
+                  <td>missing querystring customerid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring customerid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/tax-ids.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    if (!req.query || !req.query.customerid) {
+      throw new Error('invalid-customerid')
+    }
+    const customer = await global.api.user.subscriptions.Customer.get(req)
+    if (!customer) {
+      throw new Error('invalid-customerid')
+    }
+    const where = {
+      appid: req.appid || global.appid,
+      customerid: req.query.customerid
+    }
+    let taxids
+    if (req.query.all) {
+      taxids = await subscriptions.Storage.TaxId.findAll({
+        where,
+        attributes: ['taxid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      taxids = await subscriptions.Storage.TaxId.findAll({
+        where,
+        attributes: ['taxid'],
+        offset,
+        limit,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    }
+    if (!taxids || !taxids.length) {
+      return null
+    }
+    const items = []
+    for (const taxidInfo of taxids) {
+      req.query.taxid = taxidInfo.dataValues.taxid
+      const taxid = await global.api.user.subscriptions.TaxId.get(req)
+      items.push(taxid)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/tax-ids.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/tax-ids', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedTaxIds
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedTaxIds = []
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const user = await TestHelper.createUser()
+    await TestHelper.createCustomer(user, {
+      email: user.profile.contactEmail
+    })
+    const values = ['DE123456789', 'DE123456788', 'DE123456787', 'DE123456786', 'DE123456785']
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      await TestHelper.createTaxId(user, user.customer, {
+        type: 'eu_vat',
+        value: values[i]
+      })
+      cachedTaxIds.unshift(user.taxid.taxid)
+    }
+    const req1 = TestHelper.createRequest(`/api/user/subscriptions/tax-ids?customerid=${user.customer.customerid}&offset=1`)
+    req1.account = user.account
+    req1.session = user.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest(`/api/user/subscriptions/tax-ids?customerid=${user.customer.customerid}&limit=1`)
+    req2.account = user.account
+    req2.session = user.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest(`/api/user/subscriptions/tax-ids?customerid=${user.customer.customerid}&all=true`)
+    req3.account = user.account
+    req3.session = user.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest(`/api/user/subscriptions/tax-ids?customerid=${user.customer.customerid}`)
+    req4.account = user.account
+    req4.session = user.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+    global.pageSize = 2
+    cachedResponses.finished = true
+  }
+  describe('exceptions', () => {
+    describe('invalid-customerid', () => {
+      it('missing querystring customerid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/tax-ids')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+
+      it('invalid querystring customerid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/tax-ids?customerid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const user = await TestHelper.createUser()
+        await TestHelper.createCustomer(user, {
+          email: user.profile.contactEmail
+        })
+        await TestHelper.createTaxId(user, user.customer)
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/subscriptions/tax-ids?customerid=${user.customer.customerid}`)
+        req.account = user2.account
+        req.session = user2.session
+        let errorMessage
+        try {
+          await req.get()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const taxidsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(taxidsNow[i].taxid, cachedTaxIds[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const limit = 1
+      const taxidsNow = cachedResponses.limit
+      assert.strictEqual(taxidsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const taxidsNow = cachedResponses.all
+      assert.strictEqual(taxidsNow.length, cachedTaxIds.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const taxids = cachedResponses.returns
+      assert.strictEqual(taxids.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      const taxids = cachedResponses.pageSize
+      assert.strictEqual(taxids.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

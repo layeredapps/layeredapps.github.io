@@ -1,0 +1,381 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>setup-intents#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/setup-intents (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.administrator.subscriptions.SetupIntents.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "setupintentid": "seti_1LEOUtHHqepMFuCXZ6UNk5zN",
+    "accountid": "acct_964bf35e76d90b39",
+    "customerid": "cus_LwH2j6sQ9guEO8",
+    "paymentmethodid": null,
+    "object": "setupintent",
+    "stripeObject": {
+      "id": "seti_1LEOUtHHqepMFuCXZ6UNk5zN",
+      "object": "setup_intent",
+      "application": null,
+      "cancellation_reason": null,
+      "client_secret": "seti_1LEOUtHHqepMFuCXZ6UNk5zN_secret_LwH2eOhGsTDwVjv0gE6rwOtfDRFBEWJ",
+      "created": 1656123199,
+      "customer": "cus_LwH2j6sQ9guEO8",
+      "description": null,
+      "flow_directions": null,
+      "last_setup_error": null,
+      "latest_attempt": null,
+      "livemode": false,
+      "mandate": null,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1LEOUsHHqepMFuCX61tLCKuK",
+      "payment_method_options": {
+        "card": {
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "single_use_mandate": null,
+      "status": "requires_confirmation",
+      "usage": "off_session"
+    },
+    "appid": "tests_1656123186",
+    "createdAt": "2022-06-25T02:13:20.338Z",
+    "updatedAt": "2022-06-25T02:13:20.474Z"
+  },
+  {
+    "setupintentid": "seti_1LEOUqHHqepMFuCXqKxspIgL",
+    "accountid": "acct_104617f499f6e905",
+    "customerid": "cus_LwH2D7OJTz25Kb",
+    "paymentmethodid": null,
+    "object": "setupintent",
+    "stripeObject": {
+      "id": "seti_1LEOUqHHqepMFuCXqKxspIgL",
+      "object": "setup_intent",
+      "application": null,
+      "cancellation_reason": null,
+      "client_secret": "seti_1LEOUqHHqepMFuCXqKxspIgL_secret_LwH2XO0Yje8xR9EaUSi51a4gg4KGJjY",
+      "created": 1656123196,
+      "customer": "cus_LwH2D7OJTz25Kb",
+      "description": null,
+      "flow_directions": null,
+      "last_setup_error": null,
+      "latest_attempt": null,
+      "livemode": false,
+      "mandate": null,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1LEOUpHHqepMFuCXO4YNHyD4",
+      "payment_method_options": {
+        "card": {
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "single_use_mandate": null,
+      "status": "requires_confirmation",
+      "usage": "off_session"
+    },
+    "appid": "tests_1656123186",
+    "createdAt": "2022-06-25T02:13:17.195Z",
+    "updatedAt": "2022-06-25T02:13:18.670Z"
+  },
+  {
+    "setupintentid": "seti_1LEOUmHHqepMFuCXDPURW9bA",
+    "accountid": "acct_ecfa243ed188e330",
+    "customerid": "cus_LwH2B5PfKIT15v",
+    "paymentmethodid": null,
+    "object": "setupintent",
+    "stripeObject": {
+      "id": "seti_1LEOUmHHqepMFuCXDPURW9bA",
+      "object": "setup_intent",
+      "application": null,
+      "cancellation_reason": null,
+      "client_secret": "seti_1LEOUmHHqepMFuCXDPURW9bA_secret_LwH2vsusMY9MlOVp16n2eW6CFdSJRkQ",
+      "created": 1656123192,
+      "customer": "cus_LwH2B5PfKIT15v",
+      "description": null,
+      "flow_directions": null,
+      "last_setup_error": null,
+      "latest_attempt": null,
+      "livemode": false,
+      "mandate": null,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1LEOUlHHqepMFuCXluX0OmjB",
+      "payment_method_options": {
+        "card": {
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "single_use_mandate": null,
+      "status": "requires_confirmation",
+      "usage": "off_session"
+    },
+    "appid": "tests_1656123186",
+    "createdAt": "2022-06-25T02:13:13.558Z",
+    "updatedAt": "2022-06-25T02:13:13.809Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/setup-intents.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    const where = {
+      appid: req.appid || global.appid
+    }
+    let setupintentids
+    if (req.query.all) {
+      setupintentids = await subscriptions.Storage.SetupIntent.findAll({
+        where,
+        attributes: ['setupintentid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      setupintentids = await subscriptions.Storage.SetupIntent.findAll({
+        where,
+        attributes: ['setupintentid'],
+        offset,
+        limit,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    }
+    if (!setupintentids || !setupintentids.length) {
+      return null
+    }
+    const items = []
+    for (const setupintentInfo of setupintentids) {
+      req.query.setupintentid = setupintentInfo.dataValues.setupintentid
+      const setupIntent = await global.api.administrator.subscriptions.SetupIntent.get(req)
+      items.push(setupIntent)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/setup-intents.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/setup-intents', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedSetupIntents
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedSetupIntents = []
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      const user = await TestStripeAccounts.createUserWithPaymentMethod()
+      cachedSetupIntents.unshift(user.setupIntent.setupintentid)
+    }
+    const req1 = TestHelper.createRequest('/api/administrator/subscriptions/setup-intents?offset=1')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest('/api/administrator/subscriptions/setup-intents?limit=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/subscriptions/setup-intents?all=true')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/subscriptions/setup-intents')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+    global.pageSize = 2
+    cachedResponses.finished = true
+  }
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const setupIntentsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(setupIntentsNow[i].setupintentid, cachedSetupIntents[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const limit = 1
+      const setupIntentsNow = cachedResponses.limit
+      assert.strictEqual(setupIntentsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const setupIntentsNow = cachedResponses.all
+      assert.strictEqual(setupIntentsNow.length, cachedSetupIntents.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const setupIntentsNow = cachedResponses.returns
+      assert.strictEqual(setupIntentsNow.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      const setupIntentsNow = cachedResponses.pageSize
+      assert.strictEqual(setupIntentsNow.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,525 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>set-company-owners-submitted#PATCH (@layeredapps/stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/set-company-owners-submitted (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.user.connect.SetCompanyOwnersSubmitted.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "stripeid": "acct_1LEBznDEqAQO4s7z",
+  "object": "stripeAccount",
+  "accountid": "acct_b989a1e9d7b9c3b6",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "acct_1LEBznDEqAQO4s7z",
+    "object": "account",
+    "business_profile": {
+      "mcc": null,
+      "name": null,
+      "product_description": null,
+      "support_address": null,
+      "support_email": null,
+      "support_phone": null,
+      "support_url": null,
+      "url": null
+    },
+    "business_type": "company",
+    "capabilities": {
+      "card_payments": "inactive",
+      "transfers": "inactive"
+    },
+    "charges_enabled": false,
+    "company": {
+      "address": {
+        "city": null,
+        "country": "US",
+        "line1": null,
+        "line2": null,
+        "postal_code": null,
+        "state": null
+      },
+      "directors_provided": false,
+      "executives_provided": false,
+      "name": null,
+      "owners_provided": true,
+      "tax_id_provided": false,
+      "verification": {
+        "document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        }
+      }
+    },
+    "country": "US",
+    "created": 1656075143,
+    "default_currency": "usd",
+    "details_submitted": false,
+    "email": null,
+    "external_accounts": {
+      "object": "list",
+      "data": [],
+      "has_more": false,
+      "total_count": 0,
+      "url": "/v1/accounts/acct_1LEBznDEqAQO4s7z/external_accounts"
+    },
+    "future_requirements": {
+      "alternatives": [],
+      "current_deadline": null,
+      "currently_due": [],
+      "disabled_reason": null,
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "metadata": {},
+    "payouts_enabled": false,
+    "requirements": {
+      "alternatives": [
+        {
+          "alternative_fields_due": [
+            "person_1LEBzqDEqAQO4s7zk0ahEuMQ.verification.document"
+          ],
+          "original_fields_due": [
+            "person_1LEBzqDEqAQO4s7zk0ahEuMQ.ssn_last_4"
+          ]
+        },
+        {
+          "alternative_fields_due": [
+            "representative.verification.document"
+          ],
+          "original_fields_due": [
+            "representative.ssn_last_4"
+          ]
+        }
+      ],
+      "current_deadline": null,
+      "currently_due": [
+        "business_profile.mcc",
+        "business_profile.url",
+        "company.address.city",
+        "company.address.line1",
+        "company.address.postal_code",
+        "company.address.state",
+        "company.name",
+        "company.phone",
+        "company.tax_id",
+        "external_account",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.email",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.first_name",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.last_name",
+        "representative.address.city",
+        "representative.address.line1",
+        "representative.address.postal_code",
+        "representative.address.state",
+        "representative.dob.day",
+        "representative.dob.month",
+        "representative.dob.year",
+        "representative.email",
+        "representative.first_name",
+        "representative.last_name",
+        "representative.phone",
+        "representative.relationship.executive",
+        "representative.relationship.title",
+        "representative.ssn_last_4",
+        "tos_acceptance.date",
+        "tos_acceptance.ip"
+      ],
+      "disabled_reason": "requirements.past_due",
+      "errors": [],
+      "eventually_due": [
+        "business_profile.mcc",
+        "business_profile.url",
+        "company.address.city",
+        "company.address.line1",
+        "company.address.postal_code",
+        "company.address.state",
+        "company.name",
+        "company.phone",
+        "company.tax_id",
+        "external_account",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.address.city",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.address.line1",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.address.postal_code",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.address.state",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.dob.day",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.dob.month",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.dob.year",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.email",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.first_name",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.last_name",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.phone",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.ssn_last_4",
+        "representative.address.city",
+        "representative.address.line1",
+        "representative.address.postal_code",
+        "representative.address.state",
+        "representative.dob.day",
+        "representative.dob.month",
+        "representative.dob.year",
+        "representative.email",
+        "representative.first_name",
+        "representative.last_name",
+        "representative.phone",
+        "representative.relationship.executive",
+        "representative.relationship.title",
+        "representative.ssn_last_4",
+        "tos_acceptance.date",
+        "tos_acceptance.ip"
+      ],
+      "past_due": [
+        "business_profile.mcc",
+        "business_profile.url",
+        "company.address.city",
+        "company.address.line1",
+        "company.address.postal_code",
+        "company.address.state",
+        "company.name",
+        "company.phone",
+        "company.tax_id",
+        "external_account",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.email",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.first_name",
+        "person_1LEBzqDEqAQO4s7zk0ahEuMQ.last_name",
+        "representative.address.city",
+        "representative.address.line1",
+        "representative.address.postal_code",
+        "representative.address.state",
+        "representative.dob.day",
+        "representative.dob.month",
+        "representative.dob.year",
+        "representative.email",
+        "representative.first_name",
+        "representative.last_name",
+        "representative.phone",
+        "representative.relationship.executive",
+        "representative.relationship.title",
+        "representative.ssn_last_4",
+        "tos_acceptance.date",
+        "tos_acceptance.ip"
+      ],
+      "pending_verification": []
+    },
+    "settings": {
+      "bacs_debit_payments": {},
+      "branding": {
+        "icon": null,
+        "logo": null,
+        "primary_color": null,
+        "secondary_color": null
+      },
+      "card_issuing": {
+        "tos_acceptance": {
+          "date": null,
+          "ip": null
+        }
+      },
+      "card_payments": {
+        "decline_on": {
+          "avs_failure": false,
+          "cvc_failure": false
+        },
+        "statement_descriptor_prefix": null,
+        "statement_descriptor_prefix_kana": null,
+        "statement_descriptor_prefix_kanji": null
+      },
+      "dashboard": {
+        "display_name": null,
+        "timezone": "Etc/UTC"
+      },
+      "payments": {
+        "statement_descriptor": null,
+        "statement_descriptor_kana": null,
+        "statement_descriptor_kanji": null
+      },
+      "payouts": {
+        "debit_negative_balances": false,
+        "schedule": {
+          "delay_days": 2,
+          "interval": "daily"
+        },
+        "statement_descriptor": null
+      },
+      "sepa_debit_payments": {}
+    },
+    "tos_acceptance": {
+      "date": null,
+      "ip": null,
+      "user_agent": null
+    },
+    "type": "custom"
+  },
+  "requiresOwners": true,
+  "requiresDirectors": false,
+  "requiresExecutives": false,
+  "appid": "tests_1656075142",
+  "createdAt": "2022-06-24T12:52:25.536Z",
+  "updatedAt": "2022-06-24T12:52:30.595Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-stripe-account</td>
+                  <td>ineligible stripe account for individual</td>
+                </tr>
+                <tr>
+                  <td>ineligible company owners are submitted</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/set-company-owners-submitted.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const stripeCache = require('../../../../stripe-cache.js')
+const connect = require('../../../../../index.js')
+const dashboard = require('@layeredapps/dashboard')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (stripeAccount.submittedAt ||
+      stripeAccount.stripeObject.business_type !== 'company' ||
+      stripeAccount.accountid !== req.account.accountid ||
+      (stripeAccount.stripeObject.company && stripeAccount.stripeObject.company.owners_provided)) {
+      throw new Error('invalid-stripe-account')
+    }
+    if (!stripeAccount.requiresOwners) {
+      throw new Error('invalid-stripe-account')
+    }
+    const accountInfo = {
+      company: {
+        owners_provided: true
+      }
+    }
+    const stripeAccountNow = await stripeCache.execute('accounts', 'update', req.query.stripeid, accountInfo, req.stripeKey)
+    await connect.Storage.StripeAccount.update({
+      stripeObject: stripeAccountNow
+    }, {
+      where: {
+        stripeid: req.query.stripeid,
+        appid: req.appid || global.appid
+      }
+    })
+    await dashboard.StorageCache.remove(req.query.stripeid)
+    return global.api.user.connect.StripeAccount.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/set-company-owners-submitted.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+
+describe('/api/user/connect/set-company-owners-submitted', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/set-company-owners-submitted')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/set-company-owners-submitted?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-stripe-account', () => {
+      it('ineligible stripe account for individual', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          business_type: 'individual'
+        })
+        const req = TestHelper.createRequest(`/api/user/connect/set-company-owners-submitted?stripeid=${user.stripeAccount.stripeid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+
+      it('ineligible company owners are submitted', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'US',
+          business_type: 'company'
+        })
+        await TestHelper.submitCompanyOwners(user)
+        const req = TestHelper.createRequest(`/api/user/connect/set-company-owners-submitted?stripeid=${user.stripeAccount.stripeid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createStripeAccount(user, {
+          country: 'DE',
+          business_type: 'company'
+        })
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/connect/set-company-owners-submitted?stripeid=${user.stripeAccount.stripeid}`)
+        req.account = user2.account
+        req.session = user2.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const user = await TestStripeAccounts.createCompanyWithOwners('US', 1)
+      const req = TestHelper.createRequest(`/api/user/connect/set-company-owners-submitted?stripeid=${user.stripeAccount.stripeid}`)
+      req.account = user.account
+      req.session = user.session
+      req.filename = __filename
+      req.saveResponse = true
+      const accountNow = await req.patch()
+      assert.strictEqual(accountNow.stripeObject.company.owners_provided, true)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

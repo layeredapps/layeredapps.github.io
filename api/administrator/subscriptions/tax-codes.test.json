@@ -1,0 +1,26 @@
+[
+  {
+    "taxcodeid": "txcd_92010001",
+    "object": "taxcode",
+    "description": "A shipping charge for the delivery of physical goods in conjunction with the sale of these goods. This tax category is not appropriate for stand alone transportation charges that are not associated with the sale of the goods being delivered.",
+    "name": "Shipping",
+    "createdAt": "2022-06-25T00:53:27.462Z",
+    "updatedAt": "2022-06-25T00:53:27.462Z"
+  },
+  {
+    "taxcodeid": "txcd_41060003",
+    "object": "taxcode",
+    "description": "Milk type beverages from non-animal sources, such as soy, rice, almond, coconut, peanut, and hemp.",
+    "name": "Milk substitutes",
+    "createdAt": "2022-06-25T00:53:27.461Z",
+    "updatedAt": "2022-06-25T00:53:27.461Z"
+  },
+  {
+    "taxcodeid": "txcd_41060006",
+    "object": "taxcode",
+    "description": "Milk or milk substitutes, or drinks with bases of milk, coffee, unsweetened tea or cocoa.",
+    "name": "Milk, coffee, tea, and cocoa beverages",
+    "createdAt": "2022-06-25T00:53:27.461Z",
+    "updatedAt": "2022-06-25T00:53:27.461Z"
+  }
+]

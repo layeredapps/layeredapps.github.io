@@ -1,0 +1,798 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-coupon#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/create-coupon (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.administrator.subscriptions.CreateCoupon.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "couponid": "CUSTOM18",
+  "object": "coupon",
+  "stripeObject": {
+    "id": "CUSTOM18",
+    "object": "coupon",
+    "amount_off": 10,
+    "created": 1656122269,
+    "currency": "usd",
+    "duration": "once",
+    "duration_in_months": null,
+    "livemode": false,
+    "max_redemptions": null,
+    "metadata": {},
+    "name": "my coupon",
+    "percent_off": null,
+    "redeem_by": null,
+    "times_redeemed": 0,
+    "valid": true
+  },
+  "active": null,
+  "appid": "tests_1656122269",
+  "createdAt": "2022-06-25T01:57:49.668Z",
+  "updatedAt": "2022-06-25T01:57:49.668Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>amount_off </td>
+                  <td>integer, or percent_off</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>currency </td>
+                  <td>string, if amount_off</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>duration</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>duration_in_months</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>percent_off </td>
+                  <td>integer, or amount_off</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>redeem_by </td>
+                  <td>date in future</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">duplicate-couponid</td>
+                  <td>invalid posted couponid is already used</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-amount_off</td>
+                  <td>missing posted amount_off</td>
+                </tr>
+                <tr>
+                  <td>invalid posted amount_off</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-couponid</td>
+                  <td>missing posted couponid</td>
+                </tr>
+                <tr>
+                  <td>invalid posted couponid is not alphanumeric</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="2">invalid-currency</td>
+                  <td>missing posted currency</td>
+                </tr>
+                <tr>
+                  <td>invalid posted currency</td>
+                </tr>
+                <tr>
+                  <td id="description-7" rowspan="1">invalid-duration</td>
+                  <td>invalid posted duration</td>
+                </tr>
+                <tr>
+                  <td id="description-8" rowspan="2">invalid-duration_in_months</td>
+                  <td>missing posted duration_in_months</td>
+                </tr>
+                <tr>
+                  <td>invalid posted duration_in_months</td>
+                </tr>
+                <tr>
+                  <td id="description-10" rowspan="1">invalid-name</td>
+                  <td>missing posted name</td>
+                </tr>
+                <tr>
+                  <td id="description-11" rowspan="1">invalid-percent_off</td>
+                  <td>invalid posted percent_off</td>
+                </tr>
+                <tr>
+                  <td id="description-12" rowspan="1">invalid-redeem_by</td>
+                  <td>invalid posted redeem_by</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-coupon.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.body || !req.body.couponid) {
+      throw new Error('invalid-couponid')
+    }
+    if (!req.body.couponid.match(/^[a-zA-Z0-9_]+$/) ||
+      global.minimumCouponLength > req.body.couponid.length ||
+      global.maximumCouponLength < req.body.couponid.length) {
+      throw new Error('invalid-couponid')
+    }
+    if (!req.body.name) {
+      throw new Error('invalid-name')
+    }
+    if (req.body.amount_off) {
+      try {
+        req.body.amount_off = parseInt(req.body.amount_off, 10)
+        if (!req.body.amount_off) {
+          throw new Error('invalid-amount_off')
+        }
+      } catch (s) {
+        throw new Error('invalid-amount_off')
+      }
+      if (req.body.amount_off < 0) {
+        throw new Error('invalid-amount_off')
+      }
+      if (!req.body.currency || req.body.currency.length !== 3) {
+        throw new Error('invalid-currency')
+      }
+    } else if (req.body.percent_off) {
+      try {
+        req.body.percent_off = parseInt(req.body.percent_off, 10)
+        if (!req.body.percent_off) {
+          throw new Error('invalid-percent_off')
+        }
+      } catch (s) {
+        throw new Error('invalid-percent_off')
+      }
+      if (req.body.percent_off < 0 || req.body.percent_off > 100) {
+        throw new Error('invalid-percent_off')
+      }
+    }
+    if (!req.body.amount_off && !req.body.percent_off) {
+      throw new Error('invalid-amount_off')
+    }
+    if (req.body.duration !== 'once' && req.body.duration !== 'repeating' && req.body.duration !== 'forever') {
+      throw new Error('invalid-duration')
+    }
+    if (req.body.duration === 'repeating') {
+      if (req.body.duration_in_months) {
+        try {
+          req.body.duration_in_months = parseInt(req.body.duration_in_months, 10)
+          if (!req.body.duration_in_months) {
+            throw new Error('invalid-duration_in_months')
+          }
+        } catch (s) {
+          throw new Error('invalid-duration_in_months')
+        }
+        if (req.body.duration_in_months < 1 || req.body.duration_in_months > 24) {
+          throw new Error('invalid-duration_in_months')
+        }
+      } else {
+        throw new Error('invalid-duration_in_months')
+      }
+    }
+    if (req.body.max_redemptions) {
+      try {
+        req.body.max_redemptions = parseInt(req.body.max_redemptions, 10)
+        if (!req.body.max_redemptions) {
+          throw new Error('invalid-max_redemptions')
+        }
+      } catch (s) {
+        throw new Error('invalid-max_redemptions')
+      }
+      if (req.body.max_redemptions < 0) {
+        throw new Error('invalid-max_redemptions')
+      }
+    }
+    const couponInfo = {
+      id: req.body.couponid,
+      duration: req.body.duration || null,
+      name: req.body.name
+    }
+    if (req.body.redeem_by) {
+      try {
+        const redeemDate = new Date(Date.parse(req.body.redeem_by))
+        const now = new Date()
+        if (redeemDate.getTime() < now.getTime()) {
+          throw new Error('invalid-redeem_by')
+        }
+        couponInfo.redeem_by = Math.floor(redeemDate.getTime() / 1000)
+      } catch (error) {
+        throw new Error('invalid-redeem_by')
+      }
+    }
+    if (req.body.amount_off) {
+      couponInfo.amount_off = req.body.amount_off
+      couponInfo.currency = req.body.currency
+    } else {
+      couponInfo.percent_off = req.body.percent_off
+    }
+    if (req.body.duration_in_months) {
+      couponInfo.duration_in_months = req.body.duration_in_months
+    }
+    if (req.body.max_redemptions) {
+      couponInfo.max_redemptions = req.body.max_redemptions
+    }
+    const coupon = await stripeCache.execute('coupons', 'create', couponInfo, req.stripeKey)
+    await subscriptions.Storage.Coupon.create({
+      appid: req.appid || global.appid,
+      couponid: coupon.id,
+      stripeObject: coupon
+    })
+    req.query = req.query || {}
+    req.query.couponid = coupon.id
+    return global.api.administrator.subscriptions.Coupon.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-coupon.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/administrator/subscriptions/create-coupon', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('exceptions', () => {
+    describe('invalid-couponid', () => {
+      it('missing posted couponid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: '',
+          name: 'my coupon',
+          amount_off: '10',
+          percent_off: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-couponid')
+      })
+
+      it('invalid posted couponid is not alphanumeric', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: '#$%@#$%@#$%',
+          name: 'my coupon',
+          amount_off: '10',
+          percent_off: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-couponid')
+      })
+    })
+
+    describe('duplicate-couponid', () => {
+      it('invalid posted couponid is already used', async () => {
+        const administrator = await TestHelper.createOwner()
+        await TestHelper.createCoupon(administrator, {
+          couponid: 'CUSTOM1',
+          name: 'my coupon',
+          percent_off: '10',
+          duration: 'once'
+        })
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM1',
+          name: 'my coupon',
+          percent_off: '10',
+          duration: 'once'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'duplicate-couponid')
+      })
+    })
+
+    describe('invalid-name', () => {
+      it('missing posted name', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM18',
+          name: '',
+          amount_off: '10',
+          currency: 'usd',
+          duration: 'once'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-name')
+      })
+    })
+
+    describe('invalid-amount_off', () => {
+      it('missing posted amount_off', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM2',
+          name: 'my coupon',
+          amount_off: '',
+          percent_off: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-amount_off')
+      })
+
+      it('invalid posted amount_off', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM3',
+          name: 'my coupon',
+          amount_off: 'invalid',
+          percent_off: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-amount_off')
+      })
+    })
+
+    describe('invalid-currency', () => {
+      it('missing posted currency', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM4',
+          name: 'my coupon',
+          amount_off: '1',
+          currency: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-currency')
+      })
+
+      it('invalid posted currency', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM5',
+          name: 'my coupon',
+          amount_off: '1',
+          currency: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-currency')
+      })
+    })
+
+    describe('invalid-percent_off', () => {
+      it('invalid posted percent_off', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM6',
+          name: 'my coupon',
+          percent_off: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-percent_off')
+        req.body = {
+          couponid: 'CUSTOM7',
+          name: 'my coupon',
+          percent_off: '101'
+        }
+        errorMessage = null
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-percent_off')
+      })
+    })
+
+    describe('invalid-duration', () => {
+      it('invalid posted duration', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM8',
+          name: 'my coupon',
+          amount_off: '10',
+          currency: 'usd',
+          duration: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-duration')
+      })
+    })
+
+    describe('invalid-duration_in_months', () => {
+      it('missing posted duration_in_months', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM9',
+          name: 'my coupon',
+          amount_off: '10',
+          currency: 'usd',
+          duration: 'repeating',
+          duration_in_months: ''
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-duration_in_months')
+      })
+
+      it('invalid posted duration_in_months', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM10',
+          name: 'my coupon',
+          amount_off: '10',
+          currency: 'usd',
+          duration: 'repeating',
+          duration_in_months: 'invalid'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-duration_in_months')
+      })
+    })
+
+    describe('invalid-redeem_by', () => {
+      it('invalid posted redeem_by', async () => {
+        const administrator = await TestHelper.createOwner()
+        const now = new Date()
+        const lastYear = new Date(now.getFullYear() - 1, 1, 12, 47, 33)
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          couponid: 'CUSTOM11',
+          name: 'my coupon',
+          amount_off: '10',
+          currency: 'usd',
+          duration: 'repeating',
+          duration_in_months: '1',
+          redeem_by: lastYear.toISOString()
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-redeem_by')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('required posted duration', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM12',
+        name: 'my coupon',
+        amount_off: '10',
+        currency: 'usd',
+        duration: 'repeating',
+        duration_in_months: '8'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.stripeObject.duration, 'repeating')
+    })
+
+    it('optionally-required posted amount_off (integer, or percent_off)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM13',
+        name: 'my coupon',
+        amount_off: '10',
+        currency: 'usd',
+        duration: 'once'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.stripeObject.amount_off, 10)
+    })
+
+    it('optionally-required posted currency (string, if amount_off)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM14',
+        name: 'my coupon',
+        amount_off: '10',
+        currency: 'aud',
+        duration: 'once'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.stripeObject.currency, 'aud')
+    })
+
+    it('optionally-required posted percent_off (integer, or amount_off)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM15',
+        name: 'my coupon',
+        percent_off: '10',
+        currency: 'usd',
+        duration: 'once'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.stripeObject.percent_off, 10)
+    })
+
+    it('optionally-required posted redeem_by (date in future)', async () => {
+      const administrator = await TestHelper.createOwner()
+      const now = new Date()
+      const date = new Date(now.getFullYear() + 1, 1, 1, 12, 47, 33)
+      const timestamp = Math.floor(date.getTime() / 1000)
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM16',
+        name: 'my coupon',
+        percent_off: '10',
+        currency: 'usd',
+        duration: 'once',
+        redeem_by: date.toISOString()
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.stripeObject.redeem_by, timestamp)
+    })
+
+    it('optionally-required posted duration_in_months', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM17',
+        name: 'my coupon',
+        percent_off: '10',
+        currency: 'usd',
+        duration: 'repeating',
+        duration_in_months: '6'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.stripeObject.duration_in_months, 6)
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const administrator = await TestHelper.createOwner()
+      const req = TestHelper.createRequest('/api/administrator/subscriptions/create-coupon')
+      req.account = administrator.account
+      req.session = administrator.session
+      req.body = {
+        couponid: 'CUSTOM18',
+        name: 'my coupon',
+        amount_off: '10',
+        currency: 'usd',
+        duration: 'once'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const coupon = await req.post()
+      assert.strictEqual(coupon.object, 'coupon')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

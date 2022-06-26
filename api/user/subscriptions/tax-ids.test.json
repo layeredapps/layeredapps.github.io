@@ -1,0 +1,80 @@
+[
+  {
+    "taxid": "txi_1LEOp5HHqepMFuCX64Mnyvu0",
+    "object": "taxid",
+    "accountid": "acct_214386364b7e4508",
+    "customerid": "cus_LwHNf2sZGkNKy5",
+    "appid": "tests_1656124449",
+    "stripeObject": {
+      "id": "txi_1LEOp5HHqepMFuCX64Mnyvu0",
+      "object": "tax_id",
+      "country": "DE",
+      "created": 1656124451,
+      "customer": "cus_LwHNf2sZGkNKy5",
+      "livemode": false,
+      "type": "eu_vat",
+      "value": "DE123456786",
+      "verification": {
+        "status": "pending",
+        "verified_address": null,
+        "verified_name": null
+      }
+    },
+    "type": null,
+    "value": null,
+    "createdAt": "2022-06-25T02:34:11.914Z",
+    "updatedAt": "2022-06-25T02:34:11.914Z"
+  },
+  {
+    "taxid": "txi_1LEOp5HHqepMFuCXgeMjd1Bp",
+    "object": "taxid",
+    "accountid": "acct_214386364b7e4508",
+    "customerid": "cus_LwHNf2sZGkNKy5",
+    "appid": "tests_1656124449",
+    "stripeObject": {
+      "id": "txi_1LEOp5HHqepMFuCXgeMjd1Bp",
+      "object": "tax_id",
+      "country": "DE",
+      "created": 1656124451,
+      "customer": "cus_LwHNf2sZGkNKy5",
+      "livemode": false,
+      "type": "eu_vat",
+      "value": "DE123456787",
+      "verification": {
+        "status": "pending",
+        "verified_address": null,
+        "verified_name": null
+      }
+    },
+    "type": null,
+    "value": null,
+    "createdAt": "2022-06-25T02:34:11.559Z",
+    "updatedAt": "2022-06-25T02:34:11.559Z"
+  },
+  {
+    "taxid": "txi_1LEOp4HHqepMFuCXwCSsHovp",
+    "object": "taxid",
+    "accountid": "acct_214386364b7e4508",
+    "customerid": "cus_LwHNf2sZGkNKy5",
+    "appid": "tests_1656124449",
+    "stripeObject": {
+      "id": "txi_1LEOp4HHqepMFuCXwCSsHovp",
+      "object": "tax_id",
+      "country": "DE",
+      "created": 1656124450,
+      "customer": "cus_LwHNf2sZGkNKy5",
+      "livemode": false,
+      "type": "eu_vat",
+      "value": "DE123456788",
+      "verification": {
+        "status": "pending",
+        "verified_address": null,
+        "verified_name": null
+      }
+    },
+    "type": null,
+    "value": null,
+    "createdAt": "2022-06-25T02:34:11.149Z",
+    "updatedAt": "2022-06-25T02:34:11.149Z"
+  }
+]

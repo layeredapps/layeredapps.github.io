@@ -1,0 +1,23 @@
+{
+  "taxrateid": "txr_1LEOYCHHqepMFuCXotS7PoKr",
+  "object": "taxrate",
+  "stripeObject": {
+    "id": "txr_1LEOYCHHqepMFuCXotS7PoKr",
+    "object": "tax_rate",
+    "active": true,
+    "country": "US",
+    "created": 1656123404,
+    "description": "GST tax in KY",
+    "display_name": "NY Sales Tax",
+    "inclusive": true,
+    "jurisdiction": "US",
+    "livemode": false,
+    "metadata": {},
+    "percentage": 17.5,
+    "state": "NY",
+    "tax_type": "sales_tax"
+  },
+  "appid": "tests_1656123404",
+  "createdAt": "2022-06-25T02:16:44.834Z",
+  "updatedAt": "2022-06-25T02:16:45.186Z"
+}

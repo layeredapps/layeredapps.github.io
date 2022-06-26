@@ -1,0 +1,38 @@
+[
+  {
+    "invitationid": "invt_8620fb9ceed53468",
+    "organizationid": "orgn_61faa81ee806de5e",
+    "accountid": "acct_b65fdffa1c9d5e5a",
+    "object": "invitation",
+    "appid": "tests_1656039695",
+    "multi": true,
+    "acceptedAt": null,
+    "terminatedAt": null,
+    "createdAt": "2022-06-24T03:01:35.827Z",
+    "updatedAt": "2022-06-24T03:01:35.827Z"
+  },
+  {
+    "invitationid": "invt_e7bf87c08d107d12",
+    "organizationid": "orgn_61faa81ee806de5e",
+    "accountid": "acct_b65fdffa1c9d5e5a",
+    "object": "invitation",
+    "appid": "tests_1656039695",
+    "multi": true,
+    "acceptedAt": null,
+    "terminatedAt": null,
+    "createdAt": "2022-06-24T03:01:35.817Z",
+    "updatedAt": "2022-06-24T03:01:35.817Z"
+  },
+  {
+    "invitationid": "invt_acdf75af64b1b011",
+    "organizationid": "orgn_61faa81ee806de5e",
+    "accountid": "acct_b65fdffa1c9d5e5a",
+    "object": "invitation",
+    "appid": "tests_1656039695",
+    "multi": true,
+    "acceptedAt": null,
+    "terminatedAt": null,
+    "createdAt": "2022-06-24T03:01:35.807Z",
+    "updatedAt": "2022-06-24T03:01:35.807Z"
+  }
+]

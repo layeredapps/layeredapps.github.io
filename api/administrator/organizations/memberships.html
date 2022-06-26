@@ -1,0 +1,387 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>memberships#GET (@layeredapps/organizations)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Organizations module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/organizations-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/organizations-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/organizations-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/organizations-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/organizations/memberships (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.administrator.organizations.Memberships.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "membershipid": "mmbr_31aa751d28b0c3c1",
+    "object": "membership",
+    "appid": "tests_1656039697",
+    "accountid": "acct_dbadf5530d19da27",
+    "organizationid": "orgn_e1eb2c21ee584a20",
+    "invitationid": "invt_9e2feb6e5f75566c",
+    "profileid": "prof_3d8b683e05307067",
+    "createdAt": "2022-06-24T03:01:38.400Z",
+    "updatedAt": "2022-06-24T03:01:38.400Z",
+    "displayName": "Darrell Cassin",
+    "displayEmail": "Darrell_Cassin88@hotmail.com"
+  },
+  {
+    "membershipid": "mmbr_7f0fda18b2c9b284",
+    "object": "membership",
+    "appid": "tests_1656039697",
+    "accountid": "acct_dbadf5530d19da27",
+    "organizationid": "orgn_5be3d42448627a76",
+    "invitationid": "invt_4ae618ba1a612ccc",
+    "profileid": "prof_3d8b683e05307067",
+    "createdAt": "2022-06-24T03:01:38.314Z",
+    "updatedAt": "2022-06-24T03:01:38.314Z",
+    "displayName": "Darrell Cassin",
+    "displayEmail": "Darrell_Cassin88@hotmail.com"
+  },
+  {
+    "membershipid": "mmbr_af5897b296576897",
+    "object": "membership",
+    "appid": "tests_1656039697",
+    "accountid": "acct_dbadf5530d19da27",
+    "organizationid": "orgn_1878e6f5aac026e8",
+    "invitationid": "invt_4c205b347eaafb49",
+    "profileid": "prof_3d8b683e05307067",
+    "createdAt": "2022-06-24T03:01:38.216Z",
+    "updatedAt": "2022-06-24T03:01:38.216Z",
+    "displayName": "Darrell Cassin",
+    "displayEmail": "Darrell_Cassin88@hotmail.com"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>accountid </td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>organizationid </td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/organizations/tree/main/src/www/api/administrator/organizations/memberships.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const organizations = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    const where = {
+      appid: req.appid || global.appid
+    }
+    if (req.query.accountid) {
+      where.accountid = req.query.accountid
+    } else if (req.query.organizationid) {
+      where.organizationid = req.query.organizationid
+    }
+    let membershipids
+    if (req.query.all) {
+      membershipids = await organizations.Storage.Membership.findAll({
+        where,
+        attributes: ['membershipid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      membershipids = await organizations.Storage.Membership.findAll({
+        where,
+        attributes: ['membershipid'],
+        order: [
+          ['createdAt', 'DESC']
+        ],
+        offset,
+        limit
+      })
+    }
+    if (!membershipids || !membershipids.length) {
+      return null
+    }
+    const items = []
+    for (const membershipInfo of membershipids) {
+      req.query.membershipid = membershipInfo.dataValues.membershipid
+      const membership = await global.api.administrator.organizations.Membership.get(req)
+      items.push(membership)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/organizations/tree/main/src/www/api/administrator/organizations/memberships.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/organizations/memberships', function () {
+  const cachedResponses = {}
+  const cachedMemberships = []
+  const accountMemberships = []
+  const organizationMemberships = []
+  before(async () => {
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestHelper.createOwner()
+    for (let i = 0, len = global.pageSize + 1; i < len; i++) {
+      global.userProfileFields = ['contact-email', 'full-name']
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      await TestHelper.createOrganization(owner, {
+        email: owner.profile.displayEmail,
+        name: 'My organization',
+        profileid: owner.profile.profileid,
+        pin: `1234${i}`
+      })
+      cachedMemberships.unshift(owner.membership.membershipid)
+      global.userProfileFields = ['contact-email', 'full-name']
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(user, {
+        'display-name': user.profile.fullName,
+        'display-email': user.profile.contactEmail
+      })
+      await TestHelper.createInvitation(owner)
+      await TestHelper.acceptInvitation(user, owner)
+      cachedMemberships.unshift(user.membership.membershipid)
+    }
+    global.userProfileFields = ['contact-email', 'full-name']
+    const user = await TestHelper.createUser()
+    global.userProfileFields = ['display-email', 'display-name']
+    await TestHelper.createProfile(user, {
+      'display-name': user.profile.fullName,
+      'display-email': user.profile.contactEmail
+    })
+    await TestHelper.createOrganization(user, {
+      email: user.profile.displayEmail,
+      name: 'My organization 1',
+      profileid: user.profile.profileid,
+      pin: '5454'
+    })
+    accountMemberships.unshift(user.membership.membershipid)
+    cachedMemberships.unshift(user.membership.membershipid)
+    organizationMemberships.unshift(user.membership.membershipid)
+    for (let i = 0, len = 3; i < len; i++) {
+      global.userProfileFields = ['contact-email', 'full-name']
+      const member = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(member, {
+        'display-name': member.profile.fullName,
+        'display-email': member.profile.contactEmail
+      })
+      await TestHelper.createInvitation(user)
+      await TestHelper.acceptInvitation(member, user)
+      organizationMemberships.unshift(member.membership.membershipid)
+      cachedMemberships.unshift(user.membership.membershipid)
+    }
+    for (let i = 0, len = 3; i < len; i++) {
+      global.userProfileFields = ['contact-email', 'full-name']
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-email', 'display-name']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      await TestHelper.createOrganization(owner, {
+        email: owner.profile.displayEmail,
+        name: 'My organization',
+        profileid: owner.profile.profileid,
+        pin: `7789${i}`
+      })
+      cachedMemberships.unshift(owner.membership.membershipid)
+      await TestHelper.createInvitation(owner)
+      await TestHelper.acceptInvitation(user, owner)
+      accountMemberships.unshift(user.membership.membershipid)
+      cachedMemberships.unshift(user.membership.membershipid)
+    }
+    const req1 = TestHelper.createRequest('/api/administrator/organizations/memberships?offset=1')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest('/api/administrator/organizations/memberships?limit=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/organizations/memberships?all=true')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest(`/api/administrator/organizations/memberships?accountid=${user.account.accountid}&all=true`)
+    req4.account = administrator.account
+    req4.session = administrator.session
+    cachedResponses.accountid = await req4.get()
+    const req5 = TestHelper.createRequest(`/api/administrator/organizations/memberships?organizationid=${user.organization.organizationid}&all=true`)
+    req5.account = administrator.account
+    req5.session = administrator.session
+    cachedResponses.organizationid = await req5.get()
+    const req6 = TestHelper.createRequest(`/api/administrator/organizations/memberships?accountid=${user.account.accountid}`)
+    req6.account = administrator.account
+    req6.session = administrator.session
+    req6.filename = __filename
+    req6.saveResponse = true
+    cachedResponses.returns = await req6.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req6.get()
+  })
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async () => {
+      const offset = 1
+      const membershipsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(membershipsNow[i].membershipid, cachedMemberships[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const membershipsNow = cachedResponses.limit
+      assert.strictEqual(membershipsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const membershipsNow = cachedResponses.all
+      assert.strictEqual(membershipsNow.length, cachedMemberships.length)
+    })
+
+    it('optional querystring accountid (string)', async () => {
+      const membershipsNow = cachedResponses.accountid
+      assert.strictEqual(membershipsNow.length, accountMemberships.length)
+    })
+
+    it('optional querystring organizationid (string)', async () => {
+      const membershipsNow = cachedResponses.organizationid
+      assert.strictEqual(membershipsNow.length, organizationMemberships.length)
+    })
+  })
+  describe('returns', () => {
+    it('array', async () => {
+      const membershipsNow = cachedResponses.returns
+      assert.strictEqual(membershipsNow.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const membershipsNow = cachedResponses.pageSize
+      assert.strictEqual(membershipsNow.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

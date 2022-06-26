@@ -1,0 +1,400 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-tax-id#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/create-tax-id (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.user.subscriptions.CreateTaxId.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "taxid": "txi_1LEOdVHHqepMFuCXebzgEmkO",
+  "object": "taxid",
+  "accountid": "acct_1c6809d688ddeb4a",
+  "customerid": "cus_LwHBWMHSpNH7Ja",
+  "appid": "tests_1656123732",
+  "stripeObject": {
+    "id": "txi_1LEOdVHHqepMFuCXebzgEmkO",
+    "object": "tax_id",
+    "country": "DE",
+    "created": 1656123733,
+    "customer": "cus_LwHBWMHSpNH7Ja",
+    "livemode": false,
+    "type": "eu_vat",
+    "value": "DE123456789",
+    "verification": {
+      "status": "pending",
+      "verified_address": null,
+      "verified_name": null
+    }
+  },
+  "type": null,
+  "value": null,
+  "createdAt": "2022-06-25T02:22:13.386Z",
+  "updatedAt": "2022-06-25T02:22:13.386Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-customerid</td>
+                  <td>missing querystring customerid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring customerid</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-type</td>
+                  <td>missing posted type</td>
+                </tr>
+                <tr>
+                  <td>invalid posted type</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="1">invalid-value</td>
+                  <td>invalid posted value</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-tax-id.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+const validTypes = [
+  'ae_trn',
+  'au_abn',
+  'au_arn',
+  'bg_uic',
+  'br_cnpj',
+  'br_cpf',
+  'ca_bn',
+  'ca_gst_hst',
+  'ca_pst_bc',
+  'ca_pst_mb',
+  'ca_pst_sk',
+  'ca_qst',
+  'ch_vat',
+  'cl_tin',
+  'es_cif',
+  'eu_oss_vat',
+  'eu_vat',
+  'gb_vat',
+  'ge_vat',
+  'hk_br',
+  'hu_tin',
+  'id_npwp',
+  'il_vat',
+  'in_gst',
+  'is_vat',
+  'jp_cn',
+  'jp_rn',
+  'kr_brn',
+  'li_uid',
+  'mx_rfc',
+  'my_frp',
+  'my_itn',
+  'my_sst',
+  'no_vat',
+  'nz_gst',
+  'ru_inn',
+  'ru_kpp',
+  'sa_vat',
+  'sg_gst',
+  'sg_uen',
+  'si_tin',
+  'th_vat',
+  'tw_vat',
+  'ua_vat',
+  'us_ein',
+  'za_vat'
+]
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.customerid) {
+      throw new Error('invalid-customerid')
+    }
+    const customer = await global.api.user.subscriptions.Customer.get(req)
+    if (!customer) {
+      throw new Error('invalid-customerid')
+    }
+    if (!req.body || !req.body.type || !req.body.type.length || validTypes.indexOf(req.body.type) === -1) {
+      throw new Error('invalid-type')
+    }
+    if (!req.body.value || !req.body.value.length) {
+      throw new Error('invalid-value')
+    }
+    const taxidInfo = {
+      type: req.body.type,
+      value: req.body.value
+    }
+    let taxId
+    try {
+      taxId = await stripeCache.execute('customers', 'createTaxId', req.query.customerid, taxidInfo, req.stripeKey)
+    } catch (error) {
+      if (error.message === 'invalid-taxid') {
+        throw new Error('invalid-value')
+      }
+      throw error
+    }
+    await subscriptions.Storage.TaxId.create({
+      appid: req.appid || global.appid,
+      taxid: taxId.id,
+      customerid: req.query.customerid,
+      accountid: req.account.accountid,
+      stripeObject: taxId
+    })
+    req.query.taxid = taxId.id
+    return global.api.user.subscriptions.TaxId.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-tax-id.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/user/subscriptions/create-tax-id', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('exceptions', () => {
+    describe('invalid-customerid', () => {
+      it('missing querystring customerid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/create-tax-id')
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          type: 'au_abn',
+          value: 'abcdefg'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+
+      it('invalid querystring customerid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/create-tax-id?customerid=invalid')
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          type: 'au_abn',
+          value: 'abcdefg'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async () => {
+        const user = await TestHelper.createUser()
+        const user2 = await TestHelper.createUser()
+        await TestHelper.createCustomer(user2, {
+          email: user2.profile.contactEmail
+        })
+        const req = TestHelper.createRequest(`/api/user/subscriptions/create-tax-id?customerid=${user2.customer.customerid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          type: 'au_abn',
+          value: 'abcdefg'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-type', () => {
+      it('missing posted type', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createCustomer(user, {
+          email: user.profile.contactEmail
+        })
+        const req = TestHelper.createRequest(`/api/user/subscriptions/create-tax-id?customerid=${user.customer.customerid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          type: '',
+          value: 'abcdefg'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-type')
+      })
+
+      it('invalid posted type', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createCustomer(user, {
+          email: user.profile.contactEmail
+        })
+        const req = TestHelper.createRequest(`/api/user/subscriptions/create-tax-id?customerid=${user.customer.customerid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          type: 'invalid',
+          value: 'abcdefg'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-type')
+      })
+    })
+
+    describe('invalid-value', () => {
+      it('invalid posted value', async () => {
+        const user = await TestHelper.createUser()
+        await TestHelper.createCustomer(user, {
+          email: user.profile.contactEmail
+        })
+        const req = TestHelper.createRequest(`/api/user/subscriptions/create-tax-id?customerid=${user.customer.customerid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          type: 'au_abn',
+          value: 'abcdefg'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-value')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const user = await TestHelper.createUser()
+      await TestHelper.createCustomer(user, {
+        email: user.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/subscriptions/create-tax-id?customerid=${user.customer.customerid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        type: 'eu_vat',
+        value: 'DE123456789'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const taxid = await req.post()
+      assert.strictEqual(taxid.object, 'taxid')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

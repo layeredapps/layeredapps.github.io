@@ -1,0 +1,112 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Organizations module UI index</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/public/wa-mediabox.min.css" integrity="sha384-QIgOYIjb0GaFg2SpPCDf9jgtvfzsRaiwg2u1oMLlYiKGQih52JJA0CLi2MQt3s4B" crossorigin="anonymous" />
+  <script async="" src="/public/wa-mediabox.min.js" integrity="sha384-y/gOtcDxMMvaI24JJvEerKFbwXLCa847BpxiBxQKCUAXkPHl5VMJ8JumCJKgGc5x" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Organizations module UI index</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/organizations-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/organizations-configuration">Configuration</a></li>
+          <li class="active"><a class="navigation-link" href="/organizations-ui">UI</a></li>
+          <li class="api"><a class="navigation-link" href="/organizations-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <h1 id="title">UI routes</h1>
+        <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p>
+        <div class="content">
+          <div class="ui-container" id="user-container">
+            <h2 id="user-routes">User routes</h2>
+            <p>These pages require the user be signed in.</p>
+            <ul id="user-routes-list" class="screenshots desktop">
+              <li><a class="screenshot-link" href="/ui/account/organizations/accept-invitation"><img data-src="/screenshots/account/organizations/accept-invitation/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/accept-invitation">"Accept invitation" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/create-invitation"><img data-src="/screenshots/account/organizations/create-invitation/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/create-invitation">"Create invitation" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/create-organization"><img data-src="/screenshots/account/organizations/create-organization/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/create-organization">"Create organization" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/delete-invitation"><img data-src="/screenshots/account/organizations/delete-invitation/7-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/delete-invitation">"Delete invitation" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/delete-membership"><img data-src="/screenshots/account/organizations/delete-membership/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/delete-membership">"Delete membership" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/delete-organization"><img data-src="/screenshots/account/organizations/delete-organization/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/delete-organization">"Delete organization" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/edit-membership-profile"><img data-src="/screenshots/account/organizations/edit-membership-profile/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/edit-membership-profile">"Edit membership profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/edit-organization"><img data-src="/screenshots/account/organizations/edit-organization/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/edit-organization">"Edit organization" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations"><img data-src="/screenshots/account/organizations/index/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations">"Organizations" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/invitation"><img data-src="/screenshots/account/organizations/invitation/7-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/invitation">"Invitation" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/membership"><img data-src="/screenshots/account/organizations/membership/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/membership">"Membership" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/memberships"><img data-src="/screenshots/account/organizations/memberships/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/memberships">"Memberships" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/organization-invitations"><img data-src="/screenshots/account/organizations/organization-invitations/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/organization-invitations">"Organization invitations" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/organization-memberships"><img data-src="/screenshots/account/organizations/organization-memberships/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/organization-memberships">"Organization memberships" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/organization"><img data-src="/screenshots/account/organizations/organization/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/organization">"Organization" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/organizations"><img data-src="/screenshots/account/organizations/organizations/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/organizations">"Organizations" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/revoke-membership"><img data-src="/screenshots/account/organizations/revoke-membership/8-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/revoke-membership">"Revoke membership" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/organizations/transfer-organization"><img data-src="/screenshots/account/organizations/transfer-organization/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/organizations/transfer-organization">"Transfer organization" navigation guide</a></li>
+            </ul>
+          </div>
+          <div class="ui-container" id="administrator-container">
+            <h2 id="administrator-routes">Administrator routes</h2>
+            <p>These pages are only accessible to administrators.</p>
+            <ul id="administrator-routes-list" class="screenshots desktop">
+              <li><a class="screenshot-link" href="/ui/administrator/organizations"><img data-src="/screenshots/administrator/organizations/index/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations">"Organizations" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/invitation"><img data-src="/screenshots/administrator/organizations/invitation/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/invitation">"Invitation" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/invitations"><img data-src="/screenshots/administrator/organizations/invitations/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/invitations">"Invitations" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/membership"><img data-src="/screenshots/administrator/organizations/membership/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/membership">"Membership" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/memberships"><img data-src="/screenshots/administrator/organizations/memberships/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/memberships">"Memberships" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/organization-invitations"><img data-src="/screenshots/administrator/organizations/organization-invitations/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/organization-invitations">"Organization invitations" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/organization-memberships"><img data-src="/screenshots/administrator/organizations/organization-memberships/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/organization-memberships">"Organization memberships" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/organization"><img data-src="/screenshots/administrator/organizations/organization/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/organization">"Organization" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/organizations/organizations"><img data-src="/screenshots/administrator/organizations/organizations/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/organizations/organizations">"Organizations" navigation guide</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><a class="skip" href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div><template id="route-template" template="route-template">
+    <li><a class="screenshot-link" href="/ui${route.url}"><img data-src="${route.src}" /></a><a class="route-link" href="/ui${route.url}">"${route.title}" navigation guide</a></li>
+  </template>
+</body>
+
+</html>

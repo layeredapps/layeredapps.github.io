@@ -1,0 +1,23 @@
+{
+  "taxrateid": "txr_1LEOIEHHqepMFuCXCU1qNre5",
+  "object": "taxrate",
+  "stripeObject": {
+    "id": "txr_1LEOIEHHqepMFuCXCU1qNre5",
+    "object": "tax_rate",
+    "active": true,
+    "country": "US",
+    "created": 1656122414,
+    "description": "Sales tax in NY",
+    "display_name": "GST (US)",
+    "inclusive": true,
+    "jurisdiction": "US",
+    "livemode": false,
+    "metadata": {},
+    "percentage": 12.5,
+    "state": "NY",
+    "tax_type": "sales_tax"
+  },
+  "appid": "tests_1656122414",
+  "createdAt": "2022-06-25T02:00:14.918Z",
+  "updatedAt": "2022-06-25T02:00:14.918Z"
+}

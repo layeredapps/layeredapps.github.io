@@ -1,0 +1,13 @@
+{
+  "accountid": "acct_81c8fb2753977d67",
+  "object": "account",
+  "appid": "tests_1656038573",
+  "profileid": null,
+  "sessionKeyNumber": 1,
+  "owner": true,
+  "ownerSince": "2022-06-24T02:42:53.000Z",
+  "administrator": true,
+  "administratorSince": "2022-06-24T02:42:53.000Z",
+  "createdAt": "2022-06-24T02:42:53.976Z",
+  "updatedAt": "2022-06-24T02:42:53.976Z"
+}

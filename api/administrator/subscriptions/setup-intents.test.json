@@ -1,0 +1,128 @@
+[
+  {
+    "setupintentid": "seti_1LEOUtHHqepMFuCXZ6UNk5zN",
+    "accountid": "acct_964bf35e76d90b39",
+    "customerid": "cus_LwH2j6sQ9guEO8",
+    "paymentmethodid": null,
+    "object": "setupintent",
+    "stripeObject": {
+      "id": "seti_1LEOUtHHqepMFuCXZ6UNk5zN",
+      "object": "setup_intent",
+      "application": null,
+      "cancellation_reason": null,
+      "client_secret": "seti_1LEOUtHHqepMFuCXZ6UNk5zN_secret_LwH2eOhGsTDwVjv0gE6rwOtfDRFBEWJ",
+      "created": 1656123199,
+      "customer": "cus_LwH2j6sQ9guEO8",
+      "description": null,
+      "flow_directions": null,
+      "last_setup_error": null,
+      "latest_attempt": null,
+      "livemode": false,
+      "mandate": null,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1LEOUsHHqepMFuCX61tLCKuK",
+      "payment_method_options": {
+        "card": {
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "single_use_mandate": null,
+      "status": "requires_confirmation",
+      "usage": "off_session"
+    },
+    "appid": "tests_1656123186",
+    "createdAt": "2022-06-25T02:13:20.338Z",
+    "updatedAt": "2022-06-25T02:13:20.474Z"
+  },
+  {
+    "setupintentid": "seti_1LEOUqHHqepMFuCXqKxspIgL",
+    "accountid": "acct_104617f499f6e905",
+    "customerid": "cus_LwH2D7OJTz25Kb",
+    "paymentmethodid": null,
+    "object": "setupintent",
+    "stripeObject": {
+      "id": "seti_1LEOUqHHqepMFuCXqKxspIgL",
+      "object": "setup_intent",
+      "application": null,
+      "cancellation_reason": null,
+      "client_secret": "seti_1LEOUqHHqepMFuCXqKxspIgL_secret_LwH2XO0Yje8xR9EaUSi51a4gg4KGJjY",
+      "created": 1656123196,
+      "customer": "cus_LwH2D7OJTz25Kb",
+      "description": null,
+      "flow_directions": null,
+      "last_setup_error": null,
+      "latest_attempt": null,
+      "livemode": false,
+      "mandate": null,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1LEOUpHHqepMFuCXO4YNHyD4",
+      "payment_method_options": {
+        "card": {
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "single_use_mandate": null,
+      "status": "requires_confirmation",
+      "usage": "off_session"
+    },
+    "appid": "tests_1656123186",
+    "createdAt": "2022-06-25T02:13:17.195Z",
+    "updatedAt": "2022-06-25T02:13:18.670Z"
+  },
+  {
+    "setupintentid": "seti_1LEOUmHHqepMFuCXDPURW9bA",
+    "accountid": "acct_ecfa243ed188e330",
+    "customerid": "cus_LwH2B5PfKIT15v",
+    "paymentmethodid": null,
+    "object": "setupintent",
+    "stripeObject": {
+      "id": "seti_1LEOUmHHqepMFuCXDPURW9bA",
+      "object": "setup_intent",
+      "application": null,
+      "cancellation_reason": null,
+      "client_secret": "seti_1LEOUmHHqepMFuCXDPURW9bA_secret_LwH2vsusMY9MlOVp16n2eW6CFdSJRkQ",
+      "created": 1656123192,
+      "customer": "cus_LwH2B5PfKIT15v",
+      "description": null,
+      "flow_directions": null,
+      "last_setup_error": null,
+      "latest_attempt": null,
+      "livemode": false,
+      "mandate": null,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": "pm_1LEOUlHHqepMFuCXluX0OmjB",
+      "payment_method_options": {
+        "card": {
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "single_use_mandate": null,
+      "status": "requires_confirmation",
+      "usage": "off_session"
+    },
+    "appid": "tests_1656123186",
+    "createdAt": "2022-06-25T02:13:13.558Z",
+    "updatedAt": "2022-06-25T02:13:13.809Z"
+  }
+]

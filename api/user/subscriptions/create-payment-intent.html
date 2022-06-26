@@ -1,0 +1,319 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-payment-intent#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/create-payment-intent (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.user.subscriptions.CreatePaymentIntent.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns"></span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code"></code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td>ineligible posted payment method</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="2">invalid-customerid</td>
+                  <td>missing querystring customerid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring customerid</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-paymentmethodid</td>
+                  <td>missing posted paymentmethodid</td>
+                </tr>
+                <tr>
+                  <td>invalid posted paymentmethodid</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="0">object</td>
+                  <td>undefined</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-payment-intent.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.customerid) {
+      throw new Error('invalid-customerid')
+    }
+    const customer = await global.api.user.subscriptions.Customer.get(req)
+    if (!customer) {
+      throw new Error('invalid-customerid')
+    }
+    if (!req.body || !req.body.paymentmethodid) {
+      throw new Error('invalid-paymentmethodid')
+    }
+    req.query.paymentmethodid = req.body.paymentmethodid
+    const paymentMethod = await global.api.user.subscriptions.PaymentMethod.get(req)
+    if (!paymentMethod) {
+      throw new Error('invalid-paymentmethodid')
+    }
+    const paymentIntent = await stripeCache.execute('paymentIntents', 'create', {
+      amount: req.body.amount,
+      currency: req.body.currency,
+      payment_method_types: ['card'],
+      customer: req.query.customerid
+    }, req.stripeKey)
+    req.query.paymentintentid = paymentIntent.id
+    await subscriptions.Storage.PaymentIntent.create({
+      appid: req.appid || global.appid,
+      paymentintentid: paymentIntent.id,
+      accountid: customer.accountid,
+      customerid: customer.customerid,
+      paymentmethodid: req.body.paymentmethodid,
+      status: paymentIntent.status,
+      stripeObject: paymentIntent
+    })
+    return global.api.user.subscriptions.PaymentIntent.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-payment-intent.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/create-payment-intent', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const user = await TestStripeAccounts.createUserWithPaymentMethod()
+    const user2 = await TestHelper.createUser()
+    // invalid account
+    const req = TestHelper.createRequest(`/api/user/subscriptions/create-payment-intent?customerid=${user.customer.customerid}`)
+    req.account = user2.account
+    req.session = user2.session
+    req.body = {
+      paymentmethodid: user.paymentMethod.paymentmethodid,
+      amount: '10000',
+      currency: 'usd'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    const user3 = await TestStripeAccounts.createUserWithPaymentMethod()
+    const req2 = TestHelper.createRequest(`/api/user/subscriptions/create-payment-intent?customerid=${user.customer.customerid}`)
+    req2.account = user3.account
+    req2.session = user3.session
+    req2.body = {
+      paymentmethodid: user3.paymentMethod.id,
+      amount: '10000',
+      currency: 'usd'
+    }
+    try {
+      await req2.post()
+    } catch (error) {
+      cachedResponses.invalidPaymentMethodAccount = error.message
+    }
+    // invalid payment method
+    const req3 = TestHelper.createRequest(`/api/user/subscriptions/create-payment-intent?customerid=${user.customer.customerid}`)
+    req3.account = user.account
+    req3.session = user.session
+    req3.body = {
+      paymentmethodid: ''
+    }
+    try {
+      await req3.post()
+    } catch (error) {
+      cachedResponses.missingPaymentMethod = error.message
+    }
+    req3.body = {
+      paymentmethodid: 'invalid'
+    }
+    try {
+      await req3.post()
+    } catch (error) {
+      cachedResponses.invalidPaymentMethod = error.message
+    }
+    // returns
+    req3.body = {
+      paymentmethodid: user.paymentMethod.paymentmethodid,
+      amount: '10000',
+      currency: 'usd'
+    }
+    cachedResponses.returns = await req3.post()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-customerid', () => {
+      it('missing querystring customerid', async () => {
+        global.stripeJS = false
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/create-payment-intent')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+
+      it('invalid querystring customerid', async () => {
+        global.stripeJS = false
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/subscriptions/create-payment-intent?customerid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+
+      it('ineligible posted payment method', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPaymentMethodAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-paymentmethodid', () => {
+      it('missing posted paymentmethodid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingPaymentMethod
+        assert.strictEqual(errorMessage, 'invalid-paymentmethodid')
+      })
+
+      it('invalid posted paymentmethodid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPaymentMethod
+        assert.strictEqual(errorMessage, 'invalid-paymentmethodid')
+      })
+    })
+  })
+
+  describe('object', () => {
+    it('object', async () => {
+      const paymentIntent = cachedResponses.returns
+      assert.strictEqual(paymentIntent.object, 'paymentintent')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

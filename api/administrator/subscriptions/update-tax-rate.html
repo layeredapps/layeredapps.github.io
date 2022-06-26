@@ -1,0 +1,421 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>update-tax-rate#PATCH (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/update-tax-rate (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.administrator.subscriptions.UpdateTaxRate.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "taxrateid": "txr_1LEOYCHHqepMFuCXotS7PoKr",
+  "object": "taxrate",
+  "stripeObject": {
+    "id": "txr_1LEOYCHHqepMFuCXotS7PoKr",
+    "object": "tax_rate",
+    "active": true,
+    "country": "US",
+    "created": 1656123404,
+    "description": "GST tax in KY",
+    "display_name": "NY Sales Tax",
+    "inclusive": true,
+    "jurisdiction": "US",
+    "livemode": false,
+    "metadata": {},
+    "percentage": 17.5,
+    "state": "NY",
+    "tax_type": "sales_tax"
+  },
+  "appid": "tests_1656123404",
+  "createdAt": "2022-06-25T02:16:44.834Z",
+  "updatedAt": "2022-06-25T02:16:45.186Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>country</td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>description</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>display_name</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>inclusive</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>jurisdiction</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-taxrateid</td>
+                  <td>missing querystring taxrateid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring taxrateid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/update-tax-rate.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const dashboard = require('@layeredapps/dashboard')
+const stripeCache = require('../../../../stripe-cache.js')
+const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.taxrateid) {
+      throw new Error('invalid-taxrateid')
+    }
+    const taxRate = await global.api.administrator.subscriptions.TaxRate.get(req)
+    if (!taxRate) {
+      throw new Error('invalid-taxrateid')
+    }
+    if (req.body.inclusive !== 'true' && req.body.inclusive !== 'false') {
+      throw new Error('invalid-inclusive')
+    }
+    const updateInfo = {}
+    // TODO: stripe docs say state is an optional parameter but
+    // the stripe api is throwing an exception saying it cannot
+    // be updated:
+    // "You cannot change `state` via API once it has been set."
+    // https://stripe.com/docs/api/tax_rates/update
+    // TODO: stripe docs say tax_type is an optional parameter but
+    // the stripe api is throwing an exception saying it cannot
+    // be updated:
+    // "You cannot change `tax_type` via API once it has been set."
+    // https://stripe.com/docs/api/tax_rates/update
+    const optionalFields = ['active', 'description', 'jurisdiction']
+    for (const field of optionalFields) {
+      if (!req.body[field] || !req.body[field].length) {
+        throw new Error(`invalid-${field}`)
+      }
+      updateInfo[field] = req.body[field]
+    }
+    const taxRateNow = await stripeCache.execute('taxRates', 'update', req.query.taxrateid, updateInfo, req.stripeKey)
+    await subscriptions.Storage.TaxRate.update({
+      stripeObject: taxRateNow
+    }, {
+      where: {
+        taxrateid: req.query.taxrateid,
+        appid: req.appid || global.appid
+      }
+    })
+    await dashboard.StorageCache.remove(req.query.taxrateid)
+    return global.api.administrator.subscriptions.TaxRate.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/update-tax-rate.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/update-tax-rate', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestHelper.createOwner()
+    await TestHelper.createTaxRate(administrator)
+    const req = TestHelper.createRequest(`/api/administrator/subscriptions/update-tax-rate?taxrateid=${administrator.taxRate.taxrateid}`)
+    req.account = administrator.account
+    req.session = administrator.session
+    req.body = {
+      display_name: 'US Sales Tax',
+      active: 'true',
+      description: 'GST tax in KY',
+      jurisdiction: 'US'
+    }
+    // invalid display name
+    req.body.display_name = ''
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.invalidDisplayName = error.message
+    }
+    req.body.display_name = 'US Sales TAx'
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.invalidInclusive = error.message
+    }
+    req.body.inclusive = true
+    // invalid state
+    // TODO: stripe docs say state is an optional parameter but
+    // the stripe api is throwing an exception saying it cannot
+    // be updated:
+    // "You cannot change `state` via API once it has been set."
+    // https://stripe.com/docs/api/tax_rates/update
+    // req.body.state = 'invalid'
+    // try {
+    //   await req.patch()
+    // } catch (error) {
+    //   cachedResponses.invalidState = error.message
+    // }
+    // req.body.state = 'NY'
+    // invalid tax type
+    // TODO: stripe docs say tax_type is an optional parameter but
+    // the stripe api is throwing an exception saying it cannot
+    // be updated:
+    // "You cannot change `tax_type` via API once it has been set."
+    // https://stripe.com/docs/api/tax_rates/update
+    // req.body.tax_type = 'invalid'
+    // try {
+    //   await req.patch()
+    // } catch (error) {
+    //   cachedResponses.invalidTaxType = error.message
+    // }
+    req.body.tax_type = 'sales_tax'
+    // good
+    req.filename = __filename
+    req.saveResponse = true
+    cachedResponses.returns = await req.patch()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-taxrateid', () => {
+      it('missing querystring taxrateid', async function () {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/update-tax-rate')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-taxrateid')
+      })
+
+      it('invalid querystring taxrateid', async function () {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/update-tax-rate?taxrateid=invalid')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-taxrateid')
+      })
+    })
+
+    // describe('invalid-country', () => {
+    //   it('invalid posted country', async function () {
+    //     await bundledData(this.test.currentRetry())
+    //     const errorMessage = cachedResponses.invalidCountry
+    //     assert.strictEqual(errorMessage, 'invalid-country')
+    //   })
+    // })
+
+    // TODO: stripe docs say state is an optional parameter but
+    // the stripe api is throwing an exception saying it cannot
+    // be updated:
+    // "You cannot change `state` via API once it has been set."
+    // https://stripe.com/docs/api/tax_rates/update
+    // describe('invalid-state', () => {
+    //   it('invalid posted state', async function () {
+    //     await bundledData(this.test.currentRetry())
+    //     const errorMessage = cachedResponses.invalidState
+    //     assert.strictEqual(errorMessage, 'invalid-state')
+    //   })
+    // })
+
+    // TODO: stripe docs say tax_type is an optional parameter but
+    // the stripe api is throwing an exception saying it cannot
+    // be updated:
+    // "You cannot change `tax_type` via API once it has been set."
+    // https://stripe.com/docs/api/tax_rates/update
+    // describe('invalid-tax_type', () => {
+    //   it('invalid posted tax_type', async function () {
+    //     await bundledData(this.test.currentRetry())
+    //     const errorMessage = cachedResponses.invalidTaxType
+    //     assert.strictEqual(errorMessage, 'invalid-tax_type')
+    //   })
+    // })
+  })
+
+  describe('receives', () => {
+    it('required posted display_name', async function () {
+      await bundledData(this.test.currentRetry())
+      const taxRate = cachedResponses.returns
+      assert.strictEqual(taxRate.stripeObject.display_name, 'NY Sales Tax')
+    })
+
+    it('required posted inclusive', async function () {
+      await bundledData(this.test.currentRetry())
+      const taxRate = cachedResponses.returns
+      assert.strictEqual(taxRate.stripeObject.inclusive, true)
+    })
+
+    // it('optional posted tax_type', async function () {
+    //   await bundledData(this.test.currentRetry())
+    //   const taxRate = cachedResponses.returns
+    //   assert.strictEqual(taxRate.stripeObject.tax_type, 'sales_tax')
+    // })
+
+    it('required posted description', async function () {
+      await bundledData(this.test.currentRetry())
+      const taxRate = cachedResponses.returns
+      assert.strictEqual(taxRate.stripeObject.description, 'GST tax in KY')
+    })
+
+    it('required posted jurisdiction', async function () {
+      await bundledData(this.test.currentRetry())
+      const taxRate = cachedResponses.returns
+      assert.strictEqual(taxRate.stripeObject.jurisdiction, 'US')
+    })
+
+    // it('optional posted state', async function () {
+    //   await bundledData(this.test.currentRetry())
+    //   const taxRate = cachedResponses.returns
+    //   assert.strictEqual(taxRate.stripeObject.state, 'NY')
+    // })
+
+    it('optional posted country', async function () {
+      await bundledData(this.test.currentRetry())
+      const taxRate = cachedResponses.returns
+      assert.strictEqual(taxRate.stripeObject.country, 'US')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async function () {
+      await bundledData(this.test.currentRetry())
+      const taxRate = cachedResponses.returns
+      assert.strictEqual(taxRate.object, 'taxrate')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

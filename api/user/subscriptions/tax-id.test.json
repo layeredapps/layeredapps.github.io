@@ -1,0 +1,26 @@
+{
+  "taxid": "txi_1LEOoxHHqepMFuCXFbyWAGmb",
+  "object": "taxid",
+  "accountid": "acct_806baba54f2129ce",
+  "customerid": "cus_LwHN1g5wPcvN90",
+  "appid": "tests_1656124443",
+  "stripeObject": {
+    "id": "txi_1LEOoxHHqepMFuCXFbyWAGmb",
+    "object": "tax_id",
+    "country": "DE",
+    "created": 1656124443,
+    "customer": "cus_LwHN1g5wPcvN90",
+    "livemode": false,
+    "type": "eu_vat",
+    "value": "DE123456789",
+    "verification": {
+      "status": "pending",
+      "verified_address": null,
+      "verified_name": null
+    }
+  },
+  "type": null,
+  "value": null,
+  "createdAt": "2022-06-25T02:34:04.117Z",
+  "updatedAt": "2022-06-25T02:34:04.117Z"
+}

@@ -1,0 +1,240 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>reset-account-administrator#PATCH (@layeredapps/dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Dashboard API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li class="active">
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/dashboard">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/dashboard-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/dashboard-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/dashboard-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/reset-account-administrator (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.administrator.ResetAccountAdministrator.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "accountid": "acct_c47f5d55a964e0d2",
+  "object": "account",
+  "appid": "tests_1656038569",
+  "profileid": "prof_67a3671a0afd9e19",
+  "sessionKeyNumber": 1,
+  "lastSignedInAt": "2022-06-24T02:42:49.000Z",
+  "createdAt": "2022-06-24T02:42:49.901Z",
+  "updatedAt": "2022-06-24T02:42:49.937Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-account</td>
+                  <td>accessing account is not owner</td>
+                </tr>
+                <tr>
+                  <td>querystring accountid is not administrator</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="2">invalid-accountid</td>
+                  <td>missing querystring accountid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring accountid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/dashboard/tree/main/src/www/api/administrator/reset-account-administrator.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.administrator.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-accountid')
+    }
+    if (account.deleted || !account.administratorSince) {
+      throw new Error('invalid-account')
+    }
+    if (account.ownerSince) {
+      throw new Error('invalid-account')
+    }
+    await dashboard.Storage.Account.update({
+      administratorSince: null
+    }, {
+      where: {
+        accountid: req.query.accountid,
+        appid: req.appid || global.appid
+      }
+    })
+    await dashboard.StorageCache.remove(req.query.accountid)
+    return global.api.administrator.Account.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/dashboard/tree/main/src/www/api/administrator/reset-account-administrator.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/administrator/reset-account-administrator', () => {
+  describe('exceptions', () => {
+    describe('invalid-accountid', () => {
+      it('missing querystring accountid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/reset-account-administrator')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+
+      it('invalid querystring accountid', async () => {
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/reset-account-administrator?accountid=invalid')
+        req.account = administrator.account
+        req.session = administrator.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-accountid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('accessing account is not owner', async () => {
+        const owner = await TestHelper.createOwner()
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/administrator/reset-account-administrator?accountid=${user.account.accountid}`)
+        req.account = owner.account
+        req.session = owner.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+
+      it('querystring accountid is not administrator', async () => {
+        const owner = await TestHelper.createOwner()
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/administrator/reset-account-administrator?accountid=${user.account.accountid}`)
+        req.account = owner.account
+        req.session = owner.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const owner = await TestHelper.createOwner()
+      const administrator2 = await TestHelper.createAdministrator(owner)
+      const req = TestHelper.createRequest(`/api/administrator/reset-account-administrator?accountid=${administrator2.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.filename = __filename
+      req.saveResponse = true
+      const accountNow = await req.patch()
+      assert.strictEqual(accountNow.administrator, undefined)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

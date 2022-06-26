@@ -1,0 +1,42 @@
+{
+  "setupintentid": "seti_1LEOkrHHqepMFuCXSAEgRIk7",
+  "accountid": "acct_61c23ce6401c9f92",
+  "customerid": "cus_LwHJVyMv20rw4M",
+  "paymentmethodid": null,
+  "object": "setupintent",
+  "stripeObject": {
+    "id": "seti_1LEOkrHHqepMFuCXSAEgRIk7",
+    "object": "setup_intent",
+    "application": null,
+    "cancellation_reason": null,
+    "client_secret": "seti_1LEOkrHHqepMFuCXSAEgRIk7_secret_LwHJOumwIL0bIxQstO6DVTnvuCrXEjv",
+    "created": 1656124189,
+    "customer": "cus_LwHJVyMv20rw4M",
+    "description": null,
+    "flow_directions": null,
+    "last_setup_error": null,
+    "latest_attempt": null,
+    "livemode": false,
+    "mandate": null,
+    "metadata": {},
+    "next_action": null,
+    "on_behalf_of": null,
+    "payment_method": "pm_1LEOkqHHqepMFuCXeD4wgDkj",
+    "payment_method_options": {
+      "card": {
+        "mandate_options": null,
+        "network": null,
+        "request_three_d_secure": "automatic"
+      }
+    },
+    "payment_method_types": [
+      "card"
+    ],
+    "single_use_mandate": null,
+    "status": "canceled",
+    "usage": "off_session"
+  },
+  "appid": "tests_1656124187",
+  "createdAt": "2022-06-25T02:29:50.275Z",
+  "updatedAt": "2022-06-25T02:29:51.358Z"
+}

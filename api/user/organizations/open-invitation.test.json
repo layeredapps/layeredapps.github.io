@@ -1,0 +1,13 @@
+{
+  "invitationid": "invt_07989793b28d78e6",
+  "organizationid": "orgn_b17f9a23db53cbda",
+  "accountid": "acct_f6ef07a8f654a379",
+  "object": "invitation",
+  "appid": "tests_1656039710",
+  "secretCode": "secret246",
+  "multi": true,
+  "acceptedAt": null,
+  "terminatedAt": null,
+  "createdAt": "2022-06-24T03:01:51.025Z",
+  "updatedAt": "2022-06-24T03:01:51.025Z"
+}

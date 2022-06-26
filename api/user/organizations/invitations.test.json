@@ -1,0 +1,41 @@
+[
+  {
+    "invitationid": "invt_b7d24a5bacf1b3bc",
+    "organizationid": "orgn_d1132fa7afc26432",
+    "accountid": "acct_8bd5cb325333088e",
+    "object": "invitation",
+    "appid": "tests_1656039707",
+    "secretCode": "secret225",
+    "multi": true,
+    "acceptedAt": null,
+    "terminatedAt": null,
+    "createdAt": "2022-06-24T03:01:47.451Z",
+    "updatedAt": "2022-06-24T03:01:47.451Z"
+  },
+  {
+    "invitationid": "invt_71eaa0b5a5b1be8f",
+    "organizationid": "orgn_d1132fa7afc26432",
+    "accountid": "acct_8bd5cb325333088e",
+    "object": "invitation",
+    "appid": "tests_1656039707",
+    "secretCode": "secret224",
+    "multi": true,
+    "acceptedAt": null,
+    "terminatedAt": null,
+    "createdAt": "2022-06-24T03:01:47.443Z",
+    "updatedAt": "2022-06-24T03:01:47.443Z"
+  },
+  {
+    "invitationid": "invt_49f6659ffd0f5744",
+    "organizationid": "orgn_d1132fa7afc26432",
+    "accountid": "acct_8bd5cb325333088e",
+    "object": "invitation",
+    "appid": "tests_1656039707",
+    "secretCode": "secret223",
+    "multi": true,
+    "acceptedAt": null,
+    "terminatedAt": null,
+    "createdAt": "2022-06-24T03:01:47.434Z",
+    "updatedAt": "2022-06-24T03:01:47.434Z"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "membershipid": "mmbr_331f4b981592433f",
+    "object": "membership",
+    "appid": "tests_1656039709",
+    "accountid": "acct_05d7723fb3e1abe5",
+    "organizationid": "orgn_aa4e5852ce73bd0d",
+    "invitationid": null,
+    "profileid": "prof_bd3a2f4f5cf7ba46",
+    "createdAt": "2022-06-24T03:01:49.365Z",
+    "updatedAt": "2022-06-24T03:01:49.365Z",
+    "displayName": "Ivan Konopelski",
+    "displayEmail": "Ivan_Konopelski@gmail.com"
+  },
+  {
+    "membershipid": "mmbr_77e871830ad556f3",
+    "object": "membership",
+    "appid": "tests_1656039709",
+    "accountid": "acct_05d7723fb3e1abe5",
+    "organizationid": "orgn_d42ee8970aa209c0",
+    "invitationid": "invt_632c52c10a83b9f3",
+    "profileid": "prof_bd3a2f4f5cf7ba46",
+    "createdAt": "2022-06-24T03:01:49.353Z",
+    "updatedAt": "2022-06-24T03:01:49.353Z",
+    "displayName": "Ivan Konopelski",
+    "displayEmail": "Ivan_Konopelski@gmail.com"
+  },
+  {
+    "membershipid": "mmbr_1feb34a6e13c621a",
+    "object": "membership",
+    "appid": "tests_1656039709",
+    "accountid": "acct_05d7723fb3e1abe5",
+    "organizationid": "orgn_0d175154a8bcc7f5",
+    "invitationid": "invt_245370e8b9911101",
+    "profileid": "prof_bd3a2f4f5cf7ba46",
+    "createdAt": "2022-06-24T03:01:49.266Z",
+    "updatedAt": "2022-06-24T03:01:49.266Z",
+    "displayName": "Ivan Konopelski",
+    "displayEmail": "Ivan_Konopelski@gmail.com"
+  }
+]

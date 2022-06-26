@@ -1,0 +1,29 @@
+{
+  "productid": "prod_LwH6sPnNLOaVNR",
+  "object": "product",
+  "stripeObject": {
+    "id": "prod_LwH6sPnNLOaVNR",
+    "object": "product",
+    "active": true,
+    "attributes": [],
+    "created": 1656123395,
+    "default_price": null,
+    "description": null,
+    "images": [],
+    "livemode": false,
+    "metadata": {},
+    "name": "new-name",
+    "package_dimensions": null,
+    "shippable": null,
+    "statement_descriptor": "new-description",
+    "tax_code": "txcd_41060003",
+    "type": "service",
+    "unit_label": "new-thing",
+    "updated": 1656123396,
+    "url": null
+  },
+  "active": true,
+  "appid": "tests_1656123395",
+  "createdAt": "2022-06-25T02:16:35.954Z",
+  "updatedAt": "2022-06-25T02:16:36.265Z"
+}

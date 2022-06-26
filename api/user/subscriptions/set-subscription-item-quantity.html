@@ -1,0 +1,437 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>set-subscription-item-quantity#PATCH (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/set-subscription-item-quantity (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.user.subscriptions.SetSubscriptionItemQuantity.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "subscriptionitemid": "si_LwHKsO0Q0Fmfs4",
+  "object": "subscriptionitem",
+  "stripeObject": {
+    "id": "si_LwHKsO0Q0Fmfs4",
+    "object": "subscription_item",
+    "billing_thresholds": null,
+    "created": 1656124274,
+    "metadata": {},
+    "plan": {
+      "id": "price_1LEOm9HHqepMFuCXPKQ0zvdF",
+      "object": "plan",
+      "active": true,
+      "aggregate_usage": null,
+      "amount": 1000,
+      "amount_decimal": "1000",
+      "billing_scheme": "per_unit",
+      "created": 1656124269,
+      "currency": "usd",
+      "interval": "month",
+      "interval_count": 1,
+      "livemode": false,
+      "metadata": {},
+      "nickname": null,
+      "product": "prod_LwHKpBBLECvSz7",
+      "tiers_mode": null,
+      "transform_usage": null,
+      "trial_period_days": null,
+      "usage_type": "licensed"
+    },
+    "price": {
+      "id": "price_1LEOm9HHqepMFuCXPKQ0zvdF",
+      "object": "price",
+      "active": true,
+      "billing_scheme": "per_unit",
+      "created": 1656124269,
+      "currency": "usd",
+      "custom_unit_amount": null,
+      "livemode": false,
+      "lookup_key": null,
+      "metadata": {},
+      "nickname": null,
+      "product": "prod_LwHKpBBLECvSz7",
+      "recurring": {
+        "aggregate_usage": null,
+        "interval": "month",
+        "interval_count": 1,
+        "trial_period_days": null,
+        "usage_type": "licensed"
+      },
+      "tax_behavior": "inclusive",
+      "tiers_mode": null,
+      "transform_quantity": null,
+      "type": "recurring",
+      "unit_amount": 1000,
+      "unit_amount_decimal": "1000"
+    },
+    "quantity": 2,
+    "subscription": "sub_1LEOmDHHqepMFuCX8u8ITAQ9",
+    "tax_rates": []
+  },
+  "accountid": "acct_791e5a6848138589",
+  "subscriptionid": "sub_1LEOmDHHqepMFuCX8u8ITAQ9",
+  "customerid": "cus_LwHKjWpVRcFaJr",
+  "appid": "tests_1656124268",
+  "createdAt": "2022-06-25T02:31:16.220Z",
+  "updatedAt": "2022-06-25T02:31:19.965Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="4">invalid-quantity</td>
+                  <td>invalid posted quantity</td>
+                </tr>
+                <tr>
+                  <td>invalid posted quantity is unchanged</td>
+                </tr>
+                <tr>
+                  <td>invalid posted quantity is negative</td>
+                </tr>
+                <tr>
+                  <td>invalid posted quantity is zero</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="2">invalid-subscriptionitemid</td>
+                  <td>missing querystring subscriptionitemid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring subscriptionitemid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/set-subscription-item-quantity.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const dashboard = require('@layeredapps/dashboard')
+const stripeCache = require('../../../../stripe-cache.js')
+const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.subscriptionitemid) {
+      throw new Error('invalid-subscriptionitemid')
+    }
+    const subscriptionItem = await global.api.user.subscriptions.SubscriptionItem.get(req)
+    if (!subscriptionItem) {
+      throw new Error('invalid-subscriptionitemid')
+    }
+    if (subscriptionItem.accountid !== req.account.accountid) {
+      throw new Error('invalid-account')
+    }
+    if (!req.body || !req.body.quantity) {
+      throw new Error('invalid-quantity')
+    }
+    try {
+      const quantity = parseInt(req.body.quantity, 10)
+      if (quantity < 1 || quantity.toString() !== req.body.quantity) {
+        throw new Error('invalid-quantity')
+      }
+      if (subscriptionItem.stripeObject.quantity === quantity) {
+        throw new Error('invalid-quantity')
+      }
+    } catch (error) {
+      throw new Error('invalid-quantity')
+    }
+    const updateInfo = {
+      items: [{
+        id: req.query.subscriptionitemid,
+        quantity: req.body.quantity
+      }]
+    }
+    const subscriptionNow = await stripeCache.execute('subscriptions', 'update', subscriptionItem.subscriptionid, updateInfo, req.stripeKey)
+    if (!subscriptionNow) {
+      throw new Error('unknown-error')
+    }
+    await subscriptions.Storage.Subscription.update({
+      stripeObject: subscriptionNow
+    }, {
+      where: {
+        subscriptionid: subscriptionItem.subscriptionid,
+        appid: req.appid || global.appid
+      }
+    })
+    for (const item of subscriptionNow.items.data) {
+      if (item.id !== req.query.subscriptionitemid) {
+        continue
+      }
+      await subscriptions.Storage.SubscriptionItem.update({
+        stripeObject: item
+      }, {
+        where: {
+          subscriptionitemid: subscriptionItem.subscriptionitemid,
+          appid: req.appid || global.appid
+        }
+      })
+      break
+    }
+    await dashboard.StorageCache.remove(subscriptionItem.subscriptionid)
+    await dashboard.StorageCache.remove(req.query.subscriptionitemid)
+    return global.api.user.subscriptions.SubscriptionItem.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/set-subscription-item-quantity.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/set-subscription-item-quantity', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+    const user2 = await TestHelper.createUser()
+    // missing and invalid id
+    let req = TestHelper.createRequest('/api/user/subscriptions/set-subscription-item-quantity')
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: '10'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.missing = error.message
+    }
+    req = TestHelper.createRequest('/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=invalid')
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: '10'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.invalid = error.message
+    }
+    // invalid account
+    req = TestHelper.createRequest(`/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=${user.subscription.stripeObject.items.data[0].id}`)
+    req.account = user2.account
+    req.session = user2.session
+    req.body = {
+      quantity: '1'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.account = error.message
+    }
+    // invalid quantity
+    req = TestHelper.createRequest(`/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=${user.subscription.stripeObject.items.data[0].id}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: 'letters'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.invalidQuantity = error.message
+    }
+    req = TestHelper.createRequest(`/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=${user.subscription.stripeObject.items.data[0].id}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: '1'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.unchangedQuantity = error.message
+    }
+    req = TestHelper.createRequest(`/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=${user.subscription.stripeObject.items.data[0].id}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: '-1'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.negativeQuantity = error.message
+    }
+    req = TestHelper.createRequest(`/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=${user.subscription.stripeObject.items.data[0].id}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: '0'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.zeroQuantity = error.message
+    }
+    // returns
+    req = TestHelper.createRequest(`/api/user/subscriptions/set-subscription-item-quantity?subscriptionitemid=${user.subscription.stripeObject.items.data[0].id}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      quantity: '2'
+    }
+    req.filename = __filename
+    req.saveResponse = true
+    cachedResponses.returns = await req.patch()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-subscriptionitemid', () => {
+      it('missing querystring subscriptionitemid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missing
+        assert.strictEqual(errorMessage, 'invalid-subscriptionitemid')
+      })
+
+      it('invalid querystring subscriptionitemid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalid
+        assert.strictEqual(errorMessage, 'invalid-subscriptionitemid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.account
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-quantity', () => {
+      it('invalid posted quantity', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidQuantity
+        assert.strictEqual(errorMessage, 'invalid-quantity')
+      })
+
+      it('invalid posted quantity is unchanged', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.unchangedQuantity
+        assert.strictEqual(errorMessage, 'invalid-quantity')
+      })
+
+      it('invalid posted quantity is negative', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.negativeQuantity
+        assert.strictEqual(errorMessage, 'invalid-quantity')
+      })
+
+      it('invalid posted quantity is zero', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.zeroQuantity
+        assert.strictEqual(errorMessage, 'invalid-quantity')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const subscriptionItemNow = cachedResponses.returns
+      assert.strictEqual(subscriptionItemNow.stripeObject.quantity, 2)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

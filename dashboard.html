@@ -1,0 +1,739 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Dashboard</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li class="active">
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="active"><a class="navigation-link" href="/dashboard">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/dashboard-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/dashboard-ui">UI</a></li>
+          <li class="api"><a class="navigation-link" href="/dashboard-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="documentation-for-dashboard">Documentation for Dashboard</h1>
+          <h4>Shortcuts</h4>
+          <ul>
+            <li><a href="https://layeredapps.github.io">Documentation website</a></li>
+            <li><a href="https://layeredapps.github.io/dashboard">Dashboard documentation</a></li>
+            <li><a href="https://layeredapps.github.io/dashboard-ui">UI screenshots</a></li>
+            <li><a href="https://layeredapps.github.io/dashboard-api">API documentation</a></li>
+            <li><a href="https://layeredapps.github.io/dashboard-configuration">Environment configuration</a></li>
+            <li><a href="https://github.com/layeredapps/example-web-app">Example web app</a></li>
+            <li><a href="https://github.com/layeredapps/example-subscription-web-app">Example subscription web app</a></li>
+            <li><a href="https://layeredapps.com">Dashboard hosting at Layered Apps</a></li>
+          </ul>
+          <h4>Index</h4>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#hosting-dashboard-yourself">Hosting Dashboard yourself</a></li>
+            <li><a href="#customizing-dashboard-appearance">Customize Dashboard appearance</a></li>
+            <li><a href="#customize-registration-information">Customize registration information</a></li>
+            <li><a href="#configuring-dashboard">Configuring Dashboard</a></li>
+            <li><a href="#provided-server-content-and-proxy-handlers">Provided server, content and proxy handlers</a></li>
+            <li><a href="#dashboard-modules">Dashboard modules</a></li>
+            <li><a href="#access-the-api">Access the API from your application server</a></li>
+            <li><a href="#localization">Localization</a></li>
+            <li><a href="#storage-backends">Storage backends</a></li>
+            <li><a href="#storage-caching">Storage caching</a></li>
+            <li><a href="#xss-and-csrf-protection">XSS and CSRF protection</a></li>
+            <li><a href="#logging">Logging</a></li>
+            <li><a href="#creating-modules-for-dashboard">Creating modules for Dashboard</a></li>
+            <li><a href="#testing">Testing</a></li>
+            <li><a href="https://github.com/layeredapps/dashboard">Github repository</a></li>
+            <li><a href="https://npmjs.org/layeredapps/dashboard">NPM package</a></li>
+          </ul>
+          <h1 id="introduction">Introduction</h1>
+          <p>Web applications often require coding a user account system, organizations, subscriptions and other 'boilerplate' again and again.</p>
+          <p>Dashboard packages everything web apps need into reusable, modular software. It runs separately to your application so you have two web servers instead of one, and Dashboard fuses their content together to provide a single website or interface for your users. To get started your web app just needs to serve something on <code data-language="js">/</code> for your guest home page and <code data-language="js">/home</code> for signed in users.</p>
+          <p>Dashboard is stateless and designed to scale 'horizontally', that is you can run multiple instances of your Dashboard server in parallel to handle user requests using Heroku, Render, Fly, Digital Ocean's App Platform, etc. Managed hosting is available at <a href="https://layeredapps.com">Layered Apps</a>.</p>
+          <p>Your application server can return special HTML attributes and tags to interoperate with the Dashboard server. Your content can be accessible to guests by specifying <code data-language="js">&lt;html data-auth=&quot;false&quot;&gt;</code> and you can serve full-page content by specifying <code data-language="js">&lt;html data-template=&quot;false&quot;&gt;</code> in your HTML. Otherwise the routes will require authentication, and Dashboard will inject the template's header and navigation into the top of the page and merge the head tag's script and CSS references.</p>
+          <p>You can populate the template's navigation bar by including <code data-language="js">&lt;template id=&quot;navbar&quot;&gt;&lt;/template&gt;</code> with the links and any other HTML for your menu.</p>
+          <h1 id="hosting-dashboard-yourself">Hosting Dashboard yourself</h1>
+          <p>Dashboard requires NodeJS <code data-language="js">16+</code> be installed.</p>
+          <pre><code data-language="js">$ mkdir my-dashboard-server
+$ cd my-dashboard-server
+$ npm init
+$ npm install @layeredapps/dashboard
+$ echo &quot;require('@layeredapps/dashboard').start(__dirname)&quot; &gt; main.js
+$ node main.js
+</code></pre>
+          <h1 id="customizing-dashboard-appearance">Customizing Dashboard appearance</h1>
+          <p>Dashboard and module content is provided in HTML pages. Your application server can serve two special CSS files at <code data-language="js">/public/template-additional.css</code> and <code data-language="js">/public/content-additional.css</code> to theme the template and pages to match your application design.</p>
+          <pre><code data-language="js">/public/template-additional.css
+/public/content-additional.css
+</code></pre>
+          <p>You can make structural changes to the template, redirect and error pages by serving your own pages from your application server. Dashboard will try to fetch alternative HTML pages from your application server and use its own files if you do not have any:</p>
+          <pre><code data-language="js">/template.html
+/error.html
+/redirect.html
+</code></pre>
+          <p>The account and administrator drop-down menus are created from stub HTML files placed in Dashboard, modules, and your application server. To add your own links serve a <code data-language="js">/menu-account.html</code> and <code data-language="js">/menu-administrator.html</code> on your application server with the HTML to include.</p>
+          <p>The account menu is assembled in this order:</p>
+          <ol>
+            <li>Your application server's <code data-language="js">/menu-account.html</code></li>
+            <li>Any activated module's <code data-language="js">/menu-account.html</code> files</li>
+            <li>Dashboard's <code data-language="js">/menu-account.html</code></li>
+          </ol>
+          <p>The administrator menu is assembled in this order:</p>
+          <ol>
+            <li>Your application server's <code data-language="js">/menu-administrator.html</code></li>
+            <li>Any activated module's <code data-language="js">/menu-administrator.html</code> files</li>
+            <li>Dashboard's <code data-language="js">/menu-administrator.html</code></li>
+          </ol>
+          <p>Dashboard will try to fetch alternative icons from your application server:</p>
+          <pre><code data-language="js">/favicon.ico
+/public/favicon.ico
+/public/favicon-16x16.png
+/public/favicon-32x32.png
+/public/apple-touch-icon.png
+</code></pre>
+          <h1 id="customize-registration-information">Customize registration information</h1>
+          <p>By default users may register with just a username and password, both of which are encrypted so they cannot be used for anything but signing in. You can specify some personal information fields to require in an environment variable:</p>
+          <pre><code data-language="js">REQUIRE_PROFILE=true
+PROFILE_FIELDS=any,combination
+</code></pre>
+          <p>These fields are supported by the registration form:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>full-name</td>
+                <td>First and last name</td>
+              </tr>
+              <tr>
+                <td>contact-email</td>
+                <td>Contact email</td>
+              </tr>
+              <tr>
+                <td>display-name</td>
+                <td>Name to display to users</td>
+              </tr>
+              <tr>
+                <td>display-email</td>
+                <td>Email to display to users</td>
+              </tr>
+              <tr>
+                <td>dob</td>
+                <td>Date of birth</td>
+              </tr>
+              <tr>
+                <td>location</td>
+                <td>Location description</td>
+              </tr>
+              <tr>
+                <td>phone</td>
+                <td>Phone number</td>
+              </tr>
+              <tr>
+                <td>company-name</td>
+                <td>Company name</td>
+              </tr>
+              <tr>
+                <td>website</td>
+                <td>Website</td>
+              </tr>
+              <tr>
+                <td>occupation</td>
+                <td>Occupation</td>
+              </tr>
+            </tbody>
+          </table>
+          <h1 id="configuring-dashboard">Configuring Dashboard</h1>
+          <p>Dashboard is configured with a combination of environment variables and hard-coded settings in your <code data-language="js">package.json</code>:</p>
+          <pre><code data-language="js">{
+    &quot;dashboard&quot;: {
+        &quot;title&quot;: &quot;Title to place in Template&quot;,
+        &quot;modules: [
+            &quot;@layeredapps/organizations&quot;,
+            &quot;@layeredapps/stripe-connect&quot;
+        ],
+        &quot;server&quot;: [
+            &quot;/src/to/script/to/run/receiving/requests.js&quot;
+        ],
+        &quot;content&quot;: [
+            &quot;/src/to/script/to/modify/content.js&quot;
+        ],
+        &quot;proxy&quot;: [
+            &quot;/src/to/script/to/modify/proxy/requests.js
+        ],
+        &quot;themeColor&quot;: &quot;#abcdef&quot;,
+        &quot;tileColor&quot;: &quot;#abcdef&quot;
+    }
+}
+</code></pre>
+          <p>Server handlers can execute <code data-language="js">before</code> and/or <code data-language="js">after</code> a visitor is identified as a guest or user:</p>
+          <pre><code data-language="js">module.exports = {
+    before: async (req, res) =&gt; {
+        // req.account is not set
+        // req.session is not set
+    },
+    after: async (req, res) =&gt; {
+        // req.account may be set
+        // req.session may be set
+    }
+}
+</code></pre>
+          <p>Content handlers can adjust the <code data-language="js">template</code> and <code data-language="js">page</code> documents before they are served to the user:</p>
+          <pre><code data-language="js">module.exports = {
+    page: async (req, res, pageDoc) =&gt; {
+        // adjust page before mixing with template
+    },
+    template: async (req, res, templateDoc) =&gt; {
+        // page is now in `src-doc` of application iframe
+    }
+}
+</code></pre>
+          <p>Proxy handlers can add to the headers sent to your application servers:</p>
+          <pre><code data-language="js">module.exports = async (req, proxyRequestOptions) =&gt; {
+    proxyRequestOptions.headers.include = 'something'
+}
+</code></pre>
+          <h1 id="provided-server,-content-and-proxy-handlers">Provided server, content and proxy handlers</h1>
+          <p>Dashboard comes with some convenience scripts you can add to your <code data-language="js">package.json</code>:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Script path</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/dashboard/src/proxy/x-account.js</td>
+                <td>Dashboard will bundle the user's Account object in <code data-language="js">x-account</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/dashboard/src/proxy/x-csrf-token.js</td>
+                <td>Dashboard will bundle a CSRF token specific to the user session and URL (truncated to <code data-language="js">?</code>) that you can place in a hidden form input and compare when the form is submitted to prevent external websites from submitting your forms via &quot;cross-site request forgery&quot;. You can alternatively roll your own CSRF protection.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/dashboard/src/proxy/x-profile.js</td>
+                <td>Dashboard will bundle the user's Profile object in <code data-language="js">x-account</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/dashboard/src/proxy/x-session.js</td>
+                <td>Dashboard will bundle the user's Session object in <code data-language="js">x-account</code> header.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/allow-api-access.js</td>
+                <td>Allows API access from the same domain eg via browser / AJAX.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/allow-api-access-cross-domain.js</td>
+                <td>Allows API access from third-party domains eg via browser / AJAX.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/allow-api-requests-from-application.js</td>
+                <td>Allows your application server to query <code data-language="js">/api/*</code> while Dashboard's API is not publicly shared.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/allow-api-requests-to-application.js</td>
+                <td>When an unknown <code data-language="js">/api/*</code> request occurs it will be passed to your application server while Dashboard's API is not publicly shared.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/check-before-delete-account.js</td>
+                <td>Require users complete steps, such as deleting subscriptions, before deleting their account. Set a <code data-language="js">CHECK_BEFORE_DELETE_ACCOUNT</code> path such as <code data-language="js">/check-delete</code> on your Application server, Dashboard will query this API passing <code data-language="js">?accountid=xxxxx</code> and you may respond with { &quot;redirect&quot;: &quot;/your-delete-requirements&quot; } or { &quot;redirect&quot;: false }&quot; to enforce the requirements.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/fetch-application-server-special-html.js</td>
+                <td>Serve a custom <code data-language="js">error.html</code>, <code data-language="js">redirect.html</code>, <code data-language="js">template.html</code>, <code data-language="js">menu-account.html</code> or <code data-language="js">menu-administrator.html</code> from your application server at <code data-language="js">/FILE_NAME.html</code>. Dashboard will cache this for 60 seconds or an amount you set in CACHE_APPLICATION_SERVER_FILES.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/fetch-application-server-static-file.js</td>
+                <td>Serve a custom <code data-language="js">/robots.txt</code>, <code data-language="js">/favicon.ico</code> or any <code data-language="js">/public/</code> files from your application server. Dashboard will cache this for 60 seconds or an amount you set in CACHE_APPLICATION_SERVER_FILES.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Dashboard includes some &quot;private&quot; content scripts that are configured automatically:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Script path</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>content</td>
+                <td>@layeredapps/dashboard/src/content/insert-csrf-token.js</td>
+                <td>Adds a CSRF token to Dashboard and module forms, this does not add CSRF tokens to your application's forms.</td>
+              </tr>
+              <tr>
+                <td>content</td>
+                <td>@layeredapps/dashboard/src/content/set-form-novalidate.js</td>
+                <td>When NODE_ENV=testing this adds &quot;novalidate&quot; to FORM attributes so input validation (eg required) does not occur so server error messages can be tested.</td>
+              </tr>
+              <tr>
+                <td>content</td>
+                <td>@layeredapps/dashboard/src/content/set-form-return-url.js</td>
+                <td>Copies the 'return-url' from URL parameters to the FORM action if there is no pre-existing return-url defined in the FORM action.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/check-csrf-token.js</td>
+                <td>Compares posted CSRF token to expected CSRF token and renders an error message if they are not matching.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/check-xss-injection.js</td>
+                <td>Checks input for XSS injections when posting to Dashboard and module forms and APIs. This does not check data posted to your application server since Dashboard does not know if you want HTML in user input.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/dashboard/src/server/hot-reload.js</td>
+                <td>When HOT_RELOAD=true this forces files to be reloaded on each request so changes can be observed immediately without restarting the server.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h1 id="dashboard-modules">Dashboard modules</h1>
+          <p>Dashboard is modular and by itself it provides only the signing in, account management and basic administration. Modules add new pages and API routes for additional functionality.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/maxmind-geoip">@layeredapps/maxmind-geoip</a></td>
+                <td>IP address-based geolocation by MaxMind</td>
+              </tr>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/organizations">@layeredapps/organizations</a></td>
+                <td>User created groups</td>
+              </tr>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/maxmind-geoip">@layeredapps/maxmind-geoip</a></td>
+                <td>IP-to-country mapping by MaxMind</td>
+              </tr>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/stripe-connect">@layeredapps/stripe-connect</a></td>
+                <td>Marketplace functionality by Stripe</td>
+              </tr>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/stripe-subscriptions">@layeredapps/stripe-subscriptions</a></td>
+                <td>SaaS functionality by Stripe</td>
+              </tr>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/oauth">@layeredapps/oauth</a></td>
+                <td>Oauth framework for providers</td>
+              </tr>
+              <tr>
+                <td><a href="https://npmjs.com/package/layeredapps/oauth-github">@layeredapps/oauth-github</a></td>
+                <td>&quot;Sign in with GitHub&quot; using OAuth</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Modules are NodeJS packages that you install with NPM:</p>
+          <pre><code data-language="js">$ npm install @layeredapps/stripe-subscriptions
+</code></pre>
+          <p>You need to notify Dashboard which modules you are using in <code data-language="js">package.json</code> conffiguration:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@layeredapps/stripe-subscriptions&quot;
+  ]
+}
+</code></pre>
+          <h1 id="access-the-api">Access the API</h1>
+          <p>Dashboard and official modules are completely API-driven and you can access the same APIs on behalf of the user making requests. You perform <code data-language="js">GET</code>, <code data-language="js">POST</code>, <code data-language="js">PATCH</code>, and <code data-language="js">DELETE</code> HTTP requests against the API endpoints to fetch or modify data. You can use a shared secret <code data-language="js">APPLICATION_SERVER_TOKEN</code> to verify requests between servers, both servers send it in an <code data-language="js">x-application-server-token</code> header.</p>
+          <p>By default the API is not accessible, you can allow total access to it with an <code data-language="js">ENV</code> variable:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;server&quot;: [
+    &quot;@layeredapps/dashboard/src/server/allow-api-access.js&quot;
+  ]
+}
+</code></pre>
+          <p>Or enable requests from your application server with a <code data-language="js">server</code> script handler:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;server&quot;: [
+    &quot;@layeredapps/dashboard/src/server/internal-api-requests.js&quot;
+  ]
+}
+</code></pre>
+          <p>Dashboard can also forward API requests to your own <code data-language="js">/api/</code> routes:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+   &quot;server&quot;: [
+     &quot;@layeredapps/dashboard/src/server/forward-api-requests.js&quot;
+   ]
+}
+</code></pre>
+          <p>This example fetches the user's session information using NodeJS, you can do this with any language:</p>
+          <pre><code data-language="js">const sessions = await proxy(`/api/user/sessions?accountid=${accountid}`, accountid, sessionid)
+
+const proxy = util.promisify((path, accountid, sessionid, callback) =&gt; {
+    const requestOptions = {
+        host: 'dashboard.example.com',
+        path: path,
+        port: '443',
+        method: 'GET',
+        headers: {
+            'x-application-server': 'application.example.com',
+            'x-application-server-token': process.env.APPLICATION_SERVER_TOKEN,
+            'x-accountid': accountid,
+            'x-sessionid': sessionid
+        }
+    }
+    const proxyRequest = require('https').request(requestOptions, (proxyResponse) =&gt; {
+        let body = ''
+        proxyResponse.on('data', (chunk) =&gt; {
+            body += chunk
+        })
+        return proxyResponse.on('end', () =&gt; {
+            return callback(null, JSON.parse(body))
+        })
+    })
+    proxyRequest.on('error', (error) =&gt; {
+        return callback(error)
+    })
+    return proxyRequest.end()
+  })
+}
+</code></pre>
+          <h1 id="storage-backends">Storage backends</h1>
+          <p>Dashboard uses the <a href="github.com/sequelize/">Sequelize</a> library and is compatible with PostgreSQL, MySQL, MariaDB and SQLite. Support for Microsoft SQL Server and IBM DB2 is possible but has issues (<a href="https://github.com/layeredapps/dashboard/issues/5">MSSQL</a>, <a href="https://github.com/layeredapps/dashboard/issues/4">DB2</a>). During development and testing you can use SQLITE in RAM by not setting a <code data-language="js">DATABASE_FILE</code>.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Storage</th>
+                <th>Environment variables</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>SQLITE</td>
+                <td>STORAGE=sqlite</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE=dashboard</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE_FILE=/path/file.sqlite</td>
+              </tr>
+              <tr>
+                <td>POSTGRESQL</td>
+                <td>STORAGE=postgresql</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE_URL=postgres:/...</td>
+              </tr>
+              <tr>
+                <td>MariaDB</td>
+                <td>STORAGE=mariadb</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE_URL=mysql://...</td>
+              </tr>
+              <tr>
+                <td>MYSQL</td>
+                <td>STORAGE=mysql</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE_URL=mysql://...</td>
+              </tr>
+              <tr>
+                <td>MSSQL</td>
+                <td>STORAGE=mssql</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE_URL=Server=....</td>
+              </tr>
+              <tr>
+                <td>DB2</td>
+                <td>STORAGE=db2</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>DATABASE_URL=Server=...</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Dashboard modules are able to use their own storage settings:</p>
+          <pre><code data-language="js">$ SUBSCRIPTIONS_STORAGE=postgresql \
+  SUBSCRIPTIONS_DATABASE_URL=postgres://localhost:5432/subscriptions \
+  ORGANIZATIONS_STORAGE=mysql \
+  ORGANIZATIONS_DATABASE_URL=mysql:// \
+  CONNECT_STORAGE=mssql \
+  CONNECT_DATABASE_URL=... \
+  node main.js
+</code></pre>
+          <p>Read replication is supported for PostgreSQL, MariaDB, MySQL, MSSQL and DB2 by setting <code data-language="js">STORAGE_REPLICATION</code> and then defining 1+ read-only databases.</p>
+          <pre><code data-language="js">STORAGE_REPLICATION=true
+READ_DATABASE_URL1= 
+READ_DATABASE_URL2=
+</code></pre>
+          <p>Connection pooling limits can be defined including on a per-module configuration:</p>
+          <pre><code data-language="js">MAX_CONNECTIONS=3
+IDLE_CONNECTION_LIMIT=10000
+ORGANIZATIONS_MAX_CONNECTIONS=10
+ORGANIZATIONS_IDLE_CONNECTION_LIMIT=60000
+</code></pre>
+          <h1 id="storage-caching">Storage caching</h1>
+          <p>You can complement your storage backend with optional caching, either using RAM if you have a single instance of your Dashboard server, or Redis if you need a cache shared by multiple instances of your Dashboard server.</p>
+          <p>You can optionally use Redis as a cache, this is good for any storage on slow disks or for scaling Dashboard with multiple instances.</p>
+          <pre><code data-language="js">$ STORAGE_CACHE=redis \
+  REDIS_URL=redis://.... \ # use dedicated redis for cache
+  node main.js
+</code></pre>
+          <p>If you have a single Dashboard server you can cache within memory:</p>
+          <pre><code data-language="js">$ CACHE=node \
+  node main.js
+</code></pre>
+          <h1 id="usage-metrics">Usage metrics</h1>
+          <p>By default usage metrics will be stored in your Dashboard database. You can specify a Redis database to use instead.</p>
+          <p>You can optionally use Redis as a cache, this is good for any storage on slow disks.</p>
+          <pre><code data-language="js">$ STORAGE_METRICS=redis \
+  REDIS_URL=redis:/.... \
+  node main.js
+</code></pre>
+          <h1 id="single-and-multiple-redis-servers">Single and multiple Redis servers</h1>
+          <p>You can specify a single Redis server used for both caching and metrics:</p>
+          <pre><code data-language="js">$ STORAGE_METRICS=redis \
+  STORAGE_CACHE=redis \
+  REDIS_URL=redis:/.... \
+  node main.js
+</code></pre>
+          <p>You can specify separate servers:</p>
+          <pre><code data-language="js">$ STORAGE_METRICS=redis \
+  STORAGE_METRICS_REDIS_URL=redis:/.... \
+  STORAGE_CACHE=redis \
+  STORAGE_CACHE_REDIS_URL=redis:/.... \
+  node main.js
+</code></pre>
+          <h1 id="xss-and-csrf-protection">XSS and CSRF protection</h1>
+          <p>Dashboard protects its own forms and module forms from &quot;cross-site scripting&quot; attacks and &quot;cross-site request forgery&quot;, these attacks are essentially if someone enters javascript as a form value that is then executed when it is written on a page, or if they tried to submit a form from their website using an iframe.</p>
+          <p>Data that is posted to your application server is not restricted in case you have valid reasons to receive values that would not pass Dashboard's checks.</p>
+          <p>You can use the <code data-language="js">@layeredapps/dashboard/src/proxy/x-csrf-token.js</code> to receive a CSRF token for your own forms, and then when your forms are submitted you can check the posted value against the header value. These tokens are generated based on the URL, a random value assigned to the session, and the user's session and account identifiers.</p>
+          <p>For XSS there are many language-specific libraries you can use to sanitize input. Dashboard is written in NodeJS and uses <a href="https://www.npmjs.com/package/xss-filters">Yahoo's XSS-filters</a> module.</p>
+          <h1 id="logging">Logging</h1>
+          <p>By default Dashboard does not have any active <code data-language="js">console.*</code> being emitted. You can enable logging with <code data-language="js">LOG_LEVEL</code> containing a list of valid console.* methods.</p>
+          <pre><code data-language="js">$ LOG_LEVEL=log,warn,info,error node main.js
+</code></pre>
+          <p>Override Dashboard's logging by creating your own <code data-language="js">log.js</code> in the root of your project:</p>
+          <pre><code data-language="js">module.exports = (group) =&gt; {
+  return {
+    log: (message) =&gt; {
+    },
+    info: (message) =&gt; {
+    },
+    warn: (message) =&gt; {
+    }
+  }
+}
+</code></pre>
+          <h1 id="creating-modules-for-dashboard">Creating modules for Dashboard</h1>
+          <p>A module is a NodeJS application with the same folder structure as Dashboard. When Dashboard starts it scans its own files, and then any modules specified in the <code data-language="js">package.json</code> to create a combined sitemap of UI and API routes. You can browse the official modules' source to see examples.</p>
+          <pre><code data-language="js">$ mkdir my-module
+$ cd my-module
+$ npm install @layeredapps/dashboard --no-save
+# create main.js to start the server
+# create index.js optionally exporting any relevant API
+# add your content
+$ npm publish
+</code></pre>
+          <p>The &quot;--no-save&quot; flag is used to install Dashboard, this prevents your module from installing a redundant version of Dashboard when it is being installed by users.</p>
+          <p>When your module is published users can install it with NPM:</p>
+          <pre><code data-language="js">$ npm install your_module_name
+</code></pre>
+          <p>Modules must be activated in a web app's <code data-language="js">package.json</code>:</p>
+          <pre><code data-language="js">dashboard: {
+    modules: [ &quot;your_module_name&quot; ]
+}
+</code></pre>
+          <p>These paths have special significance:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Folder</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code data-language="js">/src/www</code></td>
+                <td>Web server root</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/public</code></td>
+                <td>Static assets served quickly</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/account</code></td>
+                <td>User account management pages</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/account/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/administrator</code></td>
+                <td>Administration pages</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/administrator/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/user</code></td>
+                <td>User account management pages</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/user/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/administrator</code></td>
+                <td>Administration APIs</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/api/administrator/YOUR_MODULE/</code></td>
+                <td>Your additions (if applicable)</td>
+              </tr>
+              <tr>
+                <td><code data-language="js">/src/www/webhooks/YOUR_MODULE/</code></td>
+                <td>Endpoints for receiving webhooks (if applicable)</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Content pages may export <code data-language="js">before</code>, <code data-language="js">get</code> for rendering the page and <code data-language="js">post</code> methods for submitting HTML forms. API routes may export <code data-language="js">before</code>, <code data-language="js">get</code>, <code data-language="js">post</code>, <code data-language="js">patch</code>, <code data-language="js">delete</code>, <code data-language="js">put</code> methods. If specified, the <code data-language="js">before</code> method will execute before any <code data-language="js">verb</code>.</p>
+          <p>Guest-accessible content and API routes can be flagged in the HTML or NodeJS:</p>
+          <pre><code data-language="js"># HTML
+&lt;html auth=&quot;false&quot;&gt;
+
+# NodeJS API route
+{ 
+    auth: false,
+    get: (req) = &gt; {
+
+    }
+}
+</code></pre>
+          <p>Content can occupy the full screen without the template via a flag in the HTML or NodeJS:</p>
+          <pre><code data-language="js"># HTML
+&lt;html template=&quot;false&quot;&gt;
+
+# NodeJS page handler
+{ 
+    template: false,
+    get: (req, res) = &gt; {
+
+    }
+}
+</code></pre>
+          <h1 id="testing">Testing</h1>
+          <p>Dashboard's test suite covers the <code data-language="js">API</code> and the <code data-language="js">UI</code>. The <code data-language="js">API</code> tests are performed by proxying a running instance of the software. The <code data-language="js">UI</code> tests are performed with <code data-language="js">puppeteer</code> remotely-controlling <code data-language="js">Chrome</code> to browse a running instance of the software and <code data-language="js">Mocha</code> to execute the tests. A <code data-language="js">docker-compose.yml</code> is provided to create databases.</p>
+          <pre><code data-language="js">$ npm run test-sqlite
+$ npm run test-sqlite-node-cache
+$ npm run test-sqlite-redis-cache
+$ npm run test-mysql
+$ npm run test-mysql-node-cache
+$ npm run test-mysql-redis-cache
+$ npm run test-mariadb
+$ npm run test-mariadb-node-cache
+$ npm run test-mariadb-redis-cache
+$ npm run test-postgresql
+$ npm run test-postgresql-node-cache
+$ npm run test-postgresql-redis-cache
+$ npm run test-mssql
+$ npm run test-mssql-node-cache
+$ npm run test-mssql-redis-cache
+$ npm run test-db2
+$ npm run test-db2-node-cache
+$ npm run test-db2-redis-cache
+</code></pre>
+          <h1 id="support-and-contributions">Support and contributions</h1>
+          <p>If you have encountered a problem post an issue on the appropriate <a href="https://github.com/layeredapps">Github repository</a>.</p>
+          <p>If you would like to contribute check <a href="https://github.com/layeredapps/dashboard">Github Issues</a> for ways you can help.</p>
+          <h2 id="icons">Icons</h2>
+          <p>Icons are obtained via <a href="https://flaticon.com">FlatIcon</a> and copyright their respective owners:</p>
+          <ul>
+            <li><a href="https://www.flaticon.com/free-icon/home-button_60817">Home button</a> by <a href="https://www.flaticon.com/authors/google">Google</a></li>
+            <li><a href="https://www.flaticon.com/free-icon/round-account-button-with-user-inside_61205">Account button</a> by <a href="https://www.flaticon.com/authors/google">Google</a></li>
+            <li><a href="https://www.flaticon.com/free-icon/database_149749">Administrator button</a> by <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a></li>
+            <li><a href="https://www.flaticon.com/free-icon/three-dots-more-indicator_60969">Spillage menu</a> by <a href="https://www.flaticon.com/authors/google">Google</a></li>
+          </ul>
+          <h2 id="license">License</h2>
+          <p>This software is licensed under the MIT license, a copy is enclosed in the <code data-language="js">LICENSE</code> file. Included icon assets are licensed separately, refer to the <code data-language="js">icons/licenses</code> folder for their licensing information.</p>
+          <p>Copyright (c) 2022 Ben Lowry</p>
+          <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+          <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+          <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
+        <p><a href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

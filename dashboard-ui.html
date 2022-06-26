@@ -1,0 +1,145 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Dashboard UI index</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/public/wa-mediabox.min.css" integrity="sha384-QIgOYIjb0GaFg2SpPCDf9jgtvfzsRaiwg2u1oMLlYiKGQih52JJA0CLi2MQt3s4B" crossorigin="anonymous" />
+  <script async="" src="/public/wa-mediabox.min.js" integrity="sha384-y/gOtcDxMMvaI24JJvEerKFbwXLCa847BpxiBxQKCUAXkPHl5VMJ8JumCJKgGc5x" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Dashboard UI index</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li class="active">
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/dashboard">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/dashboard-configuration">Configuration</a></li>
+          <li class="active"><a class="navigation-link" href="/dashboard-ui">UI</a></li>
+          <li class="api"><a class="navigation-link" href="/dashboard-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <h1 id="title">UI routes</h1>
+        <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p>
+        <div class="content">
+          <div class="ui-container" id="guest-container">
+            <h2 id="guest-routes">Guest routes</h2>
+            <p>These pages can be browsed by anonymous guests.</p>
+            <ul id="guest-routes-list" class="screenshots desktop">
+              <li><a class="screenshot-link" href="/ui/account/delete-account-complete"><img data-src="/screenshots/account/delete-account-complete/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/delete-account-complete">"Delete account complete" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/register"><img data-src="/screenshots/account/register/2-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/register">"Register" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/reset-account"><img data-src="/screenshots/account/reset-account/3-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/reset-account">"Reset account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/restore-account"><img data-src="/screenshots/account/restore-account/3-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/restore-account">"Restore account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/signin"><img data-src="/screenshots/account/signin/2-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/signin">"Signin" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/signout-complete"><img data-src="/screenshots/account/signout-complete/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/signout-complete">"Signout complete" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/signout"><img data-src="/screenshots/account/signout/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/signout">"Signout" navigation guide</a></li>
+            </ul>
+          </div>
+          <div class="ui-container" id="user-container">
+            <h2 id="user-routes">User routes</h2>
+            <p>These pages require the user be signed in.</p>
+            <ul id="user-routes-list" class="screenshots desktop">
+              <li><a class="screenshot-link" href="/ui/account/change-password"><img data-src="/screenshots/account/change-password/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/change-password">"Change password" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/change-username"><img data-src="/screenshots/account/change-username/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/change-username">"Change username" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/create-profile"><img data-src="/screenshots/account/create-profile/5-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/create-profile">"Create profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/create-reset-code"><img data-src="/screenshots/account/create-reset-code/5-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/create-reset-code">"Create reset code" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/delete-account-complete"><img data-src="/screenshots/account/delete-account-complete/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/delete-account-complete">"Delete account complete" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/delete-account"><img data-src="/screenshots/account/delete-account/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/delete-account">"Delete account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/delete-profile"><img data-src="/screenshots/account/delete-profile/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/delete-profile">"Delete profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/delete-reset-code"><img data-src="/screenshots/account/delete-reset-code/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/delete-reset-code">"Delete reset code" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/edit-profile"><img data-src="/screenshots/account/edit-profile/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/edit-profile">"Edit profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/end-all-sessions"><img data-src="/screenshots/account/end-all-sessions/4-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/end-all-sessions">"End all sessions" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/end-session"><img data-src="/screenshots/account/end-session/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/end-session">"End session" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account"><img data-src="/screenshots/account/index/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account">"Account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/profile"><img data-src="/screenshots/account/profile/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/profile">"Profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/profiles"><img data-src="/screenshots/account/profiles/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/profiles">"Profiles" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/register"><img data-src="/screenshots/account/register/2-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/register">"Register" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/reset-account"><img data-src="/screenshots/account/reset-account/3-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/reset-account">"Reset account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/reset-code"><img data-src="/screenshots/account/reset-code/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/reset-code">"Reset code" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/reset-codes"><img data-src="/screenshots/account/reset-codes/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/reset-codes">"Reset codes" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/restore-account"><img data-src="/screenshots/account/restore-account/3-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/restore-account">"Restore account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/session"><img data-src="/screenshots/account/session/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/session">"Session" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/sessions"><img data-src="/screenshots/account/sessions/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/sessions">"Sessions" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/set-default-profile"><img data-src="/screenshots/account/set-default-profile/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/set-default-profile">"Set default profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/signin"><img data-src="/screenshots/account/signin/2-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/signin">"Signin" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/signout-complete"><img data-src="/screenshots/account/signout-complete/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/signout-complete">"Signout complete" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/signout"><img data-src="/screenshots/account/signout/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/signout">"Signout" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/account/verify"><img data-src="/screenshots/account/verify/3-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/account/verify">"Verify" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/account-profiles"><img data-src="/screenshots/administrator/account-profiles/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/account-profiles">"Account profiles" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/account-reset-codes"><img data-src="/screenshots/administrator/account-reset-codes/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/account-reset-codes">"Account reset codes" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/account-sessions"><img data-src="/screenshots/administrator/account-sessions/6-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/account-sessions">"Account sessions" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/account"><img data-src="/screenshots/administrator/account/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/account">"Account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/accounts"><img data-src="/screenshots/administrator/accounts/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/accounts">"Accounts" navigation guide</a></li>
+            </ul>
+          </div>
+          <div class="ui-container" id="administrator-container">
+            <h2 id="administrator-routes">Administrator routes</h2>
+            <p>These pages are only accessible to administrators.</p>
+            <ul id="administrator-routes-list" class="screenshots desktop">
+              <li><a class="screenshot-link" href="/ui/administrator/administrators"><img data-src="/screenshots/administrator/administrators/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/administrators">"Administrators" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/assign-administrator"><img data-src="/screenshots/administrator/assign-administrator/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/assign-administrator">"Assign administrator" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/create-reset-code"><img data-src="/screenshots/administrator/create-reset-code/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/create-reset-code">"Create reset code" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/delete-account"><img data-src="/screenshots/administrator/delete-account/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/delete-account">"Delete account" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/delete-schedule"><img data-src="/screenshots/administrator/delete-schedule/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/delete-schedule">"Delete schedule" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator"><img data-src="/screenshots/administrator/index/3-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator">"Administrator" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/profile"><img data-src="/screenshots/administrator/profile/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/profile">"Profile" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/profiles"><img data-src="/screenshots/administrator/profiles/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/profiles">"Profiles" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/reset-code"><img data-src="/screenshots/administrator/reset-code/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/reset-code">"Reset code" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/reset-codes"><img data-src="/screenshots/administrator/reset-codes/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/reset-codes">"Reset codes" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/reset-session-key"><img data-src="/screenshots/administrator/reset-session-key/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/reset-session-key">"Reset session key" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/revoke-administrator"><img data-src="/screenshots/administrator/revoke-administrator/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/revoke-administrator">"Revoke administrator" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/schedule-account-delete"><img data-src="/screenshots/administrator/schedule-account-delete/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/schedule-account-delete">"Schedule account delete" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/session"><img data-src="/screenshots/administrator/session/5-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/session">"Session" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/sessions"><img data-src="/screenshots/administrator/sessions/4-complete-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/sessions">"Sessions" navigation guide</a></li>
+              <li><a class="screenshot-link" href="/ui/administrator/transfer-ownership"><img data-src="/screenshots/administrator/transfer-ownership/6-submit-form-desktop-en-dark.png" /></a><a class="route-link" href="/ui/administrator/transfer-ownership">"Transfer ownership" navigation guide</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><a class="skip" href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div><template id="route-template" template="route-template">
+    <li><a class="screenshot-link" href="/ui${route.url}"><img data-src="${route.src}" /></a><a class="route-link" href="/ui${route.url}">"${route.title}" navigation guide</a></li>
+  </template>
+</body>
+
+</html>

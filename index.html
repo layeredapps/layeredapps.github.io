@@ -1,0 +1,679 @@
+<html>
+
+<head>
+  <title translate="yes">Documentation for Dashboard</title>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <style>
+    /* open-sans-300 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 300;
+      src: url('/public/google-fonts/open-sans-v28-latin-300.eot');
+      /* IE9 Compat Modes */
+      src: local(''), url('/public/google-fonts/open-sans-v28-latin-300.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/google-fonts/open-sans-v28-latin-300.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-300.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-300.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/google-fonts/open-sans-v28-latin-300.svg#OpenSans') format('svg');
+      /* Legacy iOS */
+    }
+
+    /* open-sans-regular - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('/public/google-fonts/open-sans-v28-latin-regular.eot');
+      /* IE9 Compat Modes */
+      src: local(''), url('/public/google-fonts/open-sans-v28-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/google-fonts/open-sans-v28-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/google-fonts/open-sans-v28-latin-regular.svg#OpenSans') format('svg');
+      /* Legacy iOS */
+    }
+
+    /* open-sans-500 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 500;
+      src: url('/public/google-fonts/open-sans-v28-latin-500.eot');
+      /* IE9 Compat Modes */
+      src: local(''), url('/public/google-fonts/open-sans-v28-latin-500.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/google-fonts/open-sans-v28-latin-500.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-500.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-500.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/google-fonts/open-sans-v28-latin-500.svg#OpenSans') format('svg');
+      /* Legacy iOS */
+    }
+
+    /* open-sans-600 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      src: url('/public/google-fonts/open-sans-v28-latin-600.eot');
+      /* IE9 Compat Modes */
+      src: local(''), url('/public/google-fonts/open-sans-v28-latin-600.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/google-fonts/open-sans-v28-latin-600.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-600.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-600.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/google-fonts/open-sans-v28-latin-600.svg#OpenSans') format('svg');
+      /* Legacy iOS */
+    }
+
+    /* open-sans-700 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: url('/public/google-fonts/open-sans-v28-latin-700.eot');
+      /* IE9 Compat Modes */
+      src: local(''), url('/public/google-fonts/open-sans-v28-latin-700.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/google-fonts/open-sans-v28-latin-700.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-700.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-700.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/google-fonts/open-sans-v28-latin-700.svg#OpenSans') format('svg');
+      /* Legacy iOS */
+    }
+
+    /* open-sans-800 - latin */
+    @font-face {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 800;
+      src: url('/public/google-fonts/open-sans-v28-latin-800.eot');
+      /* IE9 Compat Modes */
+      src: local(''), url('/public/google-fonts/open-sans-v28-latin-800.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('/public/google-fonts/open-sans-v28-latin-800.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-800.woff') format('woff'),
+        /* Modern Browsers */
+        url('/public/google-fonts/open-sans-v28-latin-800.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/public/google-fonts/open-sans-v28-latin-800.svg#OpenSans') format('svg');
+      /* Legacy iOS */
+    }
+
+    html {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0
+    }
+
+    body {
+      min-width: 250px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
+      background: var(--gradient-background)
+    }
+
+    .dashboard {
+      min-width: 230px;
+      border-radius: 0.5rem;
+      width: 80%;
+      margin: 4rem 0;
+      background: var(--dashboard-background)
+    }
+
+    .header {
+      background-color: var(--header-background-color);
+      border-radius: 0.5rem 0.5rem 0 0;
+      height: 3rem;
+      line-height: 3rem;
+      color: inherit;
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr
+    }
+
+    .header h1 {
+      display: flex;
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: normal;
+      color: var(--header-title-text-color);
+      opacity: 0.75
+    }
+
+    .header img {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-top: 0.75rem;
+      display: block;
+      margin-left: 0.5rem;
+      opacity: 0.75;
+      filter: invert(1)
+    }
+
+    .header h1 img {
+      margin-right: 0.5rem
+    }
+
+    .header .menu {
+      height: 3rem;
+      float: right;
+      color: var(--header-menu-text-color);
+      line-height: 3rem;
+      font-size: 0.9rem;
+      margin-right: 1rem
+    }
+
+    .header .menu span {
+      display: inline-block;
+      height: 3rem;
+      line-height: 3rem
+    }
+
+    .content {
+      padding-bottom: 4rem;
+      text-align: center
+    }
+
+    .content h1 {
+      color: var(--content-heading-text-color);
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 0.5rem;
+      margin: 2rem 4rem
+    }
+
+    .content h1 span {
+      color: var(--content-heading-brighter-text-color)
+    }
+
+    .content p {
+      color: var(--content-text-color);
+      font-size: 1.2rem;
+      font-weight: 300;
+      padding: 0.5rem;
+      margin: 1rem 0 0.5rem 0
+    }
+
+    .content ul {
+      margin: 0;
+      padding: 0
+    }
+
+    .content li {
+      font-size: 1.4rem;
+      line-height: 3rem;
+      color: var(--content-li-text-color);
+      font-weight: 300;
+      list-style-type: none;
+      padding: 0 1rem;
+      margin: 1rem;
+      background-color: var(--content-li-background-color);
+      display: inline-block;
+      border-radius: 0.5rem
+    }
+
+    .content img {
+      width: 100%
+    }
+
+    .content .splash {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 1rem;
+      margin-bottom: 1rem
+    }
+
+    .content .button {
+      display: inline-block;
+      background-color: transparent;
+      border: 2px solid var(--content-button-border-color);
+      background-color: var(--content-button-background-color);
+      color: var(--content-button-text-color);
+      padding: 0 1rem;
+      line-height: 2.4rem;
+      border-radius: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none
+    }
+
+    .content .button:active,
+    .content .button:hover {
+      border-color: var(--content-button-hover-border-color);
+      color: var(--content-button-hover-text-color)
+    }
+
+    .content .button-spaced {
+      margin-right: 1rem
+    }
+
+    .content .button-imaged {
+      padding-left: 0.5rem;
+      line-height: 3rem
+    }
+
+    .content .button-imaged .wrapper {
+      display: flex
+    }
+
+    .content .button-imaged .icon {
+      display: block;
+      height: 2rem;
+      width: 2.5rem;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      filter: invert(88%) sepia(27%) saturate(3640%) hue-rotate(332deg) brightness(97%) contrast(93%)
+    }
+
+    .content .button-imaged:hover .icon {
+      filter: invert(1)
+    }
+
+    .deploy {
+      margin: 2rem 1rem 0 1rem
+    }
+
+    .deploy h2 {
+      font-weight: 300;
+      color: var(--content-subtitle-text-color);
+      font-size: 1.2rem
+    }
+
+    .deploy p {
+      font-size: 0.9rem
+    }
+
+    .deploy p a {
+      color: var(--content-link-text-color)
+    }
+
+    .deploy pre {
+      font-family: monospace;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      overflow-x: auto;
+      color: var(--pre-color);
+      text-align: left
+    }
+
+    .deploy .wrapper {
+      margin: 0 auto;
+      max-width: 40rem;
+      padding: 1rem;
+      background-color: var(--pre-wrapper-background-color);
+      border-radius: 0.5rem
+    }
+
+    .tree-body {
+      display: table;
+      margin: 0 auto
+    }
+
+    .tree-body .devices {
+      margin-top: 1rem
+    }
+
+    .tree-body #sitemap {
+      margin-top: 5rem
+    }
+
+    .tree,
+    .tree ul,
+    .tree li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative
+    }
+
+    .tree {
+      margin: 0 0 1em;
+      text-align: center
+    }
+
+    .tree,
+    .tree ul {
+      display: table
+    }
+
+    .tree ul {
+      width: 100%
+    }
+
+    .tree li {
+      display: table-cell;
+      padding: 0.4rem 0 0 0;
+      vertical-align: top
+    }
+
+    .tree li:before {
+      border-bottom: 1px dotted var(--tree-border-color);
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0
+    }
+
+    .tree li:first-child:before {
+      left: 50%
+    }
+
+    .tree li:last-child:before {
+      right: 50%
+    }
+
+    .tree span {
+      line-height: 2.4rem;
+      display: inline-block;
+      margin: 0 1rem 1rem;
+      padding: 0.5rem;
+      position: relative;
+      border-radius: 0.5rem;
+      background-color: var(--tree-background-color);
+      color: var(--content-text-color);
+      font-weight: bold;
+      font-size: 0.8rem
+    }
+
+    .tree ul:before,
+    .tree span:before {
+      border-left: 1px dotted var(--tree-border-color);
+      content: "";
+      height: 1rem;
+      left: 50%;
+      position: absolute
+    }
+
+    .tree ul:before {
+      top: -1rem
+    }
+
+    .tree span:before {
+      top: -1rem
+    }
+
+    .tree>li {
+      margin-top: 0
+    }
+
+    .tree>li:before,
+    .tree>li:after,
+    .tree>li>code:before {
+      border: none
+    }
+
+    .explain {
+      margin: 2rem auto 0 auto;
+      text-align: center;
+    }
+
+    .explain h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: var(--content-subtitle-text-color)
+    }
+
+    .explain ul {
+      margin: 0 auto
+    }
+
+    .explain li {
+      background-color: transparent
+    }
+
+    .explain span {
+      padding: 0 1rem
+    }
+
+    .attribution {
+      margin: 2rem 0;
+      color: var(--content-text-color);
+      font-size: 0.65rem;
+      line-height: 1.2rem;
+      max-width: 80%;
+      text-align: center
+    }
+
+    .attribution a {
+      color: var(--content-link-text-color)
+    }
+
+    @media (max-width: 650px) {
+      .dashboard {
+        width: 96%;
+        margin: 1rem 0
+      }
+
+      .dashboard h1 {
+        margin: 0
+      }
+
+      .content {
+        padding-top: 1rem
+      }
+    }
+
+    @media (max-width: 850px) {
+      .content .splash {
+        grid-template-columns: none;
+        display: block
+      }
+    }
+
+    @media (max-width: 1366px) {
+      .content .splash {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    /* color settings */
+    :root {
+      --gradient-background: linear-gradient(30deg, #117, #715, #ea3);
+      --dashboard-background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+      --header-background-color: rgba(0, 0, 0, 0.25);
+      --header-title-text-color: #FFF;
+      --header-menu-text-color: rgba(255, 255, 255, 0.75);
+      --content-heading-text-color: rgba(255, 255, 255, 0.5);
+      --content-heading-brighter-text-color: rgba(255, 255, 255, 0.75);
+      --content-text-color: rgba(255, 255, 255, 0.5);
+      --content-li-text-color: rgba(255, 255, 255, 0.75);
+      --content-li-background-color: rgba(0, 0, 0, 0.125);
+      --content-button-background-color: rgba(0, 0, 0, 0, 0.25);
+      --content-button-border-color: #EA3;
+      --content-button-text-color: #EA3;
+      --content-button-hover-text-color: #FFF;
+      --content-button-hover-border-color: #FFF;
+      --content-subtitle-text-color: #FFF;
+      --content-link-text-color: #FFF;
+      --tree-background-color: rgba(255, 255, 255, 0.125);
+      --tree-border-color: rgba(255, 255, 255, 0.5);
+      --pre-color: rgba(255, 255, 255, 0.75);
+      --pre-wrapper-background-color: rgba(255, 255, 255, 0.0675);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .header img {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-top: 0.75rem;
+        display: block;
+        margin-left: 0.5rem;
+        opacity: 0.25;
+        filter: invert(1)
+      }
+
+      .header h1 img {
+        opacity: 0.75
+      }
+
+      :root {
+        --gradient-background: linear-gradient(30deg, rgb(7, 7, 54), rgb(48, 6, 34), rgb(63, 45, 14));
+        --dashboard-background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5));
+        --header-background-color: rgba(0, 0, 0, 0.25);
+        --header-title-text-color: #FFF;
+        --header-menu-text-color: rgba(255, 255, 255, 0.75);
+        --content-heading-text-color: rgba(255, 255, 255, 0.5);
+        --content-heading-brighter-text-color: rgba(255, 255, 255, 0.75);
+        --content-text-color: rgba(255, 255, 255, 0.75);
+        --content-li-text-color: rgba(255, 255, 255, 0.75);
+        --content-li-background-color: rgba(0, 0, 0, 0.5);
+        --content-button-background-color: rgba(0, 0, 0, 0, 0.25);
+        --content-button-border-color: #EA3;
+        --content-button-text-color: #EA3;
+        --content-button-hover-text-color: #FFF;
+        --content-button-hover-border-color: #FFF;
+        --content-subtitle-text-color: #FFF;
+        --content-link-text-color: #FFF;
+        --tree-background-color: rgba(255, 255, 255, 0.125);
+        --tree-border-color: rgba(255, 255, 255, 0.5);
+        --pre-color: rgba(255, 255, 255, 0.75);
+        --pre-wrapper-background-color: rgba(255, 255, 255, 0.0675);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="dashboard">
+      <section class="header">
+        <h1><img src="/public/layeredapps.svg" integrity="sha384-jgAU9mv7VNKo8Kf1UeUARF+cf/qy36Bw1aqdsnRFneB/GJ53ljkXg3kBScjCg5R+" crossorigin="anonymous" /> Layered Apps</h1>
+        <div class="menus">
+          <div class="menu"><img src="/public/account.svg" integrity="sha384-MvlCEp6YYg7HTDGu9xVNzSrSqFbqWe9S+DmZzgXaytHk9zqlosRfEJ62LB0vWaO2" crossorigin="anonymous" /></div>
+          <div class="menu"><img src="/public/administrator.svg" integrity="sha384-4u1B3wyMYWYEIafYP7/NEajZ+Iq2QUSYSNAxAKVHFnZCblZ1mUo6HFNejKB5TLLS" crossorigin="anonymous" /></div>
+        </div>
+      </section>
+      <section class="content">
+        <h1><span>Dashboard</span> provides <span>web apps</span> an instant <span>UI and API</span> for user accounts, organizations and <span>Stripe integrations</span></h1>
+        <div class="splash">
+          <div>
+            <p>Deploy it in front of your web application, style it with CSS, and skip the "boilerplate" for accounts, subscriptions and more!</p><a class="button button-spaced" href="/dashboard">Documentation</a><a class="button" href="https://github.com/layeredapps">Source code</a>
+            <p>It's even easier with our hosting:</p><a class="button button-imaged" href="https://layeredapps.com"><span class="wrapper"><img class="icon" src="/public/layeredapps.svg" integrity="sha384-jgAU9mv7VNKo8Kf1UeUARF+cf/qy36Bw1aqdsnRFneB/GJ53ljkXg3kBScjCg5R+" crossorigin="anonymous" /> Layered Apps </span></a>
+          </div>
+          <p><img src="/public/devices.png" title="Screenshots on various devices demonstrate repsonsive design" integrity="sha384-6GrIoZ+rAgdQeNTjcwtlbos88vM0EMQ5HdgJ+GeYGQ7eNmkpOjjWzXGUQxR1sdTs" crossorigin="anonymous" /></p>
+        </div>
+        <ul>
+          <li>zero-code integration &#10003;</li>
+          <li>stack-agnostic &#10003;</li>
+          <li>horizontally-scalable &#10003;</li>
+          <li>self-hostable &#10003;</li>
+          <li>API-driven &#10003;</li>
+          <li>modular &#10003;</li>
+          <li>themeable &#10003;</li>
+          <li>responsive &#10003;</li>
+          <li>open-source &#10003;</li>
+        </ul>
+        <div class="explain">
+          <h2 id="how-it-works">How it works</h2>
+          <ul class="tree">
+            <li><span>User makes request</span>
+              <ul>
+                <li><span>Dashboard receives request</span>
+                  <ul>
+                    <li><span>URL recognized as Dashboard or Module content</span>
+                      <ul>
+                        <li><span>User receives content from Dashboard server</span></li>
+                      </ul>
+                    </li>
+                    <li><span>Dashboard forwards request to Application server</span>
+                      <ul>
+                        <li><span>Application server returns content to Dashboard</span>
+                          <ul>
+                            <li><span>User receives content from Application server</span></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="deploy">
+          <h2 id="deplyment-instructions">Deplyment instructions</h2>
+          <p>First set up NodeJS and your Dashboard server with any modules you want</p>
+          <div class="wrapper">
+            <pre><code>$ mkdir my-dashboard-server
+$ cd my-dashboard-server
+$ npm init -y
+$ npm install @layeredapps/dashboard
+$ npm install @layeredapps/organizations        # optional
+$ npm install @layeredapps/stripe-subscriptions # optional
+$ npm install @layeredapps/stripe-connect       # optional  
+$ echo "require('@layeredapps/dashboard').start(__dirname)" > main.js</code></pre>
+          </div>
+          <p>Add your configuration to your package.json</p>
+          <div class="wrapper">
+            <pre><code>"dashboard": {
+  "title": "My Web App",
+  "modules": [
+    "@layeredapps/stripe-subscriptions"
+  ]
+}</code></pre>
+          </div>
+          <p>Install the driver for your preferred database (read about <a href="/dashboard#storage-backends">storage backends</a> and <a href="/dashboard#storage-caching">caching</a>)</p>
+          <div class="wrapper">
+            <pre><code>$ npm install sqlite3      # perfect for dev/testing
+$ npm install pg pg-hstore # for postgresql
+$ npm install mysql2       # for mysql and mariadb
+$ npm install tedious      # for mssql server
+$ npm install ibm_db       # for db2</code></pre>
+          </div>
+          <p>Start your server (read about <a href="/dashboard-configuration">configuration variables</a>)</p>
+          <div class="wrapper">
+            <pre><code>$ export APPLICATION_SERVER=http://localhost:3000
+$ export APPLICATION_SERVER_TOKEN=secret
+$ node main.js</code></pre>
+          </div>
+          <p>Dashboard will start at http://localhost:8000</p>
+        </div>
+      </section>
+    </div>
+    <p class="attribution">Icons used under Creative Commons attribution and MIT licenses. Device icon copyright <a href="http://www.freepik.com">Freepik</a> | Home and account icon copyright <a href="https://www.flaticon.com/authors/google">Google</a> | Administrator icon copyright <a href="https://www.flaticon.com/authors/smashicons">Smashicons</a> | Cube icon copyright <a href="https://www.svgrepo.com/svg/82645/cube-with-layers">SVG Repo</a></p>
+    <p class="attribution">&copy; 2022 Ben Lowry. Dashboard, modules and documentation are licensed with the <a href="https://mit-license.org/">MIT license</a></p>
+  </div>
+</body>
+
+</html>

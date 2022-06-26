@@ -1,0 +1,33 @@
+{
+  "payoutid": "po_1LEBuARd1XimRqWc0yfo8TnS",
+  "object": "payout",
+  "stripeObject": {
+    "id": "po_1LEBuARd1XimRqWc0yfo8TnS",
+    "object": "payout",
+    "amount": 2000,
+    "arrival_date": 1656288000,
+    "automatic": false,
+    "balance_transaction": "txn_1LEBuBRd1XimRqWcQOKGPFoK",
+    "created": 1656074794,
+    "currency": "nzd",
+    "description": null,
+    "destination": "ba_1LEBthRd1XimRqWcs3YzJlYD",
+    "failure_balance_transaction": null,
+    "failure_code": null,
+    "failure_message": null,
+    "livemode": false,
+    "metadata": {},
+    "method": "standard",
+    "original_payout": null,
+    "reversed_by": null,
+    "source_type": "card",
+    "statement_descriptor": null,
+    "status": "pending",
+    "type": "bank_account"
+  },
+  "accountid": "acct_b1abff77ed45f9c3",
+  "stripeid": "acct_1LEBtaRd1XimRqWc",
+  "appid": "tests_1656074758",
+  "createdAt": "2022-06-24T12:46:36.004Z",
+  "updatedAt": "2022-06-24T12:46:36.004Z"
+}

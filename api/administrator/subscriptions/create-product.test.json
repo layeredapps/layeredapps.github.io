@@ -1,0 +1,29 @@
+{
+  "productid": "prod_LwGpBJCRJRwdpI",
+  "object": "product",
+  "stripeObject": {
+    "id": "prod_LwGpBJCRJRwdpI",
+    "object": "product",
+    "active": true,
+    "attributes": [],
+    "created": 1656122388,
+    "default_price": null,
+    "description": null,
+    "images": [],
+    "livemode": false,
+    "metadata": {},
+    "name": "product name",
+    "package_dimensions": null,
+    "shippable": null,
+    "statement_descriptor": "description",
+    "tax_code": "txcd_41060003",
+    "type": "service",
+    "unit_label": "thing",
+    "updated": 1656122389,
+    "url": null
+  },
+  "active": true,
+  "appid": "tests_1656122388",
+  "createdAt": "2022-06-25T01:59:49.155Z",
+  "updatedAt": "2022-06-25T01:59:49.155Z"
+}

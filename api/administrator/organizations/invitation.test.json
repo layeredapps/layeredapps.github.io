@@ -1,0 +1,12 @@
+{
+  "invitationid": "invt_48ddc3f178816e6c",
+  "organizationid": "orgn_e5468c580fa46cd3",
+  "accountid": "acct_448bfbec147ed134",
+  "object": "invitation",
+  "appid": "tests_1656039695",
+  "multi": true,
+  "acceptedAt": null,
+  "terminatedAt": null,
+  "createdAt": "2022-06-24T03:01:35.163Z",
+  "updatedAt": "2022-06-24T03:01:35.163Z"
+}

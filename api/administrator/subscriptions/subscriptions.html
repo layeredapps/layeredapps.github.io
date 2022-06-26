@@ -1,0 +1,721 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>subscriptions#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/subscriptions (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.administrator.subscriptions.Subscriptions.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "subscriptionid": "sub_1LEOWRHHqepMFuCXnvmMOMRF",
+    "object": "subscription",
+    "stripeObject": {
+      "id": "sub_1LEOWRHHqepMFuCXnvmMOMRF",
+      "object": "subscription",
+      "application": null,
+      "application_fee_percent": null,
+      "automatic_tax": {
+        "enabled": false
+      },
+      "billing_cycle_anchor": 1656123294,
+      "billing_thresholds": null,
+      "cancel_at": null,
+      "cancel_at_period_end": false,
+      "canceled_at": null,
+      "collection_method": "charge_automatically",
+      "created": 1656123294,
+      "current_period_end": 1658715294,
+      "current_period_start": 1656123294,
+      "customer": "cus_LwH4CJMGAiXpMy",
+      "days_until_due": null,
+      "default_payment_method": "pm_1LEOWNHHqepMFuCXPAcbPhWe",
+      "default_source": null,
+      "default_tax_rates": [],
+      "description": null,
+      "discount": null,
+      "ended_at": null,
+      "items": {
+        "object": "list",
+        "data": [
+          {
+            "id": "si_LwH4ztQrGf4lIU",
+            "object": "subscription_item",
+            "billing_thresholds": null,
+            "created": 1656123295,
+            "metadata": {},
+            "plan": {
+              "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 1000,
+              "amount_decimal": "1000",
+              "billing_scheme": "per_unit",
+              "created": 1656123268,
+              "currency": "usd",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": false,
+              "metadata": {},
+              "nickname": null,
+              "product": "prod_LwH4dOSfkdcrD9",
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": null,
+              "usage_type": "licensed"
+            },
+            "price": {
+              "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+              "object": "price",
+              "active": true,
+              "billing_scheme": "per_unit",
+              "created": 1656123268,
+              "currency": "usd",
+              "custom_unit_amount": null,
+              "livemode": false,
+              "lookup_key": null,
+              "metadata": {},
+              "nickname": null,
+              "product": "prod_LwH4dOSfkdcrD9",
+              "recurring": {
+                "aggregate_usage": null,
+                "interval": "month",
+                "interval_count": 1,
+                "trial_period_days": null,
+                "usage_type": "licensed"
+              },
+              "tax_behavior": "inclusive",
+              "tiers_mode": null,
+              "transform_quantity": null,
+              "type": "recurring",
+              "unit_amount": 1000,
+              "unit_amount_decimal": "1000"
+            },
+            "quantity": 1,
+            "subscription": "sub_1LEOWRHHqepMFuCXnvmMOMRF",
+            "tax_rates": []
+          }
+        ],
+        "has_more": false,
+        "total_count": 1,
+        "url": "/v1/subscription_items?subscription=sub_1LEOWRHHqepMFuCXnvmMOMRF"
+      },
+      "latest_invoice": "in_1LEOWRHHqepMFuCXByoNz65J",
+      "livemode": false,
+      "metadata": {},
+      "next_pending_invoice_item_invoice": null,
+      "pause_collection": null,
+      "payment_settings": {
+        "payment_method_options": null,
+        "payment_method_types": null,
+        "save_default_payment_method": "off"
+      },
+      "pending_invoice_item_interval": null,
+      "pending_setup_intent": null,
+      "pending_update": null,
+      "plan": {
+        "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+        "object": "plan",
+        "active": true,
+        "aggregate_usage": null,
+        "amount": 1000,
+        "amount_decimal": "1000",
+        "billing_scheme": "per_unit",
+        "created": 1656123268,
+        "currency": "usd",
+        "interval": "month",
+        "interval_count": 1,
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "product": "prod_LwH4dOSfkdcrD9",
+        "tiers_mode": null,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "usage_type": "licensed"
+      },
+      "quantity": 1,
+      "schedule": null,
+      "start_date": 1656123294,
+      "status": "active",
+      "test_clock": null,
+      "transfer_data": null,
+      "trial_end": null,
+      "trial_start": null
+    },
+    "customerid": "cus_LwH4CJMGAiXpMy",
+    "accountid": "acct_c6acd94c95ef14e7",
+    "paymentmethodid": null,
+    "productid": null,
+    "priceids": [
+      "price_1LEOW0HHqepMFuCX6UX1FxgQ"
+    ],
+    "couponid": null,
+    "appid": "tests_1656123267",
+    "createdAt": "2022-06-25T02:14:57.598Z",
+    "updatedAt": "2022-06-25T02:14:59.074Z"
+  },
+  {
+    "subscriptionid": "sub_1LEOWJHHqepMFuCXcN1MafPm",
+    "object": "subscription",
+    "stripeObject": {
+      "id": "sub_1LEOWJHHqepMFuCXcN1MafPm",
+      "object": "subscription",
+      "application": null,
+      "application_fee_percent": null,
+      "automatic_tax": {
+        "enabled": false
+      },
+      "billing_cycle_anchor": 1656123287,
+      "billing_thresholds": null,
+      "cancel_at": null,
+      "cancel_at_period_end": false,
+      "canceled_at": null,
+      "collection_method": "charge_automatically",
+      "created": 1656123287,
+      "current_period_end": 1658715287,
+      "current_period_start": 1656123287,
+      "customer": "cus_LwH4AsFxUuWOwf",
+      "days_until_due": null,
+      "default_payment_method": "pm_1LEOWGHHqepMFuCXgCwGzIKZ",
+      "default_source": null,
+      "default_tax_rates": [],
+      "description": null,
+      "discount": null,
+      "ended_at": null,
+      "items": {
+        "object": "list",
+        "data": [
+          {
+            "id": "si_LwH4NLYeymDJ03",
+            "object": "subscription_item",
+            "billing_thresholds": null,
+            "created": 1656123287,
+            "metadata": {},
+            "plan": {
+              "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 1000,
+              "amount_decimal": "1000",
+              "billing_scheme": "per_unit",
+              "created": 1656123268,
+              "currency": "usd",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": false,
+              "metadata": {},
+              "nickname": null,
+              "product": "prod_LwH4dOSfkdcrD9",
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": null,
+              "usage_type": "licensed"
+            },
+            "price": {
+              "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+              "object": "price",
+              "active": true,
+              "billing_scheme": "per_unit",
+              "created": 1656123268,
+              "currency": "usd",
+              "custom_unit_amount": null,
+              "livemode": false,
+              "lookup_key": null,
+              "metadata": {},
+              "nickname": null,
+              "product": "prod_LwH4dOSfkdcrD9",
+              "recurring": {
+                "aggregate_usage": null,
+                "interval": "month",
+                "interval_count": 1,
+                "trial_period_days": null,
+                "usage_type": "licensed"
+              },
+              "tax_behavior": "inclusive",
+              "tiers_mode": null,
+              "transform_quantity": null,
+              "type": "recurring",
+              "unit_amount": 1000,
+              "unit_amount_decimal": "1000"
+            },
+            "quantity": 1,
+            "subscription": "sub_1LEOWJHHqepMFuCXcN1MafPm",
+            "tax_rates": []
+          }
+        ],
+        "has_more": false,
+        "total_count": 1,
+        "url": "/v1/subscription_items?subscription=sub_1LEOWJHHqepMFuCXcN1MafPm"
+      },
+      "latest_invoice": "in_1LEOWJHHqepMFuCXcC9QCCTj",
+      "livemode": false,
+      "metadata": {},
+      "next_pending_invoice_item_invoice": null,
+      "pause_collection": null,
+      "payment_settings": {
+        "payment_method_options": null,
+        "payment_method_types": null,
+        "save_default_payment_method": "off"
+      },
+      "pending_invoice_item_interval": null,
+      "pending_setup_intent": null,
+      "pending_update": null,
+      "plan": {
+        "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+        "object": "plan",
+        "active": true,
+        "aggregate_usage": null,
+        "amount": 1000,
+        "amount_decimal": "1000",
+        "billing_scheme": "per_unit",
+        "created": 1656123268,
+        "currency": "usd",
+        "interval": "month",
+        "interval_count": 1,
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "product": "prod_LwH4dOSfkdcrD9",
+        "tiers_mode": null,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "usage_type": "licensed"
+      },
+      "quantity": 1,
+      "schedule": null,
+      "start_date": 1656123287,
+      "status": "active",
+      "test_clock": null,
+      "transfer_data": null,
+      "trial_end": null,
+      "trial_start": null
+    },
+    "customerid": "cus_LwH4AsFxUuWOwf",
+    "accountid": "acct_f32c050e520c24de",
+    "paymentmethodid": null,
+    "productid": null,
+    "priceids": [
+      "price_1LEOW0HHqepMFuCX6UX1FxgQ"
+    ],
+    "couponid": null,
+    "appid": "tests_1656123267",
+    "createdAt": "2022-06-25T02:14:49.724Z",
+    "updatedAt": "2022-06-25T02:14:50.870Z"
+  },
+  {
+    "subscriptionid": "sub_1LEOWCHHqepMFuCXD4ODRXB6",
+    "object": "subscription",
+    "stripeObject": {
+      "id": "sub_1LEOWCHHqepMFuCXD4ODRXB6",
+      "object": "subscription",
+      "application": null,
+      "application_fee_percent": null,
+      "automatic_tax": {
+        "enabled": false
+      },
+      "billing_cycle_anchor": 1656123280,
+      "billing_thresholds": null,
+      "cancel_at": null,
+      "cancel_at_period_end": false,
+      "canceled_at": null,
+      "collection_method": "charge_automatically",
+      "created": 1656123280,
+      "current_period_end": 1658715280,
+      "current_period_start": 1656123280,
+      "customer": "cus_LwH4C6510ZNTf2",
+      "days_until_due": null,
+      "default_payment_method": "pm_1LEOW9HHqepMFuCXjbsyIWhM",
+      "default_source": null,
+      "default_tax_rates": [],
+      "description": null,
+      "discount": null,
+      "ended_at": null,
+      "items": {
+        "object": "list",
+        "data": [
+          {
+            "id": "si_LwH4TIPDF2iUoz",
+            "object": "subscription_item",
+            "billing_thresholds": null,
+            "created": 1656123280,
+            "metadata": {},
+            "plan": {
+              "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+              "object": "plan",
+              "active": true,
+              "aggregate_usage": null,
+              "amount": 1000,
+              "amount_decimal": "1000",
+              "billing_scheme": "per_unit",
+              "created": 1656123268,
+              "currency": "usd",
+              "interval": "month",
+              "interval_count": 1,
+              "livemode": false,
+              "metadata": {},
+              "nickname": null,
+              "product": "prod_LwH4dOSfkdcrD9",
+              "tiers_mode": null,
+              "transform_usage": null,
+              "trial_period_days": null,
+              "usage_type": "licensed"
+            },
+            "price": {
+              "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+              "object": "price",
+              "active": true,
+              "billing_scheme": "per_unit",
+              "created": 1656123268,
+              "currency": "usd",
+              "custom_unit_amount": null,
+              "livemode": false,
+              "lookup_key": null,
+              "metadata": {},
+              "nickname": null,
+              "product": "prod_LwH4dOSfkdcrD9",
+              "recurring": {
+                "aggregate_usage": null,
+                "interval": "month",
+                "interval_count": 1,
+                "trial_period_days": null,
+                "usage_type": "licensed"
+              },
+              "tax_behavior": "inclusive",
+              "tiers_mode": null,
+              "transform_quantity": null,
+              "type": "recurring",
+              "unit_amount": 1000,
+              "unit_amount_decimal": "1000"
+            },
+            "quantity": 1,
+            "subscription": "sub_1LEOWCHHqepMFuCXD4ODRXB6",
+            "tax_rates": []
+          }
+        ],
+        "has_more": false,
+        "total_count": 1,
+        "url": "/v1/subscription_items?subscription=sub_1LEOWCHHqepMFuCXD4ODRXB6"
+      },
+      "latest_invoice": "in_1LEOWCHHqepMFuCX83ns0ie4",
+      "livemode": false,
+      "metadata": {},
+      "next_pending_invoice_item_invoice": null,
+      "pause_collection": null,
+      "payment_settings": {
+        "payment_method_options": null,
+        "payment_method_types": null,
+        "save_default_payment_method": "off"
+      },
+      "pending_invoice_item_interval": null,
+      "pending_setup_intent": null,
+      "pending_update": null,
+      "plan": {
+        "id": "price_1LEOW0HHqepMFuCX6UX1FxgQ",
+        "object": "plan",
+        "active": true,
+        "aggregate_usage": null,
+        "amount": 1000,
+        "amount_decimal": "1000",
+        "billing_scheme": "per_unit",
+        "created": 1656123268,
+        "currency": "usd",
+        "interval": "month",
+        "interval_count": 1,
+        "livemode": false,
+        "metadata": {},
+        "nickname": null,
+        "product": "prod_LwH4dOSfkdcrD9",
+        "tiers_mode": null,
+        "transform_usage": null,
+        "trial_period_days": null,
+        "usage_type": "licensed"
+      },
+      "quantity": 1,
+      "schedule": null,
+      "start_date": 1656123280,
+      "status": "active",
+      "test_clock": null,
+      "transfer_data": null,
+      "trial_end": null,
+      "trial_start": null
+    },
+    "customerid": "cus_LwH4C6510ZNTf2",
+    "accountid": "acct_d51c3fd20884864b",
+    "paymentmethodid": null,
+    "productid": null,
+    "priceids": [
+      "price_1LEOW0HHqepMFuCX6UX1FxgQ"
+    ],
+    "couponid": null,
+    "appid": "tests_1656123267",
+    "createdAt": "2022-06-25T02:14:42.444Z",
+    "updatedAt": "2022-06-25T02:14:44.040Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/subscriptions.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    const where = {
+      appid: req.appid || global.appid
+    }
+    if (req.query.customerid) {
+      const customer = await global.api.administrator.subscriptions.Customer.get(req)
+      if (!customer) {
+        throw new Error('invalid-customer')
+      }
+      where.customerid = req.query.customerid
+    } else if (req.query.accountid) {
+      const account = await global.api.administrator.Account.get(req)
+      if (!account) {
+        throw new Error('invalid-account')
+      }
+      where.accountid = req.query.accountid
+    } else if (req.query.couponid) {
+      const coupon = await global.api.administrator.subscriptions.Coupon.get(req)
+      if (!coupon) {
+        throw new Error('invalid-couponid')
+      }
+      where.couponid = req.query.couponid
+    }
+    let subscriptionids
+    if (req.query.all) {
+      subscriptionids = await subscriptions.Storage.Subscription.findAll({
+        where,
+        attributes: ['subscriptionid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      subscriptionids = await subscriptions.Storage.Subscription.findAll({
+        where,
+        attributes: ['subscriptionid'],
+        offset,
+        limit,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    }
+    if (!subscriptionids || !subscriptionids.length) {
+      return null
+    }
+    const items = []
+    for (const subscriptionInfo of subscriptionids) {
+      req.query.subscriptionid = subscriptionInfo.dataValues.subscriptionid
+      const subscription = await global.api.administrator.subscriptions.Subscription.get(req)
+      items.push(subscription)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/subscriptions.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/subscriptions', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedSubscriptions
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedSubscriptions = []
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+      cachedSubscriptions.unshift(user.subscription.subscriptionid)
+    }
+    const req1 = TestHelper.createRequest('/api/administrator/subscriptions/subscriptions?offset=1')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest('/api/administrator/subscriptions/subscriptions?limit=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/subscriptions/subscriptions?all=true')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/subscriptions/subscriptions')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+    global.pageSize = 2
+    cachedResponses.finished = true
+  }
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const subscriptionsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(subscriptionsNow[i].subscriptionid, cachedSubscriptions[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const limit = 1
+      const subscriptionsNow = cachedResponses.limit
+      assert.strictEqual(subscriptionsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const subscriptionsNow = cachedResponses.all
+      assert.strictEqual(subscriptionsNow.length, cachedSubscriptions.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const subscriptions = cachedResponses.returns
+      assert.strictEqual(subscriptions.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      const subscriptions = cachedResponses.pageSize
+      assert.strictEqual(subscriptions.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

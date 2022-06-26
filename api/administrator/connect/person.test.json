@@ -1,0 +1,103 @@
+{
+  "personid": "person_1LEBovDI1MZJCp7FWJjYlGWB",
+  "object": "person",
+  "accountid": "acct_ef4ff3662754002a",
+  "stripeid": "acct_1LEBorDI1MZJCp7F",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "person_1LEBovDI1MZJCp7FWJjYlGWB",
+    "object": "person",
+    "account": "acct_1LEBorDI1MZJCp7F",
+    "address": {
+      "city": null,
+      "country": "DE",
+      "line1": null,
+      "line2": null,
+      "postal_code": null,
+      "state": null
+    },
+    "created": 1656074469,
+    "dob": {
+      "day": null,
+      "month": null,
+      "year": null
+    },
+    "first_name": null,
+    "future_requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "last_name": null,
+    "metadata": {},
+    "relationship": {
+      "director": false,
+      "executive": false,
+      "owner": true,
+      "percent_ownership": 1,
+      "representative": false,
+      "title": "Shareholder"
+    },
+    "requirements": {
+      "alternatives": [],
+      "currently_due": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "dob.day",
+        "dob.month",
+        "dob.year",
+        "email",
+        "first_name",
+        "last_name"
+      ],
+      "errors": [],
+      "eventually_due": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "dob.day",
+        "dob.month",
+        "dob.year",
+        "email",
+        "first_name",
+        "last_name"
+      ],
+      "past_due": [
+        "address.city",
+        "address.line1",
+        "address.postal_code",
+        "dob.day",
+        "dob.month",
+        "dob.year",
+        "email",
+        "first_name",
+        "last_name"
+      ],
+      "pending_verification": []
+    },
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "unverified"
+    }
+  },
+  "appid": "tests_1656074464",
+  "createdAt": "2022-06-24T12:41:11.715Z",
+  "updatedAt": "2022-06-24T12:41:11.716Z"
+}

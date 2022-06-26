@@ -1,0 +1,41 @@
+[
+  {
+    "sessionid": "sess_901027dc9316b0ad",
+    "object": "session",
+    "appid": "tests_1656038571",
+    "accountid": "acct_88864fce2efa864a",
+    "duration": 1200,
+    "csrfToken": "0191a9a1f9f3636f9d6903869d6393aab4b310c69174932bb9e8b4db41570945350f8796afcc95636b537d9e60da495a23b473118ff80954aad9990ad47d8060",
+    "expiresAt": "2022-06-24T03:02:51.000Z",
+    "lastVerifiedAt": "2022-06-24T02:42:51.000Z",
+    "ended": false,
+    "createdAt": "2022-06-24T02:42:51.511Z",
+    "updatedAt": "2022-06-24T02:42:51.511Z"
+  },
+  {
+    "sessionid": "sess_285ec920b939b32b",
+    "object": "session",
+    "appid": "tests_1656038571",
+    "accountid": "acct_72df734bbe04a5a6",
+    "duration": 1200,
+    "csrfToken": "bfc328d05597dc47ca04b4484e02e5edee110d433012f38d91a9b3ed34450dd347b74a6cab0f8711e90e71d5da9757c24a291f2f0a666af42010ba2da1706747",
+    "expiresAt": "2022-06-24T03:02:51.000Z",
+    "lastVerifiedAt": "2022-06-24T02:42:51.000Z",
+    "ended": false,
+    "createdAt": "2022-06-24T02:42:51.480Z",
+    "updatedAt": "2022-06-24T02:42:51.480Z"
+  },
+  {
+    "sessionid": "sess_64c2fc67850151c5",
+    "object": "session",
+    "appid": "tests_1656038571",
+    "accountid": "acct_039a96bfb8fa3d3b",
+    "duration": 1200,
+    "csrfToken": "ded44b382a54dcb8cb35dc374f1e67e8c2920ab212925335922772cf0d8e9ea290d4c6cec81799e21a910964c8cd917951ff6145d90be161a14815023dd76d38",
+    "expiresAt": "2022-06-24T03:02:51.000Z",
+    "lastVerifiedAt": "2022-06-24T02:42:51.000Z",
+    "ended": false,
+    "createdAt": "2022-06-24T02:42:51.442Z",
+    "updatedAt": "2022-06-24T02:42:51.442Z"
+  }
+]

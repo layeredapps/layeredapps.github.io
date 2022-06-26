@@ -1,0 +1,562 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-organization#POST (@layeredapps/organizations)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Organizations module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/organizations-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/organizations-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/organizations-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/organizations-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/organizations/create-organization (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.user.organizations.CreateOrganization.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "organizationid": "orgn_ba984a87bbce49af",
+  "object": "organization",
+  "appid": "tests_1656039703",
+  "ownerid": "acct_5e50a72c20f78ae1",
+  "name": "this is the name",
+  "pin": "12345",
+  "email": "this@address.com",
+  "createdAt": "2022-06-24T03:01:43.769Z",
+  "updatedAt": "2022-06-24T03:01:43.769Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>organization-email</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>organization-name</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>profileid</td>
+                  <td>string</td>
+                  <td>required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-organization-email</td>
+                  <td>missing posted email</td>
+                </tr>
+                <tr>
+                  <td>invalid posted email</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-organization-name</td>
+                  <td>missing posted name</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="2">invalid-organization-name-length</td>
+                  <td>posted name too short</td>
+                </tr>
+                <tr>
+                  <td>posted name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="3">invalid-profile</td>
+                  <td>missing posted profileid</td>
+                </tr>
+                <tr>
+                  <td>invalid posted profileid</td>
+                </tr>
+                <tr>
+                  <td>ineligible posted profileid missing fields</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/organizations/tree/main/src/www/api/user/organizations/create-organization.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const organizations = require('../../../../../index.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.accountid) {
+      throw new Error('invalid-accountid')
+    }
+    const account = await global.api.user.Account.get(req)
+    if (!account) {
+      throw new Error('invalid-account')
+    }
+    if (!req.body || !req.body.name || !req.body.name.length) {
+      throw new Error('invalid-organization-name')
+    }
+    if (!req.body.pin || !req.body.pin.length) {
+      throw new Error('invalid-pin')
+    }
+    if (req.body.pin.match(/^[a-z0-9]+$/i) === null) {
+      throw new Error('invalid-pin')
+    }
+    if (!req.body.profileid || !req.body.profileid.length) {
+      throw new Error('invalid-profileid')
+    }
+    req.query.profileid = req.body.profileid
+    const profile = await global.api.user.Profile.get(req)
+    if (!profile) {
+      throw new Error('invalid-profileid')
+    }
+    const requireProfileFields = global.membershipProfileFields
+    for (const field of requireProfileFields) {
+      const displayName = global.profileFieldMap[field]
+      if (!profile[displayName]) {
+        throw new Error('invalid-profile')
+      }
+    }
+    if (global.minimumOrganizationNameLength > req.body.name.length ||
+      global.maximumOrganizationNameLength < req.body.name.length) {
+      throw new Error('invalid-organization-name-length')
+    }
+    if (global.minimumOrganizationPINLength > req.body.pin.length ||
+      global.maximumOrganizationPINLength < req.body.pin.length) {
+      throw new Error('invalid-pin-length')
+    }
+    if (!req.body.email || !req.body.email.length || req.body.email.indexOf('@') < 1) {
+      throw new Error('invalid-organization-email')
+    }
+    const organizationInfo = {
+      appid: req.appid || global.appid,
+      ownerid: req.query.accountid,
+      name: req.body.name,
+      pin: req.body.pin,
+      email: req.body.email
+    }
+    try {
+      const organization = await organizations.Storage.Organization.create(organizationInfo)
+      const membershipInfo = {
+        appid: req.appid || global.appid,
+        organizationid: organization.dataValues.organizationid,
+        accountid: req.query.accountid,
+        profileid: req.body.profileid
+      }
+      await organizations.Storage.Membership.create(membershipInfo)
+      req.query.organizationid = organization.dataValues.organizationid
+      return global.api.user.organizations.Organization.get(req)
+    } catch (error) {
+      if (error.name === 'SequelizeUniqueConstraintError') {
+        throw new Error('duplicate-pin')
+      }
+      throw new Error('unknown-error')
+    }
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/organizations/tree/main/src/www/api/user/organizations/create-organization.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/user/organizations/create-organization', () => {
+  describe('exceptions', () => {
+    describe('invalid-organization-name', () => {
+      it('missing posted name', async () => {
+        const owner = await TestHelper.createUser()
+        global.userProfileFields = ['display-name', 'display-email']
+        await TestHelper.createProfile(owner, {
+          'display-name': owner.profile.fullName,
+          'display-email': owner.profile.contactEmail
+        })
+        const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+        req.account = owner.account
+        req.session = owner.session
+        req.body = {
+          name: '',
+          email: owner.profile.contactEmail,
+          profileid: owner.profile.profileid,
+          pin: '12345'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-organization-name')
+      })
+    })
+  })
+
+  describe('invalid-organization-name-length', () => {
+    it('posted name too short', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'Sales',
+        email: owner.profile.contactEmail,
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      global.minimumOrganizationNameLength = 100
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-organization-name-length')
+      global.maximumOrganizationNameLength = 1
+      errorMessage = null
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-organization-name-length')
+    })
+
+    it('posted name too long', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'Sales',
+        email: owner.profile.contactEmail,
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      global.maximumOrganizationNameLength = 1
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-organization-name-length')
+      global.maximumOrganizationNameLength = 1
+      errorMessage = null
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-organization-name-length')
+    })
+  })
+
+  describe('invalid-organization-email', () => {
+    it('missing posted email', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail,
+        profileid: owner.profile.profileid
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'Family',
+        email: '',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-organization-email')
+    })
+
+    it('invalid posted email', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail,
+        profileid: owner.profile.profileid
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'Family',
+        email: 'invalid',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-organization-email')
+    })
+  })
+
+  describe('invalid-profile', () => {
+    it('missing posted profileid', async () => {
+      const owner = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: '',
+        pin: '12345'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-profileid')
+    })
+
+    it('invalid posted profileid', async () => {
+      const owner = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: 'invalid',
+        pin: '12345'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-profileid')
+    })
+
+    it('ineligible posted profileid missing fields', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = global.membershipProfileFields = ['display-email']
+      await TestHelper.createProfile(owner, {
+        'display-email': owner.profile.contactEmail
+      })
+      global.userProfileFields = global.membershipProfileFields = ['display-name', 'display-email']
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      let errorMessage
+      try {
+        await req.post()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-profile')
+    })
+  })
+
+  describe('receives', () => {
+    it('required posted organization-email', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      const organization = await req.post()
+      assert.strictEqual(organization.email, 'this@address.com')
+    })
+
+    it('required posted organization-name', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      const organization = await req.post()
+      assert.strictEqual(organization.name, 'this is the name')
+    })
+
+    it('required posted profileid', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      const organization = await req.post()
+      const req2 = TestHelper.createRequest(`/api/user/organizations/organization-membership?organizationid=${organization.organizationid}`)
+      req2.account = owner.account
+      req2.session = owner.session
+      const membership = await req2.get()
+      assert.strictEqual(membership.profileid, owner.profile.profileid)
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const owner = await TestHelper.createUser()
+      global.userProfileFields = ['display-name', 'display-email']
+      await TestHelper.createProfile(owner, {
+        'display-name': owner.profile.fullName,
+        'display-email': owner.profile.contactEmail
+      })
+      const req = TestHelper.createRequest(`/api/user/organizations/create-organization?accountid=${owner.account.accountid}`)
+      req.account = owner.account
+      req.session = owner.session
+      req.body = {
+        name: 'this is the name',
+        email: 'this@address.com',
+        profileid: owner.profile.profileid,
+        pin: '12345'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      const organization = await req.post()
+      assert.strictEqual(organization.object, 'organization')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

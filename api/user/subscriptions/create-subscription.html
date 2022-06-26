@@ -1,0 +1,698 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-subscription#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/create-subscription (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.user.subscriptions.CreateSubscription.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "subscriptionid": "sub_1LEOdDHHqepMFuCXbw2ID8aD",
+  "object": "subscription",
+  "stripeObject": {
+    "id": "sub_1LEOdDHHqepMFuCXbw2ID8aD",
+    "object": "subscription",
+    "application": null,
+    "application_fee_percent": null,
+    "automatic_tax": {
+      "enabled": false
+    },
+    "billing_cycle_anchor": 1656123715,
+    "billing_thresholds": null,
+    "cancel_at": null,
+    "cancel_at_period_end": false,
+    "canceled_at": null,
+    "collection_method": "charge_automatically",
+    "created": 1656123715,
+    "current_period_end": 1658715715,
+    "current_period_start": 1656123715,
+    "customer": "cus_LwHB81LQK5UWH2",
+    "days_until_due": null,
+    "default_payment_method": "pm_1LEOd8HHqepMFuCXw2KdP7oq",
+    "default_source": null,
+    "default_tax_rates": [
+      {
+        "id": "txr_1LEOdCHHqepMFuCX8XgMWfVz",
+        "object": "tax_rate",
+        "active": true,
+        "country": "US",
+        "created": 1656123714,
+        "description": "Sales tax in NY",
+        "display_name": "NY Sales Tax",
+        "inclusive": true,
+        "jurisdiction": "US",
+        "livemode": false,
+        "metadata": {},
+        "percentage": 17.5,
+        "state": "NY",
+        "tax_type": "sales_tax"
+      },
+      {
+        "id": "txr_1LEOdDHHqepMFuCXhW38FRaS",
+        "object": "tax_rate",
+        "active": true,
+        "country": "US",
+        "created": 1656123715,
+        "description": "Sales tax in NY",
+        "display_name": "NY Sales Tax",
+        "inclusive": true,
+        "jurisdiction": "US",
+        "livemode": false,
+        "metadata": {},
+        "percentage": 17.5,
+        "state": "NY",
+        "tax_type": "sales_tax"
+      }
+    ],
+    "description": null,
+    "discount": null,
+    "ended_at": null,
+    "items": {
+      "object": "list",
+      "data": [
+        {
+          "id": "si_LwHByExBocp8dH",
+          "object": "subscription_item",
+          "billing_thresholds": null,
+          "created": 1656123715,
+          "metadata": {},
+          "plan": {
+            "id": "price_1LEOd5HHqepMFuCXuIn5HDUC",
+            "object": "plan",
+            "active": true,
+            "aggregate_usage": null,
+            "amount": 1000,
+            "amount_decimal": "1000",
+            "billing_scheme": "per_unit",
+            "created": 1656123707,
+            "currency": "usd",
+            "interval": "month",
+            "interval_count": 1,
+            "livemode": false,
+            "metadata": {},
+            "nickname": null,
+            "product": "prod_LwHBvhOe6NvV3g",
+            "tiers_mode": null,
+            "transform_usage": null,
+            "trial_period_days": null,
+            "usage_type": "licensed"
+          },
+          "price": {
+            "id": "price_1LEOd5HHqepMFuCXuIn5HDUC",
+            "object": "price",
+            "active": true,
+            "billing_scheme": "per_unit",
+            "created": 1656123707,
+            "currency": "usd",
+            "custom_unit_amount": null,
+            "livemode": false,
+            "lookup_key": null,
+            "metadata": {},
+            "nickname": null,
+            "product": "prod_LwHBvhOe6NvV3g",
+            "recurring": {
+              "aggregate_usage": null,
+              "interval": "month",
+              "interval_count": 1,
+              "trial_period_days": null,
+              "usage_type": "licensed"
+            },
+            "tax_behavior": "inclusive",
+            "tiers_mode": null,
+            "transform_quantity": null,
+            "type": "recurring",
+            "unit_amount": 1000,
+            "unit_amount_decimal": "1000"
+          },
+          "quantity": 1,
+          "subscription": "sub_1LEOdDHHqepMFuCXbw2ID8aD",
+          "tax_rates": []
+        }
+      ],
+      "has_more": false,
+      "total_count": 1,
+      "url": "/v1/subscription_items?subscription=sub_1LEOdDHHqepMFuCXbw2ID8aD"
+    },
+    "latest_invoice": "in_1LEOdDHHqepMFuCX8Hvpp5Oh",
+    "livemode": false,
+    "metadata": {},
+    "next_pending_invoice_item_invoice": null,
+    "pause_collection": null,
+    "payment_settings": {
+      "payment_method_options": null,
+      "payment_method_types": null,
+      "save_default_payment_method": "off"
+    },
+    "pending_invoice_item_interval": null,
+    "pending_setup_intent": null,
+    "pending_update": null,
+    "plan": {
+      "id": "price_1LEOd5HHqepMFuCXuIn5HDUC",
+      "object": "plan",
+      "active": true,
+      "aggregate_usage": null,
+      "amount": 1000,
+      "amount_decimal": "1000",
+      "billing_scheme": "per_unit",
+      "created": 1656123707,
+      "currency": "usd",
+      "interval": "month",
+      "interval_count": 1,
+      "livemode": false,
+      "metadata": {},
+      "nickname": null,
+      "product": "prod_LwHBvhOe6NvV3g",
+      "tiers_mode": null,
+      "transform_usage": null,
+      "trial_period_days": null,
+      "usage_type": "licensed"
+    },
+    "quantity": 1,
+    "schedule": null,
+    "start_date": 1656123715,
+    "status": "active",
+    "test_clock": null,
+    "transfer_data": null,
+    "trial_end": null,
+    "trial_start": null
+  },
+  "customerid": "cus_LwHB81LQK5UWH2",
+  "accountid": "acct_895cf9d6afd6426f",
+  "paymentmethodid": null,
+  "productid": null,
+  "priceids": [
+    "price_1LEOd5HHqepMFuCXuIn5HDUC"
+  ],
+  "couponid": null,
+  "appid": "tests_1656123707",
+  "createdAt": "2022-06-25T02:21:57.680Z",
+  "updatedAt": "2022-06-25T02:21:57.681Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="1">invalid-customer</td>
+                  <td>ineligible querystring customer requires payment method</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="2">invalid-customerid</td>
+                  <td>missing querystring customerid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring customerid</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="1">invalid-price</td>
+                  <td>invalid posted priceids contains not active price</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="1">invalid-priceid</td>
+                  <td>invalid posted priceids contains invalid price</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="1">invalid-priceids</td>
+                  <td>missing posted priceids</td>
+                </tr>
+                <tr>
+                  <td id="description-7" rowspan="1">invalid-tax-rate</td>
+                  <td>invalid posted taxrateids contains inactive tax rate</td>
+                </tr>
+                <tr>
+                  <td id="description-8" rowspan="1">invalid-taxrateid</td>
+                  <td>invalid posted taxrateids contains invalid tax rate</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-subscription.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.customerid) {
+      throw new Error('invalid-customerid')
+    }
+    if (!req.body || !req.body.priceids) {
+      throw new Error('invalid-priceids')
+    }
+    if (!req.body || !req.body.quantities) {
+      throw new Error('invalid-quantities')
+    }
+    const priceids = req.body.priceids.split(',')
+    let metered = false
+    for (const priceid of priceids) {
+      req.query.priceid = priceid
+      const price = await global.api.user.subscriptions.ActivePrice.get(req)
+      if (!price) {
+        throw new Error('invalid-priceid')
+      }
+      if (!price.stripeObject.active) {
+        throw new Error('invalid-price')
+      }
+      if (price.stripeObject.recurring.usage_type === 'metered') {
+        metered = true
+      }
+    }
+    let quantities
+    if (!metered) {
+      quantities = req.body.quantities.split(',')
+      for (const value of quantities) {
+        try {
+          const quantity = parseInt(value, 10)
+          if (quantity < 1 || quantity.toString() !== value) {
+            throw new Error('invalid-quantity')
+          }
+        } catch (error) {
+          throw new Error('invalid-quantity')
+        }
+      }
+      if (quantities.length !== priceids.length) {
+        throw new Error('invalid-price-quantity-mismatch')
+      }
+    }
+    if (req.body.couponid) {
+      req.query.couponid = req.body.couponid
+      const coupon = await global.api.user.subscriptions.Coupon.get(req)
+      if (!coupon) {
+        throw new Error('invalid-couponid')
+      }
+    }
+    if (req.body.taxrateids) {
+      const taxRates = req.body.taxrateids.split(',')
+      for (const taxrateid of taxRates) {
+        req.query.taxrateid = taxrateid
+        const taxRate = await global.api.user.subscriptions.TaxRate.get(req)
+        if (!taxRate) {
+          throw new Error('invalid-taxrateid')
+        }
+        if (!taxRate.stripeObject.active) {
+          throw new Error('invalid-tax-rate')
+        }
+      }
+    }
+    const customer = await global.api.user.subscriptions.Customer.get(req)
+    if (customer.stripeObject.default_source) {
+      req.body.paymentmethodid = customer.stripeObject.default_source
+    } else if (customer.stripeObject.invoice_settings && customer.stripeObject.invoice_settings.default_payment_method) {
+      req.body.paymentmethodid = customer.stripeObject.invoice_settings.default_payment_method
+    }
+    const subscriptionInfo = {
+      customer: req.query.customerid,
+      items: [],
+      enable_incomplete_payments: true
+    }
+    for (let i = 0; i < priceids.length; i++) {
+      subscriptionInfo.items.push({
+        price: priceids[i],
+        quantity: metered ? undefined : quantities[i]
+      })
+    }
+    if (req.body.paymentmethodid) {
+      subscriptionInfo.default_payment_method = req.body.paymentmethodid
+    }
+    if (req.body.trial_period_days) {
+      subscriptionInfo.trial_period_days = req.body.trial_period_days
+    }
+    if (req.body.billing_cycle_anchor) {
+      subscriptionInfo.billing_cycle_anchor = req.body.billing_cycle_anchor
+    }
+    if (req.body.couponid) {
+      subscriptionInfo.coupon = req.body.couponid
+    }
+    if (req.body.taxrateids) {
+      subscriptionInfo.default_tax_rates = req.body.taxrateids.split(',')
+    }
+    let subscription
+    try {
+      subscription = await stripeCache.execute('subscriptions', 'create', subscriptionInfo, req.stripeKey)
+    } catch (error) {
+      if (error.message === 'invalid-paymentmethod') {
+        throw new Error('invalid-customer')
+      }
+    }
+    if (!subscription) {
+      throw new Error('unknown-error')
+    }
+    await subscriptions.Storage.Subscription.create({
+      appid: req.appid || global.appid,
+      subscriptionid: subscription.id,
+      customerid: req.query.customerid,
+      accountid: req.account.accountid,
+      priceids,
+      stripeObject: subscription
+    })
+    for (const item of subscription.items.data) {
+      await subscriptions.Storage.SubscriptionItem.create({
+        accountid: req.account.accountid,
+        subscriptionitemid: item.id,
+        customerid: req.query.customerid,
+        appid: req.appid || global.appid,
+        subscriptionid: subscription.id,
+        stripeObject: item
+      })
+    }
+    req.query.subscriptionid = subscription.id
+    return global.api.user.subscriptions.Subscription.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/create-subscription.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/create-subscription', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    const user = await TestHelper.createUser()
+    // invalid customerid
+    let req = TestHelper.createRequest('/api/user/subscriptions/create-subscription')
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.missingCustomer = error.message
+    }
+    req = TestHelper.createRequest('/api/user/subscriptions/create-subscription?customerid=invalid')
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidCustomer = error.message
+    }
+    // missing payment method
+    await TestHelper.createCustomer(user, {
+      email: user.profile.contactEmail,
+      country: 'US'
+    })
+    req = TestHelper.createRequest(`/api/user/subscriptions/create-subscription?customerid=${user.customer.customerid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidPaymentMethod = error.message
+    }
+    // invalid account
+    const user2 = await TestHelper.createUser()
+    req = TestHelper.createRequest(`/api/user/subscriptions/create-subscription?customerid=${user.customer.customerid}`)
+    req.account = user2.account
+    req.session = user2.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    // invalid price
+    const user3 = await TestStripeAccounts.createUserWithPaymentMethod()
+    req = TestHelper.createRequest(`/api/user/subscriptions/create-subscription?customerid=${user3.customer.customerid}`)
+    req.account = user3.account
+    req.session = user3.session
+    req.body = {
+      priceids: '',
+      paymentmethodid: user3.paymentMethod.paymentmethodid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.missingPrice = error.message
+    }
+    req.body = {
+      priceids: 'invalid',
+      paymentmethodid: user3.paymentMethod.paymentmethodid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidPrice = error.message
+    }
+    // not active price
+    const administrator2 = await TestStripeAccounts.createOwnerWithInactivePrice()
+    req.body = {
+      priceids: administrator2.price.priceid,
+      quantities: '1'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.notActivePrice = error.message
+    }
+    // default tax rates
+    const taxRate1 = await TestHelper.createTaxRate(administrator, {
+      active: 'false'
+    })
+    req = TestHelper.createRequest(`/api/user/subscriptions/create-subscription?customerid=${user3.customer.customerid}`)
+    req.account = user3.account
+    req.session = user3.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1',
+      taxrateids: taxRate1.taxrateid
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidTaxRate = error.message
+    }
+    req = TestHelper.createRequest(`/api/user/subscriptions/create-subscription?customerid=${user3.customer.customerid}`)
+    req.account = user3.account
+    req.session = user3.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1',
+      taxrateids: 'invalid'
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidTaxRateId = error.message
+    }
+    // response
+    const taxRate2 = await TestHelper.createTaxRate(administrator, {
+      active: true
+    })
+    const taxRate3 = await TestHelper.createTaxRate(administrator, {
+      active: true
+    })
+    req = TestHelper.createRequest(`/api/user/subscriptions/create-subscription?customerid=${user3.customer.customerid}`)
+    req.account = user3.account
+    req.session = user3.session
+    req.body = {
+      priceids: administrator.price.priceid,
+      quantities: '1',
+      paymentmethodid: user3.paymentMethod.paymentmethodid,
+      taxrateids: `${taxRate2.taxrateid},${taxRate3.taxrateid}`
+    }
+    req.filename = __filename
+    req.saveResponse = true
+    cachedResponses.returns = await req.post()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-customerid', () => {
+      it('missing querystring customerid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingCustomer
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+
+      it('invalid querystring customerid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidCustomer
+        assert.strictEqual(errorMessage, 'invalid-customerid')
+      })
+    })
+
+    describe('invalid-customer', () => {
+      it('ineligible querystring customer requires payment method', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPaymentMethod
+        assert.strictEqual(errorMessage, 'invalid-customer')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-priceids', () => {
+      it('missing posted priceids', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingPrice
+        assert.strictEqual(errorMessage, 'invalid-priceids')
+      })
+    })
+
+    describe('invalid-priceid', () => {
+      it('invalid posted priceids contains invalid price', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPrice
+        assert.strictEqual(errorMessage, 'invalid-priceid')
+      })
+    })
+
+    describe('invalid-price', () => {
+      it('invalid posted priceids contains not active price', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.notActivePrice
+        assert.strictEqual(errorMessage, 'invalid-price')
+      })
+    })
+
+    describe('invalid-taxrateid', () => {
+      it('invalid posted taxrateids contains invalid tax rate', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidTaxRateId
+        assert.strictEqual(errorMessage, 'invalid-taxrateid')
+      })
+    })
+
+    describe('invalid-tax-rate', () => {
+      it('invalid posted taxrateids contains inactive tax rate', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidTaxRate
+        assert.strictEqual(errorMessage, 'invalid-tax-rate')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const subscriptionNow = cachedResponses.returns
+      assert.strictEqual(subscriptionNow.object, 'subscription')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

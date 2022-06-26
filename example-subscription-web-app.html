@@ -1,0 +1,137 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Example Subscription Web App</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Example Subscription Web App</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="active"><a class="navigation-link" href="/example-subscription-web-app">Documentation</a></li>
+          <li class="ui"><a class="navigation-link" href="/example-subscription-web-app-ui">UI</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="example-subscription-web-app">Example subscription web app</h1>
+          <h4>Index</h4>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#application-server-structure">Application server structure</a></li>
+            <li><a href="#dashboard-server-structure">Dashboard server structure</a></li>
+            <li><a href="#requiring-subscriptions">Requiring subscriptions</a></li>
+            <li><a href="#requiring-paid-invoices">Requiring paid invoices</a></li>
+            <li><a href="#requiring-payment-authorizations">Requiring payment authorizations</a></li>
+            <li><a href="#starting-the-dashboard-and-application-servers">Starting the dashboard and application servers</a></li>
+            <li><a href="#creating-subscription-plans">Creating subscription plans</a></li>
+            <li><a href="https://github.com/layeredapps/example-web-app">Github repository</a></li>
+          </ul>
+          <h2 id="introduction">Introduction</h2>
+          <p>This example project started as a copy of <a href="https://github.com/seejohnrun/haste-server">Hastebin</a>. It is a 'pastebin' website you post code and text to share. The original Hastebin application has no user accounts, all posts are anonymous and publicly accessible via a generated URL. It was a single-page web app using client-side JavaScript and a server-side API to manage documents posted by guests.</p>
+          <p><a href="https://github.com/layeredapps/dashboard">Dashboard</a> is a reusable interface for user account management with modules for more. It runs separately to your web application, as users browse your Dashboard server they receive Dashboard content or your application server's content combined into a single website.</p>
+          <p>After integrating Dashboard the pastebin has user registrations, paid subscriptions, organizations, and documents can be private, public or shared with organization members.</p>
+          <h3 id="application-server-structure">Application server structure</h3>
+          <p>This example is a single-page app and the client-side JavaScript requires a HTTP API to manipulate data. The API is split into users and for administrators with endpoints for listing, creating and deleting documents. Application servers can be written in any language or stack.</p>
+          <p>Dashboard requires application servers provide at a minimum the <code data-language="js">/</code> guest index page and a <code data-language="js">/home</code> application home page. This example project also serves static assets from the <code data-language="js">/public</code> folder. Dashboard skips authentication for requests to anything within <code data-language="js">/public</code> so assets serve faster.</p>
+          <p>Dashboard's content can be styled by serving a <code data-language="js">/public/content-additional.css</code> for forms and <code data-language="js">/public/content-template.css</code> for full-page content like signing in. This exmaple web app uses the <code data-language="js">-additional.css</code> files to apply a consistent color scheme between application and dashboard content.</p>
+          <p>Requests made by your Dashboard server to your application server can be optionally verified using a shared signature. This example confirms the requests are made from its Dashboard server. If an application server isn't publicly accessible this may not be required.</p>
+          <p>User data is required to create posts and determine if you or an organization you are in can access posts. This data is received in HTTP headers when Dashboard proxies the application server. It could alternatively be fetched as required via Dashboard's APIs, but since this is a single-page app with just a few API routes the data is almost always required.</p>
+          <h3 id="dashboard-server-structure">Dashboard server structure</h3>
+          <p>Dashboard is a web application. It provides a server, user interface and APIs for basic account and session management for web application users and administrators. Dashboard modules can add UI and API content. This example project uses the <code data-language="js">Organizations</code> module to allow users to create posts shared with groups of other users, and the <code data-language="js">Stripe Subscriptions</code> module for monthly billing. Dashboard modules are installed with <code data-language="js">npm</code> and activated in the <code data-language="js">package.json</code>.</p>
+          <p>The application server's API is sharing the <code data-language="js">/api/user</code> and <code data-language="js">/api/administrator</code> structure of Dashboard. By default Dashboard APIs are not publicly accessible. Dashboard can be configured to allow access to the API including with CORS headers for remote-access using <code data-language="js">server</code> scripts that are executed during the request lifecycle.</p>
+          <p>This example only wants the pastebin APIs to be publicly accessible, so a <code data-language="js">server</code> script is configured to allow API requests if they are accessing the pastebin APIs. Server handlers must be activated in the <code data-language="js">package.json</code>. They can be executed <code data-language="js">before</code> or <code data-language="js">after</code> authenticating the user or guest. In this case the server handler is executing prior to authorization, it checks if you are accessing the <code data-language="js">/api</code> and if so, it checks if Dashboard recognizes the route as one of its own API endpoints. Any URL that Dashboard doesn't recognize is proxied from the application server.</p>
+          <p>This example supplements the data sent from Dashboard to the application server to include the full account and session objects and your complete organization, membership and subscription information. This is added via a <code data-language="js">proxy handler</code> that allows the request options to be modified prior to communicating with the application server. Proxy handlers must be activated in the <code data-language="js">package.json</code>, they are executed just before proxying the application server and may modify the proxy request object to include additional headers or other changes.</p>
+          <h4>Requiring subscriptions</h4>
+          <p>This example requires the user has an active subscription. This is enforced directly by Dashboard's module for Stripe Subscriptions by setting an environment variable:</p>
+          <pre><code data-language="js">REQUIRE_SUBSCRIPTION=true
+</code></pre>
+          <p>When this environment variable is set users must have an active subscription to access anything outside of the <code data-language="js">/account</code> and <code data-language="js">/administrator</code> content. All other requests redirect the user to the start subscription page.</p>
+          <h4>Requiring paid invoices</h4>
+          <p>This example requires users pay any oustanding amount owed on invoices. This is enforced directly by the Stripe Subscriptions module by setting an environment variable:</p>
+          <pre><code data-language="js">REQUIRE_PAYMENT=true
+</code></pre>
+          <p>When this environment variable is set users must pay an invoice to continue accessing anything outside of the <code data-language="js">/account</code> and <code data-language="js">/administrator</code> content. All other requests redirect the user to the invoice that needs paying.</p>
+          <h4>Requiring payment authorizations</h4>
+          <p>This example requires users complete any payment-in-progress that has asynchronous authorization like needing to verify a transaction within a bank website. This is enforced directly by the Stripe Subscriptions module by setting an environment variable:</p>
+          <pre><code data-language="js">REQUIRE_PAYMENT_AUTHORIZATION=true
+</code></pre>
+          <p>When this environment variable is set users must complete a payment to continue accessing anything outside of the <code data-language="js">/account</code> and <code data-language="js">/administrator</code> content. All other requests redirect the user to the transaction that needs completing.</p>
+          <h3 id="starting-the-dashboard-and-application-servers">Starting the dashboard and application servers</h3>
+          <p>Both the dashboard and application servers must be started to access the web application. Each of these servers runs indefinitely, waiting for requests to be made, so they will require their own terminal windows each left open. To stop the servers press <code data-language="js">&lt;CTRL&gt;</code> + <code data-language="js">c</code> or close the terminal windows. When both servers are running open <code data-language="js">http://localhost:8300</code> in your web browser to access the application.</p>
+          <p>The Subscriptions module is powered by Stripe, you will need to register and use your test API keys. In testing/development you do not need to create webhooks, in production when you have multiple instances of Dashboard a webhook must be configured too.</p>
+          <pre><code data-language="js"># application server
+$ cd application-server
+$ npm install
+$ bash start-dev.sh
+
+# dashboard server
+$ cd dashboard-server
+$ npm install
+$ export SUBSCRIPTIONS_STRIPE_KEY=&quot;sk_test_....&quot;
+$ export SUBSCRIPTIONS_STRIPE_PUBLISHABLE_KEY=&quot;pk_test_....&quot;
+$ bash start-dev.sh
+</code></pre>
+          <h3 id="creating-subscription-plans">Creating subscription plans</h3>
+          <p>The example web application will need to be running and the web app open in your browser at <code data-language="js">http://localhost:8300</code>. The first user to register is always the owner and administrator with acecss to Dashboard's administrative options.</p>
+          <p>The Stripe Subscriptions module has been configured to require users to have subscriptions and all invoices paid. A product and plan must be created for users to create a subscription. A product describes what you are selling, a plan is the payment settings. For more information on these concepts checks the <a href="https://stripe.com/docs">Stripe documentation</a>.</p>
+          <p>When a published plan is available all un-subscribed users will be diverted to set up their subscription and optionally payment information. If the plan is free or has a free trial the user will not be required to set up payment information immediately. If the plan is paid the user will be charged immediately. The Stripe documentation includes <a href="https://stripe.com/docs/testing">test card numbers</a> that can be used in testing.</p>
+          <ol>
+            <li>Hover the administrator menu</li>
+            <li>Click <code data-language="js">Stripe Subscription administration</code></li>
+            <li>Click the <code data-language="js">Products</code> link</li>
+            <li>Click the <code data-language="js">Create product</code> button and complete the form</li>
+            <li>Click <code data-language="js">Publish product</code> and submit the form</li>
+            <li>Click <code data-language="js">Plans</code></li>
+            <li>Click the <code data-language="js">Create plan</code> button and complete the form</li>
+            <li>Click <code data-language="js">Publish plan</code> and submit the form</li>
+          </ol>
+        </div>
+        <p><a href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,1318 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>country-specs#GET (@layeredapps/stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/country-specs (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.user.connect.CountrySpecs.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "countryid": "AE",
+    "object": "countrySpec",
+    "stripeObject": {
+      "id": "AE",
+      "object": "country_spec",
+      "default_currency": "aed",
+      "supported_bank_account_currencies": {
+        "aed": [
+          "AE"
+        ]
+      },
+      "supported_payment_currencies": [
+        "usd",
+        "aed",
+        "afn",
+        "all",
+        "amd",
+        "ang",
+        "aoa",
+        "ars",
+        "aud",
+        "awg",
+        "azn",
+        "bam",
+        "bbd",
+        "bdt",
+        "bgn",
+        "bhd",
+        "bif",
+        "bmd",
+        "bnd",
+        "bob",
+        "brl",
+        "bsd",
+        "bwp",
+        "byn",
+        "bzd",
+        "cad",
+        "cdf",
+        "chf",
+        "clp",
+        "cny",
+        "cop",
+        "crc",
+        "cve",
+        "czk",
+        "djf",
+        "dkk",
+        "dop",
+        "dzd",
+        "egp",
+        "etb",
+        "eur",
+        "fjd",
+        "fkp",
+        "gbp",
+        "gel",
+        "gip",
+        "gmd",
+        "gnf",
+        "gtq",
+        "gyd",
+        "hkd",
+        "hnl",
+        "hrk",
+        "htg",
+        "huf",
+        "idr",
+        "ils",
+        "inr",
+        "isk",
+        "jmd",
+        "jod",
+        "jpy",
+        "kes",
+        "kgs",
+        "khr",
+        "kmf",
+        "krw",
+        "kwd",
+        "kyd",
+        "kzt",
+        "lak",
+        "lbp",
+        "lkr",
+        "lrd",
+        "lsl",
+        "mad",
+        "mdl",
+        "mga",
+        "mkd",
+        "mmk",
+        "mnt",
+        "mop",
+        "mro",
+        "mur",
+        "mvr",
+        "mwk",
+        "mxn",
+        "myr",
+        "mzn",
+        "nad",
+        "ngn",
+        "nio",
+        "nok",
+        "npr",
+        "nzd",
+        "omr",
+        "pab",
+        "pen",
+        "pgk",
+        "php",
+        "pkr",
+        "pln",
+        "pyg",
+        "qar",
+        "ron",
+        "rsd",
+        "rub",
+        "rwf",
+        "sar",
+        "sbd",
+        "scr",
+        "sek",
+        "sgd",
+        "shp",
+        "sll",
+        "sos",
+        "srd",
+        "std",
+        "szl",
+        "thb",
+        "tjs",
+        "tnd",
+        "top",
+        "try",
+        "ttd",
+        "twd",
+        "tzs",
+        "uah",
+        "ugx",
+        "uyu",
+        "uzs",
+        "vnd",
+        "vuv",
+        "wst",
+        "xaf",
+        "xcd",
+        "xof",
+        "xpf",
+        "yer",
+        "zar",
+        "zmw"
+      ],
+      "supported_payment_methods": [
+        "card",
+        "stripe"
+      ],
+      "supported_transfer_countries": [
+        "AE"
+      ],
+      "verification_fields": {
+        "company": {
+          "additional": [
+            "documents.bank_account_ownership_verification.files",
+            "documents.company_license.files",
+            "documents.company_memorandum_of_association.files",
+            "representative.documents.passport.files"
+          ],
+          "minimum": [
+            "business_profile.mcc",
+            "business_profile.product_description",
+            "business_profile.support_phone",
+            "business_profile.url",
+            "business_type",
+            "company.address.line1",
+            "company.address.state",
+            "company.business_vat_id_number",
+            "company.executives_provided",
+            "company.name",
+            "company.owners_provided",
+            "company.phone",
+            "company.structure",
+            "company.tax_id",
+            "executives.address.line1",
+            "executives.address.state",
+            "executives.dob.day",
+            "executives.dob.month",
+            "executives.dob.year",
+            "executives.documents.passport.files",
+            "executives.first_name",
+            "executives.id_number",
+            "executives.last_name",
+            "executives.nationality",
+            "external_account",
+            "owners.address.line1",
+            "owners.address.state",
+            "owners.dob.day",
+            "owners.dob.month",
+            "owners.dob.year",
+            "owners.documents.passport.files",
+            "owners.first_name",
+            "owners.id_number",
+            "owners.last_name",
+            "owners.nationality",
+            "representative.address.line1",
+            "representative.address.state",
+            "representative.dob.day",
+            "representative.dob.month",
+            "representative.dob.year",
+            "representative.email",
+            "representative.first_name",
+            "representative.id_number",
+            "representative.last_name",
+            "representative.nationality",
+            "representative.phone",
+            "representative.relationship.executive",
+            "representative.relationship.title",
+            "tos_acceptance.date",
+            "tos_acceptance.ip"
+          ]
+        },
+        "individual": {
+          "additional": [
+            "documents.company_license.files",
+            "individual.documents.passport.files"
+          ],
+          "minimum": [
+            "business_profile.mcc",
+            "business_profile.product_description",
+            "business_profile.support_phone",
+            "business_profile.url",
+            "business_type",
+            "company.name",
+            "company.structure",
+            "company.tax_id",
+            "external_account",
+            "individual.address.line1",
+            "individual.address.state",
+            "individual.business_vat_id_number",
+            "individual.dob.day",
+            "individual.dob.month",
+            "individual.dob.year",
+            "individual.email",
+            "individual.first_name",
+            "individual.id_number",
+            "individual.last_name",
+            "individual.nationality",
+            "individual.phone",
+            "individual.relationship.executive",
+            "individual.relationship.title",
+            "tos_acceptance.date",
+            "tos_acceptance.ip"
+          ]
+        }
+      },
+      "name": "United Arab Emirates"
+    },
+    "createdAt": "2022-06-24T12:01:01.578Z",
+    "updatedAt": "2022-06-24T12:01:01.578Z"
+  },
+  {
+    "countryid": "AT",
+    "object": "countrySpec",
+    "stripeObject": {
+      "id": "AT",
+      "object": "country_spec",
+      "default_currency": "eur",
+      "supported_bank_account_currencies": {
+        "eur": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "usd": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK",
+          "US"
+        ],
+        "sek": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "nok": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "dkk": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "chf": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "gbp": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "aud": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "cad": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "jpy": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "nzd": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "pln": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "hkd": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "sgd": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "zar": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "huf": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "ron": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "SE",
+          "SI",
+          "SK"
+        ],
+        "czk": [
+          "AT",
+          "BE",
+          "BG",
+          "CH",
+          "CY",
+          "DE",
+          "DK",
+          "EE",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LT",
+          "LU",
+          "LV",
+          "MT",
+          "NL",
+          "NO",
+          "PL",
+          "PT",
+          "RO",
+          "SE",
+          "SI",
+          "SK"
+        ]
+      },
+      "supported_payment_currencies": [
+        "usd",
+        "aed",
+        "afn",
+        "all",
+        "amd",
+        "ang",
+        "aoa",
+        "ars",
+        "aud",
+        "awg",
+        "azn",
+        "bam",
+        "bbd",
+        "bdt",
+        "bgn",
+        "bif",
+        "bmd",
+        "bnd",
+        "bob",
+        "brl",
+        "bsd",
+        "bwp",
+        "byn",
+        "bzd",
+        "cad",
+        "cdf",
+        "chf",
+        "clp",
+        "cny",
+        "cop",
+        "crc",
+        "cve",
+        "czk",
+        "djf",
+        "dkk",
+        "dop",
+        "dzd",
+        "egp",
+        "etb",
+        "eur",
+        "fjd",
+        "fkp",
+        "gbp",
+        "gel",
+        "gip",
+        "gmd",
+        "gnf",
+        "gtq",
+        "gyd",
+        "hkd",
+        "hnl",
+        "hrk",
+        "htg",
+        "huf",
+        "idr",
+        "ils",
+        "inr",
+        "isk",
+        "jmd",
+        "jpy",
+        "kes",
+        "kgs",
+        "khr",
+        "kmf",
+        "krw",
+        "kyd",
+        "kzt",
+        "lak",
+        "lbp",
+        "lkr",
+        "lrd",
+        "lsl",
+        "mad",
+        "mdl",
+        "mga",
+        "mkd",
+        "mmk",
+        "mnt",
+        "mop",
+        "mro",
+        "mur",
+        "mvr",
+        "mwk",
+        "mxn",
+        "myr",
+        "mzn",
+        "nad",
+        "ngn",
+        "nio",
+        "nok",
+        "npr",
+        "nzd",
+        "pab",
+        "pen",
+        "pgk",
+        "php",
+        "pkr",
+        "pln",
+        "pyg",
+        "qar",
+        "ron",
+        "rsd",
+        "rub",
+        "rwf",
+        "sar",
+        "sbd",
+        "scr",
+        "sek",
+        "sgd",
+        "shp",
+        "sll",
+        "sos",
+        "srd",
+        "std",
+        "szl",
+        "thb",
+        "tjs",
+        "top",
+        "try",
+        "ttd",
+        "twd",
+        "tzs",
+        "uah",
+        "ugx",
+        "uyu",
+        "uzs",
+        "vnd",
+        "vuv",
+        "wst",
+        "xaf",
+        "xcd",
+        "xof",
+        "xpf",
+        "yer",
+        "zar",
+        "zmw"
+      ],
+      "supported_payment_methods": [
+        "card",
+        "stripe"
+      ],
+      "supported_transfer_countries": [
+        "AT",
+        "BE",
+        "BG",
+        "CH",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GI",
+        "GR",
+        "HR",
+        "HU",
+        "IE",
+        "IS",
+        "IT",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "NL",
+        "NO",
+        "PL",
+        "PT",
+        "RO",
+        "SE",
+        "SM",
+        "SI",
+        "SK"
+      ],
+      "verification_fields": {
+        "company": {
+          "additional": [
+            "company.verification.document",
+            "representative.verification.additional_document",
+            "representative.verification.document"
+          ],
+          "minimum": [
+            "business_profile.mcc",
+            "business_profile.url",
+            "business_type",
+            "company.address.city",
+            "company.address.line1",
+            "company.address.postal_code",
+            "company.directors_provided",
+            "company.executives_provided",
+            "company.name",
+            "company.owners_provided",
+            "company.phone",
+            "company.tax_id",
+            "directors.dob.day",
+            "directors.dob.month",
+            "directors.dob.year",
+            "directors.email",
+            "directors.first_name",
+            "directors.last_name",
+            "directors.relationship.title",
+            "executives.address.city",
+            "executives.address.line1",
+            "executives.address.postal_code",
+            "executives.dob.day",
+            "executives.dob.month",
+            "executives.dob.year",
+            "executives.email",
+            "executives.first_name",
+            "executives.last_name",
+            "executives.verification.additional_document",
+            "executives.verification.document",
+            "external_account",
+            "owners.address.city",
+            "owners.address.line1",
+            "owners.address.postal_code",
+            "owners.dob.day",
+            "owners.dob.month",
+            "owners.dob.year",
+            "owners.email",
+            "owners.first_name",
+            "owners.last_name",
+            "owners.verification.additional_document",
+            "owners.verification.document",
+            "representative.address.city",
+            "representative.address.line1",
+            "representative.address.postal_code",
+            "representative.dob.day",
+            "representative.dob.month",
+            "representative.dob.year",
+            "representative.email",
+            "representative.first_name",
+            "representative.last_name",
+            "representative.phone",
+            "representative.relationship.executive",
+            "representative.relationship.title",
+            "tos_acceptance.date",
+            "tos_acceptance.ip"
+          ]
+        },
+        "individual": {
+          "additional": [
+            "individual.verification.additional_document",
+            "individual.verification.document"
+          ],
+          "minimum": [
+            "business_profile.mcc",
+            "business_profile.url",
+            "business_type",
+            "external_account",
+            "individual.address.city",
+            "individual.address.line1",
+            "individual.address.postal_code",
+            "individual.dob.day",
+            "individual.dob.month",
+            "individual.dob.year",
+            "individual.email",
+            "individual.first_name",
+            "individual.last_name",
+            "individual.phone",
+            "tos_acceptance.date",
+            "tos_acceptance.ip"
+          ]
+        }
+      },
+      "name": "Austria"
+    },
+    "createdAt": "2022-06-24T12:01:01.538Z",
+    "updatedAt": "2022-06-24T12:01:01.538Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/country-specs.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const connect = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    let countryids
+    req.query = req.query || {}
+    if (req.query.all) {
+      countryids = await connect.Storage.CountrySpec.findAll({
+        attributes: ['countryid'],
+        order: [
+          ['countryid', 'ASC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      countryids = await connect.Storage.CountrySpec.findAll({
+        attributes: ['countryid'],
+        offset,
+        limit,
+        order: [
+          ['countryid', 'ASC']
+        ]
+      })
+    }
+    if (!countryids || !countryids.length) {
+      return null
+    }
+    const items = []
+    for (const countryInfo of countryids) {
+      req.query.countryid = countryInfo.dataValues.countryid
+      const country = await global.api.user.connect.CountrySpec.get(req)
+      items.push(country)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/country-specs.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+
+describe('/api/user/connect/country-specs', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async () => {
+      const offset = 1
+      const req = TestHelper.createRequest('/api/user/connect/country-specs?all=true')
+      const countries = await req.get()
+      const req2 = TestHelper.createRequest(`/api/user/connect/country-specs?offset=${offset}`)
+      const countriesNow = await req2.get()
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(countriesNow[i].countryid, countries[offset + i].countryid)
+      }
+    })
+
+    it('optional querystring limit (integer)', async () => {
+      const limit = 1
+      const req = TestHelper.createRequest(`/api/user/connect/country-specs?limit=${limit}`)
+      const countriesNow = await req.get()
+      assert.strictEqual(countriesNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      global.pageSize = 1
+      const req = TestHelper.createRequest('/api/user/connect/country-specs?all=true')
+      const countriesNow = await req.get()
+      assert.notStrictEqual(countriesNow.length, 0)
+      assert.notStrictEqual(countriesNow.length, global.pageSize)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const req = TestHelper.createRequest('/api/user/connect/country-specs')
+      req.filename = __filename
+      req.saveResponse = true
+      const countrySpecs = await req.get()
+      assert.strictEqual(countrySpecs.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      global.pageSize = 3
+      const req = TestHelper.createRequest('/api/user/connect/country-specs')
+      const countrySpecs = await req.get()
+      assert.strictEqual(countrySpecs.length, global.pageSize)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

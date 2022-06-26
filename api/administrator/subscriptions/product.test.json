@@ -1,0 +1,29 @@
+{
+  "productid": "prod_LwGubbhMKnDmea",
+  "object": "product",
+  "stripeObject": {
+    "id": "prod_LwGubbhMKnDmea",
+    "object": "product",
+    "active": true,
+    "attributes": [],
+    "created": 1656122683,
+    "default_price": null,
+    "description": null,
+    "images": [],
+    "livemode": false,
+    "metadata": {},
+    "name": "product185",
+    "package_dimensions": null,
+    "shippable": null,
+    "statement_descriptor": "product185 description",
+    "tax_code": "txcd_41060003",
+    "type": "service",
+    "unit_label": "thing",
+    "updated": 1656122683,
+    "url": null
+  },
+  "active": true,
+  "appid": "tests_1656122683",
+  "createdAt": "2022-06-25T02:04:43.609Z",
+  "updatedAt": "2022-06-25T02:04:43.610Z"
+}

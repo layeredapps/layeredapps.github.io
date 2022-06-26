@@ -1,0 +1,522 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>set-invoice-paid#PATCH (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/subscriptions/set-invoice-paid (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.user.subscriptions.SetInvoicePaid.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "invoiceid": "in_1LEOkDHHqepMFuCXVqmMipP6",
+  "object": "invoice",
+  "stripeObject": {
+    "id": "in_1LEOkDHHqepMFuCXVqmMipP6",
+    "object": "invoice",
+    "account_country": "AU",
+    "account_name": "test-subscriptions",
+    "account_tax_ids": null,
+    "amount_due": 2500,
+    "amount_paid": 2500,
+    "amount_remaining": 0,
+    "application": null,
+    "application_fee_amount": null,
+    "attempt_count": 1,
+    "attempted": true,
+    "auto_advance": false,
+    "automatic_tax": {
+      "enabled": false,
+      "status": null
+    },
+    "billing_reason": "manual",
+    "charge": "ch_3LEOkEHHqepMFuCX0bY61d7z",
+    "collection_method": "charge_automatically",
+    "created": 1656124149,
+    "currency": "usd",
+    "custom_fields": null,
+    "customer": "cus_LwHII6zIkBDuEU",
+    "customer_address": null,
+    "customer_email": "Dixie.Greenholt@yahoo.com",
+    "customer_name": null,
+    "customer_phone": null,
+    "customer_shipping": null,
+    "customer_tax_exempt": "none",
+    "customer_tax_ids": [],
+    "default_payment_method": null,
+    "default_source": null,
+    "default_tax_rates": [],
+    "description": null,
+    "discount": null,
+    "discounts": [],
+    "due_date": null,
+    "ending_balance": 0,
+    "footer": null,
+    "hosted_invoice_url": "https://invoice.stripe.com/i/acct_1KhiP8HHqepMFuCX/test_YWNjdF8xS2hpUDhISHFlcE1GdUNYLF9Md0hJSmluZEJkR21tVWl2VU5lSVljZEFwaXJvalVQLDQ2NjY0OTUy0200jfrVOY8N?s=ap",
+    "invoice_pdf": "https://pay.stripe.com/invoice/acct_1KhiP8HHqepMFuCX/test_YWNjdF8xS2hpUDhISHFlcE1GdUNYLF9Md0hJSmluZEJkR21tVWl2VU5lSVljZEFwaXJvalVQLDQ2NjY0OTUy0200jfrVOY8N/pdf?s=ap",
+    "last_finalization_error": null,
+    "lines": {
+      "object": "list",
+      "data": [
+        {
+          "id": "il_1LEOkCHHqepMFuCXKFayCIm7",
+          "object": "line_item",
+          "amount": 2500,
+          "amount_excluding_tax": 2500,
+          "currency": "usd",
+          "description": "One-time setup fee",
+          "discount_amounts": [],
+          "discountable": true,
+          "discounts": [],
+          "invoice_item": "ii_1LEOkCHHqepMFuCXNXevGAsM",
+          "livemode": false,
+          "metadata": {},
+          "period": {
+            "end": 1656124148,
+            "start": 1656124148
+          },
+          "plan": null,
+          "price": {
+            "id": "price_1KjGWWHHqepMFuCXfDloFG5a",
+            "object": "price",
+            "active": false,
+            "billing_scheme": "per_unit",
+            "created": 1648704380,
+            "currency": "usd",
+            "custom_unit_amount": null,
+            "livemode": false,
+            "lookup_key": null,
+            "metadata": {},
+            "nickname": null,
+            "product": "prod_LOVmd6Ev4OAeb6",
+            "recurring": null,
+            "tax_behavior": "unspecified",
+            "tiers_mode": null,
+            "transform_quantity": null,
+            "type": "one_time",
+            "unit_amount": 2500,
+            "unit_amount_decimal": "2500"
+          },
+          "proration": false,
+          "proration_details": {
+            "credited_items": null
+          },
+          "quantity": 1,
+          "subscription": null,
+          "tax_amounts": [],
+          "tax_rates": [],
+          "type": "invoiceitem",
+          "unit_amount_excluding_tax": "2500"
+        }
+      ],
+      "has_more": false,
+      "total_count": 1,
+      "url": "/v1/invoices/in_1LEOkDHHqepMFuCXVqmMipP6/lines"
+    },
+    "livemode": false,
+    "metadata": {},
+    "next_payment_attempt": null,
+    "number": "1C7947E2-0004",
+    "on_behalf_of": null,
+    "paid": true,
+    "paid_out_of_band": false,
+    "payment_intent": "pi_3LEOkEHHqepMFuCX0EZpM20O",
+    "payment_settings": {
+      "payment_method_options": null,
+      "payment_method_types": null
+    },
+    "period_end": 1658716136,
+    "period_start": 1656124136,
+    "post_payment_credit_notes_amount": 0,
+    "pre_payment_credit_notes_amount": 0,
+    "quote": null,
+    "receipt_number": null,
+    "rendering_options": null,
+    "starting_balance": 0,
+    "statement_descriptor": null,
+    "status": "paid",
+    "status_transitions": {
+      "finalized_at": 1656124149,
+      "marked_uncollectible_at": null,
+      "paid_at": 1656124150,
+      "voided_at": null
+    },
+    "subscription": null,
+    "subtotal": 2500,
+    "subtotal_excluding_tax": 2500,
+    "tax": null,
+    "test_clock": null,
+    "total": 2500,
+    "total_discount_amounts": [],
+    "total_excluding_tax": 2500,
+    "total_tax_amounts": [],
+    "transfer_data": null,
+    "webhooks_delivered_at": null
+  },
+  "customerid": "cus_LwHII6zIkBDuEU",
+  "subscriptionid": null,
+  "accountid": "acct_91f06f0d6c6b78b3",
+  "appid": "tests_1656124131",
+  "createdAt": "2022-06-25T02:29:10.607Z",
+  "updatedAt": "2022-06-25T02:29:13.086Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td>ineligible posted payment method</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="2">invalid-invoice</td>
+                  <td>invalid querystring invoice is paid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring invoice is marked uncollectable</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-invoiceid</td>
+                  <td>missing querystring invoiceid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring invoiceid</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="2">invalid-paymentmethodid</td>
+                  <td>missing posted paymentmethodid</td>
+                </tr>
+                <tr>
+                  <td>invalid posted paymentmethodid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/set-invoice-paid.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const dashboard = require('@layeredapps/dashboard')
+const stripeCache = require('../../../../stripe-cache.js')
+const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.invoiceid) {
+      throw new Error('invalid-invoiceid')
+    }
+    const invoice = await global.api.user.subscriptions.Invoice.get(req)
+    if (!invoice) {
+      throw new Error('invalid-invoiceid')
+    }
+    if (invoice.stripeObject.status !== 'draft' && invoice.stripeObject.status !== 'open') {
+      throw new Error('invalid-invoice')
+    }
+    if (!req.body || !req.body.paymentmethodid) {
+      throw new Error('invalid-paymentmethodid')
+    }
+    req.query.paymentmethodid = req.body.paymentmethodid
+    const paymentMethod = await global.api.user.subscriptions.PaymentMethod.get(req)
+    if (!paymentMethod) {
+      throw new Error('invalid-paymentmethodid')
+    }
+    const invoiceNow = await stripeCache.execute('invoices', 'pay', req.query.invoiceid, {
+      payment_method: paymentMethod.id
+    }, req.stripeKey)
+    await subscriptions.Storage.Invoice.update({
+      stripeObject: invoiceNow
+    }, {
+      where: {
+        invoiceid: req.query.invoiceid,
+        appid: req.appid || global.appid
+      }
+    })
+    await dashboard.StorageCache.remove(req.query.invoiceid)
+    return global.api.user.subscriptions.Invoice.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/user/subscriptions/set-invoice-paid.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/subscriptions/set-invoice-paid', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+    // invalid invoice is paid
+    const req5 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req5.account = user.account
+    req5.session = user.session
+    req5.body = {
+      paymentmethodid: user.paymentMethod.paymentmethodid
+    }
+    try {
+      await req5.patch()
+    } catch (error) {
+      cachedResponses.invalidInvoice = error.message
+    }
+    // missing and invalid id
+    const req = TestHelper.createRequest('/api/user/subscriptions/set-invoice-paid')
+    req.account = user.account
+    req.session = user.session
+    req.body = {
+      paymentmethodid: 'invalid'
+    }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.missing = error.message
+    }
+    const req2 = TestHelper.createRequest('/api/user/subscriptions/set-invoice-paid?invoiceid=invalid')
+    req2.account = user.account
+    req2.session = user.session
+    req2.body = {
+      paymentmethodid: 'invalid'
+    }
+    try {
+      await req2.patch()
+    } catch (error) {
+      cachedResponses.invalid = error.message
+    }
+    // invalid account
+    await TestHelper.createAmountOwed(user)
+    const user2 = await TestStripeAccounts.createUserWithPaymentMethod()
+    const req3 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req3.account = user2.account
+    req3.session = user2.session
+    req3.body = {
+      paymentmethodid: 'invalid'
+    }
+    try {
+      await req3.patch()
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    const req4 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req4.account = user.account
+    req4.session = user.session
+    req4.body = {
+      paymentmethodid: user2.paymentMethod.paymentmethodid
+    }
+    try {
+      await req4.patch()
+    } catch (error) {
+      cachedResponses.invalidAccount2 = error.message
+    }
+    // invalid invoice
+    await TestHelper.createAmountOwed(user)
+    await TestHelper.forgiveInvoice(administrator, user.invoice.invoiceid)
+    const req6 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req6.account = user.account
+    req6.session = user.session
+    req6.body = {
+      paymentmethodid: user.paymentMethod.paymentmethodid
+    }
+    try {
+      await req6.patch()
+    } catch (error) {
+      cachedResponses.invalidInvoice2 = error.message
+    }
+    // invalid payment method
+    await TestHelper.createAmountOwed(user)
+    const req7 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req7.account = user.account
+    req7.session = user.session
+    req7.body = {
+      paymentmethodid: ''
+    }
+    try {
+      await req7.patch()
+    } catch (error) {
+      cachedResponses.missingPaymentMethod = error.message
+    }
+    const req8 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req8.account = user.account
+    req8.session = user.session
+    req8.body = {
+      paymentmethodid: 'invalid'
+    }
+    try {
+      await req8.patch()
+    } catch (error) {
+      cachedResponses.invalidPaymentMethod = error.message
+    }
+    // returns
+    const req9 = TestHelper.createRequest(`/api/user/subscriptions/set-invoice-paid?invoiceid=${user.invoice.invoiceid}`)
+    req9.account = user.account
+    req9.session = user.session
+    req9.body = {
+      paymentmethodid: user.paymentMethod.paymentmethodid
+    }
+    req9.filename = __filename
+    req9.saveResponse = true
+    cachedResponses.returns = await req9.patch()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-invoiceid', () => {
+      it('missing querystring invoiceid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missing
+        assert.strictEqual(errorMessage, 'invalid-invoiceid')
+      })
+
+      it('invalid querystring invoiceid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalid
+        assert.strictEqual(errorMessage, 'invalid-invoiceid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+
+      it('ineligible posted payment method', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount2
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-invoice', () => {
+      it('invalid querystring invoice is paid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidInvoice
+        assert.strictEqual(errorMessage, 'invalid-invoice')
+      })
+
+      it('invalid querystring invoice is marked uncollectable', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidInvoice2
+        assert.strictEqual(errorMessage, 'invalid-invoice')
+      })
+    })
+
+    describe('invalid-paymentmethodid', () => {
+      it('missing posted paymentmethodid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingPaymentMethod
+        assert.strictEqual(errorMessage, 'invalid-paymentmethodid')
+      })
+
+      it('invalid posted paymentmethodid', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPaymentMethod
+        assert.strictEqual(errorMessage, 'invalid-paymentmethodid')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const invoice = cachedResponses.returns
+      assert.strictEqual(invoice.stripeObject.paid, true)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

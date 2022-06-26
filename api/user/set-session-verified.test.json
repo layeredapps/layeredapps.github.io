@@ -1,0 +1,13 @@
+{
+  "sessionid": "sess_8d70fdf51b0b2b63",
+  "object": "session",
+  "appid": "tests_1656038582",
+  "accountid": "acct_0e4dca04a8579892",
+  "duration": 1200,
+  "csrfToken": "0cdd7ea0406f53ea4b6d09e1f3be11abf35baadfa16ac43aab79b122f64dc9e9f829be1a11680045dd9497d2c0ee7998afbca2c35f74f9a7b82c226da818340e",
+  "expiresAt": "2022-06-24T03:03:02.000Z",
+  "lastVerifiedAt": "2022-06-24T02:43:02.000Z",
+  "ended": false,
+  "createdAt": "2022-06-24T02:43:02.855Z",
+  "updatedAt": "2022-06-24T02:43:02.881Z"
+}

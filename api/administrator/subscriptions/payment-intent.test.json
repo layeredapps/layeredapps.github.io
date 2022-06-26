@@ -1,0 +1,71 @@
+{
+  "paymentintentid": "pi_3LEOKmHHqepMFuCX0VdjCw9X",
+  "object": "paymentintent",
+  "stripeObject": {
+    "id": "pi_3LEOKmHHqepMFuCX0VdjCw9X",
+    "object": "payment_intent",
+    "amount": 10000,
+    "amount_capturable": 0,
+    "amount_details": {
+      "tip": {}
+    },
+    "amount_received": 0,
+    "application": null,
+    "application_fee_amount": null,
+    "automatic_payment_methods": null,
+    "canceled_at": null,
+    "cancellation_reason": null,
+    "capture_method": "automatic",
+    "charges": {
+      "object": "list",
+      "data": [],
+      "has_more": false,
+      "total_count": 0,
+      "url": "/v1/charges?payment_intent=pi_3LEOKmHHqepMFuCX0VdjCw9X"
+    },
+    "client_secret": "pi_3LEOKmHHqepMFuCX0VdjCw9X_secret_vOuBRuZRIwyQLHNaqn8gOLCZX",
+    "confirmation_method": "automatic",
+    "created": 1656122572,
+    "currency": "usd",
+    "customer": "cus_LwGs3b2WsJ6FBs",
+    "description": null,
+    "invoice": null,
+    "last_payment_error": null,
+    "livemode": false,
+    "metadata": {},
+    "next_action": null,
+    "on_behalf_of": null,
+    "payment_method": null,
+    "payment_method_options": {
+      "card": {
+        "installments": null,
+        "mandate_options": null,
+        "network": null,
+        "request_three_d_secure": "automatic"
+      }
+    },
+    "payment_method_types": [
+      "card"
+    ],
+    "processing": null,
+    "receipt_email": null,
+    "review": null,
+    "setup_future_usage": null,
+    "shipping": null,
+    "source": null,
+    "statement_descriptor": null,
+    "statement_descriptor_suffix": null,
+    "status": "requires_payment_method",
+    "transfer_data": null,
+    "transfer_group": null
+  },
+  "accountid": "acct_611d29ac706d36dd",
+  "customerid": "cus_LwGs3b2WsJ6FBs",
+  "paymentmethodid": "pm_1LEOKkHHqepMFuCXAjiakUPN",
+  "subscriptionid": null,
+  "invoiceid": null,
+  "status": "requires_payment_method",
+  "appid": "tests_1656122569",
+  "createdAt": "2022-06-25T02:02:53.033Z",
+  "updatedAt": "2022-06-25T02:02:53.501Z"
+}

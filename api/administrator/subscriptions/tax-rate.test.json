@@ -1,0 +1,23 @@
+{
+  "taxrateid": "txr_1LEOWgHHqepMFuCXYpwxqgvQ",
+  "object": "taxrate",
+  "stripeObject": {
+    "id": "txr_1LEOWgHHqepMFuCXYpwxqgvQ",
+    "object": "tax_rate",
+    "active": true,
+    "country": "US",
+    "created": 1656123310,
+    "description": "Sales tax in NY",
+    "display_name": "NY Sales Tax",
+    "inclusive": true,
+    "jurisdiction": "US",
+    "livemode": false,
+    "metadata": {},
+    "percentage": 17.5,
+    "state": "NY",
+    "tax_type": "sales_tax"
+  },
+  "appid": "tests_1656123309",
+  "createdAt": "2022-06-25T02:15:10.241Z",
+  "updatedAt": "2022-06-25T02:15:10.241Z"
+}

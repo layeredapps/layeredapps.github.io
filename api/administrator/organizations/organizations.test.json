@@ -1,0 +1,35 @@
+[
+  {
+    "organizationid": "orgn_93147d3ee44f5d88",
+    "object": "organization",
+    "appid": "tests_1656039699",
+    "ownerid": "acct_615573a0995983f4",
+    "name": "My organization 1",
+    "pin": "12342",
+    "email": "Nicole.Heller@yahoo.com",
+    "createdAt": "2022-06-24T03:01:39.531Z",
+    "updatedAt": "2022-06-24T03:01:39.531Z"
+  },
+  {
+    "organizationid": "orgn_3e1291bfdb64fe38",
+    "object": "organization",
+    "appid": "tests_1656039699",
+    "ownerid": "acct_615573a0995983f4",
+    "name": "My organization 1",
+    "pin": "12341",
+    "email": "Nicole.Heller@yahoo.com",
+    "createdAt": "2022-06-24T03:01:39.511Z",
+    "updatedAt": "2022-06-24T03:01:39.511Z"
+  },
+  {
+    "organizationid": "orgn_78a2ad82a75611a1",
+    "object": "organization",
+    "appid": "tests_1656039699",
+    "ownerid": "acct_615573a0995983f4",
+    "name": "My organization 1",
+    "pin": "12340",
+    "email": "Nicole.Heller@yahoo.com",
+    "createdAt": "2022-06-24T03:01:39.493Z",
+    "updatedAt": "2022-06-24T03:01:39.493Z"
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "taxrateid": "txr_1LEOWpHHqepMFuCXt4BA5q8r",
+    "object": "taxrate",
+    "stripeObject": {
+      "id": "txr_1LEOWpHHqepMFuCXt4BA5q8r",
+      "object": "tax_rate",
+      "active": true,
+      "country": "US",
+      "created": 1656123319,
+      "description": "Sales tax in NY",
+      "display_name": "NY Sales Tax",
+      "inclusive": true,
+      "jurisdiction": "US",
+      "livemode": false,
+      "metadata": {},
+      "percentage": 17.5,
+      "state": "NY",
+      "tax_type": "sales_tax"
+    },
+    "appid": "tests_1656123318",
+    "createdAt": "2022-06-25T02:15:19.863Z",
+    "updatedAt": "2022-06-25T02:15:19.863Z"
+  },
+  {
+    "taxrateid": "txr_1LEOWpHHqepMFuCXVvE96laM",
+    "object": "taxrate",
+    "stripeObject": {
+      "id": "txr_1LEOWpHHqepMFuCXVvE96laM",
+      "object": "tax_rate",
+      "active": true,
+      "country": "US",
+      "created": 1656123319,
+      "description": "Sales tax in NY",
+      "display_name": "NY Sales Tax",
+      "inclusive": true,
+      "jurisdiction": "US",
+      "livemode": false,
+      "metadata": {},
+      "percentage": 17.5,
+      "state": "NY",
+      "tax_type": "sales_tax"
+    },
+    "appid": "tests_1656123318",
+    "createdAt": "2022-06-25T02:15:19.498Z",
+    "updatedAt": "2022-06-25T02:15:19.498Z"
+  },
+  {
+    "taxrateid": "txr_1LEOWpHHqepMFuCXcG3hIsBs",
+    "object": "taxrate",
+    "stripeObject": {
+      "id": "txr_1LEOWpHHqepMFuCXcG3hIsBs",
+      "object": "tax_rate",
+      "active": true,
+      "country": "US",
+      "created": 1656123319,
+      "description": "Sales tax in NY",
+      "display_name": "NY Sales Tax",
+      "inclusive": true,
+      "jurisdiction": "US",
+      "livemode": false,
+      "metadata": {},
+      "percentage": 17.5,
+      "state": "NY",
+      "tax_type": "sales_tax"
+    },
+    "appid": "tests_1656123318",
+    "createdAt": "2022-06-25T02:15:19.203Z",
+    "updatedAt": "2022-06-25T02:15:19.203Z"
+  }
+]

@@ -1,0 +1,1147 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>update-person#PATCH (@layeredapps/stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/update-person (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.user.connect.UpdatePerson.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "personid": "person_1LEC5TRmeT3CaUbsfglcx1MU",
+  "object": "person",
+  "accountid": "acct_b7b4a23cd8d84230",
+  "stripeid": "acct_1LEC5QRmeT3CaUbs",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "person_1LEC5TRmeT3CaUbsfglcx1MU",
+    "object": "person",
+    "account": "acct_1LEC5QRmeT3CaUbs",
+    "address": {
+      "city": "Vienna",
+      "country": "AT",
+      "line1": "123 Park Lane",
+      "line2": null,
+      "postal_code": "1020",
+      "state": null
+    },
+    "created": 1656075496,
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1970
+    },
+    "email": "Brad_Waelchi91@hotmail.com",
+    "first_name": "Brad",
+    "future_requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "last_name": "Waelchi",
+    "metadata": {},
+    "relationship": {
+      "director": false,
+      "executive": true,
+      "owner": true,
+      "percent_ownership": 10,
+      "representative": false,
+      "title": "SVP Testing"
+    },
+    "requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": [
+        "verification.additional_document",
+        "verification.document"
+      ]
+    },
+    "verification": {
+      "additional_document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": null,
+        "details": null,
+        "details_code": null,
+        "front": null
+      },
+      "status": "pending"
+    }
+  },
+  "appid": "tests_1656075380",
+  "createdAt": "2022-06-24T12:58:17.387Z",
+  "updatedAt": "2022-06-24T12:58:20.930Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>address_city</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>address_line1</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>address_postal_code</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>address_state</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>dob_day</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>dob_month</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>dob_year</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>email</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>phone</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>ssn_last_4</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>verification_additional_document_back</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>verification_additional_document_front</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>verification_document_back</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>verification_document_front</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="2">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-address_country</td>
+                  <td>invalid posted address.country</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-address_state</td>
+                  <td>invalid posted address.state</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-dob_day</td>
+                  <td>missing posted dob.day</td>
+                </tr>
+                <tr>
+                  <td>invalid posted dob.day</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="2">invalid-dob_month</td>
+                  <td>missing posted dob.month</td>
+                </tr>
+                <tr>
+                  <td>invalid posted dob.month</td>
+                </tr>
+                <tr>
+                  <td id="description-8" rowspan="2">invalid-dob_year</td>
+                  <td>missing posted dob.month</td>
+                </tr>
+                <tr>
+                  <td>invalid posted dob.month</td>
+                </tr>
+                <tr>
+                  <td id="description-10" rowspan="1">invalid-id_number</td>
+                  <td>invalid posted id_number</td>
+                </tr>
+                <tr>
+                  <td id="description-11" rowspan="1">invalid-person</td>
+                  <td>ineligible querystring person has no required information</td>
+                </tr>
+                <tr>
+                  <td id="description-12" rowspan="2">invalid-personid</td>
+                  <td>missing querystring personid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring personid</td>
+                </tr>
+                <tr>
+                  <td id="description-14" rowspan="1">invalid-phone</td>
+                  <td>invalid posted phone</td>
+                </tr>
+                <tr>
+                  <td id="description-15" rowspan="1">invalid-relationship_percent_ownership</td>
+                  <td>invalid posted relationship.percent_ownership</td>
+                </tr>
+                <tr>
+                  <td id="description-16" rowspan="1">invalid-ssn_last_4</td>
+                  <td>invalid posted ssn_last_4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/update-person.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const connect = require('../../../../../index.js')
+const dashboard = require('@layeredapps/dashboard')
+const stripeCache = require('../../../../stripe-cache.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.personid) {
+      throw new Error('invalid-personid')
+    }
+    const person = await global.api.user.connect.Person.get(req)
+    if (!person) {
+      throw new Error('invalid-personid')
+    }
+    req.query.stripeid = person.stripeid
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    const requirements = person.stripeObject.requirements.currently_due.concat(person.stripeObject.requirements.eventually_due)
+    const accountRequirements = stripeAccount.stripeObject.requirements.currently_due.concat(stripeAccount.stripeObject.requirements.eventually_due)
+    for (const requirement of accountRequirements) {
+      if (requirement.startsWith(person.personid)) {
+        const trimmed = requirement.substring(requirement.indexOf('.') + 1)
+        if (requirements.indexOf(trimmed) === -1) {
+          requirements.push(trimmed)
+        }
+      }
+    }
+    if (!requirements.length) {
+      throw new Error('invalid-person')
+    }
+    req.body = req.body || {}
+    const updateInfo = {}
+    if (global.stripeJS === 3 && req.uploads && Object.keys(req.uploads).length && !req.body.token) {
+      throw new Error('invalid-token')
+    }
+    if (global.stripeJS === 3 && req.body.token) {
+      updateInfo.person_token = req.body.token
+      try {
+        await dashboard.StorageCache.remove(req.query.personid)
+        const personNow = await stripeCache.execute('accounts', 'updatePerson', person.stripeid, person.personid, updateInfo, req.stripeKey)
+        await connect.Storage.Person.update({
+          stripeObject: personNow,
+          tokenUpdate: new Date()
+        }, {
+          where: {
+            personid: req.query.personid,
+            appid: req.appid || global.appid
+          }
+        })
+      } catch (error) {
+        if (error.message.startsWith('invalid-')) {
+          throw new Error(error.message.split('.').join('_'))
+        }
+        throw error
+      }
+      delete (updateInfo.person_token)
+    }
+    let validateDOB = false
+    if (req.body.dob_day) {
+      validateDOB = true
+      try {
+        const day = parseInt(req.body.dob_day, 10)
+        if (!day || day < 1 || day > 31) {
+          throw new Error('invalid-dob_day')
+        }
+      } catch (s) {
+        throw new Error('invalid-dob_day')
+      }
+    }
+    if (req.body.dob_month) {
+      validateDOB = true
+      try {
+        const month = parseInt(req.body.dob_month, 10)
+        if (!month || month < 1 || month > 12) {
+          throw new Error('invalid-dob_month')
+        }
+      } catch (s) {
+        throw new Error('invalid-dob_month')
+      }
+    }
+    if (req.body.dob_year) {
+      validateDOB = true
+      try {
+        const year = parseInt(req.body.dob_year, 10)
+        const now = new Date().getFullYear()
+        if (!year || year < now - 120 || year > now - 18) {
+          throw new Error('invalid-dob_year')
+        }
+      } catch (s) {
+        throw new Error('invalid-dob_year')
+      }
+    }
+    if (validateDOB) {
+      if (!req.body.dob_day) {
+        throw new Error('invalid-dob_day')
+      }
+      if (!req.body.dob_month) {
+        throw new Error('invalid-dob_month')
+      }
+      if (!req.body.dob_year) {
+        throw new Error('invalid-dob_year')
+      }
+      try {
+        Date.parse(`${req.body.dob_year}/${req.body.dob_month}/${req.body.dob_day}`)
+      } catch (error) {
+        throw new Error('invalid-dob_day')
+      }
+    }
+    if (req.uploads) {
+      for (const key in req.uploads) {
+        const fileData = {
+          purpose: 'identity_document',
+          file: {
+            type: 'application/octet-stream',
+            name: req.uploads[key].name,
+            data: req.uploads[key].buffer
+          }
+        }
+        const file = await stripeCache.execute('files', 'create', fileData, req.stripeKey)
+        updateInfo.verification = updateInfo.verification || {}
+        const side = key.split('_').pop()
+        if (key.indexOf('_additional_document') > -1) {
+          updateInfo.verification.additional_document = updateInfo.verification.additional_document || {}
+          updateInfo.verification.additional_document[side] = file.id
+        } else if (key.indexOf('_document') > -1) {
+          updateInfo.verification.document = updateInfo.verification.document || {}
+          updateInfo.verification.document[side] = file.id
+        }
+      }
+    }
+    for (const field of requirements) {
+      const pseudonym = field.split('.').join('_')
+      if (!req.body[pseudonym]) {
+        continue
+      }
+      if (field.startsWith('dob.')) {
+        const property = field.substring('dob.'.length)
+        updateInfo.dob = updateInfo.dob || {}
+        updateInfo.dob[property] = req.body[pseudonym]
+      } else if (field.startsWith('address.kanji.')) {
+        const property = field.substring('address.kanji.'.length)
+        updateInfo.address.kanji = updateInfo.address.kanji || {}
+        updateInfo.address.kanji[property] = req.body[pseudonym]
+      } else if (field.startsWith('address.kana.')) {
+        const property = field.substring('address.kana.'.length)
+        updateInfo.address.kana = updateInfo.address.kana || {}
+        updateInfo.address.kana[property] = req.body[pseudonym]
+      } else if (field.startsWith('address.')) {
+        const property = field.substring('address.'.length)
+        updateInfo.address = updateInfo.address || {}
+        updateInfo.address[property] = req.body[pseudonym]
+      } else if (field.startsWith('verification.document.')) {
+        const property = field.substring('verification.document'.length)
+        updateInfo.verification = updateInfo.verification || {}
+        updateInfo.verification.document = updateInfo.verification.document || {}
+        updateInfo.verification.document[property] = req.body[pseudonym]
+      } else if (field.startsWith('verification.additional_document.')) {
+        const property = field.substring('verification.additional_document'.length)
+        updateInfo.verification = updateInfo.verification || {}
+        updateInfo.verification.additional_document = updateInfo.verification.additional_document || {}
+        updateInfo.verification.additional_document[property] = req.body[pseudonym]
+      } else {
+        updateInfo[field] = req.body[pseudonym]
+      }
+    }
+    // TODO: these fields are optional but not represented in requirements
+    // so when Stripe updates to have something like an 'optionally_due' array
+    // the manual checks can be removed
+    if (req.body.relationship_title) {
+      updateInfo.relationship = updateInfo.relationship || {}
+      updateInfo.relationship.title = req.body.relationship_title
+    }
+    if (req.body.relationship_executive) {
+      updateInfo.relationship = updateInfo.relationship || {}
+      updateInfo.relationship.executive = true
+    }
+    if (req.body.relationship_director) {
+      updateInfo.relationship = updateInfo.relationship || {}
+      updateInfo.relationship.director = true
+    }
+    if (req.body.relationship_owner) {
+      updateInfo.relationship = updateInfo.relationship || {}
+      updateInfo.relationship.owner = true
+    }
+    if (req.body.relationship_percent_ownership) {
+      try {
+        const percent = parseFloat(req.body.relationship_percent_ownership, 10)
+        if ((!percent && percent !== 0) || percent > 100 || percent < 0) {
+          throw new Error('invalid-relationship_percent_ownership')
+        }
+      } catch (s) {
+        throw new Error('invalid-relationship_percent_ownership')
+      }
+      updateInfo.relationship = updateInfo.relationship || {}
+      updateInfo.relationship.percent_ownership = req.body.relationship_percent_ownership
+    }
+    if (req.body.address_line2) {
+      updateInfo.address = updateInfo.address || {}
+      updateInfo.address.line2 = req.body.address_line2
+    }
+    if (req.body.address_country && req.body.address_country.length) {
+      if (!connect.countryNameIndex[req.body.address_country]) {
+        throw new Error('invalid-address_country')
+      }
+      updateInfo.address = updateInfo.address || {}
+      updateInfo.address.country = req.body.address_country
+    }
+    if (req.body.address_state && req.body.address_state.length) {
+      const states = connect.countryDivisions[req.body.address_country || stripeAccount.stripeObject.country]
+      let found
+      for (const state of states) {
+        found = state.value === req.body.address_state
+        if (found) {
+          break
+        }
+      }
+      if (!found) {
+        throw new Error('invalid-address_state')
+      }
+      updateInfo.address = updateInfo.address || {}
+      updateInfo.address.state = req.body.address_state
+    }
+    if (req.body.address_postal_code) {
+      updateInfo.address = updateInfo.address || {}
+      updateInfo.address.postal_code = req.body.address_postal_code
+    }
+    if (req.body.email) {
+      if (req.body.email.indexOf('@') === -1 || req.body.email.indexOf('@') > req.body.email.lastIndexOf('.')) {
+        throw new Error('invalid-email')
+      }
+      updateInfo.email = req.body.email
+    }
+    if (req.body.id_number && req.body.id_number.length < 5) {
+      throw new Error('invalid-id_number')
+    }
+    if (req.body.ssn_last_4 && req.body.ssn_last_4.length < 4) {
+      throw new Error('invalid-ssn_last_4')
+    }
+    try {
+      const personNow = await stripeCache.execute('accounts', 'updatePerson', person.stripeid, person.personid, updateInfo, req.stripeKey)
+      await connect.Storage.Person.update({
+        stripeObject: personNow
+      }, {
+        where: {
+          personid: req.query.personid,
+          appid: req.appid || global.appid
+        }
+      })
+    } catch (error) {
+      if (error.message.startsWith('invalid-')) {
+        throw new Error(error.message.split('.').join('_'))
+      }
+      throw error
+    }
+    await dashboard.StorageCache.remove(req.query.personid)
+    return global.api.user.connect.Person.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/update-person.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/user/connect/update-person', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const user = await TestHelper.createUser()
+    await TestHelper.createStripeAccount(user, {
+      country: 'AU',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '0'
+    })
+    // invalid date of birth
+    let req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = { dob_day: '-1', dob_month: '1', dob_year: 2000 }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-dob_day'] = error.message
+    }
+    req.body = { dob_day: '', dob_month: '-1', dob_year: 2000 }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['missing-dob_day'] = error.message
+    }
+    req.body = { dob_day: '1', dob_month: '-1', dob_year: 2000 }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-dob_month'] = error.message
+    }
+    req.body = { dob_day: '1', dob_month: '', dob_year: 2000 }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['missing-dob_month'] = error.message
+    }
+    req.body = { dob_day: '1', dob_month: '1', dob_year: 'invalid' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-dob_year'] = error.message
+    }
+    req.body = { dob_day: '1', dob_month: '1', dob_year: '' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['missing-dob_year'] = error.message
+    }
+    // invalid percent ownership
+    req.body = { relationship_percent_ownership: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-relationship_percent_ownership'] = error.message
+    }
+    // invalid country
+    req.body = { address_country: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-address_country'] = error.message
+    }
+    // invalid state
+    req.body = { address_state: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-address_state'] = error.message
+    }
+    // invalid id number
+    await TestHelper.createStripeAccount(user, {
+      country: 'HK',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '0'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = { id_number: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-id_number'] = error.message
+    }
+    // invalid phone
+    await TestHelper.createStripeAccount(user, {
+      country: 'US',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '0'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = { phone: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-phone'] = error.message
+    }
+    // invalid ssn last 4
+    req.body = { ssn_last_4: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-ssn_last_4'] = error.message
+    }
+    // invalid email
+    await TestHelper.createStripeAccount(user, {
+      country: 'AT',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_executive: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '0'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = { email: '-1' }
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses['invalid-email'] = error.message
+    }
+    // invalid account
+    const user2 = await TestHelper.createUser()
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user2.account
+    req.session = user2.session
+    req.body = { email: 'email@address.com' }
+    try {
+      await req.patch(req)
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    // invalid person
+    const user3 = await TestStripeAccounts.createCompanyReadyForSubmission('DE')
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user3.representative.personid}`)
+    req.account = user3.account
+    req.session = user3.session
+    try {
+      await req.patch(req)
+    } catch (error) {
+      cachedResponses.invalidPerson = error.message
+    }
+    // receives
+    // most fields are shared by all countries
+    await TestHelper.createStripeAccount(user, {
+      country: 'AT',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_executive: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '0'
+    })
+    await TestStripeAccounts.waitForPersonField(user, 'representative', 'first_name')
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = TestStripeAccounts.createPersonData(TestHelper.nextIdentity(), 'AT', user.representative.stripeObject)
+    req.body.email = 'email@address.com'
+    let result = await req.patch()
+    for (const field in req.body) {
+      cachedResponses[field] = result.stripeObject
+    }
+    await TestStripeAccounts.waitForPersonField(user, 'representative', 'verification.document')
+    await TestStripeAccounts.waitForPersonField(user, 'representative', 'verification.additional_document')
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.uploads = TestStripeAccounts.createPersonUploadData(user.representative.stripeObject)
+    result = await req.patch()
+    for (const field in req.uploads) {
+      cachedResponses[field] = cachedResponses[field] || result.stripeObject
+    }
+    await TestStripeAccounts.waitForPersonField(user, 'representative', 'verification.document')
+    // // some fields only by BR
+    // await TestHelper.createStripeAccount(user, {
+    //   country: 'BR',
+    //   business_type: 'company'
+    // })
+    // await TestHelper.createPerson(user, {
+    //   relationship_representative: 'true',
+    //   relationship_title: 'SVP Testing',
+    //   relationship_percent_ownership: '0'
+    // })
+    // req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    // req.account = user.account
+    // req.session = user.session
+    // req.body = TestStripeAccounts.createPersonData(TestHelper.nextIdentity(), 'BR', user.representative.stripeObject)
+    // result = await req.patch()
+    // for (const field in req.body) {
+    //   cachedResponses[field] = cachedResponses[field] || result.stripeObject
+    // }
+    // some fields only by US
+    await TestHelper.createStripeAccount(user, {
+      country: 'US',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '0'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user.representative.personid}`)
+    req.account = user.account
+    req.session = user.session
+    req.body = TestStripeAccounts.createPersonData(TestHelper.nextIdentity(), 'US', user.representative.stripeObject)
+    result = await req.patch()
+    for (const field in req.body) {
+      cachedResponses[field] = cachedResponses[field] || result.stripeObject
+    }
+    // returns
+    await TestHelper.createStripeAccount(user3, {
+      country: 'AT',
+      business_type: 'company'
+    })
+    await TestHelper.createPerson(user3, {
+      relationship_owner: 'true',
+      relationship_executive: 'true',
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: '10'
+    })
+    // await TestStripeAccounts.waitForPersonField(user3, 'owner', 'first_name')
+    // await TestStripeAccounts.waitForPersonField(user3, 'owner', 'address.state')
+    req = TestHelper.createRequest(`/api/user/connect/update-person?personid=${user3.owner.personid}`)
+    req.account = user3.account
+    req.session = user3.session
+    req.body = TestStripeAccounts.createPersonData(TestHelper.nextIdentity(), 'AT', user3.owner.stripeObject)
+    req.filename = __filename
+    req.saveResponse = true
+    cachedResponses.returns = await req.patch()
+    await TestStripeAccounts.waitForPersonFieldToLeave(user3, 'owner', 'first_name')
+    await TestStripeAccounts.waitForPersonFieldToLeave(user3, 'owner', 'address.state')
+    // returns with stripe.js
+    global.stripeJS = 3
+    await TestStripeAccounts.waitForPersonField(user3, 'owner', 'verification.document')
+    await TestStripeAccounts.waitForPersonField(user3, 'owner', 'verification.additional_document')
+    req = TestHelper.createRequest(`/account/connect/edit-person?personid=${user3.owner.personid}`)
+    req.account = user3.account
+    req.session = user3.session
+    req.uploads = TestStripeAccounts.createPersonUploadData(user3.owner.stripeObject)
+    req.waitBefore = async (page) => {
+      while (true) {
+        try {
+          const input = await page.$('#verification_additional_document_front')
+          if (input) {
+            break
+          }
+        } catch (error) {
+        }
+        await TestHelper.wait(100)
+      }
+    }
+    req.waitAfter = async (page) => {
+      while (true) {
+        const url = await page.url()
+        if (url.indexOf('/person') > -1) {
+          break
+        }
+        await TestHelper.wait(100)
+      }
+    }
+    await req.post()
+    cachedResponses.returnsWithStripeJS = await global.api.administrator.connect.Person.get({
+      query: {
+        personid: user3.owner.personid
+      }
+    })
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-personid', () => {
+      it('missing querystring personid', async function () {
+        await bundledData(this.test.currentRetry())
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/update-person')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-personid')
+      })
+
+      it('invalid querystring personid', async function () {
+        await bundledData(this.test.currentRetry())
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/update-person?personid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch(req)
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-personid')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-person', () => {
+      it('ineligible querystring person has no required information', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPerson
+        assert.strictEqual(errorMessage, 'invalid-person')
+      })
+    })
+
+    describe('invalid-dob_day', () => {
+      it('missing posted dob.day', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-dob_day']
+        assert.strictEqual(errorMessage, 'invalid-dob_day')
+      })
+      it('invalid posted dob.day', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-dob_day']
+        assert.strictEqual(errorMessage, 'invalid-dob_day')
+      })
+    })
+    describe('invalid-dob_month', () => {
+      it('missing posted dob.month', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-dob_month']
+        assert.strictEqual(errorMessage, 'invalid-dob_month')
+      })
+      it('invalid posted dob.month', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-dob_month']
+        assert.strictEqual(errorMessage, 'invalid-dob_month')
+      })
+    })
+    describe('invalid-dob_year', () => {
+      it('missing posted dob.month', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-dob_month']
+        assert.strictEqual(errorMessage, 'invalid-dob_month')
+      })
+      it('invalid posted dob.month', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-dob_month']
+        assert.strictEqual(errorMessage, 'invalid-dob_month')
+      })
+    })
+
+    describe('invalid-relationship_percent_ownership', () => {
+      it('invalid posted relationship.percent_ownership', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-relationship_percent_ownership']
+        assert.strictEqual(errorMessage, 'invalid-relationship_percent_ownership')
+      })
+    })
+
+    describe('invalid-address_country', () => {
+      it('invalid posted address.country', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-address_country']
+        assert.strictEqual(errorMessage, 'invalid-address_country')
+      })
+    })
+
+    describe('invalid-address_state', () => {
+      it('invalid posted address.state', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-address_state']
+        assert.strictEqual(errorMessage, 'invalid-address_state')
+      })
+    })
+
+    describe('invalid-id_number', () => {
+      it('invalid posted id_number', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-id_number']
+        assert.strictEqual(errorMessage, 'invalid-id_number')
+      })
+    })
+
+    describe('invalid-ssn_last_4', () => {
+      it('invalid posted ssn_last_4', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-ssn_last_4']
+        assert.strictEqual(errorMessage, 'invalid-ssn_last_4')
+      })
+    })
+
+    describe('invalid-phone', () => {
+      it('invalid posted phone', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses['invalid-phone']
+        assert.strictEqual(errorMessage, 'invalid-phone')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optionally-required posted dob_day', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.dob_day
+      assert.strictEqual(personNow.dob.day, 1)
+    })
+    it('optionally-required posted dob_month', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.dob_month
+      assert.strictEqual(personNow.dob.month, 1)
+    })
+    it('optionally-required posted dob_year', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.dob_year
+      assert.strictEqual(personNow.dob.year, 1970)
+    })
+    it('optionally-required posted address_line1', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.address_line1
+      assert.strictEqual(personNow.address.line1, '123 Park Lane')
+    })
+    it('optionally-required posted address_city', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.address_city
+      assert.strictEqual(personNow.address.city, 'Vienna')
+    })
+    it('optionally-required posted address_state', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.address_state
+      assert.strictEqual(personNow.address.state, 'NY')
+    })
+    it('optionally-required posted address_postal_code', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.address_postal_code
+      assert.strictEqual(personNow.address.postal_code, '1020')
+    })
+    it('optionally-required posted email', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.email
+      assert.strictEqual(personNow.email, 'email@address.com')
+    })
+    it('optionally-required posted phone', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.phone
+      assert.strictEqual(personNow.phone, '+14567890123')
+    })
+    // it('optionally-required posted political_exposure', async function () {
+    //   await bundledData(this.test.currentRetry())
+    //   const personNow = cachedResponses.political_exposure
+    //   assert.strictEqual(personNow.political_exposure, 'existing')
+    // })
+    // it('optionally-required posted id_number', async function () {
+    //   await bundledData(this.test.currentRetry())
+    //   const personNow = cachedResponses.id_number
+    //   assert.strictEqual(personNow.id_number_provided, true)
+    // })
+    it('optionally-required posted ssn_last_4', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.ssn_last_4
+      assert.strictEqual(personNow.ssn_last_4_provided, true)
+    })
+    it('optionally-required posted verification_document_front', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.verification_document_front
+      assert.strictEqual(personNow.verification.status, 'unverified')
+    })
+    it('optionally-required posted verification_document_back', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.verification_document_back
+      assert.strictEqual(personNow.verification.status, 'unverified')
+    })
+    it('optionally-required posted verification_additional_document_front', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.verification_additional_document_front
+      assert.strictEqual(personNow.verification.status, 'unverified')
+    })
+    it('optionally-required posted verification_additional_document_back', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.verification_additional_document_back
+      assert.strictEqual(personNow.verification.status, 'unverified')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.returns
+      assert.strictEqual(personNow.object, 'person')
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment STRIPE_JS', async function () {
+      await bundledData(this.test.currentRetry())
+      const personNow = cachedResponses.returnsWithStripeJS
+      assert.notStrictEqual(personNow.tokenUpdate, null)
+      assert.notStrictEqual(personNow.tokenUpdate, undefined)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

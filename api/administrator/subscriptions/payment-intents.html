@@ -1,0 +1,462 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>payment-intents#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/payment-intents (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.administrator.subscriptions.PaymentIntents.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "paymentintentid": "pi_3LEOLZHHqepMFuCX0bjhGF12",
+    "object": "paymentintent",
+    "stripeObject": {
+      "id": "pi_3LEOLZHHqepMFuCX0bjhGF12",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {}
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "charges": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "total_count": 0,
+        "url": "/v1/charges?payment_intent=pi_3LEOLZHHqepMFuCX0bjhGF12"
+      },
+      "client_secret": "pi_3LEOLZHHqepMFuCX0bjhGF12_secret_KzLmMBsd5OVf8UfeL4fyi3pMI",
+      "confirmation_method": "automatic",
+      "created": 1656122621,
+      "currency": "usd",
+      "customer": "cus_LwGtrRE7ZX91te",
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "livemode": false,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "accountid": "acct_dd1f553553edae02",
+    "customerid": "cus_LwGtrRE7ZX91te",
+    "paymentmethodid": "pm_1LEOLXHHqepMFuCXmCtklolb",
+    "subscriptionid": null,
+    "invoiceid": null,
+    "status": "requires_payment_method",
+    "appid": "tests_1656122598",
+    "createdAt": "2022-06-25T02:03:42.153Z",
+    "updatedAt": "2022-06-25T02:03:42.606Z"
+  },
+  {
+    "paymentintentid": "pi_3LEOLVHHqepMFuCX0tKyAqO1",
+    "object": "paymentintent",
+    "stripeObject": {
+      "id": "pi_3LEOLVHHqepMFuCX0tKyAqO1",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {}
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "charges": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "total_count": 0,
+        "url": "/v1/charges?payment_intent=pi_3LEOLVHHqepMFuCX0tKyAqO1"
+      },
+      "client_secret": "pi_3LEOLVHHqepMFuCX0tKyAqO1_secret_ClwCh0seKdFAKaRtN8saBWisf",
+      "confirmation_method": "automatic",
+      "created": 1656122617,
+      "currency": "usd",
+      "customer": "cus_LwGtPb4q8PeMyi",
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "livemode": false,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "accountid": "acct_a4b75f08df7d38ba",
+    "customerid": "cus_LwGtPb4q8PeMyi",
+    "paymentmethodid": "pm_1LEOLTHHqepMFuCXldRHTWE0",
+    "subscriptionid": null,
+    "invoiceid": null,
+    "status": "requires_payment_method",
+    "appid": "tests_1656122598",
+    "createdAt": "2022-06-25T02:03:38.216Z",
+    "updatedAt": "2022-06-25T02:03:38.812Z"
+  },
+  {
+    "paymentintentid": "pi_3LEOLRHHqepMFuCX12DaeaON",
+    "object": "paymentintent",
+    "stripeObject": {
+      "id": "pi_3LEOLRHHqepMFuCX12DaeaON",
+      "object": "payment_intent",
+      "amount": 10000,
+      "amount_capturable": 0,
+      "amount_details": {
+        "tip": {}
+      },
+      "amount_received": 0,
+      "application": null,
+      "application_fee_amount": null,
+      "automatic_payment_methods": null,
+      "canceled_at": null,
+      "cancellation_reason": null,
+      "capture_method": "automatic",
+      "charges": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "total_count": 0,
+        "url": "/v1/charges?payment_intent=pi_3LEOLRHHqepMFuCX12DaeaON"
+      },
+      "client_secret": "pi_3LEOLRHHqepMFuCX12DaeaON_secret_i56lRPpmvWXmjyK2fhKnVvydv",
+      "confirmation_method": "automatic",
+      "created": 1656122613,
+      "currency": "usd",
+      "customer": "cus_LwGtOrDxEY7STQ",
+      "description": null,
+      "invoice": null,
+      "last_payment_error": null,
+      "livemode": false,
+      "metadata": {},
+      "next_action": null,
+      "on_behalf_of": null,
+      "payment_method": null,
+      "payment_method_options": {
+        "card": {
+          "installments": null,
+          "mandate_options": null,
+          "network": null,
+          "request_three_d_secure": "automatic"
+        }
+      },
+      "payment_method_types": [
+        "card"
+      ],
+      "processing": null,
+      "receipt_email": null,
+      "review": null,
+      "setup_future_usage": null,
+      "shipping": null,
+      "source": null,
+      "statement_descriptor": null,
+      "statement_descriptor_suffix": null,
+      "status": "requires_payment_method",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "accountid": "acct_e409f5cad479f0f2",
+    "customerid": "cus_LwGtOrDxEY7STQ",
+    "paymentmethodid": "pm_1LEOLOHHqepMFuCXY2gfT7v7",
+    "subscriptionid": null,
+    "invoiceid": null,
+    "status": "requires_payment_method",
+    "appid": "tests_1656122598",
+    "createdAt": "2022-06-25T02:03:34.115Z",
+    "updatedAt": "2022-06-25T02:03:34.832Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/payment-intents.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    const where = {
+      appid: req.appid || global.appid
+    }
+    let paymentintentids
+    if (req.query.all) {
+      paymentintentids = await subscriptions.Storage.PaymentIntent.findAll({
+        where,
+        attributes: ['paymentintentid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      paymentintentids = await subscriptions.Storage.PaymentIntent.findAll({
+        where,
+        attributes: ['paymentintentid'],
+        offset,
+        limit,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    }
+    if (!paymentintentids || !paymentintentids.length) {
+      return null
+    }
+    const items = []
+    for (const paymentintentInfo of paymentintentids) {
+      req.query.paymentintentid = paymentintentInfo.dataValues.paymentintentid
+      const paymentintent = await global.api.administrator.subscriptions.PaymentIntent.get(req)
+      items.push(paymentintent)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/payment-intents.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/payment-intents', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedPaymentIntents
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedPaymentIntents = []
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestHelper.createOwner()
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      const user = await TestStripeAccounts.createUserWithPaymentMethod()
+      await TestHelper.createPaymentIntent(user, {
+        paymentmethodid: user.paymentMethod.paymentmethodid,
+        amount: '10000',
+        currency: 'usd'
+      })
+      cachedPaymentIntents.unshift(user.paymentIntent.paymentintentid)
+    }
+    const offset = 1
+    const limit = 1
+    const req1 = TestHelper.createRequest(`/api/administrator/subscriptions/payment-intents?offset=${offset}`)
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest(`/api/administrator/subscriptions/payment-intents?limit=${limit}`)
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/subscriptions/payment-intents?all=true')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/subscriptions/payment-intents')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+    global.pageSize = 2
+    cachedResponses.finished = true
+  }
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const paymentIntentsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(paymentIntentsNow[i].paymentintentid, cachedPaymentIntents[offset + i])
+      }
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const paymentIntentsNow = cachedResponses.all
+      assert.strictEqual(paymentIntentsNow.length, cachedPaymentIntents.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const paymentIntentsNow = cachedResponses.returns
+      assert.strictEqual(paymentIntentsNow.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      const paymentIntentsNow = cachedResponses.pageSize
+      assert.strictEqual(paymentIntentsNow.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>payouts#GET (@layeredapps/stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/connect/payouts (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.administrator.connect.Payouts.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "payoutid": "po_1LEBohRZ0kEyRwr1WSI3LS0z",
+    "object": "payout",
+    "stripeObject": {
+      "id": "po_1LEBohRZ0kEyRwr1WSI3LS0z",
+      "object": "payout",
+      "amount": 2000,
+      "arrival_date": 1656288000,
+      "automatic": false,
+      "balance_transaction": "txn_1LEBoiRZ0kEyRwr1Os3QwGQ6",
+      "created": 1656074455,
+      "currency": "nzd",
+      "description": null,
+      "destination": "ba_1LEBoKRZ0kEyRwr1nyqMuFU5",
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "livemode": false,
+      "metadata": {},
+      "method": "standard",
+      "original_payout": null,
+      "reversed_by": null,
+      "source_type": "card",
+      "statement_descriptor": null,
+      "status": "pending",
+      "type": "bank_account"
+    },
+    "accountid": "acct_8bef10c3c46c04ea",
+    "stripeid": "acct_1LEBoDRZ0kEyRwr1",
+    "appid": "tests_1656074355",
+    "createdAt": "2022-06-24T12:40:56.921Z",
+    "updatedAt": "2022-06-24T12:40:56.922Z"
+  },
+  {
+    "payoutid": "po_1LEBoCDEbuv1y1WOR7VPmxJK",
+    "object": "payout",
+    "stripeObject": {
+      "id": "po_1LEBoCDEbuv1y1WOR7VPmxJK",
+      "object": "payout",
+      "amount": 2000,
+      "arrival_date": 1656288000,
+      "automatic": false,
+      "balance_transaction": "txn_1LEBoCDEbuv1y1WOxZTbfAsr",
+      "created": 1656074424,
+      "currency": "nzd",
+      "description": null,
+      "destination": "ba_1LEBnoDEbuv1y1WO7faiMowO",
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "livemode": false,
+      "metadata": {},
+      "method": "standard",
+      "original_payout": null,
+      "reversed_by": null,
+      "source_type": "card",
+      "statement_descriptor": null,
+      "status": "paid",
+      "type": "bank_account"
+    },
+    "accountid": "acct_8bef10c3c46c04ea",
+    "stripeid": "acct_1LEBnhDEbuv1y1WO",
+    "appid": "tests_1656074355",
+    "createdAt": "2022-06-24T12:40:25.476Z",
+    "updatedAt": "2022-06-24T12:40:25.828Z"
+  },
+  {
+    "payoutid": "po_1LEBnfDGG7NHC4RlqB1u8hsB",
+    "object": "payout",
+    "stripeObject": {
+      "id": "po_1LEBnfDGG7NHC4RlqB1u8hsB",
+      "object": "payout",
+      "amount": 2000,
+      "arrival_date": 1656288000,
+      "automatic": false,
+      "balance_transaction": "txn_1LEBnfDGG7NHC4RlPHqrVdaf",
+      "created": 1656074391,
+      "currency": "nzd",
+      "description": null,
+      "destination": "ba_1LEBnBDGG7NHC4RldWq02SJ1",
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "livemode": false,
+      "metadata": {},
+      "method": "standard",
+      "original_payout": null,
+      "reversed_by": null,
+      "source_type": "card",
+      "statement_descriptor": null,
+      "status": "paid",
+      "type": "bank_account"
+    },
+    "accountid": "acct_84c0bbf386c8d891",
+    "stripeid": "acct_1LEBn5DGG7NHC4Rl",
+    "appid": "tests_1656074355",
+    "createdAt": "2022-06-24T12:39:52.677Z",
+    "updatedAt": "2022-06-24T12:39:52.985Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>accountid </td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>stripeid </td>
+                  <td>string</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/administrator/connect/payouts.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const connect = require('../../../../../index.js')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    const where = {
+      appid: req.appid || global.appid
+    }
+    if (req.query.stripeid) {
+      const StripeAccount = await global.api.administrator.connect.StripeAccount.get(req)
+      if (!StripeAccount) {
+        throw new Error('invalid-stripeid')
+      }
+      where.stripeid = req.query.stripeid
+    } else if (req.query.accountid) {
+      const account = await global.api.administrator.Account.get(req)
+      if (!account) {
+        throw new Error('invalid-account')
+      }
+      where.accountid = req.query.accountid
+    }
+    let payoutids
+    if (req.query.all) {
+      payoutids = await connect.Storage.Payout.findAll({
+        where,
+        attributes: ['payoutid'],
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      payoutids = await connect.Storage.Payout.findAll({
+        where,
+        attributes: ['payoutid'],
+        offset,
+        limit,
+        order: [
+          ['createdAt', 'DESC']
+        ]
+      })
+    }
+    if (!payoutids || !payoutids.length) {
+      return null
+    }
+    const items = []
+    for (const payoutInfo of payoutids) {
+      req.query.payoutid = payoutInfo.dataValues.payoutid
+      const payout = await global.api.administrator.connect.Payout.get(req)
+      items.push(payout)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/administrator/connect/payouts.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/connect/payouts', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedPayouts, accountPayouts, stripeAccountPayouts
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedPayouts = []
+    accountPayouts = []
+    stripeAccountPayouts = []
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestHelper.createOwner()
+    let user = await TestStripeAccounts.createSubmittedIndividual('NZ')
+    for (let i = 0, len = global.pageSize; i < len; i++) {
+      await TestHelper.createPayout(user)
+      cachedPayouts.unshift(user.payout.payoutid)
+    }
+    user = await TestStripeAccounts.createSubmittedIndividual('NZ')
+    const stripeid = user.stripeAccount.stripeid
+    await TestHelper.createPayout(user)
+    cachedPayouts.unshift(user.payout.payoutid)
+    accountPayouts.unshift(user.payout.payoutid)
+    stripeAccountPayouts.unshift(user.payout.payoutid)
+    user = await TestStripeAccounts.createSubmittedIndividual('NZ', user)
+    await TestHelper.createPayout(user)
+    cachedPayouts.unshift(user.payout.payoutid)
+    accountPayouts.unshift(user.payout.payoutid)
+    const req1 = TestHelper.createRequest('/api/administrator/connect/payouts')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    req1.filename = __filename
+    req1.saveResponse = true
+    cachedResponses.returns = await req1.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req1.get()
+    global.pageSize = 2
+    const req2 = TestHelper.createRequest('/api/administrator/connect/payouts?offset=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.offset = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/connect/payouts?limit=1')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.limit = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/connect/payouts?all=true')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    cachedResponses.all = await req4.get()
+    const req5 = TestHelper.createRequest(`/api/administrator/connect/payouts?accountid=${user.account.accountid}&all=true`)
+    req5.account = administrator.account
+    req5.session = administrator.session
+    cachedResponses.accountid = await req5.get()
+    const req6 = TestHelper.createRequest(`/api/administrator/connect/payouts?stripeid=${stripeid}&all=true`)
+    req6.account = administrator.account
+    req6.session = administrator.session
+    cachedResponses.stripeid = await req6.get()
+    cachedResponses.finished = true
+  }
+  describe('receives', function () {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const payoutsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(payoutsNow[i].payoutid, cachedPayouts[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const limit = 1
+      const payoutsNow = cachedResponses.limit
+      assert.strictEqual(payoutsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async function () {
+      await bundledData(this.test.currentRetry())
+      const payoutsNow = cachedResponses.all
+      assert.strictEqual(payoutsNow.length, cachedPayouts.length)
+    })
+
+    it('optional querystring accountid (string)', async function () {
+      await bundledData(this.test.currentRetry())
+      const payoutsNow = cachedResponses.accountid
+      assert.strictEqual(payoutsNow.length, accountPayouts.length)
+    })
+
+    it('optional querystring stripeid (string)', async function () {
+      await bundledData(this.test.currentRetry())
+      const payoutsNow = cachedResponses.stripeid
+      assert.strictEqual(payoutsNow.length, stripeAccountPayouts.length)
+    })
+  })
+
+  describe('returns', function () {
+    it('array', async function () {
+      await bundledData(this.test.currentRetry())
+      const payouts = cachedResponses.returns
+      assert.strictEqual(payouts.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', function () {
+    it('environment PAGE_SIZE', async function () {
+      await bundledData(this.test.currentRetry())
+      const payouts = cachedResponses.pageSize
+      assert.strictEqual(payouts.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

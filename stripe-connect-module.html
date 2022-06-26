@@ -1,0 +1,218 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Stripe Connect module</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="active"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="api"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="documentation-for-stripe-connect-module">Documentation for Stripe Connect module</h1>
+          <h4>Shortcuts</h4>
+          <ul>
+            <li><a href="https://layeredapps.github.io">Documentation website</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-connect-module">Module documentation</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-connect-ui">UI screenshots</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-connect-api">API documentation</a></li>
+            <li><a href="https://layeredapps.github.io/stripe-connect-configuration">Environment configuration</a></li>
+          </ul>
+          <h4>Index</h4>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#import-this-module">Import this module</a></li>
+            <li><a href="#setting-up-your-stripe-credentials">Setting up your Stripe credentials</a></li>
+            <li><a href="#provided-server-content-and-proxy-handlers">Provided server, content and proxy handlers</a></li>
+            <li><a href="#storage-engine">Storage engine</a></li>
+            <li><a href="#access-the-api">Access the API</a></li>
+            <li><a href="https://github.com/layeredapps/stripe-connect">Github repository</a></li>
+            <li><a href="https://npmjs.org/layeredapps/stripe-connect">NPM package</a></li>
+          </ul>
+          <h1 id="introduction">Introduction</h1>
+          <p>Dashboard bundles everything a web app needs, all the &quot;boilerplate&quot; like signing in and changing passwords, into a parallel server so you can write a much smaller web app.</p>
+          <p>The Stripe Connect module adds a complete &quot;custom&quot; integration of Stripe's Connect API, allowing your users to provide personal or company information and receive payouts on your platform. A UI is provided for users to create and manage their registrations, and a basic administrator UI is provided for oversight. When a user has completed a Stripe account registration and it has been approved by Stripe their status will be changed to <code data-language="js">payouts_enabled</code> and your application can use this property to control access to your platform functionality.</p>
+          <p>Currently only automatic payouts are supported. Countries that are &quot;in beta&quot; support by Stripe are not supported and need to be added as they become generally available. The <a href="https://stripe.com/docs/api">Stripe API documentation</a> supplements this documentation.</p>
+          <h2 id="import-this-module">Import this module</h2>
+          <p>Install the module with NPM:</p>
+          <pre><code data-language="js">$ npm install @layeredapps/stripe-connect
+</code></pre>
+          <p>Edit your <code data-language="js">package.json</code> to activate the module:</p>
+          <pre><code data-language="js">&quot;dashboard&quot;: {
+  &quot;modules&quot;: [
+    &quot;@layeredapps/stripe-connect&quot;
+  ]
+}
+</code></pre>
+          <h2 id="setting-up-your-stripe-credentials">Setting up your Stripe credentials</h2>
+          <p>You will need to retrieve various keys from <a href="https://stripe.com">Stripe</a>. During development your webhook will be created automatically, but in production with multiple dashboard server instances they share a configured webhook:</p>
+          <ul>
+            <li>create your Stripe account and find your API keys</li>
+            <li>create a webhook for https://your_domain/webhooks/connect/index-connect-data</li>
+            <li>environment STRIPE_KEY=sk_test_xxxxxxx</li>
+            <li>environment STRIPE_PUBLISHABLE_KEY=pk_test_xxxxxxx</li>
+            <li>environment CONNECT_WEBHOOK_ENDPOINT_SECRET=whsec_xxxxxxxx</li>
+          </ul>
+          <h1 id="provided-server,-content-and-proxy-handlers">Provided server, content and proxy handlers</h1>
+          <p>This module comes with some convenience scripts you can add to your <code data-language="js">package.json</code>:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Script path</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-connect/src/proxy/x-has-active-stripe-account.js</td>
+                <td>Sets <code data-language="js">x-has-active-stripe-account</code> to <code data-language="js">true</code> or <code data-language="js">false</code> if the user has a Stripe account with <code data-language="js">payouts_enabled</code>.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-connect/src/proxy/x-stripe-accounts-active.js</td>
+                <td>Dashboard will bundle the user's <code data-language="js">active</code> Stripe Account objects in <code data-language="js">x-stripe-accounts-active</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-connect/src/proxy/x-stripe-accounts-pending.js</td>
+                <td>Dashboard will bundle the user's <code data-language="js">pending approval</code> Stripe Account objects in <code data-language="js">x-stripe-accounts-pending</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-connect/src/proxy/x-stripe-accounts-requiring.js</td>
+                <td>Dashboard will bundle the user's <code data-language="js">requiring information</code> Stripe Account objects in <code data-language="js">x-stripe-accounts-requiring</code> header.</td>
+              </tr>
+              <tr>
+                <td>proxy</td>
+                <td>@layeredapps/stripe-connect/src/proxy/x-stripe-accounts.js</td>
+                <td>Dashboard will bundle the user's Stripe Account objects in <code data-language="js">x-stripe-accounts</code> header.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-connect/src/server/bind-stripe-key.js</td>
+                <td>The Stripe API key object will be bound to <code data-language="js">req.stripeKey</code>.</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-connect/src/server/check-before-delete-stripe-account.js</td>
+                <td>Require users complete steps, such as deleting subscriptions, before deleting their Stripe account. Set a <code data-language="js">CHECK_BEFORE_DELETE_STRIPE_ACCOUNT</code> path such as <code data-language="js">/check-delete</code> on your Application server, Dashboard will query this API passing <code data-language="js">?stripeid=xxxxx</code> and you may respond with { &quot;redirect&quot;: &quot;/your-delete-requirements&quot; } or { &quot;redirect&quot;: false }&quot; to enforce the requirements.</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-connect/src/server/require-all-information-submitted.js</td>
+                <td>If the user has Stripe account(s) requiring information they will be redirected to provide it. They can still access <code data-language="js">/account</code> and <code data-language="js">/administrator</code> routes (if an administrator)</td>
+              </tr>
+              <tr>
+                <td>server</td>
+                <td>@layeredapps/stripe-connect/src/server/require-connect-account.js</td>
+                <td>If the user does not have an <code data-language="js">active</code> Stripe account with payouts enabled they will be redirected to create one. They can still access <code data-language="js">/account</code> and <code data-language="js">/administrator</code> routes (if an administrator)</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 id="storage-engine">Storage engine</h2>
+          <p>By default this module will share whatever storage you use for Dashboard. You can specify nothing, specify an alternate storage backend, or specify the same type with a separate database.</p>
+          <pre><code data-language="js">CONNECT_STORAGE=mysql
+CONNECT_DATABASE_URL=mysql://...
+CONNECT_MAX_CONNECTIONS=
+CONNECT_IDLE_CONNECTION_LIMIT= 
+</code></pre>
+          <p>If your Dashboard is configured with database read replication servers this module will follow that configuration. You can also specify module-specific read replication:</p>
+          <pre><code data-language="js">CONNECT_STORAGE_REPLICATION=true
+CONNECT_DATABASE_URL=postgres://1.0.0.0:5432/connect
+CONNECT_READ_DATABASE_URL1=postgres://1.0.0.1:5432/connect
+CONNECT_READ_DATABASE_URL2=postgres://1.0.0.2:5432/connect
+CONNECT_READ_DATABASE_URL3=postgres://1.0.0.3:5432/connect
+</code></pre>
+          <h3 id="access-the-api">Access the API</h3>
+          <p>Dashboard and official modules are completely API-driven and you can access the same APIs on behalf of the user making requests. You perform <code data-language="js">GET</code>, <code data-language="js">POST</code>, <code data-language="js">PATCH</code>, and <code data-language="js">DELETE</code> HTTP requests against the API endpoints to fetch or modify data. This example fetches the user's Connect accounts using NodeJS, you can do this with any language:</p>
+          <p>You can view API documentation within the NodeJS modules' <code data-language="js">api.txt</code> files, or on the <a href="https://layeredapps.github.io/stripe-connect-api">documentation site</a>.</p>
+          <pre><code data-language="js">const stripeAccounts = await proxy(`/api/user/connect/stripe-accounts?accountid=${accountid}&amp;all=true`, accountid, sessionid)
+
+const proxy = util.promisify((path, accountid, sessionid, callback) =&gt; {
+    const requestOptions = {
+        host: 'dashboard.example.com',
+        path: path,
+        port: '443',
+        method: 'GET',
+        headers: {
+            'x-application-server': 'application.example.com',
+            'x-application-server-token': process.env.APPLICATION_SERVER_TOKEN,
+            'x-accountid': accountid,
+            'x-sessionid': sessionid
+        }
+    }
+    const proxyRequest = require('https').request(requestOptions, (proxyResponse) =&gt; {
+        let body = ''
+        proxyResponse.on('data', (chunk) =&gt; {
+            body += chunk
+        })
+        return proxyResponse.on('end', () =&gt; {
+            return callback(null, JSON.parse(body))
+        })
+    })
+    proxyRequest.on('error', (error) =&gt; {
+        return callback(error)
+    })
+    return proxyRequest.end()
+  })
+}
+</code></pre>
+        </div>
+        <p><a href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>

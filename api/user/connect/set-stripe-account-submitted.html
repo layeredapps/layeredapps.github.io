@@ -1,0 +1,728 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>set-stripe-account-submitted#PATCH (@layeredapps/stripe-connect)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Connect module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-connect-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-connect-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-connect-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-connect-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/connect/set-stripe-account-submitted (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.user.connect.SetStripeAccountSubmitted.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object (individual),object (company)</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "stripeid": "acct_1LEC0tRnXb6DmWDd",
+  "object": "stripeAccount",
+  "accountid": "acct_a8f01ce377932f33",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "acct_1LEC0tRnXb6DmWDd",
+    "object": "account",
+    "business_profile": {
+      "mcc": "7535",
+      "name": null,
+      "product_description": null,
+      "support_address": null,
+      "support_email": null,
+      "support_phone": null,
+      "support_url": null,
+      "url": "https://www.an-example-website.com"
+    },
+    "business_type": "individual",
+    "capabilities": {
+      "card_payments": "pending",
+      "transfers": "pending"
+    },
+    "charges_enabled": false,
+    "company": {
+      "address": {
+        "city": "Berlin",
+        "country": "DE",
+        "line1": "123 Park Lane",
+        "line2": null,
+        "postal_code": "01067",
+        "state": null
+      },
+      "directors_provided": true,
+      "executives_provided": true,
+      "name": null,
+      "owners_provided": true,
+      "phone": "+14567890123",
+      "tax_id_provided": false,
+      "verification": {
+        "document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        }
+      }
+    },
+    "country": "DE",
+    "created": 1656075212,
+    "default_currency": "eur",
+    "details_submitted": true,
+    "email": null,
+    "external_accounts": {
+      "object": "list",
+      "data": [
+        {
+          "id": "ba_1LEC0wRnXb6DmWDdI9UqWQok",
+          "object": "bank_account",
+          "account": "acct_1LEC0tRnXb6DmWDd",
+          "account_holder_name": "Gerardo Roob",
+          "account_holder_type": "individual",
+          "account_type": null,
+          "available_payout_methods": [
+            "standard"
+          ],
+          "bank_name": "STRIPE TEST BANK",
+          "country": "DE",
+          "currency": "eur",
+          "default_for_currency": true,
+          "fingerprint": "8JEgQB776Ig8OZcq",
+          "last4": "3000",
+          "metadata": {},
+          "routing_number": "110000000",
+          "status": "new"
+        }
+      ],
+      "has_more": false,
+      "total_count": 1,
+      "url": "/v1/accounts/acct_1LEC0tRnXb6DmWDd/external_accounts"
+    },
+    "future_requirements": {
+      "alternatives": [],
+      "current_deadline": null,
+      "currently_due": [],
+      "disabled_reason": null,
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "individual": {
+      "id": "person_1LEC10RnXb6DmWDdN3Neicsn",
+      "object": "person",
+      "account": "acct_1LEC0tRnXb6DmWDd",
+      "address": {
+        "city": "Berlin",
+        "country": "DE",
+        "line1": "123 Park Lane",
+        "line2": null,
+        "postal_code": "01067",
+        "state": null
+      },
+      "created": 1656075218,
+      "dob": {
+        "day": 1,
+        "month": 1,
+        "year": 1970
+      },
+      "email": "Gerardo.Roob8@hotmail.com",
+      "first_name": "Gerardo",
+      "future_requirements": {
+        "alternatives": [],
+        "currently_due": [],
+        "errors": [],
+        "eventually_due": [],
+        "past_due": [],
+        "pending_verification": []
+      },
+      "last_name": "Roob",
+      "metadata": {},
+      "phone": "+14567890123",
+      "relationship": {
+        "director": false,
+        "executive": false,
+        "owner": false,
+        "percent_ownership": null,
+        "representative": true,
+        "title": null
+      },
+      "requirements": {
+        "alternatives": [],
+        "currently_due": [],
+        "errors": [],
+        "eventually_due": [],
+        "past_due": [],
+        "pending_verification": [
+          "verification.additional_document",
+          "verification.document"
+        ]
+      },
+      "verification": {
+        "additional_document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "details": null,
+        "details_code": null,
+        "document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "status": "pending"
+      }
+    },
+    "metadata": {},
+    "payouts_enabled": false,
+    "requirements": {
+      "alternatives": [],
+      "current_deadline": null,
+      "currently_due": [],
+      "disabled_reason": "requirements.pending_verification",
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": [
+        "individual.verification.additional_document",
+        "individual.verification.document"
+      ]
+    },
+    "settings": {
+      "bacs_debit_payments": {},
+      "branding": {
+        "icon": null,
+        "logo": null,
+        "primary_color": null,
+        "secondary_color": null
+      },
+      "card_issuing": {
+        "tos_acceptance": {
+          "date": null,
+          "ip": null
+        }
+      },
+      "card_payments": {
+        "decline_on": {
+          "avs_failure": false,
+          "cvc_failure": false
+        },
+        "statement_descriptor_prefix": null,
+        "statement_descriptor_prefix_kana": null,
+        "statement_descriptor_prefix_kanji": null
+      },
+      "dashboard": {
+        "display_name": "An-example-website",
+        "timezone": "Etc/UTC"
+      },
+      "payments": {
+        "statement_descriptor": "WWW.AN-EXAMPLE-WEBSITE.COM",
+        "statement_descriptor_kana": null,
+        "statement_descriptor_kanji": null
+      },
+      "payouts": {
+        "debit_negative_balances": false,
+        "schedule": {
+          "delay_days": 7,
+          "interval": "daily"
+        },
+        "statement_descriptor": null
+      },
+      "sepa_debit_payments": {}
+    },
+    "tos_acceptance": {
+      "date": 1656075220,
+      "ip": "127.0.0.1",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0"
+    },
+    "type": "custom"
+  },
+  "requiresOwners": false,
+  "requiresDirectors": false,
+  "requiresExecutives": false,
+  "submittedAt": "2022-06-24T12:53:42.821Z",
+  "appid": "tests_1656075154",
+  "createdAt": "2022-06-24T12:53:33.636Z",
+  "updatedAt": "2022-06-24T12:53:42.821Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-account</td>
+                  <td>ineligible accessing account</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="1">invalid-company-owner</td>
+                  <td>ineligible company owners not submitted</td>
+                </tr>
+                <tr>
+                  <td id="description-2" rowspan="1">invalid-director</td>
+                  <td>ineligible company directors not submitted</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-executive</td>
+                  <td>ineligible company executives not submitted</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-payment-details</td>
+                  <td>ineligible Stripe company account missing payment details</td>
+                </tr>
+                <tr>
+                  <td>ineligible Stripe individual account missing payment details</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="1">invalid-person</td>
+                  <td>ineligible company person missing information</td>
+                </tr>
+                <tr>
+                  <td id="description-7" rowspan="2">invalid-registration</td>
+                  <td>ineligible Stripe company account missing information</td>
+                </tr>
+                <tr>
+                  <td>ineligible Stripe individual account missing information</td>
+                </tr>
+                <tr>
+                  <td id="description-9" rowspan="2">invalid-stripe-account</td>
+                  <td>ineligible Stripe company account is submitted</td>
+                </tr>
+                <tr>
+                  <td>ineligible Stripe individual account is submitted</td>
+                </tr>
+                <tr>
+                  <td id="description-11" rowspan="2">invalid-stripeid</td>
+                  <td>missing querystring stripeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring stripeid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/set-stripe-account-submitted.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const stripeCache = require('../../../../stripe-cache.js')
+const connect = require('../../../../../index.js')
+const dashboard = require('@layeredapps/dashboard')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.stripeid) {
+      throw new Error('invalid-stripeid')
+    }
+    const stripeAccount = await global.api.user.connect.StripeAccount.get(req)
+    if (stripeAccount.submittedAt ||
+      stripeAccount.accountid !== req.account.accountid) {
+      throw new Error('invalid-stripe-account')
+    }
+    if (!stripeAccount.stripeObject.external_accounts.data.length) {
+      throw new Error('invalid-payment-details')
+    }
+    if (stripeAccount.stripeObject.business_type === 'company') {
+      if (stripeAccount.requiresOwners && !stripeAccount.stripeObject.company.owners_provided) {
+        throw new Error('invalid-company-owner')
+      }
+      if (stripeAccount.requiresDirectors && !stripeAccount.stripeObject.company.directors_provided) {
+        throw new Error('invalid-company-director')
+      }
+      if (stripeAccount.requiresExecutives && !stripeAccount.stripeObject.company.executives_provided) {
+        throw new Error('invalid-company-executive')
+      }
+      req.query.all = true
+      const persons = await global.api.user.connect.Persons.get(req)
+      if (persons && persons.length) {
+        for (const person of persons) {
+          if (person.stripeObject.requirements.currently_due.length) {
+            throw new Error('invalid-person')
+          }
+        }
+      }
+    }
+    if (stripeAccount.stripeObject.requirements.currently_due.length) {
+      for (const field of stripeAccount.stripeObject.requirements.currently_due) {
+        if (field !== 'tos_acceptance.date' &&
+            field !== 'tos_acceptance.ip') {
+          throw new Error('invalid-registration')
+        }
+      }
+    }
+    const accountInfo = {
+      tos_acceptance: {
+        ip: req.ip,
+        user_agent: req.headers['user-agent'] || 'None',
+        date: Math.floor(new Date().getTime() / 1000)
+      }
+    }
+    const stripeAccountNow = await stripeCache.execute('accounts', 'update', req.query.stripeid, accountInfo, req.stripeKey)
+    await connect.Storage.StripeAccount.update({
+      stripeObject: stripeAccountNow,
+      submittedAt: new Date()
+    }, {
+      where: {
+        stripeid: req.query.stripeid,
+        appid: req.appid || global.appid
+      }
+    })
+    await dashboard.StorageCache.remove(req.query.stripeid)
+    return global.api.user.connect.StripeAccount.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-connect/tree/main/src/www/api/user/connect/set-stripe-account-submitted.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+
+describe('/api/user/connect/set-stripe-account-submitted', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const user = await TestHelper.createUser()
+    // company issues
+    await TestHelper.createStripeAccount(user, {
+      country: 'DE',
+      business_type: 'company'
+    })
+    const user2 = await TestHelper.createUser()
+    let req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user2.account
+    req.session = user2.session
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.invalidAccount = error.message
+    }
+    // 1) missing payment details
+    req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.companyMissingPaymentDetails = error.message
+    }
+    const companyBankingData = TestStripeAccounts.createBankingData(user.stripeAccount.stripeObject.business_type, user.profile, user.stripeAccount.stripeObject.country)
+    await TestHelper.createExternalAccount(user, companyBankingData)
+    await TestStripeAccounts.waitForAccountFieldToLeave(user, 'external_account')
+    // 2) missing submitted owners
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.companyMissingOwners = error.message
+    }
+    await TestHelper.submitCompanyOwners(user)
+    // 3) missing submitted directors
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.companyMissingDirectors = error.message
+    }
+    await TestHelper.submitCompanyDirectors(user)
+    // 4) missing submitted executives
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.companyMissingExecutives = error.message
+    }
+    await TestHelper.submitCompanyExecutives(user)
+    // 5) missing person details
+    await TestHelper.createPerson(user, {
+      relationship_representative: 'true',
+      relationship_executive: user.stripeAccount.requiresExecutives ? 'true' : undefined,
+      relationship_title: 'SVP Testing',
+      relationship_percent_ownership: 0
+    })
+    req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.invalidPerson = error.message
+    }
+    await TestStripeAccounts.waitForWebhook('person.created', (stripeEvent) => {
+      return stripeEvent.data.object.id === user.representative.personid
+    })
+    await TestStripeAccounts.waitForPersonField(user, 'representative', 'first_name')
+    const representativeData = TestStripeAccounts.createPersonData(TestHelper.nextIdentity(), user.stripeAccount.stripeObject.country, user.representative.stripeObject)
+    await TestHelper.updatePerson(user, user.representative, representativeData)
+    await TestStripeAccounts.waitForPersonField(user, 'representative', 'verification.document')
+    const representativeUploadData = TestStripeAccounts.createPersonUploadData(user.representative.stripeObject)
+    if (representativeUploadData && Object.keys(representativeUploadData).length) {
+      await TestHelper.updatePerson(user, user.representative, {}, representativeUploadData)
+      await TestStripeAccounts.waitForPersonFieldToLeave(user, 'representative', 'verification.document')
+    }
+    // 6) missing registration details
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.companyMissingRegistrationDetails = error.message
+    }
+    await TestStripeAccounts.waitForAccountField(user, 'company.name')
+    const companyAccountData = TestStripeAccounts.createAccountData(user.profile, user.stripeAccount.stripeObject.country, user.stripeAccount.stripeObject)
+    await TestHelper.updateStripeAccount(user, companyAccountData)
+    // 7) submitted company
+    cachedResponses.submittedCompany = await req.patch()
+    // 8) company is already submitted
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.companyAlreadySubmitted = error.message
+    }
+    // individual
+    await TestHelper.createStripeAccount(user, {
+      country: 'DE',
+      business_type: 'individual'
+    })
+    req = TestHelper.createRequest(`/api/user/connect/set-stripe-account-submitted?stripeid=${user.stripeAccount.stripeid}`)
+    req.account = user.account
+    req.session = user.session
+    // 1) missing banking details
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.individualMissingPaymentDetails = error.message
+    }
+    const individualBankingData = TestStripeAccounts.createBankingData(user.stripeAccount.stripeObject.business_type, user.profile, user.stripeAccount.stripeObject.country)
+    await TestHelper.createExternalAccount(user, individualBankingData)
+    await TestStripeAccounts.waitForAccountFieldToLeave(user, 'external_account')
+    // 2) missing registration details
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.individualMissingRegistrationDetails = error.message
+    }
+    const individualAccountData = TestStripeAccounts.createAccountData(user.profile, user.stripeAccount.stripeObject.country, user.stripeAccount.stripeObject)
+    await TestHelper.updateStripeAccount(user, individualAccountData)
+    // 3) submitted individual
+    req.filename = __filename
+    req.saveResponse = true
+    cachedResponses.submittedIndividual = await req.patch()
+    // 4) already submitted
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.individualAlreadySubmitted = error.message
+    }
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-stripeid', () => {
+      it('missing querystring stripeid', async function () {
+        await bundledData(this.test.currentRetry())
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/set-stripe-account-submitted')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+
+      it('invalid querystring stripeid', async function () {
+        await bundledData(this.test.currentRetry())
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/connect/set-stripe-account-submitted?stripeid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-stripeid')
+      })
+    })
+
+    describe('invalid-stripe-account', () => {
+      it('ineligible Stripe company account is submitted', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.companyAlreadySubmitted
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+      it('ineligible Stripe individual account is submitted', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.individualAlreadySubmitted
+        assert.strictEqual(errorMessage, 'invalid-stripe-account')
+      })
+    })
+
+    describe('invalid-account', () => {
+      it('ineligible accessing account', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAccount
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-payment-details', () => {
+      it('ineligible Stripe company account missing payment details', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.companyMissingPaymentDetails
+        assert.strictEqual(errorMessage, 'invalid-payment-details')
+      })
+
+      it('ineligible Stripe individual account missing payment details', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.individualMissingPaymentDetails
+        assert.strictEqual(errorMessage, 'invalid-payment-details')
+      })
+    })
+
+    describe('invalid-registration', () => {
+      it('ineligible Stripe company account missing information', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.companyMissingRegistrationDetails
+        assert.strictEqual(errorMessage, 'invalid-registration')
+      })
+
+      it('ineligible Stripe individual account missing information', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.individualMissingRegistrationDetails
+        assert.strictEqual(errorMessage, 'invalid-registration')
+      })
+    })
+
+    describe('invalid-person', () => {
+      it('ineligible company person missing information', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidPerson
+        assert.strictEqual(errorMessage, 'invalid-person')
+      })
+    })
+
+    describe('invalid-company-owner', () => {
+      it('ineligible company owners not submitted', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.companyMissingOwners
+        assert.strictEqual(errorMessage, 'invalid-company-owner')
+      })
+    })
+
+    describe('invalid-director', () => {
+      it('ineligible company directors not submitted', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.companyMissingDirectors
+        assert.strictEqual(errorMessage, 'invalid-company-director')
+      })
+    })
+
+    describe('invalid-executive', () => {
+      it('ineligible company executives not submitted', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.companyMissingExecutives
+        assert.strictEqual(errorMessage, 'invalid-company-executive')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object (individual)', async () => {
+      const stripeAccountNow = cachedResponses.submittedIndividual
+      assert.notStrictEqual(stripeAccountNow.submittedAt, undefined)
+      assert.notStrictEqual(stripeAccountNow.submittedAt, null)
+    })
+
+    it('object (company)', async () => {
+      const stripeAccountNow = cachedResponses.submittedCompany
+      assert.notStrictEqual(stripeAccountNow.submittedAt, undefined)
+      assert.notStrictEqual(stripeAccountNow.submittedAt, null)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

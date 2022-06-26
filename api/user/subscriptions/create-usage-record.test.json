@@ -1,0 +1,19 @@
+{
+  "usagerecordid": "mbur_1LEOdvHHqepMFuCXX4mnTjeQ",
+  "object": "usagerecord",
+  "stripeObject": {
+    "id": "mbur_1LEOdvHHqepMFuCXX4mnTjeQ",
+    "object": "usage_record",
+    "livemode": false,
+    "quantity": 400,
+    "subscription_item": "si_LwHCaawYvGMBtB",
+    "timestamp": 1656123758
+  },
+  "customerid": "cus_LwHCFzn9o1EEsR",
+  "accountid": "acct_bca7369ef4ad8873",
+  "subscriptionid": "sub_1LEOdfHHqepMFuCXUSGSS2rj",
+  "subscriptionitemid": "si_LwHCaawYvGMBtB",
+  "appid": "tests_1656123739",
+  "createdAt": "2022-06-25T02:22:39.311Z",
+  "updatedAt": "2022-06-25T02:22:39.311Z"
+}

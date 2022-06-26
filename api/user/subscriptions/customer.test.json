@@ -1,0 +1,38 @@
+{
+  "customerid": "cus_LwHCVmszzcT9rn",
+  "object": "customer",
+  "accountid": "acct_10b9d4e408dbeb45",
+  "couponid": null,
+  "stripeObject": {
+    "id": "cus_LwHCVmszzcT9rn",
+    "object": "customer",
+    "address": null,
+    "balance": 0,
+    "created": 1656123767,
+    "currency": null,
+    "default_source": null,
+    "delinquent": false,
+    "description": "American Express",
+    "discount": null,
+    "email": "Charlene.Mueller65@hotmail.com",
+    "invoice_prefix": "214219B5",
+    "invoice_settings": {
+      "custom_fields": null,
+      "default_payment_method": "pm_1LEOe3HHqepMFuCXHQPlQmGJ",
+      "footer": null,
+      "rendering_options": null
+    },
+    "livemode": false,
+    "metadata": {},
+    "name": null,
+    "next_invoice_sequence": 1,
+    "phone": null,
+    "preferred_locales": [],
+    "shipping": null,
+    "tax_exempt": "none",
+    "test_clock": null
+  },
+  "appid": "tests_1656123767",
+  "createdAt": "2022-06-25T02:22:47.763Z",
+  "updatedAt": "2022-06-25T02:22:50.178Z"
+}

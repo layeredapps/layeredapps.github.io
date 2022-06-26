@@ -1,0 +1,595 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>refund-requests#GET (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/refund-requests (GET)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs get" id="nodejs">await global.api.administrator.subscriptions.RefundRequests.get(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">array</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">[
+  {
+    "chargeid": "ch_3LEONpHHqepMFuCX1Vl737WP",
+    "accountid": "acct_08f141ba98b7ac20",
+    "subscriptionid": "sub_1LEONpHHqepMFuCXQFOg1Fp8",
+    "customerid": "cus_LwGvDRGVWGZgmG",
+    "paymentmethodid": null,
+    "invoiceid": "in_1LEONpHHqepMFuCXyh4PimEB",
+    "refundRequested": "2022-06-25T02:06:05.478Z",
+    "refundReason": "unused subscription",
+    "refundDenied": null,
+    "refundDeniedReason": null,
+    "object": "charge",
+    "stripeObject": {
+      "id": "ch_3LEONpHHqepMFuCX1Vl737WP",
+      "object": "charge",
+      "amount": 1000,
+      "amount_captured": 1000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3LEONpHHqepMFuCX1z0oVfvN",
+      "billing_details": {
+        "address": {
+          "city": "New York",
+          "country": "US",
+          "line1": "285 Fulton St",
+          "line2": "Apt 893",
+          "postal_code": "10007",
+          "state": "NY"
+        },
+        "email": null,
+        "name": "Fernando Olson",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "PRODUCT194 DESCRIPTION",
+      "captured": true,
+      "created": 1656122762,
+      "currency": "usd",
+      "customer": "cus_LwGvDRGVWGZgmG",
+      "description": "Subscription creation",
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {},
+      "invoice": "in_1LEONpHHqepMFuCXyh4PimEB",
+      "livemode": false,
+      "metadata": {},
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 23,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3LEONpHHqepMFuCX1LcbNarK",
+      "payment_method": "pm_1LEONmHHqepMFuCXAcmxmp6x",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": "pass",
+            "address_postal_code_check": "pass",
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 1,
+          "exp_year": 2023,
+          "fingerprint": "IRcdqfBUCskmPkNV",
+          "funding": "credit",
+          "installments": null,
+          "last4": "1111",
+          "mandate": null,
+          "network": "visa",
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/invoices/CAcaFwoVYWNjdF8xS2hpUDhISHFlcE1GdUNYKIzb2ZUGMgacBAH5DdY6LBbXcKN7mKX-i-zpl-7xpGR9hPYZT8fPCD_Z_yoI1VkN31nXRO4JSldZpzOu?s=ap",
+      "refunded": false,
+      "refunds": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "total_count": 0,
+        "url": "/v1/charges/ch_3LEONpHHqepMFuCX1Vl737WP/refunds"
+      },
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": "product194 description",
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "appid": "tests_1656122727",
+    "createdAt": "2022-06-25T02:06:04.664Z",
+    "updatedAt": "2022-06-25T02:06:05.478Z"
+  },
+  {
+    "chargeid": "ch_3LEONiHHqepMFuCX1O3349zf",
+    "accountid": "acct_005852e7691d02f4",
+    "subscriptionid": "sub_1LEONiHHqepMFuCXjuZJYQB7",
+    "customerid": "cus_LwGveNc7HVNxnN",
+    "paymentmethodid": null,
+    "invoiceid": "in_1LEONiHHqepMFuCXoj6DxBqh",
+    "refundRequested": "2022-06-25T02:05:57.780Z",
+    "refundReason": "unused subscription",
+    "refundDenied": null,
+    "refundDeniedReason": null,
+    "object": "charge",
+    "stripeObject": {
+      "id": "ch_3LEONiHHqepMFuCX1O3349zf",
+      "object": "charge",
+      "amount": 1000,
+      "amount_captured": 1000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3LEONiHHqepMFuCX18RT0pmj",
+      "billing_details": {
+        "address": {
+          "city": "New York",
+          "country": "US",
+          "line1": "285 Fulton St",
+          "line2": "Apt 893",
+          "postal_code": "10007",
+          "state": "NY"
+        },
+        "email": null,
+        "name": "Theodore VonRueden",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "PRODUCT194 DESCRIPTION",
+      "captured": true,
+      "created": 1656122755,
+      "currency": "usd",
+      "customer": "cus_LwGveNc7HVNxnN",
+      "description": "Subscription creation",
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {},
+      "invoice": "in_1LEONiHHqepMFuCXoj6DxBqh",
+      "livemode": false,
+      "metadata": {},
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 0,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3LEONiHHqepMFuCX1CCHznkK",
+      "payment_method": "pm_1LEONbHHqepMFuCXcxoqMnsT",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": "pass",
+            "address_postal_code_check": "pass",
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 1,
+          "exp_year": 2023,
+          "fingerprint": "IRcdqfBUCskmPkNV",
+          "funding": "credit",
+          "installments": null,
+          "last4": "1111",
+          "mandate": null,
+          "network": "visa",
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/invoices/CAcaFwoVYWNjdF8xS2hpUDhISHFlcE1GdUNYKITb2ZUGMgaRZRhvLMM6LBaEISKka3sIg7tI9q-kMGwjoQoF2b21-VZG5Zph8qDNifakzeFOx90M0c-d?s=ap",
+      "refunded": false,
+      "refunds": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "total_count": 0,
+        "url": "/v1/charges/ch_3LEONiHHqepMFuCX1O3349zf/refunds"
+      },
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": "product194 description",
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "appid": "tests_1656122727",
+    "createdAt": "2022-06-25T02:05:57.242Z",
+    "updatedAt": "2022-06-25T02:05:57.780Z"
+  },
+  {
+    "chargeid": "ch_3LEONXHHqepMFuCX1qvC2aVD",
+    "accountid": "acct_1e5f2a9be912492a",
+    "subscriptionid": "sub_1LEONWHHqepMFuCXkJ7ChQ7b",
+    "customerid": "cus_LwGvBklBImTyLg",
+    "paymentmethodid": null,
+    "invoiceid": "in_1LEONXHHqepMFuCXTC1m85xk",
+    "refundRequested": "2022-06-25T02:05:47.031Z",
+    "refundReason": "unused subscription",
+    "refundDenied": null,
+    "refundDeniedReason": null,
+    "object": "charge",
+    "stripeObject": {
+      "id": "ch_3LEONXHHqepMFuCX1qvC2aVD",
+      "object": "charge",
+      "amount": 1000,
+      "amount_captured": 1000,
+      "amount_refunded": 0,
+      "application": null,
+      "application_fee": null,
+      "application_fee_amount": null,
+      "balance_transaction": "txn_3LEONXHHqepMFuCX1x3sf2fV",
+      "billing_details": {
+        "address": {
+          "city": "New York",
+          "country": "US",
+          "line1": "285 Fulton St",
+          "line2": "Apt 893",
+          "postal_code": "10007",
+          "state": "NY"
+        },
+        "email": null,
+        "name": "Oliver Schulist",
+        "phone": null
+      },
+      "calculated_statement_descriptor": "PRODUCT194 DESCRIPTION",
+      "captured": true,
+      "created": 1656122744,
+      "currency": "usd",
+      "customer": "cus_LwGvBklBImTyLg",
+      "description": "Subscription creation",
+      "destination": null,
+      "dispute": null,
+      "disputed": false,
+      "failure_balance_transaction": null,
+      "failure_code": null,
+      "failure_message": null,
+      "fraud_details": {},
+      "invoice": "in_1LEONXHHqepMFuCXTC1m85xk",
+      "livemode": false,
+      "metadata": {},
+      "on_behalf_of": null,
+      "order": null,
+      "outcome": {
+        "network_status": "approved_by_network",
+        "reason": null,
+        "risk_level": "normal",
+        "risk_score": 19,
+        "seller_message": "Payment complete.",
+        "type": "authorized"
+      },
+      "paid": true,
+      "payment_intent": "pi_3LEONXHHqepMFuCX1onOqqr4",
+      "payment_method": "pm_1LEONRHHqepMFuCXvm6YK6oC",
+      "payment_method_details": {
+        "card": {
+          "brand": "visa",
+          "checks": {
+            "address_line1_check": "pass",
+            "address_postal_code_check": "pass",
+            "cvc_check": "pass"
+          },
+          "country": "US",
+          "exp_month": 1,
+          "exp_year": 2023,
+          "fingerprint": "IRcdqfBUCskmPkNV",
+          "funding": "credit",
+          "installments": null,
+          "last4": "1111",
+          "mandate": null,
+          "network": "visa",
+          "three_d_secure": null,
+          "wallet": null
+        },
+        "type": "card"
+      },
+      "receipt_email": null,
+      "receipt_number": null,
+      "receipt_url": "https://pay.stripe.com/receipts/invoices/CAcaFwoVYWNjdF8xS2hpUDhISHFlcE1GdUNYKPna2ZUGMgah8TCvAM06LBY-ASs6SsbqmB34LwtrYTTtfW6-3KcRomSY2pwSNOGbmaXReMEAdnC7hrXH?s=ap",
+      "refunded": false,
+      "refunds": {
+        "object": "list",
+        "data": [],
+        "has_more": false,
+        "total_count": 0,
+        "url": "/v1/charges/ch_3LEONXHHqepMFuCX1qvC2aVD/refunds"
+      },
+      "review": null,
+      "shipping": null,
+      "source": null,
+      "source_transfer": null,
+      "statement_descriptor": "product194 description",
+      "statement_descriptor_suffix": null,
+      "status": "succeeded",
+      "transfer_data": null,
+      "transfer_group": null
+    },
+    "appid": "tests_1656122727",
+    "createdAt": "2022-06-25T02:05:46.319Z",
+    "updatedAt": "2022-06-25T02:05:47.031Z"
+  }
+]</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>all </td>
+                  <td>boolean</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>limit </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+                <tr>
+                  <td>offset </td>
+                  <td>integer</td>
+                  <td>optional</td>
+                  <td>URL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/refund-requests.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const subscriptions = require('../../../../../index.js')
+const sequelize = require('sequelize')
+
+module.exports = {
+  get: async (req) => {
+    req.query = req.query || {}
+    const minDate = new Date()
+    minDate.setDate(minDate.getDate() + 1)
+    const where = {
+      refundRequested: {
+        [sequelize.Op.lte]: minDate
+      },
+      appid: req.appid || global.appid
+    }
+    let chargeids
+    if (req.query.all) {
+      chargeids = await subscriptions.Storage.Charge.findAll({
+        where,
+        attributes: ['chargeid'],
+        order: [
+          ['refundRequested', 'DESC']
+        ]
+      })
+    } else {
+      const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0
+      const limit = req.query.limit ? parseInt(req.query.limit, 10) : global.pageSize
+      chargeids = await subscriptions.Storage.Charge.findAll({
+        where,
+        attributes: ['chargeid'],
+        offset,
+        limit,
+        order: [
+          ['refundRequested', 'DESC']
+        ]
+      })
+    }
+    if (!chargeids || !chargeids.length) {
+      return null
+    }
+    const items = []
+    for (const chargeInfo of chargeids) {
+      req.query.chargeid = chargeInfo.dataValues.chargeid
+      const charge = await global.api.administrator.subscriptions.Charge.get(req)
+      items.push(charge)
+    }
+    return items
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/refund-requests.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/refund-requests', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses, cachedRefundRequests
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    cachedRefundRequests = []
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    for (let i = 0, len = global.pageSize + 2; i < len; i++) {
+      const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+      await TestHelper.requestRefund(user, user.charge.chargeid)
+      cachedRefundRequests.unshift(user.charge.chargeid)
+    }
+    const req1 = TestHelper.createRequest('/api/administrator/subscriptions/refund-requests?offset=1')
+    req1.account = administrator.account
+    req1.session = administrator.session
+    cachedResponses.offset = await req1.get()
+    const req2 = TestHelper.createRequest('/api/administrator/subscriptions/refund-requests?limit=1')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    cachedResponses.limit = await req2.get()
+    const req3 = TestHelper.createRequest('/api/administrator/subscriptions/refund-requests?all=true')
+    req3.account = administrator.account
+    req3.session = administrator.session
+    cachedResponses.all = await req3.get()
+    const req4 = TestHelper.createRequest('/api/administrator/subscriptions/refund-requests')
+    req4.account = administrator.account
+    req4.session = administrator.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.get()
+    global.pageSize = 3
+    cachedResponses.pageSize = await req4.get()
+    global.pageSize = 2
+    cachedResponses.finished = true
+  }
+  describe('receives', () => {
+    it('optional querystring offset (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const offset = 1
+      const refundRequestsNow = cachedResponses.offset
+      for (let i = 0, len = global.pageSize; i < len; i++) {
+        assert.strictEqual(refundRequestsNow[i].chargeid, cachedRefundRequests[offset + i])
+      }
+    })
+
+    it('optional querystring limit (integer)', async function () {
+      await bundledData(this.test.currentRetry())
+      const limit = 1
+      const refundRequestsNow = cachedResponses.limit
+      assert.strictEqual(refundRequestsNow.length, limit)
+    })
+
+    it('optional querystring all (boolean)', async () => {
+      const refundRequestsNow = cachedResponses.all
+      assert.strictEqual(refundRequestsNow.length, cachedRefundRequests.length)
+    })
+  })
+
+  describe('returns', () => {
+    it('array', async () => {
+      const refundRequestsNow = cachedResponses.returns
+      assert.strictEqual(refundRequestsNow.length, global.pageSize)
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment PAGE_SIZE', async () => {
+      const refundRequestsNow = cachedResponses.pageSize
+      assert.strictEqual(refundRequestsNow.length, global.pageSize + 1)
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+{
+  "couponid": "CUSTOM18",
+  "object": "coupon",
+  "stripeObject": {
+    "id": "CUSTOM18",
+    "object": "coupon",
+    "amount_off": 10,
+    "created": 1656122269,
+    "currency": "usd",
+    "duration": "once",
+    "duration_in_months": null,
+    "livemode": false,
+    "max_redemptions": null,
+    "metadata": {},
+    "name": "my coupon",
+    "percent_off": null,
+    "redeem_by": null,
+    "times_redeemed": 0,
+    "valid": true
+  },
+  "active": null,
+  "appid": "tests_1656122269",
+  "createdAt": "2022-06-25T01:57:49.668Z",
+  "updatedAt": "2022-06-25T01:57:49.668Z"
+}

@@ -1,0 +1,84 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>Stripe Subscriptions module configuration</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module configuration</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="api"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <p>Environment variables can be configured in your operating system. They hold pieces of information that live outside of your code, like database connection strings. Configuring or defining environment variables depends on your operating system: <a href="https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/">Linux</a>, <a href="https://osxdaily.com/2015/07/28/set-enviornment-variables-mac-os-x/">macOS</a>, <a href="https://www.techjunkie.com/environment-variables-windows-10/">Windows server &amp; desktop</a>.</p>
+          <ul id="variables-table" class="variables">
+            <li> AUTOMATIC_BILLING_PROFILE_DESCRIPTION <span class="default">DEFAULT unset</span><span class="value">EXAMPLE Boolean</span></li>
+            <li> AUTOMATIC_BILLING_PROFILE_EMAIL <span class="default">DEFAULT unset</span><span class="value">EXAMPLE Boolean</span></li>
+            <li> AUTOMATIC_BILLING_PROFILE_FULL_NAME <span class="default">DEFAULT unset</span><span class="value">EXAMPLE Boolean</span></li>
+            <li> MAXIMUM_STRIPE_RETRIES <span class="default">DEFAULT 0</span><span class="value">EXAMPLE Integer</span></li>
+            <li> OVERDUE_INVOICE_THRESHOLD <span class="default">DEFAULT 1</span><span class="value">EXAMPLE Integer</span></li>
+            <li> REQUIRE_BILLING_PROFILE_ADDRESS <span class="default">DEFAULT unset</span><span class="value">EXAMPLE Boolean</span></li>
+            <li> SKIP_CONFIRM_SUBSCRIPTION <span class="default">DEFAULT unset</span><span class="value">EXAMPLE Boolean</span></li>
+            <li> STRIPE_JS <span class="default">DEFAULT unset</span><span class="value">EXAMPLE Integer</span></li>
+            <li> STRIPE_KEY <span class="default">DEFAULT unset</span><span class="value">EXAMPLE String</span></li>
+            <li> STRIPE_PUBLISHABLE_KEY <span class="default">DEFAULT unset</span><span class="value">EXAMPLE String</span></li>
+            <li> SUBSCRIPTIONS_WEBHOOK_ENDPOINT_SECRET <span class="default">DEFAULT unset</span><span class="value">EXAMPLE String</span></li>
+            <li> SUBSCRIPTION_REFUND_PERIOD <span class="default">DEFAULT 3600</span><span class="value">EXAMPLE Integer</span></li>
+          </ul>
+        </div>
+        <p><a class="skip" href="#top">Top of page</a></p>
+      </section>
+    </div>
+  </div><template id="variable-row-template" template="variable-row-template">
+    <li> ${variable.name} <span class="default">DEFAULT ${variable.default || "unset"}</span><span class="value">EXAMPLE ${variable.value}</span></li>
+  </template>
+</body>
+
+</html>

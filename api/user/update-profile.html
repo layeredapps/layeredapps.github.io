@@ -1,0 +1,1017 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>update-profile#PATCH (@layeredapps/dashboard)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Dashboard API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li class="active">
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/dashboard">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/dashboard-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/dashboard-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/dashboard-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/user/update-profile (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.user.UpdateProfile.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "profileid": "prof_c4c0e5583ee14f61",
+  "object": "profile",
+  "appid": "tests_1656038584",
+  "accountid": "acct_aee5d69d29756d89",
+  "companyName": null,
+  "fullName": "Test Person",
+  "contactEmail": "Stacy.Heidenreich@yahoo.com",
+  "displayEmail": null,
+  "displayName": null,
+  "phone": null,
+  "occupation": null,
+  "location": null,
+  "dob": null,
+  "website": null,
+  "fields": null,
+  "createdAt": "2022-06-24T02:43:04.292Z",
+  "updatedAt": "2022-06-24T02:43:04.292Z"
+}</code></pre>
+          </div>
+          <div id="receives-container"><a name="receives" id="receives"></a>
+            <h2 id="receives">Receives</h2>
+            <p>API routes may receive parameters from the URL and POST supporting simple and multipart:</p>
+            <table id="receives-table">
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+                <th>Required</th>
+                <th>Type</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td>company-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>contact-email</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>display-email</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>display-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>dob</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>full-name</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>location</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>occupation</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+                <tr>
+                  <td>phone</td>
+                  <td>string</td>
+                  <td>configurable as required</td>
+                  <td>POST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-company-name</td>
+                  <td>missing posted company-name</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-company-name-length</td>
+                  <td>posted company-name too short</td>
+                </tr>
+                <tr>
+                  <td>posted company-name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-3" rowspan="1">invalid-contact-email</td>
+                  <td>missing posted contact-email</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="1">invalid-display-email</td>
+                  <td>missing posted display-email</td>
+                </tr>
+                <tr>
+                  <td id="description-5" rowspan="1">invalid-display-name</td>
+                  <td>missing posted display-name</td>
+                </tr>
+                <tr>
+                  <td id="description-6" rowspan="2">invalid-display-name-length</td>
+                  <td>posted display-name too short</td>
+                </tr>
+                <tr>
+                  <td>posted display-name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-8" rowspan="1">invalid-dob</td>
+                  <td>missing posted dob</td>
+                </tr>
+                <tr>
+                  <td id="description-9" rowspan="1">invalid-full-name</td>
+                  <td>missing posted full-name</td>
+                </tr>
+                <tr>
+                  <td id="description-10" rowspan="2">invalid-full-name-length</td>
+                  <td>posted full-name too short</td>
+                </tr>
+                <tr>
+                  <td>posted full-name too long</td>
+                </tr>
+                <tr>
+                  <td id="description-12" rowspan="1">invalid-location</td>
+                  <td>missing posted location</td>
+                </tr>
+                <tr>
+                  <td id="description-13" rowspan="1">invalid-occupation</td>
+                  <td>missing posted occupation</td>
+                </tr>
+                <tr>
+                  <td id="description-14" rowspan="1">invalid-phone</td>
+                  <td>missing posted phone</td>
+                </tr>
+                <tr>
+                  <td id="description-15" rowspan="3">invalid-profileid</td>
+                  <td>missing querystring profileid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring profileid</td>
+                </tr>
+                <tr>
+                  <td>ineligible querystring profileid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/dashboard/tree/main/src/www/api/user/update-profile.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const dashboard = require('../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.profileid) {
+      throw new Error('invalid-profileid')
+    }
+    const profile = await global.api.user.Profile.get(req)
+    if (!profile) {
+      throw new Error('invalid-profileid')
+    }
+    req.body = req.body || {}
+    const profileInfo = {}
+    const profileFields = req.userProfileFields || global.userProfileFields
+    for (const field of profileFields) {
+      const displayName = global.profileFieldMap[field]
+      switch (field) {
+        case 'full-name':
+          if (!req.body['full-name'] || !req.body['full-name'].length) {
+            throw new Error('invalid-full-name')
+          }
+          if (global.minimumProfileFullNameLength > req.body['full-name'].length ||
+            global.maximumProfileFullNameLength < req.body['full-name'].length) {
+            throw new Error('invalid-full-name-length')
+          }
+          profileInfo.fullName = req.body['full-name']
+          continue
+        case 'contact-email':
+          if (!req.body[field] || req.body[field].indexOf('@') < 1) {
+            throw new Error(`invalid-${field}`)
+          }
+          profileInfo.contactEmail = req.body[field]
+          continue
+        case 'display-email':
+          if (!req.body[field] || req.body[field].indexOf('@') < 1) {
+            throw new Error(`invalid-${field}`)
+          }
+          profileInfo.displayEmail = req.body[field]
+          continue
+        case 'display-name':
+          if (!req.body[field] || !req.body[field].length) {
+            throw new Error(`invalid-${field}`)
+          }
+          if (global.minimumProfileDisplayNameLength > req.body[field].length ||
+            global.maximumProfileDisplayNameLength < req.body[field].length) {
+            throw new Error('invalid-display-name-length')
+          }
+          profileInfo.displayName = req.body[field]
+          continue
+        case 'company-name':
+          if (!req.body[field] || !req.body[field].length) {
+            throw new Error(`invalid-${field}`)
+          }
+          if (global.minimumProfileCompanyNameLength > req.body[field].length ||
+            global.maximumProfileCompanyNameLength < req.body[field].length) {
+            throw new Error('invalid-company-name-length')
+          }
+          profileInfo.companyName = req.body[field]
+          continue
+        case 'dob':
+          if (!req.body[field] || !req.body[field].length) {
+            throw new Error(`invalid-${field}`)
+          }
+          try {
+            const date = dashboard.Format.parseDate(req.body[field])
+            if (!date || !date.getFullYear) {
+              throw new Error(`invalid-${field}`)
+            }
+            profileInfo.dob = dashboard.Format.date(date)
+          } catch (error) {
+            throw new Error(`invalid-${field}`)
+          }
+          continue
+        default:
+          if (!req.body[field]) {
+            throw new Error(`invalid-${field}`)
+          }
+          profileInfo[displayName] = req.body[field]
+          continue
+      }
+    }
+    await dashboard.Storage.Profile.update(profileInfo, {
+      where: {
+        profileid: req.query.profileid,
+        appid: req.appid || global.appid
+      }
+    })
+    for (const field in profileInfo) {
+      profile[field] = profileInfo[field]
+    }
+    await dashboard.StorageCache.remove(req.query.profileid)
+    return profile
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/dashboard/tree/main/src/www/api/user/update-profile.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../test-helper.js')
+
+describe('/api/user/update-profile', () => {
+  describe('exceptions', () => {
+    describe('invalid-profileid', () => {
+      it('missing querystring profileid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/update-profile')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-profileid')
+      })
+
+      it('invalid querystring profileid', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest('/api/user/update-profile?profileid=invalid')
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-profileid')
+      })
+    })
+
+    describe('invalid-profileid', () => {
+      it('ineligible querystring profileid', async () => {
+        const user = await TestHelper.createUser()
+        const user2 = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user2.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-account')
+      })
+    })
+
+    describe('invalid-full-name', () => {
+      it('missing posted full-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'full-name': ''
+        }
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-full-name')
+      })
+    })
+
+    describe('invalid-full-name-length', () => {
+      it('posted full-name too short', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'full-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        global.minimumProfileFullNameLength = 100
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-full-name-length')
+      })
+
+      it('posted full-name too long', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'full-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['full-name']
+        global.maximumProfileFullNameLength = 1
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-full-name-length')
+      })
+    })
+
+    describe('invalid-display-name', () => {
+      it('missing posted display-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['display-name']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-name')
+      })
+    })
+
+    describe('invalid-display-name-length', () => {
+      it('posted display-name too short', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'display-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['display-name']
+        global.minimumProfileDisplayNameLength = 100
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-name-length')
+      })
+
+      it('posted display-name too long', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'display-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['display-name']
+        global.maximumProfileDisplayNameLength = 1
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-name-length')
+      })
+    })
+
+    describe('invalid-company-name', () => {
+      it('missing posted company-name', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['company-name']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-company-name')
+      })
+    })
+
+    describe('invalid-company-name-length', () => {
+      it('posted company-name too short', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/create-profile?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'company-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['company-name']
+        global.minimumProfileCompanyNameLength = 100
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-company-name-length')
+      })
+
+      it('posted company-name too long', async () => {
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/create-profile?accountid=${user.account.accountid}`)
+        req.account = user.account
+        req.session = user.session
+        req.body = {
+          'company-name': 'Test'
+        }
+        global.requireProfile = true
+        global.userProfileFields = ['company-name']
+        global.maximumProfileCompanyNameLength = 1
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-company-name-length')
+      })
+    })
+
+    describe('invalid-contact-email', () => {
+      it('missing posted contact-email', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['contact-email']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-contact-email')
+      })
+    })
+
+    describe('invalid-display-email', () => {
+      it('missing posted display-email', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['display-email']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-display-email')
+      })
+    })
+
+    describe('invalid-location', () => {
+      it('missing posted location', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['location']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-location')
+      })
+    })
+
+    describe('invalid-occupation', () => {
+      it('missing posted occupation', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['occupation']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-occupation')
+      })
+    })
+
+    describe('invalid-phone', () => {
+      it('missing posted phone', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['phone']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-phone')
+      })
+    })
+
+    describe('invalid-dob', () => {
+      it('missing posted dob', async () => {
+        global.requireProfile = true
+        global.userProfileFields = ['dob']
+        const user = await TestHelper.createUser()
+        const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+        req.account = user.account
+        req.session = user.session
+        let errorMessage
+        try {
+          await req.patch()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-dob')
+      })
+    })
+  })
+
+  describe('receives', () => {
+    it('optionally-required posted full-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['full-name']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'full-name': 'Testing Person'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.fullName, 'Testing Person')
+    })
+
+    it('optionally-required posted display-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['display-name']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'display-name': 'Testing'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.displayName, 'Testing')
+    })
+
+    it('optionally-required posted company-name', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['company-name']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'company-name': 'Testing'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.companyName, 'Testing')
+    })
+
+    it('optionally-required posted contact-email', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['contact-email']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'contact-email': 'test@test.com'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.contactEmail, 'test@test.com')
+    })
+
+    it('optionally-required posted display-email', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['display-email']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'display-email': 'test@test.com'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.displayEmail, 'test@test.com')
+    })
+
+    it('optionally-required posted location', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['location']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        location: 'testing'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.location, 'testing')
+    })
+
+    it('optionally-required posted occupation', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['occupation']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        occupation: 'Testing'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.occupation, 'Testing')
+    })
+
+    it('optionally-required posted phone', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['phone']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        phone: '456-789-0123'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.phone, '456-789-0123')
+    })
+
+    it('optionally-required posted dob', async () => {
+      global.requireProfile = true
+      global.userProfileFields = ['dob']
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        dob: '1950-01-01'
+      }
+      const profile = await req.patch()
+      assert.strictEqual(profile.dob, '1950-01-01')
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'full-name': 'Test Person'
+      }
+      req.filename = __filename
+      req.saveResponse = true
+      global.userProfileFields = ['full-name']
+      const profile = await req.patch()
+      assert.strictEqual(profile.object, 'profile')
+    })
+  })
+
+  describe('configuration', () => {
+    it('environment USER_PROFILE_FIELDS', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      const fields = ['full-name', 'display-name', 'contact-email', 'display-email', 'dob', 'phone', 'occupation', 'location', 'company-name', 'website']
+      const body = {
+        'full-name': 'Test Person',
+        'contact-email': 'test1@test.com',
+        'display-email': 'test2@test.com',
+        dob: '2000-01-01',
+        'display-name': 'tester',
+        phone: '456-789-0123',
+        occupation: 'Programmer',
+        location: 'USA',
+        'company-name': 'Test company',
+        website: 'https://example.com'
+      }
+      for (const field of fields) {
+        req.body = {
+          confirm: 'password1234',
+          [field]: body[field]
+        }
+        global.userProfileFields = [field]
+        const displayName = global.profileFieldMap[field]
+        const account = await req.patch()
+        assert.strictEqual(account[displayName], body[field])
+      }
+    })
+
+    it('environment MINIMUM_PROFILE_FULL_NAME_LENGTH', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'full-name': 'Test'
+      }
+      global.userProfileFields = ['full-name']
+      global.minimumProfileFullNameLength = 100
+      let errorMessage
+      try {
+        await req.patch()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-full-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_FULL_NAME_LENGTH', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'full-name': 'Test'
+      }
+      global.userProfileFields = ['full-name']
+      global.maximumProfileFullNameLength = 1
+      let errorMessage
+      try {
+        await req.patch()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-full-name-length')
+    })
+
+    it('environment MINIMUM_PROFILE_DISPLAY_NAME_LENGTH', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'display-name': '1'
+      }
+      global.userProfileFields = ['display-name']
+      global.minimumProfileDisplayNameLength = 100
+      let errorMessage
+      try {
+        await req.patch()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-display-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_DISPLAY_NAME_LENGTH', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'display-name': 'meeeee123'
+      }
+      global.userProfileFields = ['display-name']
+      global.maximumProfileDisplayNameLength = 1
+      let errorMessage
+      try {
+        await req.patch()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-display-name-length')
+    })
+
+    it('environment MINIMUM_PROFILE_COMPANY_NAME_LENGTH', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'company-name': '1'
+      }
+      global.userProfileFields = ['company-name']
+      global.minimumProfileCompanyNameLength = 100
+      let errorMessage
+      try {
+        await req.patch()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-company-name-length')
+    })
+
+    it('environment MAXIMUM_PROFILE_COMPANY_NAME_LENGTH', async () => {
+      const user = await TestHelper.createUser()
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      req.body = {
+        'company-name': 'acme inc'
+      }
+      global.userProfileFields = ['company-name']
+      global.maximumProfileCompanyNameLength = 1
+      let errorMessage
+      try {
+        await req.patch()
+      } catch (error) {
+        errorMessage = error.message
+      }
+      assert.strictEqual(errorMessage, 'invalid-company-name-length')
+    })
+
+    it('override req.userProfileFields', async () => {
+      const user = await TestHelper.createUser()
+      global.userProfileFields = ['full-name', 'display-name', 'contact-email', 'display-email', 'dob', 'phone', 'occupation', 'location', 'company-name', 'website']
+      const req = TestHelper.createRequest(`/api/user/update-profile?profileid=${user.account.profileid}`)
+      req.account = user.account
+      req.session = user.session
+      const body = {
+        'full-name': 'Test Person',
+        'contact-email': 'test1@test.com',
+        'display-email': 'test2@test.com',
+        dob: '2000-01-01',
+        'display-name': 'tester',
+        phone: '456-789-0123',
+        occupation: 'Programmer',
+        location: 'USA',
+        'company-name': 'Test company',
+        website: 'https://example.com'
+      }
+      for (const field of global.userProfileFields) {
+        req.userProfileFields = [field]
+        req.body = {
+          [field]: body[field]
+        }
+        const displayName = global.profileFieldMap[field]
+        const account = await req.route.api.patch(req)
+        assert.strictEqual(account[displayName], body[field])
+      }
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template" template="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

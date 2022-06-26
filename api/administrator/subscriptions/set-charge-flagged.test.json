@@ -1,0 +1,113 @@
+{
+  "chargeid": "ch_3LEOQgHHqepMFuCX0HWt2NWj",
+  "accountid": "acct_3ffa2a93c1c66c75",
+  "subscriptionid": "sub_1LEOQfHHqepMFuCXf3B7mHOA",
+  "customerid": "cus_LwGyl8e44PRfS1",
+  "paymentmethodid": null,
+  "invoiceid": "in_1LEOQfHHqepMFuCXFOfHellq",
+  "refundRequested": null,
+  "refundReason": null,
+  "refundDenied": null,
+  "refundDeniedReason": null,
+  "object": "charge",
+  "stripeObject": {
+    "id": "ch_3LEOQgHHqepMFuCX0HWt2NWj",
+    "object": "charge",
+    "amount": 1000,
+    "amount_captured": 1000,
+    "amount_refunded": 0,
+    "application": null,
+    "application_fee": null,
+    "application_fee_amount": null,
+    "balance_transaction": "txn_3LEOQgHHqepMFuCX0ILDudf5",
+    "billing_details": {
+      "address": {
+        "city": "New York",
+        "country": "US",
+        "line1": "285 Fulton St",
+        "line2": "Apt 893",
+        "postal_code": "10007",
+        "state": "NY"
+      },
+      "email": null,
+      "name": "Ida Considine",
+      "phone": null
+    },
+    "calculated_statement_descriptor": "PRODUCT200 DESCRIPTION",
+    "captured": true,
+    "created": 1656122938,
+    "currency": "usd",
+    "customer": "cus_LwGyl8e44PRfS1",
+    "description": "Subscription creation",
+    "destination": null,
+    "dispute": null,
+    "disputed": false,
+    "failure_balance_transaction": null,
+    "failure_code": null,
+    "failure_message": null,
+    "fraud_details": {
+      "user_report": "fraudulent"
+    },
+    "invoice": "in_1LEOQfHHqepMFuCXFOfHellq",
+    "livemode": false,
+    "metadata": {},
+    "on_behalf_of": null,
+    "order": null,
+    "outcome": {
+      "network_status": "approved_by_network",
+      "reason": null,
+      "risk_level": "normal",
+      "risk_score": 44,
+      "seller_message": "Payment complete.",
+      "type": "authorized"
+    },
+    "paid": true,
+    "payment_intent": "pi_3LEOQgHHqepMFuCX0kOmjf1U",
+    "payment_method": "pm_1LEOQdHHqepMFuCXaRHSCEXv",
+    "payment_method_details": {
+      "card": {
+        "brand": "visa",
+        "checks": {
+          "address_line1_check": "pass",
+          "address_postal_code_check": "pass",
+          "cvc_check": "pass"
+        },
+        "country": "US",
+        "exp_month": 1,
+        "exp_year": 2023,
+        "fingerprint": "IRcdqfBUCskmPkNV",
+        "funding": "credit",
+        "installments": null,
+        "last4": "1111",
+        "mandate": null,
+        "network": "visa",
+        "three_d_secure": null,
+        "wallet": null
+      },
+      "type": "card"
+    },
+    "receipt_email": null,
+    "receipt_number": null,
+    "receipt_url": "https://pay.stripe.com/receipts/acct_1KhiP8HHqepMFuCX/ch_3LEOQgHHqepMFuCX0HWt2NWj/rcpt_LwGyrchq8f05Ng1hnszAJGQ8qElvPrG",
+    "refunded": false,
+    "refunds": {
+      "object": "list",
+      "data": [],
+      "has_more": false,
+      "total_count": 0,
+      "url": "/v1/charges/ch_3LEOQgHHqepMFuCX0HWt2NWj/refunds"
+    },
+    "review": null,
+    "shipping": null,
+    "source": null,
+    "source_transfer": null,
+    "statement_descriptor": "product200 description",
+    "statement_descriptor_suffix": null,
+    "status": "succeeded",
+    "transfer_data": null,
+    "transfer_group": null
+  },
+  "appid": "tests_1656122925",
+  "createdAt": "2022-06-25T02:09:01.117Z",
+  "updatedAt": "2022-06-25T02:09:02.371Z"
+}

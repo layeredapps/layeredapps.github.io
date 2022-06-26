@@ -1,0 +1,344 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>create-refund#POST (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/create-refund (POST)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs post" id="nodejs">await global.api.administrator.subscriptions.CreateRefund.post(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "refundid": "re_3LEOI0HHqepMFuCX1MSmw5PT",
+  "object": "refund",
+  "stripeObject": {
+    "id": "re_3LEOI0HHqepMFuCX1MSmw5PT",
+    "object": "refund",
+    "amount": 1000,
+    "balance_transaction": "txn_3LEOI0HHqepMFuCX1j0ojQAi",
+    "charge": "ch_3LEOI0HHqepMFuCX1JMwlglM",
+    "created": 1656122405,
+    "currency": "usd",
+    "metadata": {},
+    "payment_intent": "pi_3LEOI0HHqepMFuCX1dp4ji2O",
+    "reason": "requested_by_customer",
+    "receipt_number": null,
+    "source_transfer_reversal": null,
+    "status": "succeeded",
+    "transfer_reversal": null
+  },
+  "accountid": "acct_f67c760a7c677fc1",
+  "subscriptionid": null,
+  "customerid": null,
+  "invoiceid": "in_1LEOI0HHqepMFuCXi617k9eR",
+  "productid": null,
+  "paymentmethodid": null,
+  "appid": "tests_1656122395",
+  "createdAt": "2022-06-25T02:00:05.977Z",
+  "updatedAt": "2022-06-25T02:00:05.977Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="4">invalid-amount</td>
+                  <td>missing posted amount</td>
+                </tr>
+                <tr>
+                  <td>invalid posted amount</td>
+                </tr>
+                <tr>
+                  <td>invalid posted amount is negative</td>
+                </tr>
+                <tr>
+                  <td>invalid posted amount exceeds charge</td>
+                </tr>
+                <tr>
+                  <td id="description-4" rowspan="2">invalid-chargeid</td>
+                  <td>missing querystring chargeid</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring chargeid</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-refund.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const stripeCache = require('../../../../stripe-cache.js')
+const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  post: async (req) => {
+    if (!req.query || !req.query.chargeid) {
+      throw new Error('invalid-chargeid')
+    }
+    if (!req.body || !req.body.amount) {
+      throw new Error('invalid-amount')
+    }
+    const charge = await global.api.administrator.subscriptions.Charge.get(req)
+    if (!charge) {
+      throw new Error('invalid-chargeid')
+    }
+    const balance = charge.stripeObject.amount - (charge.stripeObject.amount_refunded || 0)
+    if (charge.refunded || !charge.stripeObject.paid || charge.stripeObject.amount === 0 || balance === 0) {
+      throw new Error('invalid-charge')
+    }
+    try {
+      req.body.amount = parseInt(req.body.amount, 10)
+      if (!req.body.amount || req.body.amount < 0 || req.body.amount > balance) {
+        throw new Error('invalid-amount')
+      }
+    } catch (error) {
+      throw new Error('invalid-amount')
+    }
+    req.query.invoiceid = charge.stripeObject.invoice
+    const invoice = await global.api.administrator.subscriptions.Invoice.get(req)
+    const refundInfo = {
+      charge: req.query.chargeid,
+      amount: req.body.amount,
+      reason: 'requested_by_customer'
+    }
+    const refund = await stripeCache.execute('refunds', 'create', refundInfo, req.stripeKey)
+    await subscriptions.Storage.Refund.create({
+      appid: req.appid || global.appid,
+      accountid: charge.accountid,
+      refundid: refund.id,
+      chargeid: charge.id,
+      customerid: charge.stripeObject.customer.id,
+      invoiceid: charge.stripeObject.invoice,
+      subscriptionid: invoice.stripeObject.subscriptionid,
+      productid: invoice.stripeObject.productid,
+      stripeObject: refund
+    })
+    const chargeNow = await stripeCache.retrieve(req.query.chargeid, 'charges', req.stripeKey)
+    await subscriptions.Storage.Charge.update({
+      stripeObject: chargeNow
+    }, {
+      where: {
+        chargeid: req.query.chargeid,
+        appid: req.appid || global.appid
+      }
+    })
+    req.query.refundid = refund.id
+    return global.api.administrator.subscriptions.Refund.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/create-refund.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/create-refund', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+    const req = TestHelper.createRequest(`/api/administrator/subscriptions/create-refund?chargeid=${user.charge.chargeid}`)
+    req.account = administrator.account
+    req.session = administrator.session
+    req.body = {
+      amount: ''
+    }
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.missingAmount = error.message
+    }
+    req.body.amount = 'invalid'
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.invalidAmount = error.message
+    }
+    req.body.amount = '-7'
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.negativeAmount = error.message
+    }
+    req.body.amount = 10000000
+    try {
+      await req.post()
+    } catch (error) {
+      cachedResponses.excessiveAmount = error.message
+    }
+    req.body.amount = administrator.price.stripeObject.unit_amount
+    req.filename = __filename
+    req.saveResponse = true
+    cachedResponses.returns = await req.post()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-chargeid', () => {
+      it('missing querystring chargeid', async function () {
+        await bundledData(this.test.currentRetry())
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-refund')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          amount: '1000'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-chargeid')
+      })
+
+      it('invalid querystring chargeid', async function () {
+        await bundledData(this.test.currentRetry())
+        const administrator = await TestHelper.createOwner()
+        const req = TestHelper.createRequest('/api/administrator/subscriptions/create-refund?chargeid=invalid')
+        req.account = administrator.account
+        req.session = administrator.session
+        req.body = {
+          amount: '1000'
+        }
+        let errorMessage
+        try {
+          await req.post()
+        } catch (error) {
+          errorMessage = error.message
+        }
+        assert.strictEqual(errorMessage, 'invalid-chargeid')
+      })
+    })
+
+    describe('invalid-amount', () => {
+      it('missing posted amount', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missingAmount
+        assert.strictEqual(errorMessage, 'invalid-amount')
+      })
+
+      it('invalid posted amount', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidAmount
+        assert.strictEqual(errorMessage, 'invalid-amount')
+      })
+
+      it('invalid posted amount is negative', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.negativeAmount
+        assert.strictEqual(errorMessage, 'invalid-amount')
+      })
+
+      it('invalid posted amount exceeds charge', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.excessiveAmount
+        assert.strictEqual(errorMessage, 'invalid-amount')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const refund = cachedResponses.returns
+      assert.strictEqual(refund.object, 'refund')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>

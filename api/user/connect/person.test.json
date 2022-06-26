@@ -1,0 +1,78 @@
+{
+  "personid": "person_1LEBwgRmMLYvfXYXTYFFxOU6",
+  "object": "person",
+  "accountid": "acct_7e206dfda36bbed6",
+  "stripeid": "acct_1LEBwdRmMLYvfXYX",
+  "tokenUpdate": null,
+  "stripeObject": {
+    "id": "person_1LEBwgRmMLYvfXYXTYFFxOU6",
+    "object": "person",
+    "account": "acct_1LEBwdRmMLYvfXYX",
+    "address": {
+      "city": "Berlin",
+      "country": "DE",
+      "line1": "123 Park Lane",
+      "line2": null,
+      "postal_code": "01067",
+      "state": null
+    },
+    "created": 1656074951,
+    "dob": {
+      "day": 1,
+      "month": 1,
+      "year": 1970
+    },
+    "email": "Harold49@yahoo.com",
+    "first_name": "Harold",
+    "future_requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": []
+    },
+    "last_name": "Gaylord",
+    "metadata": {},
+    "phone": "+14567890123",
+    "relationship": {
+      "director": false,
+      "executive": true,
+      "owner": false,
+      "percent_ownership": null,
+      "representative": true,
+      "title": "SVP Testing"
+    },
+    "requirements": {
+      "alternatives": [],
+      "currently_due": [],
+      "errors": [],
+      "eventually_due": [],
+      "past_due": [],
+      "pending_verification": [
+        "verification.additional_document",
+        "verification.document"
+      ]
+    },
+    "verification": {
+      "additional_document": {
+        "back": "file_1LEBwwDsofxDmDiW9kHVYgUv",
+        "details": null,
+        "details_code": null,
+        "front": "file_1LEBwvDsofxDmDiWGV789G50"
+      },
+      "details": null,
+      "details_code": null,
+      "document": {
+        "back": "file_1LEBwzDsofxDmDiW9MvEtF3d",
+        "details": null,
+        "details_code": null,
+        "front": "file_1LEBwxDsofxDmDiWWcA5vmR0"
+      },
+      "status": "pending"
+    }
+  },
+  "appid": "tests_1656074947",
+  "createdAt": "2022-06-24T12:49:12.745Z",
+  "updatedAt": "2022-06-24T12:49:39.777Z"
+}

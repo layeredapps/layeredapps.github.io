@@ -1,0 +1,38 @@
+{
+  "customerid": "cus_LwH9p2g0EsOean",
+  "object": "customer",
+  "accountid": "acct_fdc7f5b086520e8d",
+  "couponid": null,
+  "stripeObject": {
+    "id": "cus_LwH9p2g0EsOean",
+    "object": "customer",
+    "address": null,
+    "balance": 0,
+    "created": 1656123603,
+    "currency": null,
+    "default_source": null,
+    "delinquent": false,
+    "description": "Work VISA",
+    "discount": null,
+    "email": "Steve12@yahoo.com",
+    "invoice_prefix": "4B6E9862",
+    "invoice_settings": {
+      "custom_fields": null,
+      "default_payment_method": null,
+      "footer": null,
+      "rendering_options": null
+    },
+    "livemode": false,
+    "metadata": {},
+    "name": null,
+    "next_invoice_sequence": 1,
+    "phone": null,
+    "preferred_locales": [],
+    "shipping": null,
+    "tax_exempt": "none",
+    "test_clock": null
+  },
+  "appid": "tests_1656123603",
+  "createdAt": "2022-06-25T02:20:03.871Z",
+  "updatedAt": "2022-06-25T02:20:03.871Z"
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "accountid": "acct_00aa51592703886e",
+    "object": "account",
+    "appid": "tests_1656038566",
+    "profileid": "prof_b15a5124e8bc02cf",
+    "sessionKeyNumber": 1,
+    "lastSignedInAt": "2022-06-24T02:42:46.000Z",
+    "administrator": true,
+    "administratorSince": "2022-06-24T02:42:46.000Z",
+    "createdAt": "2022-06-24T02:42:46.831Z",
+    "updatedAt": "2022-06-24T02:42:46.860Z"
+  },
+  {
+    "accountid": "acct_da990c4d1416a467",
+    "object": "account",
+    "appid": "tests_1656038566",
+    "profileid": "prof_531b9dfd445a2629",
+    "sessionKeyNumber": 1,
+    "lastSignedInAt": "2022-06-24T02:42:46.000Z",
+    "administrator": true,
+    "administratorSince": "2022-06-24T02:42:46.000Z",
+    "createdAt": "2022-06-24T02:42:46.793Z",
+    "updatedAt": "2022-06-24T02:42:46.824Z"
+  },
+  {
+    "accountid": "acct_f08115e3e70b3bc2",
+    "object": "account",
+    "appid": "tests_1656038566",
+    "profileid": "prof_f9a88a6a861817a1",
+    "sessionKeyNumber": 1,
+    "lastSignedInAt": "2022-06-24T02:42:46.000Z",
+    "administrator": true,
+    "administratorSince": "2022-06-24T02:42:46.000Z",
+    "createdAt": "2022-06-24T02:42:46.755Z",
+    "updatedAt": "2022-06-24T02:42:46.788Z"
+  }
+]

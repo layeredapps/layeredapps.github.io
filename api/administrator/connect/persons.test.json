@@ -1,0 +1,293 @@
+[
+  {
+    "personid": "person_1LEBqURWlXhsfg4STy812wyj",
+    "object": "person",
+    "accountid": "acct_42f15039e73ca835",
+    "stripeid": "acct_1LEBqNRWlXhsfg4S",
+    "tokenUpdate": null,
+    "stripeObject": {
+      "id": "person_1LEBqURWlXhsfg4STy812wyj",
+      "object": "person",
+      "account": "acct_1LEBqNRWlXhsfg4S",
+      "address": {
+        "city": null,
+        "country": "DE",
+        "line1": null,
+        "line2": null,
+        "postal_code": null,
+        "state": null
+      },
+      "created": 1656074567,
+      "dob": {
+        "day": null,
+        "month": null,
+        "year": null
+      },
+      "first_name": null,
+      "future_requirements": {
+        "alternatives": [],
+        "currently_due": [],
+        "errors": [],
+        "eventually_due": [],
+        "past_due": [],
+        "pending_verification": []
+      },
+      "last_name": null,
+      "metadata": {},
+      "relationship": {
+        "director": true,
+        "executive": true,
+        "owner": false,
+        "percent_ownership": null,
+        "representative": false,
+        "title": "SVP Testing"
+      },
+      "requirements": {
+        "alternatives": [],
+        "currently_due": [
+          "address.city",
+          "address.line1",
+          "address.postal_code",
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "errors": [],
+        "eventually_due": [
+          "address.city",
+          "address.line1",
+          "address.postal_code",
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "past_due": [
+          "address.city",
+          "address.line1",
+          "address.postal_code",
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "pending_verification": []
+      },
+      "verification": {
+        "additional_document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "details": null,
+        "details_code": null,
+        "document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "status": "unverified"
+      }
+    },
+    "appid": "tests_1656074529",
+    "createdAt": "2022-06-24T12:42:49.808Z",
+    "updatedAt": "2022-06-24T12:42:49.808Z"
+  },
+  {
+    "personid": "person_1LEBqRRWlXhsfg4Sz46ugQor",
+    "object": "person",
+    "accountid": "acct_42f15039e73ca835",
+    "stripeid": "acct_1LEBqNRWlXhsfg4S",
+    "tokenUpdate": null,
+    "stripeObject": {
+      "id": "person_1LEBqRRWlXhsfg4Sz46ugQor",
+      "object": "person",
+      "account": "acct_1LEBqNRWlXhsfg4S",
+      "address": {
+        "city": null,
+        "country": "DE",
+        "line1": null,
+        "line2": null,
+        "postal_code": null,
+        "state": null
+      },
+      "created": 1656074563,
+      "dob": {
+        "day": null,
+        "month": null,
+        "year": null
+      },
+      "first_name": null,
+      "future_requirements": {
+        "alternatives": [],
+        "currently_due": [],
+        "errors": [],
+        "eventually_due": [],
+        "past_due": [],
+        "pending_verification": []
+      },
+      "last_name": null,
+      "metadata": {},
+      "relationship": {
+        "director": true,
+        "executive": false,
+        "owner": false,
+        "percent_ownership": null,
+        "representative": false,
+        "title": "Director"
+      },
+      "requirements": {
+        "alternatives": [],
+        "currently_due": [
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "errors": [],
+        "eventually_due": [
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "past_due": [
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "pending_verification": []
+      },
+      "verification": {
+        "additional_document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "details": null,
+        "details_code": null,
+        "document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "status": "unverified"
+      }
+    },
+    "appid": "tests_1656074529",
+    "createdAt": "2022-06-24T12:42:45.239Z",
+    "updatedAt": "2022-06-24T12:42:46.538Z"
+  },
+  {
+    "personid": "person_1LEBqMRV3CkaOXbJmKbNM1Kq",
+    "object": "person",
+    "accountid": "acct_944c5bd7c0a89ffd",
+    "stripeid": "acct_1LEBqIRV3CkaOXbJ",
+    "tokenUpdate": null,
+    "stripeObject": {
+      "id": "person_1LEBqMRV3CkaOXbJmKbNM1Kq",
+      "object": "person",
+      "account": "acct_1LEBqIRV3CkaOXbJ",
+      "address": {
+        "city": null,
+        "country": "DE",
+        "line1": null,
+        "line2": null,
+        "postal_code": null,
+        "state": null
+      },
+      "created": 1656074558,
+      "dob": {
+        "day": null,
+        "month": null,
+        "year": null
+      },
+      "first_name": null,
+      "future_requirements": {
+        "alternatives": [],
+        "currently_due": [],
+        "errors": [],
+        "eventually_due": [],
+        "past_due": [],
+        "pending_verification": []
+      },
+      "last_name": null,
+      "metadata": {},
+      "relationship": {
+        "director": true,
+        "executive": false,
+        "owner": false,
+        "percent_ownership": null,
+        "representative": false,
+        "title": "Director"
+      },
+      "requirements": {
+        "alternatives": [],
+        "currently_due": [
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "errors": [],
+        "eventually_due": [
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "past_due": [
+          "dob.day",
+          "dob.month",
+          "dob.year",
+          "email",
+          "first_name",
+          "last_name"
+        ],
+        "pending_verification": []
+      },
+      "verification": {
+        "additional_document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "details": null,
+        "details_code": null,
+        "document": {
+          "back": null,
+          "details": null,
+          "details_code": null,
+          "front": null
+        },
+        "status": "unverified"
+      }
+    },
+    "appid": "tests_1656074529",
+    "createdAt": "2022-06-24T12:42:39.686Z",
+    "updatedAt": "2022-06-24T12:42:41.080Z"
+  }
+]

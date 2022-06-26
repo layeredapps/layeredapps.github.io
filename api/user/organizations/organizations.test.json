@@ -1,0 +1,35 @@
+[
+  {
+    "organizationid": "orgn_3af2e78ccc2d01f4",
+    "object": "organization",
+    "appid": "tests_1656039712",
+    "ownerid": "acct_5bd3229b52e2b747",
+    "name": "My organization",
+    "pin": "12343",
+    "email": "Amy.Toy76@gmail.com",
+    "createdAt": "2022-06-24T03:01:52.484Z",
+    "updatedAt": "2022-06-24T03:01:52.484Z"
+  },
+  {
+    "organizationid": "orgn_2ab9541b378456cf",
+    "object": "organization",
+    "appid": "tests_1656039712",
+    "ownerid": "acct_5bd3229b52e2b747",
+    "name": "My organization",
+    "pin": "12342",
+    "email": "Amy.Toy76@gmail.com",
+    "createdAt": "2022-06-24T03:01:52.468Z",
+    "updatedAt": "2022-06-24T03:01:52.468Z"
+  },
+  {
+    "organizationid": "orgn_dcc7d3296fc6324b",
+    "object": "organization",
+    "appid": "tests_1656039712",
+    "ownerid": "acct_5bd3229b52e2b747",
+    "name": "My organization",
+    "pin": "12341",
+    "email": "Amy.Toy76@gmail.com",
+    "createdAt": "2022-06-24T03:01:52.451Z",
+    "updatedAt": "2022-06-24T03:01:52.451Z"
+  }
+]

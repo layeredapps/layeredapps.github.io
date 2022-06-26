@@ -1,0 +1,354 @@
+<!doctype html><html data-navbar="navbar.html">
+
+<head>
+  <title>set-charge-flagged#PATCH (@layeredapps/stripe-subscriptions)</title>
+  <link rel="stylesheet" href="/public/style.css" integrity="sha384-9EJe1FLOakbLr/vMaZDEbRuwtDeeS3yVZL/bzSymErrtkZU/lYf0fAb2lYjiVEQO" crossorigin="anonymous" />
+  <script async="" src="/public/highlight.min.js" integrity="sha384-nVeUU7Vs271Rl+bZYnR4QgAe2j1O8PRTiRVzv2hVgK+3iqVjdGlbR2kM2kt3lG/5" crossorigin="anonymous"></script>
+  <script src="/public/browser.js" integrity="sha384-a1ehI1wY9KzPMNipevlKiOkL9AiIdMUpJk1yebeCCl6oiaFZ89RT/fpQAQywLByz" crossorigin="anonymous"></script>
+  <link rel="icon" href="/public/favicon.ico" integrity="sha384-23Ip8lD2EVDlj7eNTjiV2EXVtUS0UdoiyW+i3pJtkgiNqQzFjf/+ciCqfZ0gFj12" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png" integrity="sha384-dOFU7uCZdJbj1FvnW4GJ48vloZnPLHgQN05+gEQkRFmKnVEhYvyW9pu2hZ9/LaxC" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png" integrity="sha384-JlaTBaR5hZAPKC4bMr0eaykxVRzoVp/ydUGyjg6AaDT9q3iKf4ldCugp/+c5hZ5e" crossorigin="anonymous" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" integrity="sha384-xCe0MjeAWLbVAJrVHm+/3aMSduUqIp35oawFFBWQczOs3X8NewzVQC/rHejX9Qiw" crossorigin="anonymous" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body><a name="top" id="top"></a>
+  <div class="body-container">
+    <header>
+      <h1 id="dashboard">Stripe Subscriptions module API explorer</h1>
+      <section id="navigation" class="navigation">
+        <ul class="menu">
+          <li>
+            <h2><a class="navigation-link" href="/dashboard">Dashboard</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/maxmind-geoip-module">MaxMind GeoIP</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/organizations-module">Organizations</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/stripe-connect-module">Stripe Connect</a></h2>
+          </li>
+          <li class="active">
+            <h2><a class="navigation-link" href="/stripe-subscriptions-module">Stripe Subscriptions</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/oauth-module">OAuth</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-web-app">Example app</a></h2>
+          </li>
+          <li>
+            <h2><a class="navigation-link" href="/example-subscription-web-app">Example subscription app</a></h2>
+          </li>
+        </ul>
+        <ul class="submenu">
+          <li class="readme"><a class="navigation-link" href="/stripe-subscriptions-module">Documentation</a></li>
+          <li class="env"><a class="navigation-link" href="/stripe-subscriptions-configuration">Configuration</a></li>
+          <li class="ui"><a class="navigation-link" href="/stripe-subscriptions-ui">UI</a></li>
+          <li class="active"><a class="navigation-link" href="/stripe-subscriptions-api">API</a></li>
+        </ul>
+      </section>
+    </header>
+    <div class="section-container">
+      <section class="full"><a name="content" id="content"></a>
+        <div class="content">
+          <h1 id="title">/api/administrator/subscriptions/set-charge-flagged (PATCH)</h1>
+          <p>Account information like email addresses is generated with <a href="https://github.com/faker-js/faker">faker-js</a> it is not real user information.</p><span class="nodejs patch" id="nodejs">await global.api.administrator.subscriptions.SetChargeFlagged.patch(req)</span>
+          <div id="response-container">
+            <h2 id="returns-">Returns <span id="returns">object</span></h2>
+            <pre class="response-code"><code data-language="json" id="response-code">{
+  "chargeid": "ch_3LEOQgHHqepMFuCX0HWt2NWj",
+  "accountid": "acct_3ffa2a93c1c66c75",
+  "subscriptionid": "sub_1LEOQfHHqepMFuCXf3B7mHOA",
+  "customerid": "cus_LwGyl8e44PRfS1",
+  "paymentmethodid": null,
+  "invoiceid": "in_1LEOQfHHqepMFuCXFOfHellq",
+  "refundRequested": null,
+  "refundReason": null,
+  "refundDenied": null,
+  "refundDeniedReason": null,
+  "object": "charge",
+  "stripeObject": {
+    "id": "ch_3LEOQgHHqepMFuCX0HWt2NWj",
+    "object": "charge",
+    "amount": 1000,
+    "amount_captured": 1000,
+    "amount_refunded": 0,
+    "application": null,
+    "application_fee": null,
+    "application_fee_amount": null,
+    "balance_transaction": "txn_3LEOQgHHqepMFuCX0ILDudf5",
+    "billing_details": {
+      "address": {
+        "city": "New York",
+        "country": "US",
+        "line1": "285 Fulton St",
+        "line2": "Apt 893",
+        "postal_code": "10007",
+        "state": "NY"
+      },
+      "email": null,
+      "name": "Ida Considine",
+      "phone": null
+    },
+    "calculated_statement_descriptor": "PRODUCT200 DESCRIPTION",
+    "captured": true,
+    "created": 1656122938,
+    "currency": "usd",
+    "customer": "cus_LwGyl8e44PRfS1",
+    "description": "Subscription creation",
+    "destination": null,
+    "dispute": null,
+    "disputed": false,
+    "failure_balance_transaction": null,
+    "failure_code": null,
+    "failure_message": null,
+    "fraud_details": {
+      "user_report": "fraudulent"
+    },
+    "invoice": "in_1LEOQfHHqepMFuCXFOfHellq",
+    "livemode": false,
+    "metadata": {},
+    "on_behalf_of": null,
+    "order": null,
+    "outcome": {
+      "network_status": "approved_by_network",
+      "reason": null,
+      "risk_level": "normal",
+      "risk_score": 44,
+      "seller_message": "Payment complete.",
+      "type": "authorized"
+    },
+    "paid": true,
+    "payment_intent": "pi_3LEOQgHHqepMFuCX0kOmjf1U",
+    "payment_method": "pm_1LEOQdHHqepMFuCXaRHSCEXv",
+    "payment_method_details": {
+      "card": {
+        "brand": "visa",
+        "checks": {
+          "address_line1_check": "pass",
+          "address_postal_code_check": "pass",
+          "cvc_check": "pass"
+        },
+        "country": "US",
+        "exp_month": 1,
+        "exp_year": 2023,
+        "fingerprint": "IRcdqfBUCskmPkNV",
+        "funding": "credit",
+        "installments": null,
+        "last4": "1111",
+        "mandate": null,
+        "network": "visa",
+        "three_d_secure": null,
+        "wallet": null
+      },
+      "type": "card"
+    },
+    "receipt_email": null,
+    "receipt_number": null,
+    "receipt_url": "https://pay.stripe.com/receipts/acct_1KhiP8HHqepMFuCX/ch_3LEOQgHHqepMFuCX0HWt2NWj/rcpt_LwGyrchq8f05Ng1hnszAJGQ8qElvPrG",
+    "refunded": false,
+    "refunds": {
+      "object": "list",
+      "data": [],
+      "has_more": false,
+      "total_count": 0,
+      "url": "/v1/charges/ch_3LEOQgHHqepMFuCX0HWt2NWj/refunds"
+    },
+    "review": null,
+    "shipping": null,
+    "source": null,
+    "source_transfer": null,
+    "statement_descriptor": "product200 description",
+    "statement_descriptor_suffix": null,
+    "status": "succeeded",
+    "transfer_data": null,
+    "transfer_group": null
+  },
+  "appid": "tests_1656122925",
+  "createdAt": "2022-06-25T02:09:01.117Z",
+  "updatedAt": "2022-06-25T02:09:02.371Z"
+}</code></pre>
+          </div>
+          <div id="exceptions-container"><a name="exceptions" id="exceptions"></a>
+            <h2 id="exceptions">Exceptions</h2>
+            <p>These exceptions are thrown (NodeJS) or returned as JSON (HTTP) if you provide incorrect data or do not meet the requirements:</p>
+            <table id="exceptions-table">
+              <tr>
+                <th>Exception</th>
+                <th>Circumstances</th>
+              </tr>
+              <tbody>
+                <tr>
+                  <td id="description-0" rowspan="1">invalid-charge</td>
+                  <td>ineligible querystring charge is already flagged</td>
+                </tr>
+                <tr>
+                  <td id="description-1" rowspan="2">invalid-chargeid</td>
+                  <td>missing querystring charge</td>
+                </tr>
+                <tr>
+                  <td>invalid querystring charge</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="source-code"><a name="source" id="source"></a>
+            <h2 id="nodejs-source-(">NodeJS source (<a id="github_source" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/set-charge-flagged.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="source-code">const dashboard = require('@layeredapps/dashboard')
+const stripeCache = require('../../../../stripe-cache.js')
+const subscriptions = require('../../../../../index.js')
+
+module.exports = {
+  patch: async (req) => {
+    if (!req.query || !req.query.chargeid) {
+      throw new Error('invalid-chargeid')
+    }
+    const charge = await global.api.administrator.subscriptions.Charge.get(req)
+    if (!charge) {
+      throw new Error('invalid-chargeid')
+    }
+    if (charge.stripeObject.fraud_details.user_report) {
+      throw new Error('invalid-charge')
+    }
+    const chargeInfo = {
+      fraud_details: {
+        user_report: 'fraudulent'
+      }
+    }
+    const chargeNow = await stripeCache.execute('charges', 'update', req.query.chargeid, chargeInfo, req.stripeKey)
+    await subscriptions.Storage.Charge.update({
+      stripeObject: chargeNow
+    }, {
+      where: {
+        chargeid: req.query.chargeid,
+        appid: req.appid || global.appid
+      }
+    })
+    await dashboard.StorageCache.remove(req.query.chargeid)
+    return global.api.administrator.subscriptions.Charge.get(req)
+  }
+}
+</code></pre><a name="tests" id="tests"></a>
+            <h2 id="test-source-(">Test source (<a id="github_tests" href="https://github.com/layeredapps/@layeredapps/stripe-subscriptions/tree/main/src/www/api/administrator/subscriptions/set-charge-flagged.test.js">view on github</a>)</h2>
+            <pre><code data-language="js" id="test-code">/* eslint-env mocha */
+const assert = require('assert')
+const TestHelper = require('../../../../../test-helper.js')
+const TestStripeAccounts = require('../../../../../test-stripe-accounts.js')
+const DashboardTestHelper = require('@layeredapps/dashboard/test-helper.js')
+
+describe('/api/administrator/subscriptions/set-charge-flagged', function () {
+  before(TestHelper.disableMetrics)
+  after(TestHelper.enableMetrics)
+  let cachedResponses
+  async function bundledData (retryNumber) {
+    if (retryNumber > 0) {
+      cachedResponses = {}
+    }
+    if (cachedResponses && cachedResponses.finished) {
+      return
+    }
+    cachedResponses = {}
+    await TestHelper.setupBefore()
+    await DashboardTestHelper.setupBeforeEach()
+    await TestHelper.setupBeforeEach()
+    const administrator = await TestStripeAccounts.createOwnerWithPrice()
+    // missing and invalid id
+    const req = TestHelper.createRequest('/api/administrator/subscriptions/set-charge-flagged')
+    req.account = administrator.account
+    req.session = administrator.session
+    try {
+      await req.patch()
+    } catch (error) {
+      cachedResponses.missing = error.message
+    }
+    const req2 = TestHelper.createRequest('/api/administrator/subscriptions/set-charge-flagged?chargeid=invalid')
+    req2.account = administrator.account
+    req2.session = administrator.session
+    try {
+      await req2.patch()
+    } catch (error) {
+      cachedResponses.invalid = error.message
+    }
+    // invalid charge
+    const user = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+    await TestHelper.flagCharge(administrator, user.charge.chargeid)
+    const req3 = TestHelper.createRequest(`/api/administrator/subscriptions/set-charge-flagged?chargeid=${user.charge.chargeid}`)
+    req3.account = administrator.account
+    req3.session = administrator.session
+    try {
+      await req3.patch()
+    } catch (error) {
+      cachedResponses.invalidCharge = error.message
+    }
+    // returns
+    const user2 = await TestStripeAccounts.createUserWithPaidSubscription(administrator.price)
+    const req4 = TestHelper.createRequest(`/api/administrator/subscriptions/set-charge-flagged?chargeid=${user2.charge.chargeid}`)
+    req4.account = administrator.account
+    req4.session = administrator.session
+    req4.filename = __filename
+    req4.saveResponse = true
+    cachedResponses.returns = await req4.patch()
+    cachedResponses.finished = true
+  }
+
+  describe('exceptions', () => {
+    describe('invalid-chargeid', () => {
+      it('missing querystring charge', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.missing
+        assert.strictEqual(errorMessage, 'invalid-chargeid')
+      })
+
+      it('invalid querystring charge', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalid
+        assert.strictEqual(errorMessage, 'invalid-chargeid')
+      })
+    })
+
+    describe('invalid-charge', () => {
+      it('ineligible querystring charge is already flagged', async function () {
+        await bundledData(this.test.currentRetry())
+        const errorMessage = cachedResponses.invalidCharge
+        assert.strictEqual(errorMessage, 'invalid-charge')
+      })
+    })
+  })
+
+  describe('returns', () => {
+    it('object', async () => {
+      const charge = cachedResponses.returns
+      assert.strictEqual(charge.stripeObject.fraud_details.user_report, 'fraudulent')
+    })
+  })
+})
+</code></pre>
+          </div>
+          <p><a class="skip" href="#top">Top of page</a></p>
+        </div>
+      </section>
+    </div>
+  </div><template id="property-item-template">
+    <li>${property.name}</li>
+  </template><template id="exception-template" template="exception-template">
+    <tr>
+      <td id="description-${exception.id}" rowspan="${exception.rowSpan}">${exception.text}</td>
+      <td>${exception.note}</td>
+    </tr>
+  </template><template id="property-row-template">
+    <tr>
+      <td>${property.variable}</td>
+      <td>${property.value}</td>
+      <td>${property.required}</td>
+      <td>${property.type}</td>
+    </tr>
+  </template>
+</body>
+
+</html>
